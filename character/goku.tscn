@@ -1,0 +1,39 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://character/goku.gd" id="1_rqicn"]
+[ext_resource type="Texture2D" path="res://assets/images/Goku/profile_mastery_goku.png" id="2_0c8oj"]
+[ext_resource type="Texture2D" path="res://assets/images/Goku/gokuprof.png" id="2_8iauh"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_fpi55"]
+[ext_resource type="Texture2D" path="res://assets/images/Goku/gokualtprof1.png" id="3_0x5w7"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_cpd4k"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_0rkqx"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_s7coe"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_nx4sc"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_ffw64"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_rqicn")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_0c8oj")
+mastery_name = "Super Saiyan Goku"
+portrait_texture = ExtResource("2_8iauh")
+alt_portraits = Array[Texture2D]([ExtResource("3_0x5w7")])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_fpi55")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_cpd4k")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_0rkqx")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_s7coe")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_nx4sc")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_ffw64")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

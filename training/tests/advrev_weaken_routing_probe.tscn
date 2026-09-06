@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://training/tests/advrev_weaken_routing_probe.gd" id="1"]
+
+[node name="AdvRevWeakenRoutingProbe" type="Node"]
+script = ExtResource("1")

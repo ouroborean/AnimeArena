@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/akame.gd" id="1_l0k65"]
+[ext_resource type="Texture2D" path="res://assets/images/Akame/akameprof.png" id="2_60wi8"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="3_0gn5m"]
+[ext_resource type="Texture2D" path="res://assets/images/Akame/akamealtprof1.png" id="3_3lymm"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="4_g8il1"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="5_cxyl3"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="6_lwapr"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="7_3k036"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="8_auvdv"]
+
+[node name="Akame" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_l0k65")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("3_3lymm")
+mastery_name = "Little War Horn Akame"
+portrait_texture = ExtResource("2_60wi8")
+alt_portraits = Array[Texture2D]([ExtResource("3_3lymm")])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("3_0gn5m")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_g8il1")]
+
+[node name="StatComponent" parent="." instance=ExtResource("5_cxyl3")]
+
+[node name="NameComponent" parent="." instance=ExtResource("6_lwapr")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("7_3k036")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("8_auvdv")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

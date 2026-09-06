@@ -1,0 +1,67 @@
+Godot Engine v4.6.2.stable.official.71f334935 - https://godotengine.org
+
+[trainer] seed=77000 matches=30 opponent=policy:res://training/checkpoints/focused_current.json eval=true out=res://training/checkpoints/work.json checkpoint=res://training/checkpoints/focus_asta/merged.json
+[authored] loaded 1 authored character(s)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   1/30  ] LOSS   22 turns   asta, seventeen, rengoku  vs  semiramis, nagisa, veldora
+Applying bleed effect! Checking special code
+[   2/30  ] WIN    15 turns   asta, ganta, ban  vs  power, yoh, jesse
+[   3/30  ] WIN    20 turns   asta, mercury, toga  vs  noelle, aang, nezuko
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   4/30  ] LOSS   20 turns   asta, uranus, rengoku  vs  luffy, itachi, minene
+[   5/30  ] LOSS   24 turns   asta, yugi, shiro  vs  tanjiro, tsubaki, genos
+[   6/30  ] WIN    24 turns   asta, tsuyu, jinwoo  vs  megumin, renamon, yuji
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   7/30  ] LOSS   12 turns   asta, akame, koro  vs  nimaiya, ken, jack
+[   8/30  ] WIN    16 turns   asta, uzui, tanjiro  vs  semiramis, emiyaarcher, ace
+[   9/30  ] WIN    24 turns   asta, venus, tsunayoshi  vs  saturn, tsuyu, mami
+Applying bleed effect! Checking special code
+[  10/30  ] LOSS   19 turns   asta, tsunayoshi, nonon  vs  jinwoo, denji, broly
+[  11/30  ] LOSS    8 turns   asta, power, seventeen  vs  todoroki, esdeath, yamamoto
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  12/30  ] WIN    22 turns   asta, muichiro, denji  vs  sayaka, emiya, koro
+[  13/30  ] WIN    16 turns   asta, yuno, frieren  vs  emiya, kitara, yoh
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  14/30  ] WIN    20 turns   asta, denji, nimaiya  vs  lucy, genos, aang
+[  15/30  ] WIN    28 turns   asta, levi, rob  vs  naruto, chrome, saitama
+[  16/30  ] WIN    18 turns   asta, boruto, adam  vs  mavis, toudou, ace
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  17/30  ] WIN    18 turns   asta, satsuki, gohan  vs  nimaiya, meliodas, denji
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  18/30  ] WIN    33 turns   asta, emiya, nel  vs  rengoku, jesse, akame
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  19/30  ] WIN    17 turns   asta, maka, midoriya  vs  death, madoka, ken
+[  20/30  ] WIN    19 turns   asta, edward, mavis  vs  gohan, toph, eren
+Applying bleed effect! Checking special code
+[  21/30  ] WIN    18 turns   asta, kuroko, mami  vs  noelle, nezuko, inosuke
+[  22/30  ] WIN    10 turns   asta, madoka, hisoka  vs  rob, blackwargreymon, crona
+[  23/30  ] LOSS   15 turns   asta, todoroki, misaka  vs  lucy, ryohei, ace
+[  24/30  ] WIN    20 turns   asta, minene, tanjiro  vs  veldora, uzui, jesse
+[  25/30  ] WIN    29 turns   asta, omnimon, tsubaki  vs  emiya, misaka, kaiba
+Applying bleed effect! Checking special code
+[  26/30  ] LOSS   17 turns   asta, diane, gojo  vs  lizandpatty, hashirama, gohan
+[  27/30  ] LOSS   23 turns   asta, meliodas, yubel  vs  usopp, astolfo, frankenstein
+[  28/30  ] LOSS   16 turns   asta, tsubaki, mercury  vs  veldora, kid, hashirama
+[  29/30  ] LOSS   21 turns   asta, muichiro, yugi  vs  sakura, eren, veldora
+Applying bleed effect! Checking special code
+[  30/30  ] WIN    27 turns   asta, edward, diane  vs  nel, horohoro, toph
+=== TRAINER RUN COMPLETE ===
+Matches: 30   W: 19   L: 11   D: 0   Win: 63.3%   (opponent: v3:focused_current.json  [EVAL])

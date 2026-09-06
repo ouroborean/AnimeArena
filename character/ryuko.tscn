@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/ryuko.gd" id="1_edkrc"]
+[ext_resource type="Texture2D" path="res://assets/images/Ryuko Matoi/ryuko.png" id="2_cmduv"]
+[ext_resource type="Texture2D" path="res://assets/images/Ryuko Matoi/profile_mastery_ryuko.png" id="2_p4lvb"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_wos8c"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_1m5ys"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_5w6hd"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_2nr5n"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_s5boh"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_h2ac2"]
+
+[node name="Ryuko" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_edkrc")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_p4lvb")
+mastery_name = "Villain Ryuko"
+portrait_texture = ExtResource("2_cmduv")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_wos8c")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_1m5ys")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_5w6hd")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_2nr5n")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_s5boh")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_h2ac2")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

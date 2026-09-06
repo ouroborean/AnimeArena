@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_component.gd" id="1_pcmev"]
+[ext_resource type="PackedScene" path="res://components/team_component.tscn" id="2_kfpg1"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="3_8xbru"]
+[ext_resource type="PackedScene" path="res://components/rank_component.tscn" id="4_tk545"]
+
+[node name="PlayerComponent" type="Node" node_paths=PackedStringArray("team", "_name", "rank")]
+script = ExtResource("1_pcmev")
+team = NodePath("TeamComponent")
+_name = NodePath("NameComponent")
+rank = NodePath("Rank")
+
+[node name="TeamComponent" parent="." instance=ExtResource("2_kfpg1")]
+
+[node name="NameComponent" parent="." instance=ExtResource("3_8xbru")]
+
+[node name="Rank" parent="." instance=ExtResource("4_tk545")]

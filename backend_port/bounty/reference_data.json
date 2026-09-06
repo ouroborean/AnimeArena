@@ -1,0 +1,2382 @@
+{
+  "category_order": [
+    "sword",
+    "air",
+    "water",
+    "earth",
+    "ice",
+    "fire",
+    "lightning",
+    "undead",
+    "ninja",
+    "hero",
+    "fairy tail",
+    "vongola",
+    "leader",
+    "brawler",
+    "servant",
+    "shinigami",
+    "pirate",
+    "esper",
+    "magical girl",
+    "night raid",
+    "sins",
+    "villain",
+    "digimon",
+    "assassin",
+    "mage",
+    "blood",
+    "sound",
+    "bow",
+    "gun",
+    "shadow",
+    "tech",
+    "defender",
+    "beast",
+    "eye",
+    "scythe"
+  ],
+  "ordered_archetypes_per_character": {
+    "naruto": [
+      "air",
+      "ninja"
+    ],
+    "sasuke": [
+      "fire",
+      "lightning",
+      "ninja",
+      "villain",
+      "eye"
+    ],
+    "sakura": [
+      "ninja",
+      "brawler"
+    ],
+    "hinata": [
+      "ninja",
+      "eye"
+    ],
+    "hashirama": [
+      "water",
+      "earth",
+      "undead",
+      "ninja",
+      "leader"
+    ],
+    "boruto": [
+      "air",
+      "ninja",
+      "eye"
+    ],
+    "itachi": [
+      "ninja",
+      "villain",
+      "eye"
+    ],
+    "luffy": [
+      "leader",
+      "brawler",
+      "pirate"
+    ],
+    "zoro": [
+      "sword",
+      "pirate"
+    ],
+    "usopp": [
+      "pirate"
+    ],
+    "ace": [
+      "fire",
+      "pirate"
+    ],
+    "marco": [
+      "pirate",
+      "beast"
+    ],
+    "rob": [
+      "leader",
+      "brawler",
+      "villain",
+      "assassin"
+    ],
+    "yuji": [
+      "brawler"
+    ],
+    "nobara": [
+      "mage"
+    ],
+    "megumi": [
+      "mage",
+      "shadow"
+    ],
+    "sukuna": [
+      "fire",
+      "villain",
+      "mage",
+      "bow"
+    ],
+    "gojo": [
+      "leader",
+      "mage",
+      "eye"
+    ],
+    "toji": [
+      "sword",
+      "brawler",
+      "villain"
+    ],
+    "midoriya": [
+      "hero",
+      "brawler"
+    ],
+    "uraraka": [
+      "hero"
+    ],
+    "bakugo": [
+      "fire",
+      "hero",
+      "brawler"
+    ],
+    "todoroki": [
+      "ice",
+      "fire",
+      "hero"
+    ],
+    "tokoyami": [
+      "shadow",
+      "beast"
+    ],
+    "tsuyu": [
+      "hero",
+      "beast"
+    ],
+    "toga": [
+      "villain",
+      "blood"
+    ],
+    "allmight": [
+      "hero",
+      "brawler",
+      "defender"
+    ],
+    "natsu": [
+      "fire",
+      "fairy tail",
+      "brawler",
+      "mage"
+    ],
+    "lucy": [
+      "water",
+      "fairy tail",
+      "mage"
+    ],
+    "gray": [
+      "water",
+      "ice",
+      "fairy tail",
+      "mage"
+    ],
+    "erza": [
+      "sword",
+      "fairy tail",
+      "mage"
+    ],
+    "mavis": [
+      "fairy tail",
+      "leader",
+      "mage"
+    ],
+    "madoka": [
+      "magical girl",
+      "bow"
+    ],
+    "sayaka": [
+      "sword",
+      "hero",
+      "magical girl",
+      "sound"
+    ],
+    "mami": [
+      "magical girl",
+      "gun"
+    ],
+    "asta": [
+      "sword",
+      "mage"
+    ],
+    "yuno": [
+      "air",
+      "mage"
+    ],
+    "noelle": [
+      "water",
+      "mage"
+    ],
+    "maka": [
+      "scythe"
+    ],
+    "soul": [
+      "sound",
+      "scythe"
+    ],
+    "blackstar": [
+      "sword",
+      "assassin"
+    ],
+    "tsubaki": [
+      "ninja",
+      "assassin",
+      "scythe"
+    ],
+    "kid": [
+      "shinigami",
+      "gun"
+    ],
+    "lizandpatty": [
+      "gun"
+    ],
+    "crona": [
+      "blood"
+    ],
+    "aang": [
+      "air",
+      "water",
+      "earth",
+      "fire"
+    ],
+    "kitara": [
+      "water",
+      "ice"
+    ],
+    "toph": [
+      "earth",
+      "sound"
+    ],
+    "korra": [
+      "air",
+      "water",
+      "earth",
+      "fire"
+    ],
+    "tatsumi": [
+      "sword",
+      "night raid",
+      "assassin"
+    ],
+    "akame": [
+      "sword",
+      "night raid",
+      "assassin"
+    ],
+    "sheele": [
+      "night raid",
+      "assassin"
+    ],
+    "mine": [
+      "night raid",
+      "assassin",
+      "gun",
+      "tech"
+    ],
+    "esdeath": [
+      "sword",
+      "ice",
+      "leader",
+      "villain",
+      "assassin"
+    ],
+    "tanjiro": [
+      "sword",
+      "water"
+    ],
+    "nezuko": [
+      "blood"
+    ],
+    "zenitsu": [
+      "sword",
+      "lightning"
+    ],
+    "inosuke": [
+      "sword",
+      "beast"
+    ],
+    "rengoku": [
+      "sword",
+      "fire"
+    ],
+    "muichiro": [
+      "sword",
+      "air",
+      "water"
+    ],
+    "uzui": [
+      "sword",
+      "ninja",
+      "sound"
+    ],
+    "meliodas": [
+      "sword",
+      "fire",
+      "leader",
+      "sins"
+    ],
+    "diane": [
+      "earth",
+      "sins"
+    ],
+    "king": [
+      "sins"
+    ],
+    "ban": [
+      "undead",
+      "sins"
+    ],
+    "tsunayoshi": [
+      "fire",
+      "vongola",
+      "leader"
+    ],
+    "yamamoto": [
+      "sword",
+      "water",
+      "vongola"
+    ],
+    "ryohei": [
+      "vongola",
+      "brawler"
+    ],
+    "chrome": [
+      "fire",
+      "vongola"
+    ],
+    "squalo": [
+      "sword",
+      "water",
+      "vongola"
+    ],
+    "xanxus": [
+      "vongola",
+      "leader",
+      "villain",
+      "gun"
+    ],
+    "hibari": [
+      "vongola",
+      "brawler"
+    ],
+    "eren": [
+      "sword",
+      "villain",
+      "defender"
+    ],
+    "mikasa": [
+      "sword"
+    ],
+    "levi": [
+      "sword",
+      "leader"
+    ],
+    "aiohto": [
+      "brawler",
+      "eye"
+    ],
+    "jinwoo": [
+      "sword",
+      "assassin",
+      "mage",
+      "shadow",
+      "defender"
+    ],
+    "minene": [
+      "assassin",
+      "tech"
+    ],
+    "tsubasa": [
+      "sword",
+      "fire",
+      "tech",
+      "defender"
+    ],
+    "saitama": [
+      "hero",
+      "brawler"
+    ],
+    "genos": [
+      "fire",
+      "lightning",
+      "hero",
+      "brawler",
+      "tech"
+    ],
+    "tatsumaki": [
+      "hero",
+      "esper"
+    ],
+    "shinra": [
+      "fire",
+      "brawler"
+    ],
+    "tamaki": [
+      "fire"
+    ],
+    "arthur": [
+      "sword",
+      "fire"
+    ],
+    "gon": [
+      "brawler"
+    ],
+    "killua": [
+      "lightning",
+      "assassin"
+    ],
+    "kurapika": [
+      "sword",
+      "eye"
+    ],
+    "hisoka": [
+      "villain"
+    ],
+    "neferpitou": [
+      "villain",
+      "beast"
+    ],
+    "misaka": [
+      "lightning",
+      "esper"
+    ],
+    "kuroko": [
+      "esper"
+    ],
+    "gunha": [
+      "brawler",
+      "esper"
+    ],
+    "shokuhou": [
+      "esper",
+      "tech"
+    ],
+    "rakko": [
+      "esper",
+      "assassin",
+      "gun",
+      "tech"
+    ],
+    "emiya": [
+      "sword"
+    ],
+    "saber": [
+      "sword",
+      "servant"
+    ],
+    "gilgamesh": [
+      "hero",
+      "servant",
+      "villain",
+      "bow"
+    ],
+    "emiyaarcher": [
+      "sword",
+      "servant",
+      "bow"
+    ],
+    "jack": [
+      "undead",
+      "servant",
+      "assassin",
+      "shadow"
+    ],
+    "semiramis": [
+      "servant",
+      "assassin",
+      "mage"
+    ],
+    "frankenstein": [
+      "lightning",
+      "servant"
+    ],
+    "mash": [
+      "servant",
+      "defender"
+    ],
+    "ryuko": [
+      "sword"
+    ],
+    "satsuki": [
+      "sword"
+    ],
+    "nonon": [
+      "air",
+      "sound",
+      "gun",
+      "tech"
+    ],
+    "ichigo": [
+      "sword",
+      "shinigami"
+    ],
+    "orihime": [
+      "defender"
+    ],
+    "byakuya": [
+      "sword",
+      "shinigami"
+    ],
+    "nel": [
+      "defender",
+      "beast"
+    ],
+    "halibel": [
+      "sword",
+      "water",
+      "villain",
+      "beast"
+    ],
+    "nimaiya": [
+      "sword",
+      "shinigami"
+    ],
+    "ichibe": [
+      "leader",
+      "shinigami",
+      "shadow"
+    ],
+    "kurotsuchi": [
+      "sword",
+      "shinigami",
+      "tech"
+    ],
+    "yoruichi": [
+      "lightning",
+      "brawler",
+      "shinigami"
+    ],
+    "ganta": [
+      "blood",
+      "gun"
+    ],
+    "shiro": [
+      "brawler",
+      "blood"
+    ],
+    "ken": [
+      "undead",
+      "villain",
+      "blood",
+      "eye"
+    ],
+    "touka": [
+      "undead",
+      "blood"
+    ],
+    "rimuru": [
+      "leader",
+      "shadow"
+    ],
+    "veldora": [
+      "brawler",
+      "villain"
+    ],
+    "edward": [
+      "brawler",
+      "tech"
+    ],
+    "alphonse": [
+      "earth",
+      "defender"
+    ],
+    "goku": [
+      "brawler"
+    ],
+    "vegeta": [
+      "brawler",
+      "villain"
+    ],
+    "gohan": [
+      "brawler"
+    ],
+    "gogeta": [
+      "brawler"
+    ],
+    "cooler": [
+      "brawler",
+      "villain"
+    ],
+    "cell": [
+      "brawler",
+      "villain"
+    ],
+    "seventeen": [
+      "brawler",
+      "villain",
+      "tech"
+    ],
+    "broly": [
+      "brawler",
+      "villain"
+    ],
+    "frieza": [
+      "leader",
+      "villain"
+    ],
+    "gatomon": [
+      "digimon",
+      "bow",
+      "beast"
+    ],
+    "hawkmon": [
+      "air",
+      "digimon",
+      "beast"
+    ],
+    "adam": [
+      "brawler",
+      "eye"
+    ],
+    "denji": [
+      "brawler",
+      "blood"
+    ],
+    "power": [
+      "blood"
+    ],
+    "impmon": [
+      "fire",
+      "digimon",
+      "gun",
+      "shadow"
+    ],
+    "renamon": [
+      "fire",
+      "digimon",
+      "beast"
+    ],
+    "myotismon": [
+      "undead",
+      "villain",
+      "digimon",
+      "blood"
+    ],
+    "ladydevimon": [
+      "villain",
+      "digimon",
+      "shadow"
+    ],
+    "machinedramon": [
+      "villain",
+      "digimon",
+      "tech"
+    ],
+    "gallantmon": [
+      "hero",
+      "digimon",
+      "defender"
+    ],
+    "omnimon": [
+      "sword",
+      "hero",
+      "digimon"
+    ],
+    "alphamon": [
+      "sword",
+      "digimon"
+    ],
+    "yoh": [
+      "sword",
+      "earth"
+    ],
+    "horohoro": [
+      "water",
+      "ice"
+    ],
+    "lyserg": [
+      "fire",
+      "tech"
+    ],
+    "jeanne": [
+      "leader",
+      "defender"
+    ],
+    "nagisa": [
+      "assassin"
+    ],
+    "koro": [
+      "leader",
+      "villain",
+      "assassin"
+    ],
+    "mercury": [
+      "water",
+      "ice",
+      "magical girl"
+    ],
+    "venus": [
+      "leader",
+      "magical girl"
+    ],
+    "mars": [
+      "fire",
+      "magical girl"
+    ],
+    "jupiter": [
+      "lightning",
+      "magical girl"
+    ],
+    "saturn": [
+      "magical girl",
+      "shadow"
+    ],
+    "uranus": [
+      "air",
+      "fire",
+      "magical girl",
+      "defender"
+    ],
+    "frieren": [
+      "fire",
+      "mage"
+    ],
+    "fern": [
+      "mage"
+    ],
+    "stark": [
+      "brawler",
+      "defender"
+    ],
+    "megumin": [
+      "fire",
+      "mage"
+    ],
+    "inuyasha": [
+      "sword",
+      "blood"
+    ],
+    "yugi": [
+      "shadow",
+      "tech"
+    ],
+    "kaiba": [
+      "tech"
+    ],
+    "pegasus": [
+      "villain",
+      "shadow",
+      "eye"
+    ],
+    "jaden": [
+      "air",
+      "water",
+      "earth",
+      "fire",
+      "hero",
+      "tech",
+      "defender"
+    ],
+    "jesse": [
+      "tech",
+      "beast"
+    ],
+    "yubel": [
+      "villain",
+      "shadow",
+      "eye"
+    ],
+    "shinoa": [
+      "leader",
+      "scythe"
+    ],
+    "toudou": [
+      "sword",
+      "lightning",
+      "leader"
+    ],
+    "gasai": [
+      "gun",
+      "tech",
+      "defender"
+    ],
+    "blackwargreymon": [
+      "hero",
+      "villain",
+      "digimon"
+    ],
+    "astolfo": [
+      "servant",
+      "defender"
+    ],
+    "death": [
+      "leader",
+      "shadow",
+      "scythe"
+    ]
+  },
+  "mission_types": [
+    "with",
+    "with",
+    "with",
+    "against",
+    "against",
+    "versus"
+  ],
+  "categories": {
+    "sword": [
+      "esdeath",
+      "zoro",
+      "meliodas",
+      "erza",
+      "sayaka",
+      "asta",
+      "blackstar",
+      "tatsumi",
+      "akame",
+      "tanjiro",
+      "zenitsu",
+      "inosuke",
+      "rengoku",
+      "muichiro",
+      "yamamoto",
+      "squalo",
+      "eren",
+      "mikasa",
+      "kurapika",
+      "emiya",
+      "saber",
+      "emiyaarcher",
+      "ryuko",
+      "satsuki",
+      "ichigo",
+      "byakuya",
+      "nimaiya",
+      "omnimon",
+      "uzui",
+      "inuyasha",
+      "toudou",
+      "yoh",
+      "alphamon",
+      "halibel",
+      "kurotsuchi",
+      "arthur",
+      "toji",
+      "levi",
+      "jinwoo",
+      "tsubasa"
+    ],
+    "air": [
+      "naruto",
+      "yuno",
+      "aang",
+      "korra",
+      "hawkmon",
+      "nonon",
+      "boruto",
+      "muichiro",
+      "jaden",
+      "uranus"
+    ],
+    "water": [
+      "lucy",
+      "hashirama",
+      "noelle",
+      "aang",
+      "korra",
+      "tanjiro",
+      "muichiro",
+      "yamamoto",
+      "squalo",
+      "gray",
+      "mercury",
+      "jaden",
+      "kitara",
+      "horohoro",
+      "halibel"
+    ],
+    "earth": [
+      "diane",
+      "hashirama",
+      "aang",
+      "toph",
+      "korra",
+      "alphonse",
+      "jaden",
+      "yoh"
+    ],
+    "ice": [
+      "gray",
+      "esdeath",
+      "mercury",
+      "kitara",
+      "todoroki",
+      "horohoro"
+    ],
+    "fire": [
+      "sasuke",
+      "bakugo",
+      "natsu",
+      "meliodas",
+      "frieren",
+      "ace",
+      "sukuna",
+      "aang",
+      "korra",
+      "rengoku",
+      "tsunayoshi",
+      "genos",
+      "shinra",
+      "tamaki",
+      "mars",
+      "megumin",
+      "renamon",
+      "jaden",
+      "chrome",
+      "todoroki",
+      "lyserg",
+      "uranus",
+      "arthur",
+      "impmon",
+      "tsubasa"
+    ],
+    "lightning": [
+      "sasuke",
+      "zenitsu",
+      "genos",
+      "killua",
+      "misaka",
+      "frankenstein",
+      "jupiter",
+      "toudou",
+      "lightning",
+      "yoruichi"
+    ],
+    "undead": [
+      "jack",
+      "ken",
+      "touka",
+      "myotismon",
+      "hashirama",
+      "ban"
+    ],
+    "ninja": [
+      "naruto",
+      "sasuke",
+      "sakura",
+      "hinata",
+      "hashirama",
+      "tsubaki",
+      "boruto",
+      "uzui",
+      "itachi"
+    ],
+    "hero": [
+      "midoriya",
+      "uraraka",
+      "bakugo",
+      "saitama",
+      "genos",
+      "tatsumaki",
+      "gilgamesh",
+      "gallantmon",
+      "omnimon",
+      "tsuyu",
+      "sayaka",
+      "jaden",
+      "todoroki",
+      "allmight",
+      "blackwargreymon"
+    ],
+    "fairy tail": [
+      "natsu",
+      "lucy",
+      "gray",
+      "erza",
+      "mavis"
+    ],
+    "vongola": [
+      "tsunayoshi",
+      "yamamoto",
+      "ryohei",
+      "xanxus",
+      "squalo",
+      "chrome",
+      "hibari"
+    ],
+    "leader": [
+      "esdeath",
+      "shinoa",
+      "gojo",
+      "luffy",
+      "meliodas",
+      "koro",
+      "hashirama",
+      "rob",
+      "tsunayoshi",
+      "xanxus",
+      "rimuru",
+      "venus",
+      "toudou",
+      "ichibe",
+      "jeanne",
+      "mavis",
+      "levi",
+      "death",
+      "frieza"
+    ],
+    "brawler": [
+      "edward",
+      "gon",
+      "luffy",
+      "yuji",
+      "midoriya",
+      "bakugo",
+      "goku",
+      "vegeta",
+      "natsu",
+      "rob",
+      "ryohei",
+      "saitama",
+      "genos",
+      "shinra",
+      "gunha",
+      "gogeta",
+      "sakura",
+      "shiro",
+      "gohan",
+      "allmight",
+      "veldora",
+      "cooler",
+      "cell",
+      "seventeen",
+      "hibari",
+      "broly",
+      "adam",
+      "toji",
+      "aiohto",
+      "denji",
+      "yoruichi",
+      "stark"
+    ],
+    "servant": [
+      "saber",
+      "gilgamesh",
+      "emiyaarcher",
+      "jack",
+      "semiramis",
+      "frankenstein",
+      "mash",
+      "astolfo"
+    ],
+    "shinigami": [
+      "ichigo",
+      "byakuya",
+      "nimaiya",
+      "kid",
+      "ichibe",
+      "kurotsuchi",
+      "yoruichi"
+    ],
+    "pirate": [
+      "luffy",
+      "zoro",
+      "usopp",
+      "marco",
+      "ace"
+    ],
+    "esper": [
+      "tatsumaki",
+      "misaka",
+      "kuroko",
+      "gunha",
+      "shokuhou",
+      "rakko"
+    ],
+    "magical girl": [
+      "madoka",
+      "sayaka",
+      "mami",
+      "mars",
+      "jupiter",
+      "saturn",
+      "mercury",
+      "venus",
+      "uranus"
+    ],
+    "night raid": [
+      "tatsumi",
+      "akame",
+      "sheele",
+      "mine"
+    ],
+    "sins": [
+      "meliodas",
+      "king",
+      "diane",
+      "ban"
+    ],
+    "villain": [
+      "esdeath",
+      "sasuke",
+      "gilgamesh",
+      "ken",
+      "vegeta",
+      "machinedramon",
+      "xanxus",
+      "toga",
+      "sukuna",
+      "rob",
+      "myotismon",
+      "hisoka",
+      "neferpitou",
+      "koro",
+      "ladydevimon",
+      "pegasus",
+      "halibel",
+      "veldora",
+      "itachi",
+      "eren",
+      "yubel",
+      "cooler",
+      "cell",
+      "seventeen",
+      "broly",
+      "toji",
+      "blackwargreymon",
+      "frieza"
+    ],
+    "digimon": [
+      "gatomon",
+      "omnimon",
+      "myotismon",
+      "machinedramon",
+      "gallantmon",
+      "renamon",
+      "hawkmon",
+      "ladydevimon",
+      "alphamon",
+      "impmon",
+      "blackwargreymon"
+    ],
+    "assassin": [
+      "esdeath",
+      "rob",
+      "blackstar",
+      "tatsumi",
+      "sheele",
+      "akame",
+      "killua",
+      "jack",
+      "semiramis",
+      "nagisa",
+      "tsubaki",
+      "koro",
+      "mine",
+      "rakko",
+      "jinwoo",
+      "minene"
+    ],
+    "mage": [
+      "asta",
+      "noelle",
+      "yuno",
+      "natsu",
+      "gray",
+      "lucy",
+      "semiramis",
+      "megumin",
+      "frieren",
+      "erza",
+      "megumi",
+      "nobara",
+      "gojo",
+      "sukuna",
+      "mavis",
+      "jinwoo",
+      "fern"
+    ],
+    "blood": [
+      "toga",
+      "crona",
+      "nezuko",
+      "ganta",
+      "shiro",
+      "myotismon",
+      "inuyasha",
+      "ken",
+      "touka",
+      "denji",
+      "power"
+    ],
+    "sound": [
+      "sayaka",
+      "soul",
+      "toph",
+      "uzui",
+      "nonon"
+    ],
+    "bow": [
+      "sukuna",
+      "madoka",
+      "gilgamesh",
+      "emiyaarcher",
+      "gatomon"
+    ],
+    "gun": [
+      "mami",
+      "kid",
+      "xanxus",
+      "nonon",
+      "ganta",
+      "mine",
+      "lizandpatty",
+      "rakko",
+      "impmon",
+      "gasai"
+    ],
+    "shadow": [
+      "megumi",
+      "tokoyami",
+      "jack",
+      "rimuru",
+      "saturn",
+      "yugi",
+      "ichibe",
+      "ladydevimon",
+      "pegasus",
+      "yubel",
+      "impmon",
+      "jinwoo",
+      "death"
+    ],
+    "tech": [
+      "edward",
+      "genos",
+      "shokuhou",
+      "nonon",
+      "machinedramon",
+      "yugi",
+      "kaiba",
+      "jaden",
+      "jesse",
+      "mine",
+      "lyserg",
+      "kurotsuchi",
+      "rakko",
+      "seventeen",
+      "gasai",
+      "minene",
+      "tsubasa"
+    ],
+    "defender": [
+      "gallantmon",
+      "eren",
+      "mash",
+      "orihime",
+      "alphonse",
+      "jaden",
+      "nel",
+      "jeanne",
+      "allmight",
+      "uranus",
+      "gasai",
+      "astolfo",
+      "jinwoo",
+      "tsubasa",
+      "stark"
+    ],
+    "beast": [
+      "marco",
+      "tokoyami",
+      "tsuyu",
+      "inosuke",
+      "gatomon",
+      "hawkmon",
+      "renamon",
+      "jesse",
+      "nel",
+      "halibel",
+      "neferpitou"
+    ],
+    "eye": [
+      "sasuke",
+      "boruto",
+      "gojo",
+      "ken",
+      "hinata",
+      "kurapika",
+      "pegasus",
+      "itachi",
+      "yubel",
+      "adam",
+      "aiohto"
+    ],
+    "scythe": [
+      "maka",
+      "soul",
+      "tsubaki",
+      "shinoa",
+      "death"
+    ]
+  },
+  "archetypes": [
+    "scythe",
+    "eye",
+    "sword",
+    "air",
+    "water",
+    "earth",
+    "ice",
+    "fire",
+    "lightning",
+    "undead",
+    "ninja",
+    "hero",
+    "fairy tail",
+    "vongola",
+    "leader",
+    "brawler",
+    "servant",
+    "shinigami",
+    "pirate",
+    "esper",
+    "magical girl",
+    "night raid",
+    "sins",
+    "villain",
+    "digimon",
+    "assassin",
+    "non human",
+    "mage",
+    "blood",
+    "sound",
+    "bow",
+    "gun",
+    "shadow",
+    "tech",
+    "defender",
+    "beast"
+  ],
+  "winning_patterns": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    [
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    [
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    [
+      0,
+      5,
+      10,
+      15,
+      20
+    ],
+    [
+      1,
+      6,
+      11,
+      16,
+      21
+    ],
+    [
+      2,
+      7,
+      12,
+      17,
+      22
+    ],
+    [
+      3,
+      8,
+      13,
+      18,
+      23
+    ],
+    [
+      4,
+      9,
+      14,
+      19,
+      24
+    ],
+    [
+      0,
+      6,
+      12,
+      18,
+      24
+    ],
+    [
+      4,
+      8,
+      12,
+      16,
+      20
+    ]
+  ],
+  "mastery_suffix": "_mastery",
+  "char_name_list": [
+    "naruto",
+    "sasuke",
+    "sakura",
+    "hinata",
+    "hashirama",
+    "boruto",
+    "itachi",
+    "luffy",
+    "zoro",
+    "usopp",
+    "ace",
+    "marco",
+    "rob",
+    "yuji",
+    "nobara",
+    "megumi",
+    "sukuna",
+    "gojo",
+    "toji",
+    "midoriya",
+    "uraraka",
+    "bakugo",
+    "todoroki",
+    "tokoyami",
+    "tsuyu",
+    "toga",
+    "allmight",
+    "natsu",
+    "lucy",
+    "gray",
+    "erza",
+    "mavis",
+    "madoka",
+    "sayaka",
+    "mami",
+    "asta",
+    "yuno",
+    "noelle",
+    "maka",
+    "soul",
+    "blackstar",
+    "tsubaki",
+    "kid",
+    "lizandpatty",
+    "crona",
+    "aang",
+    "kitara",
+    "toph",
+    "korra",
+    "tatsumi",
+    "akame",
+    "sheele",
+    "mine",
+    "esdeath",
+    "tanjiro",
+    "nezuko",
+    "zenitsu",
+    "inosuke",
+    "rengoku",
+    "muichiro",
+    "uzui",
+    "meliodas",
+    "diane",
+    "king",
+    "ban",
+    "tsunayoshi",
+    "yamamoto",
+    "ryohei",
+    "chrome",
+    "squalo",
+    "xanxus",
+    "hibari",
+    "eren",
+    "mikasa",
+    "levi",
+    "aiohto",
+    "jinwoo",
+    "minene",
+    "tsubasa",
+    "saitama",
+    "genos",
+    "tatsumaki",
+    "shinra",
+    "tamaki",
+    "arthur",
+    "gon",
+    "killua",
+    "kurapika",
+    "hisoka",
+    "neferpitou",
+    "misaka",
+    "kuroko",
+    "gunha",
+    "shokuhou",
+    "rakko",
+    "emiya",
+    "saber",
+    "gilgamesh",
+    "emiyaarcher",
+    "jack",
+    "semiramis",
+    "frankenstein",
+    "mash",
+    "ryuko",
+    "satsuki",
+    "nonon",
+    "ichigo",
+    "orihime",
+    "byakuya",
+    "nel",
+    "halibel",
+    "nimaiya",
+    "ichibe",
+    "kurotsuchi",
+    "yoruichi",
+    "ganta",
+    "shiro",
+    "ken",
+    "touka",
+    "rimuru",
+    "veldora",
+    "edward",
+    "alphonse",
+    "goku",
+    "vegeta",
+    "gohan",
+    "gogeta",
+    "cooler",
+    "cell",
+    "seventeen",
+    "broly",
+    "frieza",
+    "gatomon",
+    "hawkmon",
+    "adam",
+    "denji",
+    "power",
+    "impmon",
+    "renamon",
+    "myotismon",
+    "ladydevimon",
+    "machinedramon",
+    "gallantmon",
+    "omnimon",
+    "alphamon",
+    "yoh",
+    "horohoro",
+    "lyserg",
+    "jeanne",
+    "nagisa",
+    "koro",
+    "mercury",
+    "venus",
+    "mars",
+    "jupiter",
+    "saturn",
+    "uranus",
+    "frieren",
+    "fern",
+    "stark",
+    "megumin",
+    "inuyasha",
+    "yugi",
+    "kaiba",
+    "pegasus",
+    "jaden",
+    "jesse",
+    "yubel",
+    "shinoa",
+    "toudou",
+    "gasai",
+    "blackwargreymon",
+    "astolfo",
+    "death"
+  ],
+  "roster": [
+    {
+      "path_name": "naruto",
+      "universe": 0
+    },
+    {
+      "path_name": "sasuke",
+      "universe": 0
+    },
+    {
+      "path_name": "sakura",
+      "universe": 0
+    },
+    {
+      "path_name": "hinata",
+      "universe": 0
+    },
+    {
+      "path_name": "hashirama",
+      "universe": 0
+    },
+    {
+      "path_name": "boruto",
+      "universe": 0
+    },
+    {
+      "path_name": "itachi",
+      "universe": 0
+    },
+    {
+      "path_name": "luffy",
+      "universe": 2
+    },
+    {
+      "path_name": "zoro",
+      "universe": 2
+    },
+    {
+      "path_name": "usopp",
+      "universe": 2
+    },
+    {
+      "path_name": "ace",
+      "universe": 2
+    },
+    {
+      "path_name": "marco",
+      "universe": 2
+    },
+    {
+      "path_name": "rob",
+      "universe": 2
+    },
+    {
+      "path_name": "yuji",
+      "universe": 23
+    },
+    {
+      "path_name": "nobara",
+      "universe": 23
+    },
+    {
+      "path_name": "megumi",
+      "universe": 23
+    },
+    {
+      "path_name": "sukuna",
+      "universe": 23
+    },
+    {
+      "path_name": "gojo",
+      "universe": 23
+    },
+    {
+      "path_name": "toji",
+      "universe": 23
+    },
+    {
+      "path_name": "midoriya",
+      "universe": 3
+    },
+    {
+      "path_name": "uraraka",
+      "universe": 3
+    },
+    {
+      "path_name": "bakugo",
+      "universe": 3
+    },
+    {
+      "path_name": "todoroki",
+      "universe": 3
+    },
+    {
+      "path_name": "tokoyami",
+      "universe": 3
+    },
+    {
+      "path_name": "tsuyu",
+      "universe": 3
+    },
+    {
+      "path_name": "toga",
+      "universe": 3
+    },
+    {
+      "path_name": "allmight",
+      "universe": 3
+    },
+    {
+      "path_name": "natsu",
+      "universe": 6
+    },
+    {
+      "path_name": "lucy",
+      "universe": 6
+    },
+    {
+      "path_name": "gray",
+      "universe": 6
+    },
+    {
+      "path_name": "erza",
+      "universe": 6
+    },
+    {
+      "path_name": "mavis",
+      "universe": 6
+    },
+    {
+      "path_name": "madoka",
+      "universe": 5
+    },
+    {
+      "path_name": "sayaka",
+      "universe": 5
+    },
+    {
+      "path_name": "mami",
+      "universe": 5
+    },
+    {
+      "path_name": "asta",
+      "universe": 4
+    },
+    {
+      "path_name": "yuno",
+      "universe": 4
+    },
+    {
+      "path_name": "noelle",
+      "universe": 4
+    },
+    {
+      "path_name": "maka",
+      "universe": 7
+    },
+    {
+      "path_name": "soul",
+      "universe": 7
+    },
+    {
+      "path_name": "blackstar",
+      "universe": 7
+    },
+    {
+      "path_name": "tsubaki",
+      "universe": 7
+    },
+    {
+      "path_name": "kid",
+      "universe": 7
+    },
+    {
+      "path_name": "lizandpatty",
+      "universe": 7
+    },
+    {
+      "path_name": "crona",
+      "universe": 7
+    },
+    {
+      "path_name": "aang",
+      "universe": 8
+    },
+    {
+      "path_name": "kitara",
+      "universe": 8
+    },
+    {
+      "path_name": "toph",
+      "universe": 8
+    },
+    {
+      "path_name": "korra",
+      "universe": 8
+    },
+    {
+      "path_name": "tatsumi",
+      "universe": 9
+    },
+    {
+      "path_name": "akame",
+      "universe": 9
+    },
+    {
+      "path_name": "sheele",
+      "universe": 9
+    },
+    {
+      "path_name": "mine",
+      "universe": 9
+    },
+    {
+      "path_name": "esdeath",
+      "universe": 9
+    },
+    {
+      "path_name": "tanjiro",
+      "universe": 10
+    },
+    {
+      "path_name": "nezuko",
+      "universe": 10
+    },
+    {
+      "path_name": "zenitsu",
+      "universe": 10
+    },
+    {
+      "path_name": "inosuke",
+      "universe": 10
+    },
+    {
+      "path_name": "rengoku",
+      "universe": 10
+    },
+    {
+      "path_name": "muichiro",
+      "universe": 10
+    },
+    {
+      "path_name": "uzui",
+      "universe": 10
+    },
+    {
+      "path_name": "meliodas",
+      "universe": 11
+    },
+    {
+      "path_name": "diane",
+      "universe": 11
+    },
+    {
+      "path_name": "king",
+      "universe": 11
+    },
+    {
+      "path_name": "ban",
+      "universe": 11
+    },
+    {
+      "path_name": "tsunayoshi",
+      "universe": 12
+    },
+    {
+      "path_name": "yamamoto",
+      "universe": 12
+    },
+    {
+      "path_name": "ryohei",
+      "universe": 12
+    },
+    {
+      "path_name": "chrome",
+      "universe": 12
+    },
+    {
+      "path_name": "squalo",
+      "universe": 12
+    },
+    {
+      "path_name": "xanxus",
+      "universe": 12
+    },
+    {
+      "path_name": "hibari",
+      "universe": 12
+    },
+    {
+      "path_name": "eren",
+      "universe": 13
+    },
+    {
+      "path_name": "mikasa",
+      "universe": 13
+    },
+    {
+      "path_name": "levi",
+      "universe": 13
+    },
+    {
+      "path_name": "aiohto",
+      "universe": 51
+    },
+    {
+      "path_name": "jinwoo",
+      "universe": 31
+    },
+    {
+      "path_name": "minene",
+      "universe": 47
+    },
+    {
+      "path_name": "tsubasa",
+      "universe": 50
+    },
+    {
+      "path_name": "saitama",
+      "universe": 14
+    },
+    {
+      "path_name": "genos",
+      "universe": 14
+    },
+    {
+      "path_name": "tatsumaki",
+      "universe": 14
+    },
+    {
+      "path_name": "shinra",
+      "universe": 15
+    },
+    {
+      "path_name": "tamaki",
+      "universe": 15
+    },
+    {
+      "path_name": "arthur",
+      "universe": 15
+    },
+    {
+      "path_name": "gon",
+      "universe": 16
+    },
+    {
+      "path_name": "killua",
+      "universe": 16
+    },
+    {
+      "path_name": "kurapika",
+      "universe": 16
+    },
+    {
+      "path_name": "hisoka",
+      "universe": 16
+    },
+    {
+      "path_name": "neferpitou",
+      "universe": 16
+    },
+    {
+      "path_name": "misaka",
+      "universe": 17
+    },
+    {
+      "path_name": "kuroko",
+      "universe": 17
+    },
+    {
+      "path_name": "gunha",
+      "universe": 17
+    },
+    {
+      "path_name": "shokuhou",
+      "universe": 17
+    },
+    {
+      "path_name": "rakko",
+      "universe": 17
+    },
+    {
+      "path_name": "emiya",
+      "universe": 18
+    },
+    {
+      "path_name": "saber",
+      "universe": 18
+    },
+    {
+      "path_name": "gilgamesh",
+      "universe": 18
+    },
+    {
+      "path_name": "emiyaarcher",
+      "universe": 18
+    },
+    {
+      "path_name": "jack",
+      "universe": 18
+    },
+    {
+      "path_name": "semiramis",
+      "universe": 18
+    },
+    {
+      "path_name": "frankenstein",
+      "universe": 18
+    },
+    {
+      "path_name": "mash",
+      "universe": 18
+    },
+    {
+      "path_name": "ryuko",
+      "universe": 19
+    },
+    {
+      "path_name": "satsuki",
+      "universe": 19
+    },
+    {
+      "path_name": "nonon",
+      "universe": 19
+    },
+    {
+      "path_name": "ichigo",
+      "universe": 1
+    },
+    {
+      "path_name": "orihime",
+      "universe": 1
+    },
+    {
+      "path_name": "byakuya",
+      "universe": 1
+    },
+    {
+      "path_name": "nel",
+      "universe": 1
+    },
+    {
+      "path_name": "halibel",
+      "universe": 1
+    },
+    {
+      "path_name": "nimaiya",
+      "universe": 1
+    },
+    {
+      "path_name": "ichibe",
+      "universe": 1
+    },
+    {
+      "path_name": "kurotsuchi",
+      "universe": 1
+    },
+    {
+      "path_name": "yoruichi",
+      "universe": 1
+    },
+    {
+      "path_name": "ganta",
+      "universe": 20
+    },
+    {
+      "path_name": "shiro",
+      "universe": 20
+    },
+    {
+      "path_name": "ken",
+      "universe": 21
+    },
+    {
+      "path_name": "touka",
+      "universe": 21
+    },
+    {
+      "path_name": "rimuru",
+      "universe": 22
+    },
+    {
+      "path_name": "veldora",
+      "universe": 22
+    },
+    {
+      "path_name": "edward",
+      "universe": 36
+    },
+    {
+      "path_name": "alphonse",
+      "universe": 36
+    },
+    {
+      "path_name": "goku",
+      "universe": 27
+    },
+    {
+      "path_name": "vegeta",
+      "universe": 27
+    },
+    {
+      "path_name": "gohan",
+      "universe": 27
+    },
+    {
+      "path_name": "gogeta",
+      "universe": 27
+    },
+    {
+      "path_name": "cooler",
+      "universe": 27
+    },
+    {
+      "path_name": "cell",
+      "universe": 27
+    },
+    {
+      "path_name": "seventeen",
+      "universe": 27
+    },
+    {
+      "path_name": "broly",
+      "universe": 27
+    },
+    {
+      "path_name": "frieza",
+      "universe": 27
+    },
+    {
+      "path_name": "gatomon",
+      "universe": 24
+    },
+    {
+      "path_name": "hawkmon",
+      "universe": 24
+    },
+    {
+      "path_name": "adam",
+      "universe": 43
+    },
+    {
+      "path_name": "denji",
+      "universe": 32
+    },
+    {
+      "path_name": "power",
+      "universe": 32
+    },
+    {
+      "path_name": "impmon",
+      "universe": 24
+    },
+    {
+      "path_name": "renamon",
+      "universe": 24
+    },
+    {
+      "path_name": "myotismon",
+      "universe": 24
+    },
+    {
+      "path_name": "ladydevimon",
+      "universe": 24
+    },
+    {
+      "path_name": "machinedramon",
+      "universe": 24
+    },
+    {
+      "path_name": "gallantmon",
+      "universe": 24
+    },
+    {
+      "path_name": "omnimon",
+      "universe": 24
+    },
+    {
+      "path_name": "alphamon",
+      "universe": 24
+    },
+    {
+      "path_name": "yoh",
+      "universe": 42
+    },
+    {
+      "path_name": "horohoro",
+      "universe": 42
+    },
+    {
+      "path_name": "lyserg",
+      "universe": 42
+    },
+    {
+      "path_name": "jeanne",
+      "universe": 42
+    },
+    {
+      "path_name": "nagisa",
+      "universe": 37
+    },
+    {
+      "path_name": "koro",
+      "universe": 37
+    },
+    {
+      "path_name": "mercury",
+      "universe": 25
+    },
+    {
+      "path_name": "venus",
+      "universe": 25
+    },
+    {
+      "path_name": "mars",
+      "universe": 25
+    },
+    {
+      "path_name": "jupiter",
+      "universe": 25
+    },
+    {
+      "path_name": "saturn",
+      "universe": 25
+    },
+    {
+      "path_name": "uranus",
+      "universe": 25
+    },
+    {
+      "path_name": "frieren",
+      "universe": 30
+    },
+    {
+      "path_name": "fern",
+      "universe": 30
+    },
+    {
+      "path_name": "stark",
+      "universe": 30
+    },
+    {
+      "path_name": "megumin",
+      "universe": 38
+    },
+    {
+      "path_name": "inuyasha",
+      "universe": 35
+    },
+    {
+      "path_name": "yugi",
+      "universe": 34
+    },
+    {
+      "path_name": "kaiba",
+      "universe": 34
+    },
+    {
+      "path_name": "pegasus",
+      "universe": 34
+    },
+    {
+      "path_name": "jaden",
+      "universe": 34
+    },
+    {
+      "path_name": "jesse",
+      "universe": 34
+    },
+    {
+      "path_name": "yubel",
+      "universe": 34
+    },
+    {
+      "path_name": "shinoa",
+      "universe": 39
+    },
+    {
+      "path_name": "toudou",
+      "universe": 40
+    },
+    {
+      "path_name": "gasai",
+      "universe": 47
+    },
+    {
+      "path_name": "blackwargreymon",
+      "universe": 24
+    },
+    {
+      "path_name": "astolfo",
+      "universe": 18
+    },
+    {
+      "path_name": "death",
+      "universe": 7
+    }
+  ],
+  "universe_enum": {
+    "NARUTO": 0,
+    "BLEACH": 1,
+    "ONE_PIECE": 2,
+    "MY_HERO_ACADEMIA": 3,
+    "BLACK_CLOVER": 4,
+    "MADOKA_MAGICA": 5,
+    "FAIRY_TAIL": 6,
+    "SOUL_EATER": 7,
+    "AVATAR": 8,
+    "AKAME_GA_KILL": 9,
+    "DEMON_SLAYER": 10,
+    "SEVEN_DEADLY_SINS": 11,
+    "KATEKYO_HITMAN_REBORN": 12,
+    "ATTACK_ON_TITAN": 13,
+    "ONE_PUNCH_MAN": 14,
+    "FIRE_FORCE": 15,
+    "HUNTER_X_HUNTER": 16,
+    "A_CERTAIN_SCIENTIFIC_RAILGUN": 17,
+    "FATE": 18,
+    "KILL_LA_KILL": 19,
+    "DEADMAN_WONDERLAND": 20,
+    "TOKYO_GHOUL": 21,
+    "THAT_TIME_I_GOT_REINCARNATED_AS_A_SLIME": 22,
+    "JUJUTSU_KAISEN": 23,
+    "DIGIMON": 24,
+    "SAILOR_MOON": 25,
+    "INVINCIBLE": 26,
+    "DRAGON_BALL": 27,
+    "MASHLE": 28,
+    "EMINENCE_IN_SHADOW": 29,
+    "FRIEREN": 30,
+    "SOLO_LEVELING": 31,
+    "CHAINSAW_MAN": 32,
+    "AO_NO_EXORCIST": 33,
+    "YUGIOH": 34,
+    "INUYASHA": 35,
+    "FULL_METAL_ALCHEMIST": 36,
+    "ASSASSINATION_CLASSROOM": 37,
+    "KONOSUBA": 38,
+    "SERAPH_OF_THE_END": 39,
+    "CHIVALRY_OF_A_FAILED_KNIGHT": 40,
+    "GACHIAKUTA": 41,
+    "SHAMAN_KING": 42,
+    "RECORD_OF_RAGNAROK": 43,
+    "SAINT_SEIYA": 44,
+    "YU_YU_HAKUSHO": 45,
+    "TOUGEN_ANKI": 46,
+    "MIRAI_NIKKI": 47,
+    "RE_ZERO": 48,
+    "BAKI": 49,
+    "SYMPHOGEAR": 50,
+    "WONDER_EGG_PRIORITY": 51,
+    "CUSTOM": 52,
+    "SWORD_ART_ONLINE": 53
+  },
+  "no_archetype_characters": [],
+  "category_members_not_on_roster": {
+    "lightning": [
+      "lightning"
+    ]
+  },
+  "archetypes_with_no_category": [
+    "non human"
+  ]
+}

@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/tamaki.gd" id="1_rglqq"]
+[ext_resource type="Texture2D" path="res://assets/images/Tamaki Kotatsu/tamakiprof.png" id="2_l8fkx"]
+[ext_resource type="Texture2D" path="res://assets/images/Tamaki Kotatsu/profile_mastery_tamaki.png" id="2_l84fp"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_mo4b6"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_t6g1t"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_ky5ra"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_kudj4"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_8rqoq"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_jo1gb"]
+
+[node name="Tamaki" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_rglqq")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_l84fp")
+mastery_name = "Nekomata Tamaki"
+portrait_texture = ExtResource("2_l8fkx")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_mo4b6")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_t6g1t")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_ky5ra")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_kudj4")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_8rqoq")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_jo1gb")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

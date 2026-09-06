@@ -1,0 +1,26 @@
+{
+  "_source": "components/server_connection.gd",
+  "_symbols": [
+    "GATE_BANDS",
+    "MM_TICK",
+    "ADMIN_USERNAMES"
+  ],
+  "_generated_by": "tools/reference_data.py",
+  "gate_bands": [
+    {
+      "max_delta_rating": -1,
+      "wait_multiplier": 0.0
+    }
+  ],
+  "_gate_bands_note": "max_delta_rating -1 is the catch-all. wait_multiplier is a MULTIPLE of the ranked bot delay, not seconds — the 'far pairs meet a bot first' property is what the multiples encode.",
+  "mm_tick_seconds": 1.0,
+  "admin_usernames": [
+    "Cheshire",
+    "IsaacTheEmperor"
+  ],
+  "bot_excluded_chars": [
+    "tsubaki",
+    "toga",
+    "fern"
+  ]
+}

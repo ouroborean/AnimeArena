@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/tatsumaki.gd" id="1_dtny5"]
+[ext_resource type="Texture2D" path="res://assets/images/Tatsumaki/profile_mastery_tatsumaki.png" id="2_4atfn"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_25ok5"]
+[ext_resource type="Texture2D" path="res://assets/images/Tatsumaki/tatsumakiprof.png" id="2_s84e7"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_4kq27"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_yoh15"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_me5cf"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_yilnt"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_46n0i"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_dtny5")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_4atfn")
+mastery_name = "Webtoon Tatsumaki"
+portrait_texture = ExtResource("2_s84e7")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_25ok5")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_4kq27")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_yoh15")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_me5cf")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_yilnt")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_46n0i")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

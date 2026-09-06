@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/mash.gd" id="1_a81xh"]
+[ext_resource type="Texture2D" path="res://assets/images/Mash Kyrielight/mashprof.png" id="2_e528y"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_oy6uo"]
+[ext_resource type="Texture2D" path="res://assets/images/Mash Kyrielight/alt_prof_mash.png" id="2_v665l"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_r0qed"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_nkwbi"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_a48xo"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_ucsub"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_fojyq"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_a81xh")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_v665l")
+mastery_name = "Demiservant Mash"
+portrait_texture = ExtResource("2_e528y")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_oy6uo")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_r0qed")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_nkwbi")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_a48xo")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_ucsub")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_fojyq")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

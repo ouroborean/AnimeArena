@@ -1,0 +1,820 @@
+{
+	"format": "aa-team-pool",
+	"teams": [
+		{
+			"chars": [
+				"asta",
+				"orihime",
+				"astolfo"
+			],
+			"key": "asta|astolfo|orihime",
+			"losses": 158.0,
+			"runs": 7.0,
+			"wins": 208.0
+		},
+		{
+			"chars": [
+				"satsuki",
+				"saturn",
+				"ganta"
+			],
+			"key": "ganta|satsuki|saturn",
+			"losses": 6.0,
+			"runs": 2.0,
+			"wins": 102.0
+		},
+		{
+			"chars": [
+				"neferpitou",
+				"yugi",
+				"boruto"
+			],
+			"key": "boruto|neferpitou|yugi",
+			"losses": 176.0,
+			"runs": 8.0,
+			"wins": 256.0
+		},
+		{
+			"chars": [
+				"shinra",
+				"gunha",
+				"mercury"
+			],
+			"key": "gunha|mercury|shinra",
+			"losses": 32.0,
+			"runs": 2.0,
+			"wins": 76.0
+		},
+		{
+			"chars": [
+				"uranus",
+				"jupiter",
+				"neferpitou"
+			],
+			"key": "jupiter|neferpitou|uranus",
+			"losses": 45.0,
+			"runs": 4.0,
+			"wins": 171.0
+		},
+		{
+			"chars": [
+				"kuroko",
+				"halibel",
+				"mavis"
+			],
+			"key": "halibel|kuroko|mavis",
+			"losses": 19.0,
+			"runs": 2.0,
+			"wins": 89.0
+		},
+		{
+			"chars": [
+				"hashirama",
+				"saber",
+				"madoka"
+			],
+			"key": "hashirama|madoka|saber",
+			"losses": 3.0,
+			"runs": 1.0,
+			"wins": 51.0
+		},
+		{
+			"chars": [
+				"kid",
+				"ken",
+				"frieza"
+			],
+			"key": "frieza|ken|kid",
+			"losses": 9.0,
+			"runs": 1.0,
+			"wins": 45.0
+		},
+		{
+			"chars": [
+				"naruto",
+				"ryohei",
+				"toga"
+			],
+			"key": "naruto|ryohei|toga",
+			"losses": 9.0,
+			"runs": 1.0,
+			"wins": 44.0
+		},
+		{
+			"chars": [
+				"yugi",
+				"astolfo",
+				"halibel"
+			],
+			"key": "astolfo|halibel|yugi",
+			"losses": 34.0,
+			"runs": 2.0,
+			"wins": 74.0
+		},
+		{
+			"chars": [
+				"levi",
+				"ace",
+				"saturn"
+			],
+			"key": "ace|levi|saturn",
+			"losses": 10.0,
+			"runs": 1.0,
+			"wins": 44.0
+		},
+		{
+			"chars": [
+				"gunha",
+				"jupiter",
+				"tatsumi"
+			],
+			"key": "gunha|jupiter|tatsumi",
+			"losses": 9.0,
+			"runs": 1.0,
+			"wins": 45.0
+		},
+		{
+			"chars": [
+				"jaden",
+				"jinwoo",
+				"usopp"
+			],
+			"key": "jaden|jinwoo|usopp",
+			"losses": 12.0,
+			"runs": 1.0,
+			"wins": 42.0
+		},
+		{
+			"chars": [
+				"esdeath",
+				"alphamon",
+				"natsu"
+			],
+			"key": "alphamon|esdeath|natsu",
+			"losses": 2.0,
+			"runs": 1.0,
+			"wins": 52.0
+		},
+		{
+			"chars": [
+				"marco",
+				"bakugo",
+				"shinra"
+			],
+			"key": "bakugo|marco|shinra",
+			"losses": 34.0,
+			"runs": 2.0,
+			"wins": 74.0
+		},
+		{
+			"chars": [
+				"maka",
+				"mavis",
+				"zoro"
+			],
+			"key": "maka|mavis|zoro",
+			"losses": 8.0,
+			"runs": 1.0,
+			"wins": 46.0
+		},
+		{
+			"chars": [
+				"ladydevimon",
+				"zoro",
+				"rakko"
+			],
+			"key": "ladydevimon|rakko|zoro",
+			"losses": 8.0,
+			"runs": 1.0,
+			"wins": 46.0
+		},
+		{
+			"chars": [
+				"naruto",
+				"mikasa",
+				"usopp"
+			],
+			"key": "mikasa|naruto|usopp",
+			"losses": 8.0,
+			"runs": 1.0,
+			"wins": 44.0
+		},
+		{
+			"chars": [
+				"mikasa",
+				"mercury",
+				"broly"
+			],
+			"key": "broly|mercury|mikasa",
+			"losses": 18.0,
+			"runs": 2.0,
+			"wins": 90.0
+		},
+		{
+			"chars": [
+				"nagisa",
+				"emiya",
+				"xanxus"
+			],
+			"key": "emiya|nagisa|xanxus",
+			"losses": 6.0,
+			"runs": 1.0,
+			"wins": 48.0
+		},
+		{
+			"chars": [
+				"nonon",
+				"pegasus",
+				"mavis"
+			],
+			"key": "mavis|nonon|pegasus",
+			"losses": 7.0,
+			"runs": 1.0,
+			"wins": 47.0
+		},
+		{
+			"chars": [
+				"shinra",
+				"gogeta",
+				"madoka"
+			],
+			"key": "gogeta|madoka|shinra",
+			"losses": 2.0,
+			"runs": 1.0,
+			"wins": 52.0
+		},
+		{
+			"chars": [
+				"mash",
+				"mars",
+				"nimaiya"
+			],
+			"key": "mars|mash|nimaiya",
+			"losses": 6.0,
+			"runs": 1.0,
+			"wins": 48.0
+		},
+		{
+			"chars": [
+				"gunha",
+				"mash",
+				"tatsumaki"
+			],
+			"key": "gunha|mash|tatsumaki",
+			"losses": 10.0,
+			"runs": 1.0,
+			"wins": 44.0
+		},
+		{
+			"chars": [
+				"gray",
+				"maka",
+				"toudou"
+			],
+			"key": "gray|maka|toudou",
+			"losses": 8.0,
+			"runs": 1.0,
+			"wins": 46.0
+		},
+		{
+			"chars": [
+				"maka",
+				"satsuki",
+				"nimaiya"
+			],
+			"key": "maka|nimaiya|satsuki",
+			"losses": 2.0,
+			"runs": 1.0,
+			"wins": 52.0
+		},
+		{
+			"chars": [
+				"gojo",
+				"gallantmon",
+				"ichibe"
+			],
+			"key": "gallantmon|gojo|ichibe",
+			"losses": 3.0,
+			"runs": 1.0,
+			"wins": 51.0
+		},
+		{
+			"chars": [
+				"uraraka",
+				"hashirama",
+				"yuno"
+			],
+			"key": "hashirama|uraraka|yuno",
+			"losses": 2.0,
+			"runs": 1.0,
+			"wins": 52.0
+		},
+		{
+			"chars": [
+				"gohan",
+				"luffy",
+				"mine"
+			],
+			"key": "gohan|luffy|mine",
+			"losses": 11.0,
+			"runs": 1.0,
+			"wins": 43.0
+		},
+		{
+			"chars": [
+				"ladydevimon",
+				"ichibe",
+				"midoriya"
+			],
+			"key": "ichibe|ladydevimon|midoriya",
+			"losses": 3.0,
+			"runs": 1.0,
+			"wins": 51.0
+		},
+		{
+			"chars": [
+				"lucy",
+				"ganta",
+				"toudou"
+			],
+			"key": "ganta|lucy|toudou",
+			"losses": 16.0,
+			"runs": 1.0,
+			"wins": 38.0
+		},
+		{
+			"chars": [
+				"astolfo",
+				"jupiter",
+				"rakko"
+			],
+			"key": "astolfo|jupiter|rakko",
+			"losses": 22.0,
+			"runs": 2.0,
+			"wins": 86.0
+		},
+		{
+			"chars": [
+				"asta",
+				"mavis",
+				"minene"
+			],
+			"key": "asta|mavis|minene",
+			"losses": 7.0,
+			"runs": 1.0,
+			"wins": 47.0
+		},
+		{
+			"chars": [
+				"ladydevimon",
+				"jack",
+				"toga"
+			],
+			"key": "jack|ladydevimon|toga",
+			"losses": 7.0,
+			"runs": 1.0,
+			"wins": 47.0
+		},
+		{
+			"chars": [
+				"nagisa",
+				"shinoa",
+				"alphamon"
+			],
+			"key": "alphamon|nagisa|shinoa",
+			"losses": 5.0,
+			"runs": 1.0,
+			"wins": 49.0
+		},
+		{
+			"chars": [
+				"kuroko",
+				"saturn",
+				"mash"
+			],
+			"key": "kuroko|mash|saturn",
+			"losses": 5.0,
+			"runs": 1.0,
+			"wins": 49.0
+		},
+		{
+			"chars": [
+				"chrome",
+				"broly",
+				"meliodas"
+			],
+			"key": "broly|chrome|meliodas",
+			"losses": 36.0,
+			"runs": 2.0,
+			"wins": 72.0
+		},
+		{
+			"chars": [
+				"madoka",
+				"saber",
+				"venus"
+			],
+			"key": "madoka|saber|venus",
+			"losses": 6.0,
+			"runs": 1.0,
+			"wins": 48.0
+		},
+		{
+			"chars": [
+				"eren",
+				"sukuna",
+				"zenitsu"
+			],
+			"key": "eren|sukuna|zenitsu",
+			"losses": 13.0,
+			"runs": 1.0,
+			"wins": 41.0
+		},
+		{
+			"chars": [
+				"alphamon",
+				"venus",
+				"arthur"
+			],
+			"key": "alphamon|arthur|venus",
+			"losses": 11.0,
+			"runs": 1.0,
+			"wins": 43.0
+		},
+		{
+			"chars": [
+				"saturn",
+				"tatsumaki",
+				"omnimon"
+			],
+			"key": "omnimon|saturn|tatsumaki",
+			"losses": 10.0,
+			"runs": 1.0,
+			"wins": 44.0
+		},
+		{
+			"chars": [
+				"gatomon",
+				"chrome",
+				"meliodas"
+			],
+			"key": "chrome|gatomon|meliodas",
+			"losses": 12.0,
+			"runs": 1.0,
+			"wins": 42.0
+		},
+		{
+			"chars": [
+				"tsubaki",
+				"satsuki",
+				"madoka"
+			],
+			"key": "madoka|satsuki|tsubaki",
+			"losses": 16.0,
+			"runs": 2.0,
+			"wins": 92.0
+		},
+		{
+			"chars": [
+				"neferpitou",
+				"esdeath",
+				"usopp"
+			],
+			"key": "esdeath|neferpitou|usopp",
+			"losses": 2.0,
+			"runs": 1.0,
+			"wins": 52.0
+		},
+		{
+			"chars": [
+				"nagisa",
+				"toudou",
+				"hibari"
+			],
+			"key": "hibari|nagisa|toudou",
+			"losses": 1.0,
+			"runs": 1.0,
+			"wins": 53.0
+		},
+		{
+			"chars": [
+				"gallantmon",
+				"yugi",
+				"chrome"
+			],
+			"key": "chrome|gallantmon|yugi",
+			"losses": 8.0,
+			"runs": 1.0,
+			"wins": 46.0
+		},
+		{
+			"chars": [
+				"luffy",
+				"yoruichi",
+				"alphamon"
+			],
+			"key": "alphamon|luffy|yoruichi",
+			"losses": 5.0,
+			"runs": 1.0,
+			"wins": 49.0
+		},
+		{
+			"chars": [
+				"nagisa",
+				"power",
+				"tatsumaki"
+			],
+			"key": "nagisa|power|tatsumaki",
+			"losses": 7.0,
+			"runs": 1.0,
+			"wins": 47.0
+		},
+		{
+			"chars": [
+				"kuroko",
+				"gray",
+				"rakko"
+			],
+			"key": "gray|kuroko|rakko",
+			"losses": 19.0,
+			"runs": 2.0,
+			"wins": 89.0
+		},
+		{
+			"chars": [
+				"esdeath",
+				"killua",
+				"nonon"
+			],
+			"key": "esdeath|killua|nonon",
+			"losses": 10.0,
+			"runs": 1.0,
+			"wins": 44.0
+		},
+		{
+			"chars": [
+				"tatsumi",
+				"luffy",
+				"tamaki"
+			],
+			"key": "luffy|tamaki|tatsumi",
+			"losses": 7.0,
+			"runs": 1.0,
+			"wins": 47.0
+		},
+		{
+			"chars": [
+				"ichibe",
+				"natsu",
+				"tsunayoshi"
+			],
+			"key": "ichibe|natsu|tsunayoshi",
+			"losses": 9.0,
+			"runs": 1.0,
+			"wins": 45.0
+		},
+		{
+			"chars": [
+				"jupiter",
+				"broly",
+				"nimaiya"
+			],
+			"key": "broly|jupiter|nimaiya",
+			"losses": 3.0,
+			"runs": 1.0,
+			"wins": 51.0
+		},
+		{
+			"chars": [
+				"nimaiya",
+				"eren",
+				"ichigo"
+			],
+			"key": "eren|ichigo|nimaiya",
+			"losses": 7.0,
+			"runs": 1.0,
+			"wins": 47.0
+		},
+		{
+			"chars": [
+				"ladydevimon",
+				"broly",
+				"jeanne"
+			],
+			"key": "broly|jeanne|ladydevimon",
+			"losses": 13.0,
+			"runs": 1.0,
+			"wins": 41.0
+		},
+		{
+			"chars": [
+				"arthur",
+				"tatsumi",
+				"meliodas"
+			],
+			"key": "arthur|meliodas|tatsumi",
+			"losses": 10.0,
+			"runs": 1.0,
+			"wins": 44.0
+		},
+		{
+			"chars": [
+				"jinwoo",
+				"gray",
+				"tokoyami"
+			],
+			"key": "gray|jinwoo|tokoyami",
+			"losses": 9.0,
+			"runs": 1.0,
+			"wins": 45.0
+		},
+		{
+			"chars": [
+				"yuno",
+				"ichibe",
+				"hashirama"
+			],
+			"key": "hashirama|ichibe|yuno",
+			"losses": 5.0,
+			"runs": 1.0,
+			"wins": 49.0
+		},
+		{
+			"chars": [
+				"kuroko",
+				"chrome",
+				"ban"
+			],
+			"key": "ban|chrome|kuroko",
+			"losses": 8.0,
+			"runs": 1.0,
+			"wins": 46.0
+		},
+		{
+			"chars": [
+				"zenitsu",
+				"jack",
+				"megumi"
+			],
+			"key": "jack|megumi|zenitsu",
+			"losses": 13.0,
+			"runs": 1.0,
+			"wins": 41.0
+		},
+		{
+			"chars": [
+				"genos",
+				"gallantmon",
+				"blackwargreymon"
+			],
+			"key": "blackwargreymon|gallantmon|genos",
+			"losses": 19.0,
+			"runs": 1.0,
+			"wins": 35.0
+		},
+		{
+			"chars": [
+				"gray",
+				"hashirama",
+				"toudou"
+			],
+			"key": "gray|hashirama|toudou",
+			"losses": 4.0,
+			"runs": 1.0,
+			"wins": 50.0
+		},
+		{
+			"chars": [
+				"yuno",
+				"alphamon",
+				"veldora"
+			],
+			"key": "alphamon|veldora|yuno",
+			"losses": 5.0,
+			"runs": 1.0,
+			"wins": 49.0
+		},
+		{
+			"chars": [
+				"mavis",
+				"satsuki",
+				"meliodas"
+			],
+			"key": "mavis|meliodas|satsuki",
+			"losses": 3.0,
+			"runs": 1.0,
+			"wins": 51.0
+		},
+		{
+			"chars": [
+				"toga",
+				"chrome",
+				"gatomon"
+			],
+			"key": "chrome|gatomon|toga",
+			"losses": 15.0,
+			"runs": 1.0,
+			"wins": 39.0
+		},
+		{
+			"chars": [
+				"aiohto",
+				"boruto",
+				"ichibe"
+			],
+			"key": "aiohto|boruto|ichibe",
+			"losses": 6.0,
+			"runs": 1.0,
+			"wins": 48.0
+		},
+		{
+			"chars": [
+				"gojo",
+				"mavis",
+				"astolfo"
+			],
+			"key": "astolfo|gojo|mavis",
+			"losses": 9.0,
+			"runs": 1.0,
+			"wins": 45.0
+		},
+		{
+			"chars": [
+				"ladydevimon",
+				"killua",
+				"nezuko"
+			],
+			"key": "killua|ladydevimon|nezuko",
+			"losses": 10.0,
+			"runs": 1.0,
+			"wins": 44.0
+		},
+		{
+			"chars": [
+				"midoriya",
+				"marco",
+				"hibari"
+			],
+			"key": "hibari|marco|midoriya",
+			"losses": 20.0,
+			"runs": 1.0,
+			"wins": 34.0
+		},
+		{
+			"chars": [
+				"nagisa",
+				"neferpitou",
+				"blackwargreymon"
+			],
+			"key": "blackwargreymon|nagisa|neferpitou",
+			"losses": 7.0,
+			"runs": 1.0,
+			"wins": 47.0
+		},
+		{
+			"chars": [
+				"aiohto",
+				"boruto",
+				"yugi"
+			],
+			"key": "aiohto|boruto|yugi",
+			"losses": 8.0,
+			"runs": 1.0,
+			"wins": 46.0
+		},
+		{
+			"chars": [
+				"luffy",
+				"saber",
+				"ban"
+			],
+			"key": "ban|luffy|saber",
+			"losses": 8.0,
+			"runs": 1.0,
+			"wins": 46.0
+		},
+		{
+			"chars": [
+				"frieren",
+				"neferpitou",
+				"sasuke"
+			],
+			"key": "frieren|neferpitou|sasuke",
+			"losses": 13.0,
+			"runs": 1.0,
+			"wins": 41.0
+		},
+		{
+			"chars": [
+				"ladydevimon",
+				"nimaiya",
+				"stark"
+			],
+			"key": "ladydevimon|nimaiya|stark",
+			"losses": 6,
+			"runs": 1,
+			"wins": 48
+		}
+	],
+	"version": 1.0
+}

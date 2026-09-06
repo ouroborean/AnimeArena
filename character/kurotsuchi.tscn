@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bc3i65akdbblm"]
+
+[ext_resource type="Script" uid="uid://cq46ij5x8mn1i" path="res://character/kurotsuchi.gd" id="1_i3hb5"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_6c08b"]
+[ext_resource type="Texture2D" uid="uid://ckd6hjelom43b" path="res://assets/images/Kurotsuchi Mayuri/kurotsuchiprof.png" id="2_cu3dn"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_82v2i"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_g4gxt"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_6r3ao"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_cpbo4"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_qqtwg"]
+
+[node name="CharacterTemplate" type="Node" unique_id=1093520682 node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_i3hb5")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+portrait_texture = ExtResource("2_cu3dn")
+
+[node name="EffectStorageComponent" parent="." unique_id=148101302 instance=ExtResource("2_6c08b")]
+
+[node name="HealthComponent" parent="." unique_id=864291862 instance=ExtResource("3_82v2i")]
+
+[node name="StatComponent" parent="." unique_id=1108254549 instance=ExtResource("4_g4gxt")]
+
+[node name="NameComponent" parent="." unique_id=1665660826 instance=ExtResource("5_6r3ao")]
+
+[node name="MovesetComponent" parent="." unique_id=1057280859 instance=ExtResource("6_cpbo4")]
+
+[node name="TargeterComponent" parent="." unique_id=1036187561 instance=ExtResource("7_qqtwg")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

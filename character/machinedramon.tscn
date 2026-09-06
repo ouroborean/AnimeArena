@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/machinedramon.gd" id="1_xyhdt"]
+[ext_resource type="Texture2D" path="res://assets/images/Machinedramon/machinedramonprof.png" id="2_8gh5t"]
+[ext_resource type="Texture2D" path="res://assets/images/Machinedramon/alt_prof_machinedramon.png" id="2_lxo0v"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="4_3ellk"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="5_1vik0"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="6_p6elh"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="7_jglja"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="8_h44kf"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="9_1gmho"]
+
+[node name="Machinedramon" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_xyhdt")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_lxo0v")
+mastery_name = "HiMachineDramon"
+portrait_texture = ExtResource("2_8gh5t")
+alt_portraits = Array[Texture2D]([null])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("4_3ellk")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_1vik0")]
+
+[node name="StatComponent" parent="." instance=ExtResource("6_p6elh")]
+
+[node name="NameComponent" parent="." instance=ExtResource("7_jglja")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("8_h44kf")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("9_1gmho")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

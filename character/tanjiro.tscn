@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/tanjiro.gd" id="1_x1ma4"]
+[ext_resource type="Texture2D" path="res://assets/images/Kamado Tanjiro/tanjiroprof.png" id="2_ds7ou"]
+[ext_resource type="Texture2D" path="res://assets/images/Kamado Tanjiro/profile_mastery_tanjiro.png" id="2_o58gv"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_vb134"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_lt47d"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_i8xsg"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_l5haa"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_26awb"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_ha5ro"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_x1ma4")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_o58gv")
+mastery_name = "Sun Breathing Tanjiro"
+portrait_texture = ExtResource("2_ds7ou")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_vb134")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_lt47d")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_i8xsg")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_l5haa")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_26awb")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_ha5ro")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

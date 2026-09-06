@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://character/hibari.gd" id="1_hibari"]
+[ext_resource type="Texture2D" path="res://assets/images/Hibari Kyouya/hibariprof.png" id="2_hibari"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="3_hibari"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="4_hibari"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="5_hibari"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="6_hibari"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="7_hibari"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="8_hibari"]
+
+[node name="Hibari" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_hibari")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+portrait_texture = ExtResource("2_hibari")
+alt_portraits = Array[Texture2D]([null])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("3_hibari")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_hibari")]
+
+[node name="StatComponent" parent="." instance=ExtResource("5_hibari")]
+
+[node name="NameComponent" parent="." instance=ExtResource("6_hibari")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("7_hibari")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("8_hibari")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

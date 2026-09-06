@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/myotismon.gd" id="1_x5jo8"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_4rpa8"]
+[ext_resource type="Texture2D" path="res://assets/images/Myotismon/myotismonprof.png" id="2_pde4q"]
+[ext_resource type="Texture2D" path="res://assets/images/Myotismon/alt_prof_myotismon.png" id="2_x6478"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_h2bks"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_u5r3c"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_j5ti1"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_0pbj5"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_kkrml"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_x5jo8")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_x6478")
+mastery_name = "VenomMyotismon"
+portrait_texture = ExtResource("2_pde4q")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_4rpa8")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_h2bks")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_u5r3c")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_j5ti1")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_0pbj5")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_kkrml")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/shiro.gd" id="1_fjf10"]
+[ext_resource type="Texture2D" path="res://assets/images/Shiro (DMW)/mastery_shiroprof.png" id="2_0qubd"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_em1pi"]
+[ext_resource type="Texture2D" path="res://assets/images/Shiro (DMW)/shiroprof.png" id="2_woqcm"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_ued6o"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_ydy28"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_51k3n"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_416rs"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_y18mx"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_fjf10")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_0qubd")
+mastery_name = "The Wretched Egg"
+portrait_texture = ExtResource("2_woqcm")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_em1pi")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_ued6o")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_ydy28")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_51k3n")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_416rs")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_y18mx")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

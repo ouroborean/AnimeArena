@@ -1,0 +1,14 @@
+{
+	"done": true,
+	"draws": 0,
+	"eval": true,
+	"generation": 51,
+	"losses": 22,
+	"matches_done": 30,
+	"num_matches": 30,
+	"opponent": "v3:bot_policy.json",
+	"run_seed": 29,
+	"trained_matches": 10000,
+	"updated": "2026-08-16T20:39:28",
+	"wins": 8
+}

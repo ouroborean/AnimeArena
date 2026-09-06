@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://biqfcmbf0bg8b"]
+
+[ext_resource type="Script" uid="uid://88niul01k8j7" path="res://character/uranus.gd" id="1_em12b"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_6c08b"]
+[ext_resource type="Texture2D" path="res://assets/images/Sailor Uranus/uranusprof.png" id="2_eoxgs"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_82v2i"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_g4gxt"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_6r3ao"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_cpbo4"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_qqtwg"]
+
+[node name="CharacterTemplate" type="Node" unique_id=415311288 node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_em12b")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+portrait_texture = ExtResource("2_eoxgs")
+
+[node name="EffectStorageComponent" parent="." unique_id=1424471847 instance=ExtResource("2_6c08b")]
+
+[node name="HealthComponent" parent="." unique_id=1800668729 instance=ExtResource("3_82v2i")]
+
+[node name="StatComponent" parent="." unique_id=648191740 instance=ExtResource("4_g4gxt")]
+
+[node name="NameComponent" parent="." unique_id=2123092378 instance=ExtResource("5_6r3ao")]
+
+[node name="MovesetComponent" parent="." unique_id=142576720 instance=ExtResource("6_cpbo4")]
+
+[node name="TargeterComponent" parent="." unique_id=759444703 instance=ExtResource("7_qqtwg")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

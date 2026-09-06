@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://character/bulbasaur.gd" id="1_03vbj"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_kodvr"]
+[ext_resource type="Texture2D" path="res://assets/images/Bulbasaur/bulbasaurprof.png" id="2_ri3yn"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_10pka"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_wgafn"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_b0ayh"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_1ajy4"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_spo5x"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_03vbj")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+portrait_texture = ExtResource("2_ri3yn")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_kodvr")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_10pka")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_wgafn")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_b0ayh")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_1ajy4")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_spo5x")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

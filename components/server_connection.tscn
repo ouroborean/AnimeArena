@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://components/server_connection.gd" id="1_yugj8"]
+
+[node name="ServerConnection" type="Node" node_paths=PackedStringArray("heartbeat_timer", "ladder_timer")]
+script = ExtResource("1_yugj8")
+heartbeat_timer = NodePath("HeartbeatTimer")
+ladder_timer = NodePath("LadderTimer")
+
+[node name="HeartbeatTimer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="LadderTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="HeartbeatTimer" to="." method="heartbeat_check"]

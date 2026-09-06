@@ -1,0 +1,607 @@
+{
+    "aang": {
+        "name": "Aang",
+        "path": "aang",
+        "description": "Hailing from the Air Nomads, Aang is not just any Airbender\u2014he's the last of his kind and the current Avatar. Gifted with the ability to master all four elements, Aang's playful demeanor belies a deep sense of responsibility and an attachment to his duty as the Avatar that will change the world."
+    },
+    "akame": {
+        "name": "Akame",
+        "path": "akame",
+        "description": "Akame, the most talented killer of the assassin group Night Raid. Raised from a young age by the corrupt Empire, a chance assignment saw Akame turning on the nation that raised her. Now, she wields the fearsome blade Murasame to free the oppressed people from the tyranny of the Prime Minister."
+    },
+    "alphonse": {
+        "name": "Alphonse Elric",
+        "path": "alphonse",
+        "description": "Alphonse Elric, the soul of a boy trapped in a suit of armor. After an ill-fated attempt at resurrecting his mother, Alphonse's body was lost in the exchange. After his brother Edward traded his arm and leg to seal his soul in armor, Alphonse joined him on a quest to restore what was taken from them."
+    },
+    "ash": {
+        "name": "Ash Ketchum",
+        "path": "ash",
+        "description": "Just a boy from Pallet Town, Ash Ketchum set out from his home with his partner Pikachu, determined to be the very best. With a roster that somehow comprises of every starter Pokemon, Ash is a versatile, straight-forward trainer with a spirit that never accepts defeat."
+    },
+    "asta": {
+        "name": "Asta",
+        "path": "asta",
+        "description": "A Magic Knight of the Clover Kingdom, Asta wields the five-leaf clover grimoire and a variety of anti-magic swords."
+    },
+    "atomeve": {
+        "name": "Atom Eve",
+        "path": "atomeve",
+        "description": "Atom Eve, or Samantha Eve Wilkins as she's known outside the hero circle, is a force of nature. Wielding the incredible gift to bend matter to her will, reshaping things on a molecular level like it's second nature to her. Atom Eve is always out there, using her gifts to make things better, to help people, and that's what makes her a true hero."
+    },
+    "bakugo": {
+        "name": "Bakugo Katsuki",
+        "path": "bakugo",
+        "description": "One of the best UA rookies from the class 1-A. Bakugou has a short and aggressive temperament. His inviduality allows him to expel nitroglycerin from the palms and create forms of explosion. Besides this factor, Bakugou has a keen instinct and intelligence above the others."
+    },
+    "ban": {
+        "name": "Ban",
+        "path": "ban",
+        "description": "Undead Ban, the Fox's Sin of Greed. With his unique ability to 'rob' his targets of their strength, combined with the immortality he gained from the Fountain of Youth, Ban is a terrifying and unstoppable fighter."
+    },
+    "blackstar": {
+        "name": "Black Star",
+        "path": "blackstar",
+        "description": "An assassin who loves the spotlight, Black Star is one of the top Maesters of the DWMA, along with his partner, Tsubaki Nakatsukasa."
+    },
+    "boruto": {
+        "name": "Uzumaki Boruto",
+        "path": "boruto",
+        "description": "Uzumaki Boruto, son of Naruto. Though similar in personality, Boruto's upbringing was the polar opposite of Naruto's: surrounded by friends, encouraged and nurtured by his doting parents, Boruto's talents as a shinobi are only matched by his pride and urge to prove himself."
+    },
+    "bulbasaur": {
+        "name": "Bulbasaur",
+        "path": "bulbasaur",
+        "description": "This small, quadruped Pok\u00e9mon is green with a bulb on its back, which will eventually grow into a large plant. As a Grass/Poison-type Pok\u00e9mon, Bulbasaur has a unique blend of nature-based and toxic abilities."
+    },
+    "byakuya": {
+        "name": "Byakuya Kuchiki",
+        "path": "byakuya",
+        "description": "Byakuya Kuchiki, the 28th head of the Kuchiki Clan, serves as the Captain of the 6th squad of the Gotei 13. He controls thousands of blades at once using his zanpakutou, crushing enemies beneath a storm of cherry blossoms."
+    },
+    "charmander": {
+        "name": "Charmander",
+        "path": "charmander",
+        "description": "A flame burns on the tip of its tail from birth. It is said that a Charmander dies of its flame ever goes out."
+    },
+    "diane": {
+        "name": "Diane",
+        "path": "diane",
+        "description": "Diane, the Serpent's Sin of Envy. A member of the Giant Clan, she wields her Sacred Treasure Gideon together with her ability to control the earth to cause wide-spread havoc."
+    },
+    "edward": {
+        "name": "Edward Elric",
+        "path": "edward",
+        "description": "Edward Elric, the Fullmetal Alchemist. After a brush with forbidden alchemy cost him an arm and a leg and his brother's entire body, Edward became a state alchemist with the goal of uncovering the secret of the Philosopher's Stone to bring back everything he's lost."
+    },
+    "emiya": {
+        "name": "Emiya Shirou",
+        "path": "emiya",
+        "description": "Emiya Shirou, a young mage thrust unwillingly into a Holy Grail War. His magic lets him trace the properties of other artifacts, reinforcing the mundane and even conjuring copies of enemy weapons."
+    },
+    "emiyaarcher": {
+        "name": "EMIYA",
+        "path": "emiyaarcher",
+        "description": "EMIYA, an Archer-class Servant with no history. An enigma even among the Heroic Spirits, EMIYA possesses an arsenal of powerful artifacts and an unerring knowledge of other Heroic Spirits and their Noble Phantasms. When combined with his own ferocity and sharp battle acumen, EMIYA is a powerful and unpredictable foe."
+    },
+    "eren": {
+        "name": "Eren Yeager",
+        "path": "eren",
+        "description": "Eren Yeager is a teenager who swears revenge against Titans who killed his mother and destroyed his hometown. During the Battle of Trost, Eren's impulsiveness and brash nature lead him to making a near-fatal mistake that revealed he can become a Titan."
+    },
+    "erza": {
+        "name": "Erza Scarlet",
+        "path": "erza",
+        "description": "Erza Scarlet, contender for the position of strongest mage in Fairy Tail. Her magic allows her to manifest suits of armor and powerful weapons, giving her a versatile edge."
+    },
+    "frankenstein": {
+        "name": "Frankenstein",
+        "path": "frankenstein",
+        "description": "Created through science, Frankenstein was summoned to serve as a Berserker servant of the Black Faction in the Great Holy Grail War. Her attacks carry devastating weight and she can channel lightning to destructive effect."
+    },
+    "frieren": {
+        "name": "Frieren",
+        "path": "frieren",
+        "description": "Frieren, Mage of the Hero's Party. After the defeat of the demon king and the death of Himmel the Hero, Frieren commits herself to getting to know humans a little more closely, despite her absurdly long lifespan and unusually strong powers."
+    },
+    "gallantmon": {
+        "name": "Gallantmon",
+        "path": "gallantmon",
+        "description": "Gallantmon, one of the 13 Royal Knights. Tasked with defending the digital world from the 7 Demon Lords, Gallantmon wields its shield and spear to protect the weak and to eradicate evil wherever it exists."
+    },
+    "ganta": {
+        "name": "Ganta Igarashi",
+        "path": "ganta",
+        "description": "Ganta Igarashi, the Deadman known as Woodpecker. After being framed for the murder of his classmates, Ganta is taken to the prison known as Deadman Wonderland, where he finds himself at the heart of a literal bloodbath."
+    },
+    "gatomon": {
+        "name": "Gatomon",
+        "path": "gatomon",
+        "description": "A Holy Beast Digimon. With a small body and a curious, prank-loving nature, its appearance does not match the true strength it possesses. "
+    },
+    "genos": {
+        "name": "Genos",
+        "path": "genos",
+        "description": "Genos, the Rank-12 S Class Hero Demon Cyborg. Apprenticed to Saitama, Genos is an advanced fighting machine capable of unleashing blisteringly fast attacks and overwhelming energy assaults."
+    },
+    "gilgamesh": {
+        "name": "Gilgamesh",
+        "path": "gilgamesh",
+        "description": "Gilgamesh, the legendary King of Heroes and a Heroic Spirit summoned in the role of Archer. Gilgamesh is a proud warrior, and can summon a myriad of Noble Phantasms from the endless vaults he amassed during his life to overwhelm his foes with their individual power or the sheer weight of their blades."
+    },
+    "gogeta": {
+        "name": "Gogeta",
+        "path": "gogeta",
+        "description": "Gogeta, the fusion between Goku and Vegeta. When the two strongest Saiyans combine, the result is a warrior so overwhelmingly powerful that even the mightiest beings in the universe become weaklings to toy with."
+    },
+    "goku": {
+        "name": "Son Goku",
+        "path": "goku",
+        "description": "Son Goku, a Saiyan raised on Earth. A lifelong martial artist with a pure heart, Goku shook free of the shackles of his warrior race and became Earth's greatest champion."
+    },
+    "gon": {
+        "name": "Gon Freecs",
+        "path": "gon",
+        "description": "Gon Freecss, known for his unwavering determination and boundless potential, has faced countless challenges in his journey as a Hunter. Using his unique capacity for Nen, Gon utilizes his own Janken-style fighting technique to overwhelm his enemies."
+    },
+    "gray": {
+        "name": "Gray Fullbuster",
+        "path": "gray",
+        "description": "Gray Fullbuster, ice mage of Fairy Tail. Natsu's number one rival, Gray is a cool and collected mage that uses ice moulding magic to craft wondrous creations from ice."
+    },
+    "gunha": {
+        "name": "Sogiita Gunha",
+        "path": "gunha",
+        "description": "Sogiita Gunha, 7th-ranked esper in Academy City. Gunha's power is a mystery to even the most experienced scientists, though he personally believes that with a little guts, anything is possible."
+    },
+    "hashirama": {
+        "name": "Hashirama Senju",
+        "path": "hashirama",
+        "description": "The first Hokage, founder of the Leaf Village and God of Shinobi, Hashirama Senju. A shinobi of nearly unrivaled strength, the famous nemesis of Madara Uchiha boasts nearly limitless versatility and strength with his signature Wood-Style techniques. Thanks to: Hashirama Senju (lol)"
+    },
+    "hawkmon": {
+        "name": "Hawkmon",
+        "path": "hawkmon",
+        "description": "Hawkmon, a calm and collected Avian Digimon. It attacks using its claws and beaks until it has stored enough energy to Digivolve. It works best when coordinating with teammates."
+    },
+    "hinata": {
+        "name": "Hyuuga Hinata",
+        "path": "hinata",
+        "description": "Hinata Hyuuga, heir to the prestigious Hyuuga family. Though she is normally kind and gentle, she has a fiercely loyal and protective spirit that awakens in defense of her loved ones."
+    },
+    "hisoka": {
+        "name": "Hisoka Morow",
+        "path": "hisoka",
+        "description": "Hisoka Morow, a pro hunter and former member of the Phantom Troupe. Hisoka is a fearsome fighter and insatiable killer, known to murder without a thought and to spare those he thinks might one day be enough to challenge him."
+    },
+    "ichigo": {
+        "name": "Ichigo Kurosaki",
+        "path": "ichigo",
+        "description": "Ichigo is a substitute Shinigami who initially borrowed Rukia's power. Since then, Ichigo has unlocked and learned how to use his sword Zangetsu while developing a close bond with him."
+    },
+    "inosuke": {
+        "name": "Hashibira Inosuke",
+        "path": "inosuke",
+        "description": "Hashibira Inosuke, the wild and uncontrollable beast man. From his trademark boar helmet to his chipped and jagged blades, everything about Inosuke is hazardous and free."
+    },
+    "invincible": {
+        "name": "Invincible",
+        "path": "invincible",
+        "description": "Mark Grayson, better known as the superhero Invincible. The half-alien son of the Viltrumite superhero Omni-Man, Invincible struggles each day with the challenges of becoming an adult and accepting his destiny as Earth's protector."
+    },
+    "jack": {
+        "name": "Jack the Ripper",
+        "path": "jack",
+        "description": "Jack the Ripper, a Heroic Spirit summoned in the role of Assassin. Jack is an embodiment of the vengeful spirits of the lost and neglected children who died on the streets of London. She can call forth London's bleak smog and steal her enemies away to its cold streets."
+    },
+    "jupiter": {
+        "name": "Sailor Jupiter",
+        "path": "jupiter",
+        "description": "Makoto Kino, the girl known as Sailor Jupiter. A naturally strong girl with a tomboyish presentation, Jupiter is actually a gentle and kind Sailor Senshi. Though her specialty is her physical strength, she can also control plants and devastating electrical energy."
+    },
+    "kakashi": {
+        "name": "Hatake Kakashi",
+        "path": "kakashi",
+        "description": "Hatake Kakashi, the Copy Ninja. A Jonin of the Hidden Leaf Village, Kakashi is the sensei of the notorious Team 7, and a man of nearly endless technical expertise and unpredictable jutsu."
+    },
+    "ken": {
+        "name": "Ken Kaneki",
+        "path": "ken",
+        "description": "A human who's life changed forever after having a Ghoul's organ transplanted into his body. Kaneki is effectively both human and ghoul, and lives in two worlds where he doesn't feel like he belongs."
+    },
+    "killua": {
+        "name": "Killua Zoldyck",
+        "path": "killua",
+        "description": "A highly skilled assassin and a close friend of Gon, Killua Zoldyck is a complex and enigmatic young man. Trained since birth to be a lethal killer, Killua possesses incredible NORMAL and mental abilities that make him a formidable opponent. Despite his past, he befriends Gon and learns to value friendship and loyalty above all else."
+    },
+    "king": {
+        "name": "King",
+        "path": "king",
+        "description": "The Fairy King Harlequin, known simply as King, and the Grizzly's Sin of Sloth. King is the protector of the Fairy Realm, and wields his shape-shifting spear Chastiefol to rule over the cycle of life and death."
+    },
+    "koro": {
+        "name": "Koro-sensei",
+        "path": "koro",
+        "description": "Koro-sensei, an enigmatic alien creature. After destroying half of the moon and threatening the entire world, an uneasy Earth grants him his one request: to teach a class of troubled students the art of how to end a life. Thanks to: Fghop"
+    },
+    "korra": {
+        "name": "Korra",
+        "path": "korra",
+        "description": "Korra, the successor to Avatar Aang. Korra is a willful Water Tribe woman who demonstrated a prodigious talent for bending from a young age. Her adaptability and Avatar talents make her an unpredictable and implacable opponent."
+    },
+    "kurapika": {
+        "name": "Kurapika",
+        "path": "kurapika",
+        "description": "Kurapika is a Blacklist Hunter on the hunt for the thieves that murdered his clan. Using a vast repertoire of knowledge and a thirst for vengeance, Kurapika is on the hunt for the Scarlet Eyes of his clan."
+    },
+    "kuroko": {
+        "name": "Shirai Kuroko",
+        "path": "kuroko",
+        "description": "Shirai Kuroko, level 4 esper and Misaka Mikoto's devoted underclassman. A talented member of Judgement, Academy City's organized esper task force, Kuroko puts her all into her work, constantly improving while maintaining a strict code of justice. Her ability to teleport both objects and herself make her an unpredictable foe."
+    },
+    "pucelle": {
+        "name": "La Pucelle",
+        "path": "pucelle",
+        "description": "Kishibe Souta, the Magical Girl La Pucelle. As a boy, Souta often felt out of place due to his fascination with Magical Girls. He found a steady friendship in Himekawa Koyuki, and now that they are both Magical Girls, the two seek to live out their ideal lives, protecting the weak from harm."
+    },
+    "lucy": {
+        "name": "Lucy Heartphilia",
+        "path": "lucy",
+        "description": "Lucy Heartfilia, proud Celestial Spirit wizard of Fairy Tail. After a chance meeting with Natsu Dragneel, Lucy joined his guild and started a life of adventure. As a Celestial Spirit wizard, Lucy uses Zodiac Keys to summon outsiders to fight with her."
+    },
+    "luffy": {
+        "name": "Monkey D. Luffy",
+        "path": "luffy",
+        "description": "Monkey D. Luffy, also known as 'Straw Hat Luffy', is the founder and captain of the increasingly infamous and powerful Straw Hat Pirates, as well as the most powerful of its top fighters. He believes that being the Pirate King means having the most freedom in the world. At age 7, Luffy accidentally ate the Gomu Gomu no Mi, which turned his body into rubber."
+    },
+    "machinedramon": {
+        "name": "Machinedramon",
+        "path": "machinedramon",
+        "description": "Machinedramon is a Machine Digimon, built by synthesizing the parts of many Cyborg Digimon."
+    },
+    "madoka": {
+        "name": "Madoka Kaname",
+        "path": "madoka",
+        "description": "Madoka Kaname, the strongest magical girl. A girl with no wish, caught at the conflux of a destiny so incredible that it transcends time and space. As a magical girl, Madoka fights with her enchanted bow and arrow, and does everything she can to keep her friends safe from harm."
+    },
+    "maka": {
+        "name": "Maka Albarn",
+        "path": "maka",
+        "description": "Maka Albarn is a two-star meister at Death Weapon Meister Academy. The daughter of Death's weapon partner, she became a scythe-meister and partnered with the demon scythe, Soul Evans."
+    },
+    "mami": {
+        "name": "Mami Tomoe",
+        "path": "mami",
+        "description": "Mami Tomoe, a kind and generous classmate who becomes Madoka and Sayaka's mentor as magical girls. Her magic lets her control ribbons and summon a wide array of firearms and artillery."
+    },
+    "mars": {
+        "name": "Sailor Mars",
+        "path": "mars",
+        "description": "Rei Hino is a Shinto Priestess better known as her alter ego, Sailor Mars. Together with the rest of the Sailor Guardians, they protect the Solar System from evil."
+    },
+    "mash": {
+        "name": "Mash Kyrielight",
+        "path": "mash",
+        "description": "Mash Kyrielight is a Demi-Servant human fused with the Heroic Spirit Galahad. Created artifically to be a vessel for a Heroic Spirit's soul, she wields a Shield made from the Round Table to protect her Master."
+    },
+    "megumi": {
+        "name": "Fushiguro Megumi",
+        "path": "megumi",
+        "description": "Fushiguro Megumi, a jujutsu sorceror who summons shadow spirits to do his bidding. With a versatile array of various puppets, Megumi can adapt to a variety of situations."
+    },
+    "megumin": {
+        "name": "Megumin",
+        "path": "megumin",
+        "description": "Megumin, the foremost archmage among Crimson Demons. Though her Explosion magic is dramatic and powerful, she will quickly find herself depleted and in need of allied support."
+    },
+    "meliodas": {
+        "name": "Meliodas",
+        "path": "meliodas",
+        "description": "Meliodas, the captain of the Seven Deadly Sins and the Dragon's Sin of Wrath. Despite his appearance, Meliodas is ancient, and his experience leading the armies of demons and men have made him an unparalleled combatant."
+    },
+    "midoriya": {
+        "name": "Midoriya Izuku",
+        "path": "midoriya",
+        "description": "Although he was born Quirkless, Midoriya Izuku earned the right to wield the mantle of One For All through his innate heroism and strong sense of justice."
+    },
+    "mikasa": {
+        "name": "Mikasa Ackerman",
+        "path": "mikasa",
+        "description": "Mikasa Ackerman, a symbol of resilience, strength, and unwavering loyalty, lived in a world plagued by the constant threat of Titans. Her life, marked by battles and the quest for survival, made her one of the most skilled fighters of her time."
+    },
+    "misaka": {
+        "name": "Misaka Mikoto",
+        "path": "misaka",
+        "description": "Misaka Mikoto, the ace of Tokiwadai Middle School. Misaka is one of seven Level 5 espers in Academy City, the world's bastion of esper research. Her abilities as an electromaster have her ranked third among the city's top espers."
+    },
+    "muichiro": {
+        "name": "Muichiro Tokito",
+        "path": "muichiro",
+        "description": "The young Mist Hashira, Muichiro Tokito, is a remarkable prodigy in the Demon Slayer Corps, achieving his high rank with incredible speed. Initially, he appears detached and forgetful; a consequence of amnesia stemming from a past tragedy. In combat, he wields the Mist Breathing style with exceptional mastery."
+    },
+    "myotismon": {
+        "name": "Myotismon",
+        "path": "myotismon",
+        "description": "Myotismon, the king of Undead Digimon. Originally a computer virus, Myotismon is a malignant and extremely cruel Digimon who uses his dark powers to debilitate his foes and extend his own unnatural life."
+    },
+    "nagisa": {
+        "name": "Nagisa Shiota",
+        "path": "nagisa",
+        "description": "Nagisa is a calm and somewhat reserved boy, with a sharp eye and a kind heart. Despite all this, after a chance meeting with Koro-sensei, he discovers that he has a natural talent for assassination. Thanks to: Fghop"
+    },
+    "naruto": {
+        "name": "Naruto Uzumaki",
+        "path": "naruto",
+        "description": "Naruto is known for his boisterous personality, unwavering determination, and dream of becoming the Hokage. Despite being ostracized for having the Nine-Tailed Fox sealed within him, he remains optimistic and seeks recognition from his peers. Naruto's main techniques during this period include the Shadow Clone Jutsu and the Rasengan."
+    },
+    "natsu": {
+        "name": "Natsu Dragneel",
+        "path": "natsu",
+        "description": "Natsu Dragneel, infamous fire mage of Fairy Tail. He was raised by a dragon, Igneel, who taught him dragon-slaying magic that he wields with a pure heart and a quick temper."
+    },
+    "neferpitou": {
+        "name": "Neferpitou",
+        "path": "neferpitou",
+        "description": "Neferpitou, firstborn of the Chimera Ant King's three Royal Guards. Though easily distracted and eager for opportunities to play, Neferpitou places the King's goals far above their own safety or life."
+    },
+    "nezuko": {
+        "name": "Kamado Nezuko",
+        "path": "nezuko",
+        "description": "Kamado Nezuko is the younger sister of Tanjiro and a demon herself, though she retains her human emotions and consciousness. After being turned into a demon by a powerful demon, Nezuko struggles to maintain her humanity and resist the urge to feed on humans."
+    },
+    "nimaiya": {
+        "name": "Nimaiya Oetsu",
+        "path": "nimaiya",
+        "description": "The God of the Sword, Divine General of the West, Third Officer of the Zero Division and the creator of Zanpakutou, Nimaiya Oetsu sits at the pinnacle of swordsmanship. His blade Sayafushi is so sharp that it has been deemed a failure as a zanpakutou, though he wields it to deadly effect."
+    },
+    "nobara": {
+        "name": "Kugisaki Nobara",
+        "path": "nobara",
+        "description": "Nobara is a first year sorceror studying alongside Itadori Yuji. Her special technique involves linking a doll to her enemy and channeling her cursed energy through her hammer and nails."
+    },
+    "noelle": {
+        "name": "Noelle Silva",
+        "path": "noelle",
+        "description": "Noelle Silva is a noblewoman and junior Magic Knight of the Royal Knights. Though proud and reserved, Noelle is driven by kindness and a desire to prove herself to the world."
+    },
+    "nonon": {
+        "name": "Nonon Jakazure",
+        "path": "nonon",
+        "description": "Nonon Jakazure, one of the Elite Four of Honnoji Academy's Student Council. Her Three-Star Goku uniform transforms into a gigantic LRAD capable of launching barrages of musical attacks."
+    },
+    "omniman": {
+        "name": "Omni-Man",
+        "path": "omniman",
+        "description": "Nolan Grayson, better known as the superhero Omni-man, is a Viltrumite from the planet Viltrum. He is an internally conflicted but powerful man, famous for his seemingly impenetrable body, endless strength, and peerless speed. A one-man planetary army, Omni-man is capable of singlehandedly defending Earth...or destroying it."
+    },
+    "omnimon": {
+        "name": "Omnimon",
+        "path": "omnimon",
+        "description": "One of the Royal Knights, a Digimon created for the singular purpose of defeating the Demon Lords. A fusion of WarGreymon and MetalGarurumon, Omnimon combines the strengths of both Digimon into a formidable duelist. Thanks to: Kiru Kasai"
+    },
+    "pikachu": {
+        "name": "Pikachu",
+        "path": "pikachu",
+        "description": "Recognized by its yellow fur, pointy ears, and tail shaped like a lightning bolt, Pikachu is an Electric-type Pok\u00e9mon known for its electrifying abilities."
+    },
+    "renamon": {
+        "name": "Renamon",
+        "path": "renamon",
+        "description": "This vulpine Digimon is a refined and agile fighter. Renamon specializes in high-speed combat, often utilizing its agility and illusionary techniques to confuse opponents before delivering a decisive blow."
+    },
+    "rengoku": {
+        "name": "Kyojuro Rengoku",
+        "path": "rengoku",
+        "description": "A Hashira of the Demon Slayer Corps, Rengoku is a eccentric yet enthusiastic swordsman, who harnesses his Flame Breathing style for devastating swordplay."
+    },
+    "rimuru": {
+        "name": "Rimuru Tempest",
+        "path": "rimuru",
+        "description": "Rimuru is the founder and King of the monster country Tempest of the Jura Forest. He is regarded as one of the strongest among the Eight Star Demon Lords."
+    },
+    "rob": {
+        "name": "Rob Lucci",
+        "path": "rob",
+        "description": "Rob Lucci, the 'Massacre Weapon' of Cipher Pol. Known amongst the organization as the strongest assassin in history, Rob's mastery over Rokushiki is unparalleled. With his Devil Fruit's power to transform him into a powerful leopard, Rob does the dirty work of the World Government with cold-blooded effectiveness."
+    },
+    "ruler": {
+        "name": "Ruler",
+        "path": "ruler",
+        "description": "Sanae Mukou, a woman who spent her entire life being ostracized for her intellect and browbeat by incompetent authority, received the opportunity to become the Magical Girl Ruler. Using her power to issue commands that must be obeyed, she has gathered a cluster of easily manipulated magical girls to her side."
+    },
+    "ryohei": {
+        "name": "Ryohei Sasagawa",
+        "path": "ryohei",
+        "description": "Sasagawa Ryohei, the Vongola Guardian of the Sun. Ryohei is an exuberant, if slightly oblivious, member of Sawada Tsunayoshi's growing Mafia family. An avid boxer, his motto is to live 'to the extreme!', which is something that he extends to all facets of life. He immediately and enthusiastically wants to be included in anything he sees."
+    },
+    "ryuko": {
+        "name": "Ryuko Matoi",
+        "path": "ryuko",
+        "description": "Ryuko Matoi, a hybrid human fused with Life Fibers. Bearing one half of a red Scissor Blade, Ryuko searches for the person bearing the other half, who used that weapon to murder her father."
+    },
+    "saber": {
+        "name": "Saber",
+        "path": "saber",
+        "description": "Saber, the Heroic Spirit Arturia Pendragon. The famous wielder of Excalibur, Saber has top notch combat and defensive abilities and can go toe-to-toe with nearly any combatant. Her powerful blade can demolish entire fortresses."
+    },
+    "saitama": {
+        "name": "Saitama",
+        "path": "saitama",
+        "description": "Saitama is the titular One Punch Man. As the current strongest known being in the universe, he has lost all joy and meaning since the only wish he has is to have a good fight."
+    },
+    "sakura": {
+        "name": "Haruno Sakura",
+        "path": "sakura",
+        "description": "Sakura is often seen as having a sharp intellect, excellent chakra control, and a deep admiration for Sasuke Uchiha. Initially perceived as having a more supportive role, her training under the Fifth Hokage, Tsunade, elevates her combat abilities, particularly in the area of medical ninjutsu and superhuman strength."
+    },
+    "sasuke": {
+        "name": "Uchiha Sasuke",
+        "path": "sasuke",
+        "description": "Sasuke is characterized by his deep-seated desire for power, stemming from his ambition to avenge his clan by killing his older brother, Itachi Uchiha. Possessing the Sharingan, a kekkei genkai unique to the Uchiha clan, Sasuke's abilities revolve around advanced visual perception and chakra manipulation."
+    },
+    "satsuki": {
+        "name": "Satsuki Kiryuin",
+        "path": "satsuki",
+        "description": "Satsuki Kiryuin, the president of Honnoji Academy's Student Council. A revered figure of absolute authority, Satsuki is a talented user of her inherited Kamui, a proud perfectionist who does not tolerate mistakes."
+    },
+    "saturn": {
+        "name": "Sailor Saturn",
+        "path": "saturn",
+        "description": "Tomoe Hotaru, the girl known as Sailor Saturn. After being killed in a laboratory accident as a child, Hotaru's father makes a sinister bargain to restore her to life. Armed with the Silence Glaive, Sailor Saturn fights with the power of death itself."
+    },
+    "sayaka": {
+        "name": "Sayaka",
+        "path": "sayaka",
+        "description": "Sayaka Miki, Madoka's close friend. A rash, stubborn, but ultimately kind warrior, Sayaka becamse a Magical Girl to protect Madoka from harm, but carries on her duties with a heart full of justice and a resolute wish."
+    },
+    "semiramis": {
+        "name": "Semiramis",
+        "path": "semiramis",
+        "description": "The Wise Queen of Assyria, Semiramis is an Assassin and Caster-type Servant summoned by Shirou Kotomine in the Holy Grail War of Fate/Apocrypha."
+    },
+    "sheele": {
+        "name": "Sheele",
+        "path": "sheele",
+        "description": "Sheele, an assassin of Night Raid. A compassionate woman who, in a moment of life-threatening danger, discovered she had a talent for murder. She wields Extase, a pair of giant scissors that can cut through anything."
+    },
+    "shinra": {
+        "name": "Shinra Kusakabe",
+        "path": "shinra",
+        "description": "Shinra Kusakabe is a pyrokinetic in the Special Fire Force Company 8. Shinra wants to become a hero, protecting the innocent from Spontaneous Human Combustion with the power of his own flames."
+    },
+    "shiro": {
+        "name": "Shiro",
+        "path": "shiro",
+        "description": "Shiro is a childhood friend of Ganta Igarashi. Carefree, loyal and friendly, Shiro loves sweets and will do anything to protect Ganta from harm."
+    },
+    "shokuhou": {
+        "name": "Shokuhou Misaki",
+        "path": "shokuhou",
+        "description": "Shokuhou Misaki, the Majesty of Tokiwadai. The 5th ranked Esper of Academy City, with the most powerful mind control power on record, 'Mental Out'. Though she is the leader of the school's largest clique, her ability to compel others has left her personally isolated."
+    },
+    "snowwhite": {
+        "name": "Snow White",
+        "path": "snowwhite",
+        "description": "Himekawa Koyuki, the magical girl Snow White. A loving, selfless girl who was drawn into a game of death by a sadistic magical girl. She can hear the thoughts of those in distress, and can use this to aid allies or get the upper hand on enemies."
+    },
+    "soul": {
+        "name": "Soul Evans",
+        "path": "soul",
+        "description": "Soul Evans is a demon weapon born into a family of famous musicians. After discovering his weapon abilities, Soul joined Death Weapon Meister Academy where he partnered with the scythe-meister, Maka Albarn."
+    },
+    "squalo": {
+        "name": "Superbia Squalo",
+        "path": "squalo",
+        "description": "Superbia Squalo, second-in-command of the Varia. A savage and proud swordsman, Squalo has travelled the world defeating swordmasters, all for the sake of crowning himself Sword Emperor."
+    },
+    "squirtle": {
+        "name": "Squirtle",
+        "path": "squirtle",
+        "description": "It hides in its shell to protect itself, then strikes back with spouts of water at every opportunity. When it feels threatened, it draws its limbs inside its shell and sprays water from its mouth."
+    },
+    "sukuna": {
+        "name": "Ryomen Sukuna",
+        "path": "sukuna",
+        "description": "Ryomen Sukuna, the strongest Jujutsu sorcerer in history. Thought to originally be a demon, Sukuna actually split his soul between his 20 indestructible fingers to gain immortality. He bides his time until he has a chance to walk the earth once again."
+    },
+    "tamaki": {
+        "name": "Tamaki Kotatsu",
+        "path": "tamaki",
+        "description": "t"
+    },
+    "tanjiro": {
+        "name": "Kamado Tanjiro",
+        "path": "tanjiro",
+        "description": "A kind-hearted and determined young man, Tanjiro Kamado is a demon slayer in search of a cure for his sister's demon curse. His journey is filled with danger and difficulty as he battles demons and uncovers the secrets of his past."
+    },
+    "tatsumaki": {
+        "name": "Tatsumaki",
+        "path": "tatsumaki",
+        "description": "Tatsumaki, the Tornado of Terror, is the Hero Associations Rank 2 hero, and the most powerful esper in the world. She prefers to work alone, using her unparalleled psychic powers and caustic personality to ward off both threats and allies."
+    },
+    "tatsumi": {
+        "name": "Tatsumi",
+        "path": "tatsumi",
+        "description": "Tatsumi, the newest member of Night Raid. Heading to the big city with dreams of fame and fortune, Tatsumi's dreams are quickly dashed as he is introduced to the darkness that lurks there. He decided to join Night Raid, a group of rebel assassins, to help make the country a safe and just place for all."
+    },
+    "toga": {
+        "name": "Himiko Toga",
+        "path": "toga",
+        "description": "Himiko Toga is a cheerful girl with a sadistic streak, boasting membership in multiple powerful Villain groups. Once her attacks have siphoned blood from a victim, she can use her Quirk to Transform into them, allowing for easy infiltration and surprise attacks."
+    },
+    "toph": {
+        "name": "Toph Beifong",
+        "path": "toph",
+        "description": "Toph Beifong, one of the most powerful earthbenders of her time. Despite being born blind, she acts with startling precision using her sense of touch and her earthbending prowess."
+    },
+    "touka": {
+        "name": "Touka Kirishima",
+        "path": "touka",
+        "description": "Touka Kirishima is a fiercely independent and determined character in the world of Tokyo Ghoul. She is a ghoul, a creature that must consume human flesh to survive, and is a member of the ghoul group known as Anteiku."
+    },
+    "tsubaki": {
+        "name": "Tsubaki Nakatsukasa",
+        "path": "tsubaki",
+        "description": "Tsubaki Nakatsukasa, a talented Demon Weapon and the devoted partner of Black Star. She can change into a variety of different weapon forms to fit the situation, a rarity among Weapons."
+    },
+    "tsunayoshi": {
+        "name": "Sawada Tsunayoshi",
+        "path": "tsunayoshi",
+        "description": "Sawada Tsunayoshi, the tenth head of the Vongola Family. Unconfident and timid, yet fiercely loyal to his friends, Tsuna is the unwilling head of a mafia family, and wielder of the Vongola Flames of the Sky."
+    },
+    "urahara": {
+        "name": "Urahara Kisuke",
+        "path": "urahara",
+        "description": "Urahara Kisuke is the former captain of the 12th Division of the Court Guard Squards. He currently resides in Karakura Town, where he runs a shop that sells Shinigami supplies."
+    },
+    "uraraka": {
+        "name": "Uraraka Ochaco",
+        "path": "uraraka",
+        "description": "A skilled fighter and member of the U.A. High School's Hero Course, Uraraka is a cheerful and optimistic young woman with a heart of gold. Her Quirk, Zero Gravity, allows her to manipulate gravity, making objects weightless with a touch."
+    },
+    "uryuu": {
+        "name": "Ishida Uryu",
+        "path": "uryuu",
+        "description": "The last known Quincy is a calm and collected character who is able to analyze any situation. Uryuu's Quincy skills allow for amazing defensive and offensive abilities."
+    },
+    "usopp": {
+        "name": "Usopp",
+        "path": "usopp",
+        "description": "C'mon, you know him, he's Usopp. Slingshot guy, yeah."
+    },
+    "vegeta": {
+        "name": "Vegeta",
+        "path": "vegeta",
+        "description": "Vegeta, legendary prince of the Saiyans. A powerful and relentless warrior, Vegeta bears the pride of his fallen race on his back and never accepts defeat."
+    },
+    "xanxus": {
+        "name": "Xanxus",
+        "path": "xanxus",
+        "description": "Xanxus is the son of the Vongola family's Ninth Boss, and the leader of the Varia, its independent assassination squad. He possesses the Flames of Wrath, a power made even more devastating when used in conjunction with his handguns."
+    },
+    "yamamoto": {
+        "name": "Yamamoto Takeshi",
+        "path": "yamamoto",
+        "description": "Yamamoto Takeshi, the Vongola Guardian of Rain. The heir to the Shigure Soen Ryu style of swordsmanship, Yamamoto is a mild-mannered teenager who has more interest in enjoying his time with his friends than improving the Vongola Mafia family."
+    },
+    "yuji": {
+        "name": "Itadori Yuuji",
+        "path": "yuji",
+        "description": "Itadori Yuji, an up-and-coming jujutsu sorcerer. The tenuous vessel of the special grade cursed object Ryomen Sukuna, Yuji has an unbelievable capacity for cursed energy and a potential that he is only just beginning to explore."
+    },
+    "yuno": {
+        "name": "Yuno Grinberryall",
+        "path": "yuno",
+        "description": "Yuno is an orphan left at a church after the downfall of his family, the rulers of the Spade Kingdom. Along with his partner, the wind spirit Sylph, Yuno wields his four-leaf clover grimoire in service of the Royal Knights."
+    },
+    "zenitsu": {
+        "name": "Agatsuma Zenitsu",
+        "path": "zenitsu",
+        "description": "Zenitsu Agatsuma is a member of the Demon Slayer Corps, who was once a timid and cowardly individual. However, when he is forced to face his fears during a demon attack, he awakens to his true potential and becomes a formidable warrior."
+    },
+    "zoro": {
+        "name": "Roronoa Zoro",
+        "path": "zoro",
+        "description": "As a master of the Three Sword Style, which he created during his childhood, Zoro is one of the most powerful combatants of the Straw Hat pirate crew. His dream is to become the greatest swordsman in the world."
+    }
+}

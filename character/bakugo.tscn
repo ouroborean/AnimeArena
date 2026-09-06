@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/bakugo.gd" id="1_f8yun"]
+[ext_resource type="Texture2D" path="res://assets/images/Katsuki Bakugou/profile_mastery_bakugo.png" id="2_a1n02"]
+[ext_resource type="Texture2D" path="res://assets/images/Katsuki Bakugou/bakugouprof.png" id="2_e5u5p"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_gamxs"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_pnk7j"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_72kw7"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_u2dgy"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_qfqgn"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_efig7"]
+
+[node name="Bakugo" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_f8yun")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_a1n02")
+mastery_name = "Enraged Bakugo"
+portrait_texture = ExtResource("2_e5u5p")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_gamxs")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_pnk7j")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_72kw7")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_u2dgy")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_qfqgn")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_efig7")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

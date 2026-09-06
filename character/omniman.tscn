@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/omniman.gd" id="1_hu05w"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_a3jry"]
+[ext_resource type="Texture2D" path="res://assets/images/Omni-man/omnimanprof.png" id="2_c7owe"]
+[ext_resource type="Texture2D" path="res://assets/images/Omni-man/profile_mastery_omniman.png" id="2_ygl5a"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_q34xk"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_tg17g"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_61ta7"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_s7mjv"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_k5x05"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_hu05w")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_ygl5a")
+mastery_name = "Homelander"
+portrait_texture = ExtResource("2_c7owe")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_a3jry")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_q34xk")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_tg17g")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_61ta7")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_s7mjv")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_k5x05")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

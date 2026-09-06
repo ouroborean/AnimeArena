@@ -1,0 +1,14 @@
+{
+	"done": true,
+	"draws": 0,
+	"eval": true,
+	"generation": 8,
+	"losses": 214,
+	"matches_done": 400,
+	"num_matches": 400,
+	"opponent": "v3:gen_8.json",
+	"run_seed": 54321,
+	"trained_matches": 16000,
+	"updated": "2026-07-26T19:43:53",
+	"wins": 186
+}

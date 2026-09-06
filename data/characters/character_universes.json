@@ -1,0 +1,891 @@
+{
+  "_source": "character/<path_name>.gd",
+  "_symbols": [
+    "character_name",
+    "path_name",
+    "universe"
+  ],
+  "_generated_by": "tools/reference_data.py",
+  "characters": {
+    "naruto": {
+      "name": "Naruto Uzumaki",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "sasuke": {
+      "name": "Sasuke Uchiha",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "sakura": {
+      "name": "Haruno Sakura",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "hinata": {
+      "name": "Hyuuga Hinata",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "hashirama": {
+      "name": "Hashirama Senju",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "boruto": {
+      "name": "Uzumaki Boruto",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "itachi": {
+      "name": "Uchiha Itachi",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "luffy": {
+      "name": "Monkey D. Luffy",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "zoro": {
+      "name": "Roronoa Zoro",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "usopp": {
+      "name": "Usopp",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "ace": {
+      "name": "Portgas D. Ace",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "marco": {
+      "name": "Marco the Phoenix",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "rob": {
+      "name": "Rob Lucci",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "yuji": {
+      "name": "Itadori Yuuji",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "nobara": {
+      "name": "Kugisaki Nobara",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "megumi": {
+      "name": "Fushiguro Megumi",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "sukuna": {
+      "name": "Ryomen Sukuna",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "gojo": {
+      "name": "Satoru Gojo",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "toji": {
+      "name": "Fushiguro Toji",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "midoriya": {
+      "name": "Midoriya Izuku",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "uraraka": {
+      "name": "Uraraka Ochaco",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "bakugo": {
+      "name": "Bakugo Katsuki",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "todoroki": {
+      "name": "Todoroki Shoto",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "tokoyami": {
+      "name": "Fumikage Tokoyami",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "tsuyu": {
+      "name": "Asui Tsuyu",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "toga": {
+      "name": "Himiko Toga",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "allmight": {
+      "name": "All Might",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "natsu": {
+      "name": "Natsu Dragneel",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "lucy": {
+      "name": "Lucy Heartphilia",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "gray": {
+      "name": "Gray Fullbuster",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "erza": {
+      "name": "Erza Scarlet",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "mavis": {
+      "name": "Mavis Vermillion",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "madoka": {
+      "name": "Madoka Kaname",
+      "universe": "MADOKA_MAGICA",
+      "universe_ordinal": 5
+    },
+    "sayaka": {
+      "name": "Sayaka",
+      "universe": "MADOKA_MAGICA",
+      "universe_ordinal": 5
+    },
+    "mami": {
+      "name": "Mami Tomoe",
+      "universe": "MADOKA_MAGICA",
+      "universe_ordinal": 5
+    },
+    "asta": {
+      "name": "Asta",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "yuno": {
+      "name": "Yuno Grinberryall",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "noelle": {
+      "name": "Noelle Silva",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "maka": {
+      "name": "Maka Albarn",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    },
+    "soul": {
+      "name": "Soul Evans",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    },
+    "blackstar": {
+      "name": "Black Star",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    },
+    "tsubaki": {
+      "name": "Tsubaki Nakatsukasa",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    },
+    "kid": {
+      "name": "Death the Kid",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    },
+    "lizandpatty": {
+      "name": "The Thompson Sisters",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    },
+    "crona": {
+      "name": "Crona",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    },
+    "aang": {
+      "name": "Aang",
+      "universe": "AVATAR",
+      "universe_ordinal": 8
+    },
+    "kitara": {
+      "name": "Katara",
+      "universe": "AVATAR",
+      "universe_ordinal": 8
+    },
+    "toph": {
+      "name": "Toph Beifong",
+      "universe": "AVATAR",
+      "universe_ordinal": 8
+    },
+    "korra": {
+      "name": "Korra",
+      "universe": "AVATAR",
+      "universe_ordinal": 8
+    },
+    "tatsumi": {
+      "name": "Tatsumi",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "akame": {
+      "name": "Akame",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "sheele": {
+      "name": "Sheele",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "mine": {
+      "name": "Mine",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "esdeath": {
+      "name": "Esdeath",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "tanjiro": {
+      "name": "Kamado Tanjiro",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "nezuko": {
+      "name": "Kamado Nezuko",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "zenitsu": {
+      "name": "Agatsuma Zenitsu",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "inosuke": {
+      "name": "Hashibira Inosuke",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "rengoku": {
+      "name": "Kyojuro Rengoku",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "muichiro": {
+      "name": "Muichiro Tokito",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "uzui": {
+      "name": "Tengen Uzui",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "meliodas": {
+      "name": "Meliodas",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "diane": {
+      "name": "Diane",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "king": {
+      "name": "King",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "ban": {
+      "name": "Ban",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "escanor": {
+      "name": "Escanor",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "tsunayoshi": {
+      "name": "Sawada Tsunayoshi",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "yamamoto": {
+      "name": "Yamamoto Takeshi",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "ryohei": {
+      "name": "Ryohei Sasagawa",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "chrome": {
+      "name": "Chrome Dokuro",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "squalo": {
+      "name": "Superbia Squalo",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "xanxus": {
+      "name": "Xanxus",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "hibari": {
+      "name": "Hibari Kyouya",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "eren": {
+      "name": "Eren Yeager",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "mikasa": {
+      "name": "Mikasa Ackerman",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "levi": {
+      "name": "Levi Ackerman",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "aiohto": {
+      "name": "Ai Ohto",
+      "universe": "WONDER_EGG_PRIORITY",
+      "universe_ordinal": 51
+    },
+    "jinwoo": {
+      "name": "Sung Jin-woo",
+      "universe": "SOLO_LEVELING",
+      "universe_ordinal": 31
+    },
+    "minene": {
+      "name": "Minene Uryuu",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "tsubasa": {
+      "name": "Tsubasa Kazanari",
+      "universe": "SYMPHOGEAR",
+      "universe_ordinal": 50
+    },
+    "hibiki": {
+      "name": "Hibiki Tachibana",
+      "universe": "SYMPHOGEAR",
+      "universe_ordinal": 50
+    },
+    "saitama": {
+      "name": "Saitama",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "genos": {
+      "name": "Genos",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "tatsumaki": {
+      "name": "Tatsumaki",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "shinra": {
+      "name": "Shinra Kusakabe",
+      "universe": "FIRE_FORCE",
+      "universe_ordinal": 15
+    },
+    "tamaki": {
+      "name": "Tamaki Kotatsu",
+      "universe": "FIRE_FORCE",
+      "universe_ordinal": 15
+    },
+    "arthur": {
+      "name": "Arthur Boyle",
+      "universe": "FIRE_FORCE",
+      "universe_ordinal": 15
+    },
+    "gon": {
+      "name": "Gon Freecs",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "killua": {
+      "name": "Killua Zoldyck",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "kurapika": {
+      "name": "Kurapika",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "hisoka": {
+      "name": "Hisoka Morow",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "neferpitou": {
+      "name": "Neferpitou",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "misaka": {
+      "name": "Misaka Mikoto",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "kuroko": {
+      "name": "Shirai Kuroko",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "gunha": {
+      "name": "Sogiita Gunha",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "shokuhou": {
+      "name": "Shokuhou Misaki",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "rakko": {
+      "name": "Yumiya Rakko",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "emiya": {
+      "name": "Emiya Shirou",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "saber": {
+      "name": "Saber",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "gilgamesh": {
+      "name": "Gilgamesh",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "emiyaarcher": {
+      "name": "EMIYA",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "jack": {
+      "name": "Jack the Ripper",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "semiramis": {
+      "name": "Semiramis",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "frankenstein": {
+      "name": "Frankenstein",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "mash": {
+      "name": "Mash Kyrielight",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "ryuko": {
+      "name": "Ryuko Matoi",
+      "universe": "KILL_LA_KILL",
+      "universe_ordinal": 19
+    },
+    "satsuki": {
+      "name": "Satsuki Kiryuin",
+      "universe": "KILL_LA_KILL",
+      "universe_ordinal": 19
+    },
+    "nonon": {
+      "name": "Nonon Jakazure",
+      "universe": "KILL_LA_KILL",
+      "universe_ordinal": 19
+    },
+    "ichigo": {
+      "name": "Ichigo Kurosaki",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "orihime": {
+      "name": "Orihime Inoue",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "byakuya": {
+      "name": "Byakuya Kuchiki",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "nel": {
+      "name": "Nelliel tu Odelschwank",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "halibel": {
+      "name": "Tia Halibel",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "nimaiya": {
+      "name": "Nimaiya Oetsu",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "ichibe": {
+      "name": "Ichibe Hyosube",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "kurotsuchi": {
+      "name": "Mayuri Kurotsuchi",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "yoruichi": {
+      "name": "Yoruichi Shihouin",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "ganta": {
+      "name": "Ganta Igarashi",
+      "universe": "DEADMAN_WONDERLAND",
+      "universe_ordinal": 20
+    },
+    "shiro": {
+      "name": "Shiro",
+      "universe": "DEADMAN_WONDERLAND",
+      "universe_ordinal": 20
+    },
+    "ken": {
+      "name": "Ken Kaneki",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "touka": {
+      "name": "Touka Kirishima",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "rimuru": {
+      "name": "Rimuru Tempest",
+      "universe": "THAT_TIME_I_GOT_REINCARNATED_AS_A_SLIME",
+      "universe_ordinal": 22
+    },
+    "veldora": {
+      "name": "Veldora Tempest",
+      "universe": "THAT_TIME_I_GOT_REINCARNATED_AS_A_SLIME",
+      "universe_ordinal": 22
+    },
+    "edward": {
+      "name": "Edward Elric",
+      "universe": "FULL_METAL_ALCHEMIST",
+      "universe_ordinal": 36
+    },
+    "alphonse": {
+      "name": "Alphonse Elric",
+      "universe": "FULL_METAL_ALCHEMIST",
+      "universe_ordinal": 36
+    },
+    "goku": {
+      "name": "Son Goku",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "vegeta": {
+      "name": "Vegeta",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "gohan": {
+      "name": "Son Gohan",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "gogeta": {
+      "name": "Gogeta",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "cooler": {
+      "name": "Cooler",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "cell": {
+      "name": "Cell",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "seventeen": {
+      "name": "Android 17",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "broly": {
+      "name": "Broly",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "frieza": {
+      "name": "Frieza",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "gatomon": {
+      "name": "Gatomon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "hawkmon": {
+      "name": "Hawkmon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "adam": {
+      "name": "Adam",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "denji": {
+      "name": "Denji",
+      "universe": "CHAINSAW_MAN",
+      "universe_ordinal": 32
+    },
+    "power": {
+      "name": "Power",
+      "universe": "CHAINSAW_MAN",
+      "universe_ordinal": 32
+    },
+    "impmon": {
+      "name": "Impmon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "renamon": {
+      "name": "Renamon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "myotismon": {
+      "name": "Myotismon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "ladydevimon": {
+      "name": "LadyDevimon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "machinedramon": {
+      "name": "Machinedramon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "gallantmon": {
+      "name": "Gallantmon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "omnimon": {
+      "name": "Omnimon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "alphamon": {
+      "name": "Alphamon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "yoh": {
+      "name": "Asakura Yoh",
+      "universe": "SHAMAN_KING",
+      "universe_ordinal": 42
+    },
+    "horohoro": {
+      "name": "Horohoro",
+      "universe": "SHAMAN_KING",
+      "universe_ordinal": 42
+    },
+    "lyserg": {
+      "name": "Lyserg Diethel",
+      "universe": "SHAMAN_KING",
+      "universe_ordinal": 42
+    },
+    "jeanne": {
+      "name": "Iron Maiden Jeanne",
+      "universe": "SHAMAN_KING",
+      "universe_ordinal": 42
+    },
+    "nagisa": {
+      "name": "Nagisa Shiota",
+      "universe": "ASSASSINATION_CLASSROOM",
+      "universe_ordinal": 37
+    },
+    "koro": {
+      "name": "Koro-sensei",
+      "universe": "ASSASSINATION_CLASSROOM",
+      "universe_ordinal": 37
+    },
+    "mercury": {
+      "name": "Sailor Mercury",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "venus": {
+      "name": "Sailor Venus",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "mars": {
+      "name": "Sailor Mars",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "jupiter": {
+      "name": "Sailor Jupiter",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "saturn": {
+      "name": "Sailor Saturn",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "uranus": {
+      "name": "Sailor Uranus",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "frieren": {
+      "name": "Frieren",
+      "universe": "FRIEREN",
+      "universe_ordinal": 30
+    },
+    "fern": {
+      "name": "Fern",
+      "universe": "FRIEREN",
+      "universe_ordinal": 30
+    },
+    "stark": {
+      "name": "Stark",
+      "universe": "FRIEREN",
+      "universe_ordinal": 30
+    },
+    "megumin": {
+      "name": "Megumin",
+      "universe": "KONOSUBA",
+      "universe_ordinal": 38
+    },
+    "inuyasha": {
+      "name": "Inuyasha",
+      "universe": "INUYASHA",
+      "universe_ordinal": 35
+    },
+    "yugi": {
+      "name": "Yugi Mutou",
+      "universe": "YUGIOH",
+      "universe_ordinal": 34
+    },
+    "kaiba": {
+      "name": "Seto Kaiba",
+      "universe": "YUGIOH",
+      "universe_ordinal": 34
+    },
+    "pegasus": {
+      "name": "Maximillion Pegasus",
+      "universe": "YUGIOH",
+      "universe_ordinal": 34
+    },
+    "jaden": {
+      "name": "Jaden Yuki",
+      "universe": "YUGIOH",
+      "universe_ordinal": 34
+    },
+    "jesse": {
+      "name": "Jesse Anderson",
+      "universe": "YUGIOH",
+      "universe_ordinal": 34
+    },
+    "yubel": {
+      "name": "Yubel",
+      "universe": "YUGIOH",
+      "universe_ordinal": 34
+    },
+    "shinoa": {
+      "name": "Hiragi Shinoa",
+      "universe": "SERAPH_OF_THE_END",
+      "universe_ordinal": 39
+    },
+    "toudou": {
+      "name": "Toudou Touka",
+      "universe": "CHIVALRY_OF_A_FAILED_KNIGHT",
+      "universe_ordinal": 40
+    },
+    "gasai": {
+      "name": "Yuno Gasai",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "blackwargreymon": {
+      "name": "BlackWarGreymon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "astolfo": {
+      "name": "Astolfo",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "death": {
+      "name": "Death",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    }
+  }
+}

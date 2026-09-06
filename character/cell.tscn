@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://g81s3hhqiete"]
+
+[ext_resource type="Script" uid="uid://dnxog164yknc5" path="res://character/cell.gd" id="1_vdpju"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_6c08b"]
+[ext_resource type="Texture2D" uid="uid://c4aj416aspkuq" path="res://assets/images/Cell/cellprof.png" id="2_p4mve"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_82v2i"]
+[ext_resource type="Texture2D" uid="uid://27npjr8h6vf4" path="res://assets/images/Cell/cellaltprof1.png" id="3_x5xnk"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_g4gxt"]
+[ext_resource type="Texture2D" uid="uid://bw5mvfnv6w45k" path="res://assets/images/Cell/cellaltprof.png" id="4_w1v1n"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_6r3ao"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_cpbo4"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_qqtwg"]
+
+[node name="CharacterTemplate" type="Node" unique_id=2121685481 node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_vdpju")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+portrait_texture = ExtResource("2_p4mve")
+alt_portraits = Array[Texture2D]([ExtResource("3_x5xnk"), ExtResource("4_w1v1n")])
+
+[node name="EffectStorageComponent" parent="." unique_id=1726197535 instance=ExtResource("2_6c08b")]
+
+[node name="HealthComponent" parent="." unique_id=1551593029 instance=ExtResource("3_82v2i")]
+
+[node name="StatComponent" parent="." unique_id=1927808687 instance=ExtResource("4_g4gxt")]
+
+[node name="NameComponent" parent="." unique_id=494676341 instance=ExtResource("5_6r3ao")]
+
+[node name="MovesetComponent" parent="." unique_id=1867434965 instance=ExtResource("6_cpbo4")]
+
+[node name="TargeterComponent" parent="." unique_id=2105476843 instance=ExtResource("7_qqtwg")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://missions/sample_mission.gd" id="1_f5cfl"]
+[ext_resource type="Texture2D" path="res://assets/images/Team_Kakashi.png" id="2_ur28k"]
+
+[node name="SampleMission" type="Node"]
+script = ExtResource("1_f5cfl")
+_name = "The Sharingan Sensei"
+mission_id = "kakashi_unlock"
+description = "Kakashi Hatake, one of the Leaf Village's most well-known Jonin, has just been assigned to teach Team 7. Faced with a clumsy showoff, a vengeful genius, and a girl more interested in boys than ninjutsu, Kakashi has decided to put his new Genin to the test."
+image = ExtResource("2_ur28k")
+rank_requirement = 1

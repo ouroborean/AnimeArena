@@ -1,0 +1,12 @@
+{
+  "_source": "components/stats_db.gd",
+  "_symbols": [
+    "EXCLUDED_USERS"
+  ],
+  "_generated_by": "tools/reference_data.py",
+  "excluded_users": [
+    "Cheshire",
+    "Suffering"
+  ],
+  "_note": "Accounts omitted from character usage/win statistics (dev accounts). A port that drops this silently pollutes the stats with developer games."
+}

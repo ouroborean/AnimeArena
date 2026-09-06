@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://components/match.gd" id="1_hoyxs"]
+
+[node name="Match" type="Node"]
+script = ExtResource("1_hoyxs")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="handle_turn_timeout"]

@@ -1,0 +1,66 @@
+{
+  "_comment": "PLACEHOLDER chapter X — validates the campaign map/VN/state system with placeholder text + real portraits/backgrounds as stand-in art. Node behavior resolves from story state (stage + flags + completed activations): first matching, non-consumed activation wins. See .claude/plans/campaign-mode.md.",
+  "chapters": [
+    {
+      "id": "chapterX",
+      "title": "Chapter X — Placeholder Convergence",
+      "universe": "Test",
+      "map_background": "background_charselect_default",
+      "start_node": "hub",
+      "start_stage": "start",
+      "party": ["vessel", "sasuke", "sakura"],
+      "roster_grants": ["naruto", "sasuke", "sakura", "itachi", "bakugo", "vegeta"],
+      "nodes": [
+        {
+          "id": "hub", "label": "Leaf Hub", "x": 0.16, "y": 0.55,
+          "edges": ["mist", "market", "shrine"],
+          "open_when": {},
+          "activations": [
+            { "id": "hub_intro", "when": { "stage": "start" }, "once": true,
+              "sequence": [{ "talk": "dlg_hub_intro" }],
+              "on_complete": { "set_stage": "go_mist", "set_flags": ["met_guide", "mist_open", "market_open"] } },
+            { "id": "hub_return", "when": { "stage": "return_leaf" }, "once": true,
+              "sequence": [{ "talk": "dlg_hub_return_pre" }, { "battle": "enc_defense" }, { "talk": "dlg_hub_return_post" }],
+              "on_complete": { "set_stage": "climax", "set_flags": ["shrine_open"] } },
+            { "id": "hub_train", "when": { "flags": ["met_guide"] }, "repeatable": true,
+              "sequence": [{ "talk": "dlg_hub_train" }] },
+            { "id": "hub_idle", "when": {}, "sequence": [{ "talk": "dlg_hub_idle" }] }
+          ]
+        },
+        {
+          "id": "mist", "label": "Mist Village", "x": 0.55, "y": 0.24,
+          "edges": ["hub", "shrine"],
+          "open_when": { "flags": ["mist_open"] },
+          "activations": [
+            { "id": "mist_story", "when": { "stage": "go_mist" }, "once": true,
+              "sequence": [{ "talk": "dlg_mist_pre" }, { "battle": "enc_mist" }, { "talk": "dlg_mist_post" }],
+              "on_complete": { "set_stage": "return_leaf" } },
+            { "id": "mist_idle", "when": {}, "sequence": [{ "talk": "dlg_mist_idle" }] }
+          ]
+        },
+        {
+          "id": "market", "label": "Border Market", "x": 0.36, "y": 0.85,
+          "edges": ["hub"],
+          "open_when": { "flags": ["market_open"] },
+          "activations": [
+            { "id": "market_quest", "when": { "not_flags": ["helped_merchant", "declined_merchant"] }, "once": true,
+              "sequence": [{ "talk": "dlg_market_quest" }] },
+            { "id": "market_after", "when": { "flags": ["helped_merchant"] }, "sequence": [{ "talk": "dlg_market_after" }] },
+            { "id": "market_idle", "when": {}, "sequence": [{ "talk": "dlg_market_idle" }] }
+          ]
+        },
+        {
+          "id": "shrine", "label": "Convergence Shrine", "x": 0.82, "y": 0.6,
+          "edges": ["hub", "mist"],
+          "open_when": { "flags": ["shrine_open"] },
+          "activations": [
+            { "id": "shrine_final", "when": { "stage": "climax" }, "once": true,
+              "sequence": [{ "talk": "dlg_shrine_final" }],
+              "on_complete": { "set_flags": ["chapterX_done"] } },
+            { "id": "shrine_locked", "when": {}, "sequence": [{ "talk": "dlg_shrine_idle" }] }
+          ]
+        }
+      ]
+    }
+  ]
+}

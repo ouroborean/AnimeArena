@@ -1,0 +1,14 @@
+{
+	"done": true,
+	"draws": 0,
+	"eval": true,
+	"generation": 5,
+	"losses": 43,
+	"matches_done": 150,
+	"num_matches": 150,
+	"opponent": "contextual_v2",
+	"run_seed": 55902,
+	"trained_matches": 10000,
+	"updated": "2026-07-27T09:02:53",
+	"wins": 107
+}

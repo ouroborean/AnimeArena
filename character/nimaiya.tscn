@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/nimaiya.gd" id="1_ddvjo"]
+[ext_resource type="Texture2D" path="res://assets/images/Nimaiya Oetsu/oetsuprof.png" id="2_codnu"]
+[ext_resource type="Texture2D" path="res://assets/images/Nimaiya Oetsu/alt_prof_nimaiya.png" id="2_n2362"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="4_3nj1m"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="5_swemm"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="6_o6f7k"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="7_cdku8"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="8_00cei"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="9_o8pnv"]
+
+[node name="Nimaiya" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_ddvjo")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_n2362")
+mastery_name = "Forge God Nimaiya"
+portrait_texture = ExtResource("2_codnu")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("4_3nj1m")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_swemm")]
+
+[node name="StatComponent" parent="." instance=ExtResource("6_o6f7k")]
+
+[node name="NameComponent" parent="." instance=ExtResource("7_cdku8")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("8_00cei")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("9_o8pnv")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

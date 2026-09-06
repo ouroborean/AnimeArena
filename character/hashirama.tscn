@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/hashirama.gd" id="1_caf0m"]
+[ext_resource type="Texture2D" path="res://assets/images/Hashirama Senju/alt_prof_hashirama.png" id="2_33kvq"]
+[ext_resource type="Texture2D" path="res://assets/images/Hashirama Senju/hashiramaprof.png" id="2_m3ngv"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="4_guuu1"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="5_defxy"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="6_dfnmg"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="7_jitqf"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="8_du3tp"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="9_sn1b6"]
+
+[node name="Aang" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_caf0m")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_33kvq")
+mastery_name = "Founder Hashirama"
+portrait_texture = ExtResource("2_m3ngv")
+alt_portraits = Array[Texture2D]([null])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("4_guuu1")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_defxy")]
+
+[node name="StatComponent" parent="." instance=ExtResource("6_dfnmg")]
+
+[node name="NameComponent" parent="." instance=ExtResource("7_jitqf")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("8_du3tp")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("9_sn1b6")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

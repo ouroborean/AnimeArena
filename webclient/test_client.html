@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Anime Arena — JSON Gateway Test Client</title>
+<style>
+  body { font: 14px/1.5 system-ui, sans-serif; margin: 1.5rem; max-width: 720px; }
+  h1 { font-size: 1.1rem; }
+  #log { background:#111; color:#bada55; padding:.75rem; height:320px; overflow:auto;
+         white-space:pre-wrap; border-radius:6px; font-family:ui-monospace,monospace; font-size:12px; }
+  .row { display:flex; gap:.5rem; flex-wrap:wrap; margin:.5rem 0; align-items:center; }
+  button { padding:.4rem .8rem; cursor:pointer; }
+  input { padding:.35rem; }
+  .sent { color:#7fd; } .recv { color:#bada55; } .sys { color:#888; } .err { color:#f77; }
+</style>
+</head>
+<body>
+  <h1>Anime Arena — JSON Gateway Test Client</h1>
+  <p>Validates the raw-WebSocket + JSON transport against <code>gateway_runner.gd</code>
+     (run: <code>godot --headless --path . --script res://webclient/gateway_runner.gd</code>).</p>
+
+  <div class="row">
+    <label>URL <input id="url" value="ws://localhost:5696" size="24" /></label>
+    <button id="connect">Connect</button>
+    <button id="disconnect" disabled>Disconnect</button>
+    <span id="status" class="sys">disconnected</span>
+  </div>
+
+  <div class="row">
+    <button id="ping" disabled>Send ping</button>
+    <label>user <input id="user" value="tester" size="10" /></label>
+    <label>pass <input id="pass" value="secret" size="10" /></label>
+    <button id="login" disabled>Send login</button>
+    <button id="bad" disabled>Send unknown type</button>
+  </div>
+
+  <div id="log"></div>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+  const logEl = $("log");
+  let ws = null;
+
+  function log(cls, msg) {
+    const t = new Date().toLocaleTimeString();
+    logEl.innerHTML += `<span class="${cls}">[${t}] ${msg}</span>\n`;
+    logEl.scrollTop = logEl.scrollHeight;
+  }
+  function send(obj) {
+    if (!ws || ws.readyState !== WebSocket.OPEN) { log("err", "not connected"); return; }
+    ws.send(JSON.stringify(obj));
+    log("sent", "-> " + JSON.stringify(obj));
+  }
+  function setConnected(on) {
+    $("status").textContent = on ? "connected" : "disconnected";
+    $("status").className = on ? "recv" : "sys";
+    $("connect").disabled = on; $("disconnect").disabled = !on;
+    for (const id of ["ping", "login", "bad"]) $(id).disabled = !on;
+  }
+
+  $("connect").onclick = () => {
+    try {
+      ws = new WebSocket($("url").value.trim());
+    } catch (e) { log("err", "bad URL: " + e); return; }
+    log("sys", "connecting...");
+    ws.onopen = () => { log("sys", "OPEN"); setConnected(true); };
+    ws.onclose = (e) => { log("sys", `CLOSED (code ${e.code})`); setConnected(false); };
+    ws.onerror = () => { log("err", "socket error (is the gateway running?)"); };
+    ws.onmessage = (ev) => {
+      let parsed; try { parsed = JSON.parse(ev.data); } catch { parsed = ev.data; }
+      log("recv", "<- " + JSON.stringify(parsed));
+    };
+  };
+  $("disconnect").onclick = () => ws && ws.close();
+  $("ping").onclick = () => send({ type: "ping", payload: { t: Date.now() } });
+  $("login").onclick = () => send({ type: "login", username: $("user").value, password: $("pass").value });
+  $("bad").onclick = () => send({ type: "frobnicate", foo: 42 });
+</script>
+</body>
+</html>

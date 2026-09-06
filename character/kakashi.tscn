@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://character/kakashi.gd" id="1_8y80v"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_qatvh"]
+[ext_resource type="Texture2D" path="res://assets/images/Kakashi Hatake/kakashiprof.png" id="2_uxv8c"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_q7f2u"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_8ruuq"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_h2f8x"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_60c7q"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_glpds"]
+
+[node name="Kakashi" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_8y80v")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+portrait_texture = ExtResource("2_uxv8c")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_qatvh")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_q7f2u")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_8ruuq")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_h2f8x")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_60c7q")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_glpds")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

@@ -1,0 +1,2619 @@
+﻿Godot Engine v4.6.2.stable.official.71f334935 - https://godotengine.org
+
+[trainer] seed=25901 matches=150 opponent=priority eval=true out=res://training/checkpoints/work.json checkpoint=res://training/checkpoints/gen_2.json
+[authored] loaded 1 authored character(s)
+WARNING: res://character/mercury.tscn:3 - ext_resource, invalid UID: uid://0elk6jbn3c1r - using text path instead: res://character/mercury.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/mercury.tscn:5 - ext_resource, invalid UID: uid://c7aalorxulq8n - using text path instead: res://assets/images/Sailor Mercury/mercuryprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/sakura.tscn:3 - ext_resource, invalid UID: uid://dkxup0e80k3cl - using text path instead: res://character/sakura.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/sakura.tscn:5 - ext_resource, invalid UID: uid://bj3dckey1sbel - using text path instead: res://assets/images/Haruno Sakura/sakuraprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/sakura.tscn:6 - ext_resource, invalid UID: uid://dt5qotac3nob4 - using text path instead: res://assets/images/Haruno Sakura/profile_mastery_sakura.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: Failed loading resource: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: res://character/minene.tscn:20 - Parse Error: [ext_resource] referenced non-existent resource at: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:40)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[   1/150 ] WIN    18 turns   mercury, blackstar, alphonse  vs  sakura, lizandpatty, minene
+WARNING: res://character/venus.tscn:5 - ext_resource, invalid UID: uid://c4sl3df8pymad - using text path instead: res://assets/images/Sailor Venus/venusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[   2/150 ] LOSS   24 turns   edward, venus, genos  vs  squalo, kuroko, toudou
+WARNING: res://character/shinoa.tscn:3 - ext_resource, invalid UID: uid://v82sjtso14nc - using text path instead: res://character/shinoa.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/shinoa.tscn:5 - ext_resource, invalid UID: uid://odaiuwh5l86v - using text path instead: res://assets/images/Hiragi Shinoa/shinoaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   3/150 ] LOSS   18 turns   mikasa, power, genos  vs  shinoa, hashirama, aang
+WARNING: res://character/jeanne.tscn:3 - ext_resource, invalid UID: uid://cp5edyo8cm60g - using text path instead: res://character/jeanne.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jeanne.tscn:5 - ext_resource, invalid UID: uid://bmiuugogqcs - using text path instead: res://assets/images/Jeanne/jeanneprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/esdeath.tscn:3 - ext_resource, invalid UID: uid://pmbdjmwo0r64 - using text path instead: res://character/esdeath.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/esdeath.tscn:5 - ext_resource, invalid UID: uid://cto4y04uyuwic - using text path instead: res://assets/images/Esdeath/esdeathprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[   4/150 ] WIN    32 turns   jeanne, esdeath, lucy  vs  ken, ban, maka
+WARNING: res://character/shinoa.tscn:3 - ext_resource, invalid UID: uid://v82sjtso14nc - using text path instead: res://character/shinoa.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/shinoa.tscn:5 - ext_resource, invalid UID: uid://odaiuwh5l86v - using text path instead: res://assets/images/Hiragi Shinoa/shinoaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/crona.tscn:3 - ext_resource, invalid UID: uid://dcnkady2b7bmh - using text path instead: res://character/crona.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/crona.tscn:5 - ext_resource, invalid UID: uid://dj7ew3sxl6mja - using text path instead: res://assets/images/Crona/cronaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[   5/150 ] WIN    32 turns   shinoa, lucy, saturn  vs  zenitsu, inuyasha, crona
+WARNING: res://character/jaden.tscn:3 - ext_resource, invalid UID: uid://o74grnoamqwi - using text path instead: res://character/jaden.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jaden.tscn:5 - ext_resource, invalid UID: uid://b81k3ilxfqqi - using text path instead: res://assets/images/Jaden Yuki/jadenprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/todoroki.tscn:5 - ext_resource, invalid UID: uid://bkio5ldesb5f - using text path instead: res://assets/images/Shoto Todoroki/todorokiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   6/150 ] WIN    14 turns   ken, asta, yubel  vs  jaden, jupiter, todoroki
+WARNING: res://character/crona.tscn:3 - ext_resource, invalid UID: uid://dcnkady2b7bmh - using text path instead: res://character/crona.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/crona.tscn:5 - ext_resource, invalid UID: uid://dj7ew3sxl6mja - using text path instead: res://assets/images/Crona/cronaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jesse.tscn:3 - ext_resource, invalid UID: uid://dkj2vbbufdg3r - using text path instead: res://character/jesse.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jesse.tscn:4 - ext_resource, invalid UID: uid://cufv0pfvmnagf - using text path instead: res://assets/images/Jesse Anderson/jesseprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[   7/150 ] WIN    33 turns   myotismon, crona, halibel  vs  jesse, aang, zenitsu
+WARNING: res://character/jesse.tscn:3 - ext_resource, invalid UID: uid://dkj2vbbufdg3r - using text path instead: res://character/jesse.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jesse.tscn:4 - ext_resource, invalid UID: uid://cufv0pfvmnagf - using text path instead: res://assets/images/Jesse Anderson/jesseprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[   8/150 ] WIN    24 turns   gogeta, ace, shiro  vs  blackstar, gasai, jesse
+WARNING: res://character/uzui.tscn:3 - ext_resource, invalid UID: uid://dra3h2oe6x7nl - using text path instead: res://character/uzui.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/uzui.tscn:5 - ext_resource, invalid UID: uid://c3piyyj0vx8vu - using text path instead: res://assets/images/Tengen Uzui/uzuiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[   9/150 ] WIN    21 turns   neferpitou, asta, uzui  vs  muichiro, arthur, vegeta
+WARNING: res://character/ichibe.tscn:3 - ext_resource, invalid UID: uid://bff17rk8065rc - using text path instead: res://character/ichibe.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:5 - ext_resource, invalid UID: uid://c6xox3jw634v6 - using text path instead: res://assets/images/Ichibe Hyosube/ichibeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  10/150 ] LOSS   24 turns   hibari, power, ichibe  vs  genos, ryuko, mars
+WARNING: res://character/crona.tscn:3 - ext_resource, invalid UID: uid://dcnkady2b7bmh - using text path instead: res://character/crona.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/crona.tscn:5 - ext_resource, invalid UID: uid://dj7ew3sxl6mja - using text path instead: res://assets/images/Crona/cronaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  11/150 ] LOSS   18 turns   diane, impmon, crona  vs  emiyaarcher, jinwoo, omnimon
+WARNING: res://character/orihime.tscn:3 - ext_resource, invalid UID: uid://dt0wg4uiy2o8g - using text path instead: res://character/orihime.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/orihime.tscn:5 - ext_resource, invalid UID: uid://h372d51odf8s - using text path instead: res://assets/images/Orihime Inoue/orihimeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:3 - ext_resource, invalid UID: uid://8dmjd6hcersd - using text path instead: res://character/tokoyami.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:5 - ext_resource, invalid UID: uid://bghv1nrv5go33 - using text path instead: res://assets/images/Fumikage Tokoyami/tokoyamiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jeanne.tscn:3 - ext_resource, invalid UID: uid://cp5edyo8cm60g - using text path instead: res://character/jeanne.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jeanne.tscn:5 - ext_resource, invalid UID: uid://bmiuugogqcs - using text path instead: res://assets/images/Jeanne/jeanneprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  12/150 ] WIN    53 turns   diane, sukuna, orihime  vs  tokoyami, saber, jeanne
+WARNING: res://character/allmight.tscn:5 - ext_resource, invalid UID: uid://bhfvdt87k6r14 - using text path instead: res://assets/images/All Might/allmightprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  13/150 ] LOSS   20 turns   mars, allmight, hashirama  vs  aiohto, gunha, gray
+WARNING: res://character/lyserg.tscn:5 - ext_resource, invalid UID: uid://dvv2dnwit3xt7 - using text path instead: res://assets/images/Diethel Lyserg/lysergprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/marco.tscn:3 - ext_resource, invalid UID: uid://dvn2jcycy4hsn - using text path instead: res://character/marco.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/marco.tscn:5 - ext_resource, invalid UID: uid://cinlhkvrkupj7 - using text path instead: res://assets/images/Marco/marcoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: Failed loading resource: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: res://character/minene.tscn:20 - Parse Error: [ext_resource] referenced non-existent resource at: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:40)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+SCRIPT ERROR: Invalid call. Nonexistent function 'grant_detonator_stack' in base 'Node (adam5.gd)'.
+   at: execute (res://abilities/minene1.gd:28)
+   GDScript backtrace (most recent call first):
+       [0] execute (res://abilities/minene1.gd:28)
+       [1] execute_ability (res://new multiplayer/battle_manager.gd:1205)
+       [2] _v3_execute (res://scripts/player_component.gd:1279)
+       [3] perform_turn_v3 (res://scripts/player_component.gd:1227)
+       [4] _dispatch (res://training/bot_trainer.gd:376)
+       [5] _drive_match (res://training/bot_trainer.gd:323)
+       [6] _process (res://training/bot_trainer.gd:184)
+[  14/150 ] LOSS   33 turns   adam, lyserg, zoro  vs  marco, nel, minene
+WARNING: res://character/todoroki.tscn:5 - ext_resource, invalid UID: uid://bkio5ldesb5f - using text path instead: res://assets/images/Shoto Todoroki/todorokiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ladydevimon.tscn:5 - ext_resource, invalid UID: uid://c1lm0hnw1jkdw - using text path instead: res://assets/images/LadyDevimon/ladydevimonprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  15/150 ] WIN    27 turns   broly, byakuya, hibari  vs  todoroki, tsubasa, ladydevimon
+[  16/150 ] WIN    14 turns   neferpitou, aang, toji  vs  vegeta, emiya, shiro
+WARNING: res://character/crona.tscn:3 - ext_resource, invalid UID: uid://dcnkady2b7bmh - using text path instead: res://character/crona.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/crona.tscn:5 - ext_resource, invalid UID: uid://dj7ew3sxl6mja - using text path instead: res://assets/images/Crona/cronaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  17/150 ] LOSS   15 turns   rimuru, yuno, crona  vs  machinedramon, toga, levi
+ERROR: Failed loading resource: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: res://character/minene.tscn:20 - Parse Error: [ext_resource] referenced non-existent resource at: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:40)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kaiba.tscn:3 - ext_resource, invalid UID: uid://do6banb66h602 - using text path instead: res://character/kaiba.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kaiba.tscn:5 - ext_resource, invalid UID: uid://cpldflrhcn3v1 - using text path instead: res://assets/images/Seto Kaiba/kaibaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  18/150 ] WIN    42 turns   edward, minene, tsunayoshi  vs  tatsumi, kaiba, mars
+SCRIPT ERROR: Invalid call. Nonexistent function 'attempt_transformation' in base 'Node (byakuya5.gd)'.
+   at: death_trigger (res://abilities/cell3.gd:92)
+   GDScript backtrace (most recent call first):
+       [0] death_trigger (res://abilities/cell3.gd:92)
+       [1] check (res://scripts/trigger.gd:27)
+       [2] check_death_triggers (res://scripts/character_component.gd:1441)
+       [3] die (res://scripts/character_component.gd:1878)
+       [4] modify_hp (res://scripts/health_component.gd:28)
+       [5] receive_damage (res://scripts/character_component.gd:460)
+       [6] receive_ability_damage (res://scripts/character_component.gd:404)
+       [7] deal_ability_damage (res://scripts/character_component.gd:654)
+       [8] resolve_damage (res://scripts/character_component.gd:2100)
+       [9] execute (res://abilities/byakuya1.gd:28)
+       [10] execute_ability (res://new multiplayer/battle_manager.gd:1205)
+       [11] _v3_execute (res://scripts/player_component.gd:1279)
+       [12] perform_turn_v3 (res://scripts/player_component.gd:1227)
+       [13] _dispatch (res://training/bot_trainer.gd:376)
+       [14] _drive_match (res://training/bot_trainer.gd:323)
+       [15] _process (res://training/bot_trainer.gd:184)
+SCRIPT ERROR: Invalid call. Nonexistent function 'attempt_transformation' in base 'Node (byakuya5.gd)'.
+   at: death_trigger (res://abilities/cell3.gd:92)
+   GDScript backtrace (most recent call first):
+       [0] death_trigger (res://abilities/cell3.gd:92)
+       [1] check (res://scripts/trigger.gd:27)
+       [2] check_death_triggers (res://scripts/character_component.gd:1441)
+       [3] die (res://scripts/character_component.gd:1878)
+       [4] modify_hp (res://scripts/health_component.gd:28)
+       [5] receive_damage (res://scripts/character_component.gd:460)
+       [6] receive_ability_damage (res://scripts/character_component.gd:404)
+       [7] deal_ability_damage (res://scripts/character_component.gd:654)
+       [8] resolve_damage (res://scripts/character_component.gd:2100)
+       [9] execute (res://abilities/byakuya1.gd:28)
+       [10] execute_ability (res://new multiplayer/battle_manager.gd:1205)
+       [11] _v3_execute (res://scripts/player_component.gd:1279)
+       [12] perform_turn_v3 (res://scripts/player_component.gd:1227)
+       [13] _dispatch (res://training/bot_trainer.gd:376)
+       [14] _drive_match (res://training/bot_trainer.gd:323)
+       [15] _process (res://training/bot_trainer.gd:184)
+SCRIPT ERROR: Invalid call. Nonexistent function 'attempt_transformation' in base 'Node (byakuya5.gd)'.
+   at: death_trigger (res://abilities/cell3.gd:92)
+   GDScript backtrace (most recent call first):
+       [0] death_trigger (res://abilities/cell3.gd:92)
+       [1] check (res://scripts/trigger.gd:27)
+       [2] check_death_triggers (res://scripts/character_component.gd:1441)
+       [3] die (res://scripts/character_component.gd:1878)
+       [4] modify_hp (res://scripts/health_component.gd:28)
+       [5] receive_damage (res://scripts/character_component.gd:460)
+       [6] receive_effect_damage (res://scripts/character_component.gd:440)
+       [7] deal_effect_damage (res://scripts/character_component.gd:780)
+       [8] resolve_effect_damage (res://scripts/character_component.gd:2110)
+       [9] execute_ticking_effect (res://new multiplayer/battle_manager.gd:1241)
+       [10] execute_step (res://new multiplayer/battle_manager.gd:1132)
+       [11] _execution_loop_step_sync (res://new multiplayer/battle_manager.gd:980)
+       [12] execution_loop_step (res://new multiplayer/battle_manager.gd:963)
+       [13] start_round_loop (res://new multiplayer/battle_manager.gd:950)
+       [14] perform_turn_v3 (res://scripts/player_component.gd:1250)
+       [15] _dispatch (res://training/bot_trainer.gd:376)
+       [16] _drive_match (res://training/bot_trainer.gd:323)
+       [17] _process (res://training/bot_trainer.gd:184)
+[  19/150 ] WIN    18 turns   cell, byakuya, tatsumaki  vs  mine, toudou, inuyasha
+[  20/150 ] LOSS   24 turns   xanxus, saitama, megumi  vs  megumin, vegeta, frieren
+WARNING: res://character/shinoa.tscn:3 - ext_resource, invalid UID: uid://v82sjtso14nc - using text path instead: res://character/shinoa.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/shinoa.tscn:5 - ext_resource, invalid UID: uid://odaiuwh5l86v - using text path instead: res://assets/images/Hiragi Shinoa/shinoaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yoh.tscn:5 - ext_resource, invalid UID: uid://dfvlh6upg6oqe - using text path instead: res://assets/images/Asakura Yoh/yohprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  21/150 ] WIN    34 turns   shinoa, muichiro, yoh  vs  erza, ken, rakko
+SCRIPT ERROR: Invalid call. Nonexistent function 'attempt_transformation' in base 'Node (bakugo5.gd)'.
+   at: death_trigger (res://abilities/cell3.gd:92)
+   GDScript backtrace (most recent call first):
+       [0] death_trigger (res://abilities/cell3.gd:92)
+       [1] check (res://scripts/trigger.gd:27)
+       [2] check_death_triggers (res://scripts/character_component.gd:1441)
+       [3] die (res://scripts/character_component.gd:1878)
+       [4] modify_hp (res://scripts/health_component.gd:28)
+       [5] receive_damage (res://scripts/character_component.gd:460)
+       [6] receive_effect_damage (res://scripts/character_component.gd:440)
+       [7] deal_effect_damage (res://scripts/character_component.gd:780)
+       [8] resolve_effect_damage (res://scripts/character_component.gd:2110)
+       [9] detonate_trigger (res://abilities/bakugo1.gd:40)
+       [10] check (res://scripts/trigger.gd:27)
+       [11] check_ability_use_triggers (res://scripts/character_component.gd:1330)
+       [12] execute_ability (res://new multiplayer/battle_manager.gd:1206)
+       [13] perform_turn (res://scripts/player_component.gd:584)
+       [14] _dispatch (res://training/bot_trainer.gd:368)
+       [15] _drive_match (res://training/bot_trainer.gd:323)
+       [16] _process (res://training/bot_trainer.gd:184)
+[  22/150 ] WIN    16 turns   cell, hashirama, bakugo  vs  mami, kurapika, toga
+WARNING: res://character/ladydevimon.tscn:5 - ext_resource, invalid UID: uid://c1lm0hnw1jkdw - using text path instead: res://assets/images/LadyDevimon/ladydevimonprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  23/150 ] WIN    10 turns   ryuko, soul, mavis  vs  ladydevimon, gogeta, shokuhou
+WARNING: res://character/uzui.tscn:3 - ext_resource, invalid UID: uid://dra3h2oe6x7nl - using text path instead: res://character/uzui.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/uzui.tscn:5 - ext_resource, invalid UID: uid://c3piyyj0vx8vu - using text path instead: res://assets/images/Tengen Uzui/uzuiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/pegasus.tscn:3 - ext_resource, invalid UID: uid://23upvaul7bqa - using text path instead: res://character/pegasus.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/pegasus.tscn:5 - ext_resource, invalid UID: uid://crsl6rmh6yedm - using text path instead: res://assets/images/Maximillion Pegasus/pegasusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  24/150 ] WIN    15 turns   uzui, tatsumi, frankenstein  vs  adam, ryuko, pegasus
+WARNING: res://character/pegasus.tscn:3 - ext_resource, invalid UID: uid://23upvaul7bqa - using text path instead: res://character/pegasus.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/pegasus.tscn:5 - ext_resource, invalid UID: uid://crsl6rmh6yedm - using text path instead: res://assets/images/Maximillion Pegasus/pegasusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:3 - ext_resource, invalid UID: uid://bl6gat54uaep1 - using text path instead: res://character/yugi.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:4 - ext_resource, invalid UID: uid://dhjf4fcies2aw - using text path instead: res://assets/images/Yugi Mutou/yugiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  25/150 ] WIN    20 turns   asta, nezuko, toga  vs  mikasa, pegasus, yugi
+[  26/150 ] WIN    17 turns   gallantmon, uranus, gon  vs  inuyasha, hibari, broly
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  27/150 ] LOSS   17 turns   korra, rengoku, saber  vs  meliodas, broly, ace
+[  28/150 ] WIN    25 turns   blackwargreymon, yuji, zoro  vs  semiramis, xanxus, frankenstein
+[  29/150 ] WIN    26 turns   zoro, toga, tanjiro  vs  ace, tsunayoshi, kurotsuchi
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  30/150 ] WIN    22 turns   ace, megumi, nezuko  vs  king, mavis, zoro
+WARNING: res://character/allmight.tscn:5 - ext_resource, invalid UID: uid://bhfvdt87k6r14 - using text path instead: res://assets/images/All Might/allmightprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+[  31/150 ] WIN    24 turns   jupiter, nobara, zoro  vs  allmight, inosuke, meliodas
+[  32/150 ] LOSS   41 turns   lucy, toph, neferpitou  vs  natsu, edward, yuji
+WARNING: res://character/yugi.tscn:3 - ext_resource, invalid UID: uid://bl6gat54uaep1 - using text path instead: res://character/yugi.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:4 - ext_resource, invalid UID: uid://dhjf4fcies2aw - using text path instead: res://assets/images/Yugi Mutou/yugiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  33/150 ] WIN    26 turns   madoka, adam, byakuya  vs  saber, yugi, tsubaki
+WARNING: res://character/crona.tscn:3 - ext_resource, invalid UID: uid://dcnkady2b7bmh - using text path instead: res://character/crona.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/crona.tscn:5 - ext_resource, invalid UID: uid://dj7ew3sxl6mja - using text path instead: res://assets/images/Crona/cronaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  34/150 ] LOSS   21 turns   crona, ace, edward  vs  saturn, alphonse, aang
+WARNING: res://character/tokoyami.tscn:3 - ext_resource, invalid UID: uid://8dmjd6hcersd - using text path instead: res://character/tokoyami.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:5 - ext_resource, invalid UID: uid://bghv1nrv5go33 - using text path instead: res://assets/images/Fumikage Tokoyami/tokoyamiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/mercury.tscn:3 - ext_resource, invalid UID: uid://0elk6jbn3c1r - using text path instead: res://character/mercury.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/mercury.tscn:5 - ext_resource, invalid UID: uid://c7aalorxulq8n - using text path instead: res://assets/images/Sailor Mercury/mercuryprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  35/150 ] WIN    17 turns   tokoyami, itachi, mercury  vs  gunha, renamon, korra
+SCRIPT ERROR: Invalid access to property or key 'mag' on a base object of type 'Nil'.
+   at: extreme_trigger (res://abilities/ryohei4.gd:50)
+   GDScript backtrace (most recent call first):
+       [0] extreme_trigger (res://abilities/ryohei4.gd:50)
+       [1] check (res://scripts/trigger.gd:27)
+       [2] check_damage_taken_triggers (res://scripts/character_component.gd:1276)
+       [3] receive_ability_damage (res://scripts/character_component.gd:406)
+       [4] deal_ability_damage (res://scripts/character_component.gd:654)
+       [5] resolve_damage (res://scripts/character_component.gd:2100)
+       [6] execute (res://abilities/inuyasha3.gd:31)
+       [7] execute_ability (res://new multiplayer/battle_manager.gd:1205)
+       [8] perform_turn (res://scripts/player_component.gd:584)
+       [9] _dispatch (res://training/bot_trainer.gd:368)
+       [10] _drive_match (res://training/bot_trainer.gd:323)
+       [11] _process (res://training/bot_trainer.gd:184)
+SCRIPT ERROR: Invalid access to property or key 'mag' on a base object of type 'Nil'.
+   at: extreme_trigger (res://abilities/ryohei4.gd:50)
+   GDScript backtrace (most recent call first):
+       [0] extreme_trigger (res://abilities/ryohei4.gd:50)
+       [1] check (res://scripts/trigger.gd:27)
+       [2] check_damage_taken_triggers (res://scripts/character_component.gd:1276)
+       [3] receive_ability_damage (res://scripts/character_component.gd:406)
+       [4] deal_ability_damage (res://scripts/character_component.gd:654)
+       [5] resolve_damage (res://scripts/character_component.gd:2100)
+       [6] execute (res://abilities/gatomon1.gd:19)
+       [7] execute_ability (res://new multiplayer/battle_manager.gd:1205)
+       [8] perform_turn (res://scripts/player_component.gd:584)
+       [9] _dispatch (res://training/bot_trainer.gd:368)
+       [10] _drive_match (res://training/bot_trainer.gd:323)
+       [11] _process (res://training/bot_trainer.gd:184)
+SCRIPT ERROR: Invalid access to property or key 'mag' on a base object of type 'Nil'.
+   at: extreme_trigger (res://abilities/ryohei4.gd:50)
+   GDScript backtrace (most recent call first):
+       [0] extreme_trigger (res://abilities/ryohei4.gd:50)
+       [1] check (res://scripts/trigger.gd:27)
+       [2] check_damage_taken_triggers (res://scripts/character_component.gd:1276)
+       [3] receive_ability_damage (res://scripts/character_component.gd:406)
+       [4] deal_ability_damage (res://scripts/character_component.gd:654)
+       [5] resolve_damage (res://scripts/character_component.gd:2100)
+       [6] execute (res://abilities/yuno1.gd:20)
+       [7] execute_ability (res://new multiplayer/battle_manager.gd:1205)
+       [8] perform_turn (res://scripts/player_component.gd:584)
+       [9] _dispatch (res://training/bot_trainer.gd:368)
+       [10] _drive_match (res://training/bot_trainer.gd:323)
+       [11] _process (res://training/bot_trainer.gd:184)
+SCRIPT ERROR: Invalid access to property or key 'mag' on a base object of type 'Nil'.
+   at: extreme_trigger (res://abilities/ryohei4.gd:50)
+   GDScript backtrace (most recent call first):
+       [0] extreme_trigger (res://abilities/ryohei4.gd:50)
+       [1] check (res://scripts/trigger.gd:27)
+       [2] check_damage_taken_triggers (res://scripts/character_component.gd:1276)
+       [3] receive_ability_damage (res://scripts/character_component.gd:406)
+       [4] deal_ability_damage (res://scripts/character_component.gd:654)
+       [5] resolve_damage (res://scripts/character_component.gd:2100)
+       [6] execute (res://abilities/inuyasha3.gd:31)
+       [7] execute_ability (res://new multiplayer/battle_manager.gd:1205)
+       [8] perform_turn (res://scripts/player_component.gd:584)
+       [9] _dispatch (res://training/bot_trainer.gd:368)
+       [10] _drive_match (res://training/bot_trainer.gd:323)
+       [11] _process (res://training/bot_trainer.gd:184)
+SCRIPT ERROR: Invalid access to property or key 'mag' on a base object of type 'Nil'.
+   at: extreme_trigger (res://abilities/ryohei4.gd:50)
+   GDScript backtrace (most recent call first):
+       [0] extreme_trigger (res://abilities/ryohei4.gd:50)
+       [1] check (res://scripts/trigger.gd:27)
+       [2] check_damage_taken_triggers (res://scripts/character_component.gd:1276)
+       [3] receive_ability_damage (res://scripts/character_component.gd:406)
+       [4] deal_ability_damage (res://scripts/character_component.gd:654)
+       [5] resolve_damage (res://scripts/character_component.gd:2100)
+       [6] execute (res://abilities/inuyasha3.gd:31)
+       [7] execute_ability (res://new multiplayer/battle_manager.gd:1205)
+       [8] perform_turn (res://scripts/player_component.gd:584)
+       [9] _dispatch (res://training/bot_trainer.gd:368)
+       [10] _drive_match (res://training/bot_trainer.gd:323)
+       [11] _process (res://training/bot_trainer.gd:184)
+[  36/150 ] LOSS   36 turns   arthur, ryohei, toph  vs  inuyasha, gatomon, yuno
+[  37/150 ] WIN    14 turns   sayaka, astolfo, misaka  vs  neferpitou, toji, squalo
+WARNING: res://character/venus.tscn:5 - ext_resource, invalid UID: uid://c4sl3df8pymad - using text path instead: res://assets/images/Sailor Venus/venusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  38/150 ] LOSS   22 turns   yuno, sukuna, midoriya  vs  venus, noelle, semiramis
+[  39/150 ] WIN    30 turns   koro, ganta, yuji  vs  gatomon, impmon, mash
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  40/150 ] WIN    12 turns   asta, ken, astolfo  vs  arthur, alphonse, midoriya
+[  41/150 ] WIN    28 turns   shokuhou, tatsumaki, adam  vs  hashirama, frankenstein, shiro
+WARNING: res://character/gohan.tscn:3 - ext_resource, invalid UID: uid://bg2t58hpbs25u - using text path instead: res://character/gohan.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gohan.tscn:5 - ext_resource, invalid UID: uid://dxeun5y86nbg0 - using text path instead: res://assets/images/Gohan/gohanprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/allmight.tscn:5 - ext_resource, invalid UID: uid://bhfvdt87k6r14 - using text path instead: res://assets/images/All Might/allmightprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  42/150 ] LOSS   23 turns   gohan, allmight, maka  vs  mikasa, neferpitou, broly
+WARNING: res://character/orihime.tscn:3 - ext_resource, invalid UID: uid://dt0wg4uiy2o8g - using text path instead: res://character/orihime.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/orihime.tscn:5 - ext_resource, invalid UID: uid://h372d51odf8s - using text path instead: res://assets/images/Orihime Inoue/orihimeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gohan.tscn:3 - ext_resource, invalid UID: uid://bg2t58hpbs25u - using text path instead: res://character/gohan.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gohan.tscn:5 - ext_resource, invalid UID: uid://dxeun5y86nbg0 - using text path instead: res://assets/images/Gohan/gohanprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  43/150 ] LOSS   24 turns   mikasa, orihime, gohan  vs  ichigo, eren, hibari
+ERROR: Failed loading resource: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: res://character/minene.tscn:20 - Parse Error: [ext_resource] referenced non-existent resource at: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:40)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  44/150 ] WIN    14 turns   gasai, midoriya, ken  vs  hisoka, minene, jupiter
+[  45/150 ] WIN    13 turns   hawkmon, zoro, asta  vs  inuyasha, itachi, akame
+WARNING: res://character/horohoro.tscn:5 - ext_resource, invalid UID: uid://b2qn7w6n56vvh - using text path instead: res://assets/images/Horohoro/horohoroprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kitara.tscn:3 - ext_resource, invalid UID: uid://dkigq5aytc22u - using text path instead: res://character/kitara.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kitara.tscn:5 - ext_resource, invalid UID: uid://jy5gbenj40rp - using text path instead: res://assets/images/Kitara/kitaraprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:3 - ext_resource, invalid UID: uid://bff17rk8065rc - using text path instead: res://character/ichibe.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:5 - ext_resource, invalid UID: uid://c6xox3jw634v6 - using text path instead: res://assets/images/Ichibe Hyosube/ichibeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ladydevimon.tscn:5 - ext_resource, invalid UID: uid://c1lm0hnw1jkdw - using text path instead: res://assets/images/LadyDevimon/ladydevimonprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  46/150 ] LOSS   33 turns   horohoro, cooler, kitara  vs  ichibe, ladydevimon, misaka
+WARNING: res://character/mercury.tscn:3 - ext_resource, invalid UID: uid://0elk6jbn3c1r - using text path instead: res://character/mercury.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/mercury.tscn:5 - ext_resource, invalid UID: uid://c7aalorxulq8n - using text path instead: res://assets/images/Sailor Mercury/mercuryprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  47/150 ] WIN    13 turns   nonon, gray, mercury  vs  frankenstein, ryohei, aang
+WARNING: res://character/lyserg.tscn:5 - ext_resource, invalid UID: uid://dvv2dnwit3xt7 - using text path instead: res://assets/images/Diethel Lyserg/lysergprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/veldora.tscn:5 - ext_resource, invalid UID: uid://cxgynkxnt0jlv - using text path instead: res://assets/images/Veldora/veldorisprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  48/150 ] LOSS   28 turns   yubel, luffy, halibel  vs  alphonse, lyserg, veldora
+WARNING: res://character/jesse.tscn:3 - ext_resource, invalid UID: uid://dkj2vbbufdg3r - using text path instead: res://character/jesse.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jesse.tscn:4 - ext_resource, invalid UID: uid://cufv0pfvmnagf - using text path instead: res://assets/images/Jesse Anderson/jesseprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  49/150 ] WIN    19 turns   satsuki, uraraka, madoka  vs  jesse, toudou, omnimon
+WARNING: res://character/marco.tscn:3 - ext_resource, invalid UID: uid://dvn2jcycy4hsn - using text path instead: res://character/marco.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/marco.tscn:5 - ext_resource, invalid UID: uid://cinlhkvrkupj7 - using text path instead: res://assets/images/Marco/marcoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  50/150 ] LOSS   39 turns   marco, soul, eren  vs  levi, uraraka, lucy
+WARNING: res://character/tsuyu.tscn:3 - ext_resource, invalid UID: uid://dmux61407fhv2 - using text path instead: res://character/tsuyu.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tsuyu.tscn:5 - ext_resource, invalid UID: uid://bkwru3bicjwb8 - using text path instead: res://assets/images/Tsuyu Asui/tsuyuprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  51/150 ] LOSS   22 turns   ryuko, megumi, tsuyu  vs  tsubasa, cooler, itachi
+ERROR: Failed loading resource: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: res://character/minene.tscn:20 - Parse Error: [ext_resource] referenced non-existent resource at: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:40)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  52/150 ] WIN    26 turns   misaka, vegeta, minene  vs  nel, rengoku, toji
+WARNING: res://character/chrome.tscn:3 - ext_resource, invalid UID: uid://cmo1e06kqbtmd - using text path instead: res://character/chrome.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:4 - ext_resource, invalid UID: uid://p23c0b52sebe - using text path instead: res://assets/images/Chrome Dokuro/chromeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:5 - ext_resource, invalid UID: uid://ctpem1eub5lfh - using text path instead: res://assets/images/Chrome Dokuro/rokudoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  53/150 ] LOSS   15 turns   soul, blackwargreymon, korra  vs  seventeen, chrome, adam
+WARNING: res://character/horohoro.tscn:5 - ext_resource, invalid UID: uid://b2qn7w6n56vvh - using text path instead: res://assets/images/Horohoro/horohoroprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:3 - ext_resource, invalid UID: uid://bff17rk8065rc - using text path instead: res://character/ichibe.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:5 - ext_resource, invalid UID: uid://c6xox3jw634v6 - using text path instead: res://assets/images/Ichibe Hyosube/ichibeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kaiba.tscn:3 - ext_resource, invalid UID: uid://do6banb66h602 - using text path instead: res://character/kaiba.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kaiba.tscn:5 - ext_resource, invalid UID: uid://cpldflrhcn3v1 - using text path instead: res://assets/images/Seto Kaiba/kaibaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+SCRIPT ERROR: Invalid call. Nonexistent function 'apply_ink_stack' in base 'Node (rimuru2.gd)'.
+   at: execute (res://abilities/ichibe1.gd:20)
+   GDScript backtrace (most recent call first):
+       [0] execute (res://abilities/ichibe1.gd:20)
+       [1] execute_ability (res://new multiplayer/battle_manager.gd:1205)
+       [2] perform_turn (res://scripts/player_component.gd:584)
+       [3] _dispatch (res://training/bot_trainer.gd:368)
+       [4] _drive_match (res://training/bot_trainer.gd:323)
+       [5] _process (res://training/bot_trainer.gd:184)
+SCRIPT ERROR: Invalid call. Nonexistent function 'apply_ink_stack' in base 'Node (rimuru2.gd)'.
+   at: execute (res://abilities/ichibe1.gd:20)
+   GDScript backtrace (most recent call first):
+       [0] execute (res://abilities/ichibe1.gd:20)
+       [1] execute_ability (res://new multiplayer/battle_manager.gd:1205)
+       [2] perform_turn (res://scripts/player_component.gd:584)
+       [3] _dispatch (res://training/bot_trainer.gd:368)
+       [4] _drive_match (res://training/bot_trainer.gd:323)
+       [5] _process (res://training/bot_trainer.gd:184)
+[  54/150 ] WIN    31 turns   hawkmon, horohoro, ichibe  vs  kaiba, rimuru, vegeta
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  55/150 ] LOSS   26 turns   king, kurapika, erza  vs  sayaka, lizandpatty, mash
+WARNING: res://character/kaiba.tscn:3 - ext_resource, invalid UID: uid://do6banb66h602 - using text path instead: res://character/kaiba.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kaiba.tscn:5 - ext_resource, invalid UID: uid://cpldflrhcn3v1 - using text path instead: res://assets/images/Seto Kaiba/kaibaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  56/150 ] LOSS   21 turns   midoriya, power, goku  vs  omnimon, kaiba, zenitsu
+[  57/150 ] WIN    21 turns   gallantmon, natsu, ichigo  vs  mars, gogeta, yuno
+WARNING: res://character/chrome.tscn:3 - ext_resource, invalid UID: uid://cmo1e06kqbtmd - using text path instead: res://character/chrome.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:4 - ext_resource, invalid UID: uid://p23c0b52sebe - using text path instead: res://assets/images/Chrome Dokuro/chromeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:5 - ext_resource, invalid UID: uid://ctpem1eub5lfh - using text path instead: res://assets/images/Chrome Dokuro/rokudoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  58/150 ] WIN    22 turns   inuyasha, yamamoto, chrome  vs  killua, tsunayoshi, nonon
+WARNING: res://character/marco.tscn:3 - ext_resource, invalid UID: uid://dvn2jcycy4hsn - using text path instead: res://character/marco.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/marco.tscn:5 - ext_resource, invalid UID: uid://cinlhkvrkupj7 - using text path instead: res://assets/images/Marco/marcoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  59/150 ] LOSS   25 turns   myotismon, megumi, saber  vs  toji, saturn, marco
+WARNING: res://character/pegasus.tscn:3 - ext_resource, invalid UID: uid://23upvaul7bqa - using text path instead: res://character/pegasus.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/pegasus.tscn:5 - ext_resource, invalid UID: uid://crsl6rmh6yedm - using text path instead: res://assets/images/Maximillion Pegasus/pegasusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  60/150 ] WIN    22 turns   jack, diane, alphamon  vs  blackstar, killua, pegasus
+WARNING: res://character/uzui.tscn:3 - ext_resource, invalid UID: uid://dra3h2oe6x7nl - using text path instead: res://character/uzui.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/uzui.tscn:5 - ext_resource, invalid UID: uid://c3piyyj0vx8vu - using text path instead: res://assets/images/Tengen Uzui/uzuiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kitara.tscn:3 - ext_resource, invalid UID: uid://dkigq5aytc22u - using text path instead: res://character/kitara.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kitara.tscn:5 - ext_resource, invalid UID: uid://jy5gbenj40rp - using text path instead: res://assets/images/Kitara/kitaraprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  61/150 ] WIN    19 turns   gatomon, uzui, kitara  vs  gasai, adam, eren
+WARNING: res://character/kid.tscn:3 - ext_resource, invalid UID: uid://chlpf63ol4mxn - using text path instead: res://character/kid.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kid.tscn:5 - ext_resource, invalid UID: uid://wyf222csoqvo - using text path instead: res://assets/images/Death the Kid/kidprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  62/150 ] WIN    19 turns   muichiro, nimaiya, toph  vs  kid, jinwoo, midoriya
+WARNING: res://character/pegasus.tscn:3 - ext_resource, invalid UID: uid://23upvaul7bqa - using text path instead: res://character/pegasus.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/pegasus.tscn:5 - ext_resource, invalid UID: uid://crsl6rmh6yedm - using text path instead: res://assets/images/Maximillion Pegasus/pegasusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:3 - ext_resource, invalid UID: uid://8dmjd6hcersd - using text path instead: res://character/tokoyami.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:5 - ext_resource, invalid UID: uid://bghv1nrv5go33 - using text path instead: res://assets/images/Fumikage Tokoyami/tokoyamiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  63/150 ] LOSS   21 turns   nagisa, zenitsu, midoriya  vs  pegasus, tokoyami, tsubasa
+[  64/150 ] WIN    24 turns   ryuko, noelle, nezuko  vs  emiya, tamaki, shokuhou
+WARNING: res://character/horohoro.tscn:5 - ext_resource, invalid UID: uid://b2qn7w6n56vvh - using text path instead: res://assets/images/Horohoro/horohoroprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  65/150 ] WIN    20 turns   zoro, yuno, kurapika  vs  yuji, frieren, horohoro
+WARNING: res://character/ladydevimon.tscn:5 - ext_resource, invalid UID: uid://c1lm0hnw1jkdw - using text path instead: res://assets/images/LadyDevimon/ladydevimonprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  66/150 ] LOSS   19 turns   aang, rob, frieren  vs  ladydevimon, cell, yamamoto
+WARNING: res://character/tokoyami.tscn:3 - ext_resource, invalid UID: uid://8dmjd6hcersd - using text path instead: res://character/tokoyami.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:5 - ext_resource, invalid UID: uid://bghv1nrv5go33 - using text path instead: res://assets/images/Fumikage Tokoyami/tokoyamiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jaden.tscn:3 - ext_resource, invalid UID: uid://o74grnoamqwi - using text path instead: res://character/jaden.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jaden.tscn:5 - ext_resource, invalid UID: uid://b81k3ilxfqqi - using text path instead: res://assets/images/Jaden Yuki/jadenprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  67/150 ] LOSS   21 turns   rimuru, power, tokoyami  vs  nimaiya, ichigo, jaden
+WARNING: res://character/tokoyami.tscn:3 - ext_resource, invalid UID: uid://8dmjd6hcersd - using text path instead: res://character/tokoyami.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:5 - ext_resource, invalid UID: uid://bghv1nrv5go33 - using text path instead: res://assets/images/Fumikage Tokoyami/tokoyamiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/pegasus.tscn:3 - ext_resource, invalid UID: uid://23upvaul7bqa - using text path instead: res://character/pegasus.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/pegasus.tscn:5 - ext_resource, invalid UID: uid://crsl6rmh6yedm - using text path instead: res://assets/images/Maximillion Pegasus/pegasusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:3 - ext_resource, invalid UID: uid://bl6gat54uaep1 - using text path instead: res://character/yugi.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:4 - ext_resource, invalid UID: uid://dhjf4fcies2aw - using text path instead: res://assets/images/Yugi Mutou/yugiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  68/150 ] LOSS   24 turns   tokoyami, pegasus, ban  vs  yugi, zenitsu, meliodas
+ERROR: Failed loading resource: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: res://character/minene.tscn:20 - Parse Error: [ext_resource] referenced non-existent resource at: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:40)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/crona.tscn:3 - ext_resource, invalid UID: uid://dcnkady2b7bmh - using text path instead: res://character/crona.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/crona.tscn:5 - ext_resource, invalid UID: uid://dj7ew3sxl6mja - using text path instead: res://assets/images/Crona/cronaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  69/150 ] WIN    22 turns   byakuya, broly, toji  vs  minene, crona, blackstar
+WARNING: res://character/tokoyami.tscn:3 - ext_resource, invalid UID: uid://8dmjd6hcersd - using text path instead: res://character/tokoyami.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:5 - ext_resource, invalid UID: uid://bghv1nrv5go33 - using text path instead: res://assets/images/Fumikage Tokoyami/tokoyamiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  70/150 ] WIN    22 turns   inuyasha, halibel, power  vs  byakuya, ken, tokoyami
+WARNING: res://character/esdeath.tscn:3 - ext_resource, invalid UID: uid://pmbdjmwo0r64 - using text path instead: res://character/esdeath.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/esdeath.tscn:5 - ext_resource, invalid UID: uid://cto4y04uyuwic - using text path instead: res://assets/images/Esdeath/esdeathprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/allmight.tscn:5 - ext_resource, invalid UID: uid://bhfvdt87k6r14 - using text path instead: res://assets/images/All Might/allmightprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ladydevimon.tscn:5 - ext_resource, invalid UID: uid://c1lm0hnw1jkdw - using text path instead: res://assets/images/LadyDevimon/ladydevimonprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  71/150 ] LOSS   19 turns   vegeta, esdeath, zenitsu  vs  allmight, erza, ladydevimon
+WARNING: res://character/tokoyami.tscn:3 - ext_resource, invalid UID: uid://8dmjd6hcersd - using text path instead: res://character/tokoyami.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:5 - ext_resource, invalid UID: uid://bghv1nrv5go33 - using text path instead: res://assets/images/Fumikage Tokoyami/tokoyamiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/uzui.tscn:3 - ext_resource, invalid UID: uid://dra3h2oe6x7nl - using text path instead: res://character/uzui.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/uzui.tscn:5 - ext_resource, invalid UID: uid://c3piyyj0vx8vu - using text path instead: res://assets/images/Tengen Uzui/uzuiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:3 - ext_resource, invalid UID: uid://bff17rk8065rc - using text path instead: res://character/ichibe.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:5 - ext_resource, invalid UID: uid://c6xox3jw634v6 - using text path instead: res://assets/images/Ichibe Hyosube/ichibeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  72/150 ] WIN    22 turns   tokoyami, uzui, rimuru  vs  gasai, ichibe, nonon
+WARNING: res://character/mercury.tscn:3 - ext_resource, invalid UID: uid://0elk6jbn3c1r - using text path instead: res://character/mercury.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/mercury.tscn:5 - ext_resource, invalid UID: uid://c7aalorxulq8n - using text path instead: res://assets/images/Sailor Mercury/mercuryprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  73/150 ] WIN    17 turns   kurotsuchi, kurapika, mercury  vs  saitama, noelle, frieren
+WARNING: res://character/marco.tscn:3 - ext_resource, invalid UID: uid://dvn2jcycy4hsn - using text path instead: res://character/marco.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/marco.tscn:5 - ext_resource, invalid UID: uid://cinlhkvrkupj7 - using text path instead: res://assets/images/Marco/marcoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  74/150 ] WIN    23 turns   neferpitou, semiramis, nobara  vs  marco, saturn, tsubasa
+WARNING: res://character/shinoa.tscn:3 - ext_resource, invalid UID: uid://v82sjtso14nc - using text path instead: res://character/shinoa.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/shinoa.tscn:5 - ext_resource, invalid UID: uid://odaiuwh5l86v - using text path instead: res://assets/images/Hiragi Shinoa/shinoaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:3 - ext_resource, invalid UID: uid://8dmjd6hcersd - using text path instead: res://character/tokoyami.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:5 - ext_resource, invalid UID: uid://bghv1nrv5go33 - using text path instead: res://assets/images/Fumikage Tokoyami/tokoyamiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:3 - ext_resource, invalid UID: uid://cmo1e06kqbtmd - using text path instead: res://character/chrome.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:4 - ext_resource, invalid UID: uid://p23c0b52sebe - using text path instead: res://assets/images/Chrome Dokuro/chromeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:5 - ext_resource, invalid UID: uid://ctpem1eub5lfh - using text path instead: res://assets/images/Chrome Dokuro/rokudoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  75/150 ] WIN    17 turns   shinoa, nimaiya, tokoyami  vs  rimuru, muichiro, chrome
+WARNING: res://character/mercury.tscn:3 - ext_resource, invalid UID: uid://0elk6jbn3c1r - using text path instead: res://character/mercury.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/mercury.tscn:5 - ext_resource, invalid UID: uid://c7aalorxulq8n - using text path instead: res://assets/images/Sailor Mercury/mercuryprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/allmight.tscn:5 - ext_resource, invalid UID: uid://bhfvdt87k6r14 - using text path instead: res://assets/images/All Might/allmightprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+[  76/150 ] WIN    19 turns   mercury, jinwoo, inosuke  vs  gasai, hisoka, allmight
+WARNING: res://character/marco.tscn:3 - ext_resource, invalid UID: uid://dvn2jcycy4hsn - using text path instead: res://character/marco.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/marco.tscn:5 - ext_resource, invalid UID: uid://cinlhkvrkupj7 - using text path instead: res://assets/images/Marco/marcoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/uzui.tscn:3 - ext_resource, invalid UID: uid://dra3h2oe6x7nl - using text path instead: res://character/uzui.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/uzui.tscn:5 - ext_resource, invalid UID: uid://c3piyyj0vx8vu - using text path instead: res://assets/images/Tengen Uzui/uzuiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:3 - ext_resource, invalid UID: uid://bl6gat54uaep1 - using text path instead: res://character/yugi.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:4 - ext_resource, invalid UID: uid://dhjf4fcies2aw - using text path instead: res://assets/images/Yugi Mutou/yugiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  77/150 ] WIN    23 turns   marco, uzui, mami  vs  tsubaki, killua, yugi
+WARNING: res://character/todoroki.tscn:5 - ext_resource, invalid UID: uid://bkio5ldesb5f - using text path instead: res://assets/images/Shoto Todoroki/todorokiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/horohoro.tscn:5 - ext_resource, invalid UID: uid://b2qn7w6n56vvh - using text path instead: res://assets/images/Horohoro/horohoroprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  78/150 ] WIN    19 turns   omnimon, megumin, todoroki  vs  vegeta, machinedramon, horohoro
+[  79/150 ] LOSS   19 turns   mami, muichiro, ryohei  vs  ganta, saitama, tamaki
+[  80/150 ] LOSS   25 turns   edward, saitama, frankenstein  vs  astolfo, saturn, adam
+[  81/150 ] WIN    21 turns   natsu, shinra, frieren  vs  saber, bakugo, nezuko
+[  82/150 ] WIN    15 turns   mavis, tsubaki, xanxus  vs  shinra, megumin, ken
+WARNING: res://character/ladydevimon.tscn:5 - ext_resource, invalid UID: uid://c1lm0hnw1jkdw - using text path instead: res://assets/images/LadyDevimon/ladydevimonprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  83/150 ] WIN    25 turns   ladydevimon, broly, frieren  vs  hinata, luffy, nezuko
+WARNING: res://character/veldora.tscn:5 - ext_resource, invalid UID: uid://cxgynkxnt0jlv - using text path instead: res://assets/images/Veldora/veldorisprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/todoroki.tscn:5 - ext_resource, invalid UID: uid://bkio5ldesb5f - using text path instead: res://assets/images/Shoto Todoroki/todorokiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gohan.tscn:3 - ext_resource, invalid UID: uid://bg2t58hpbs25u - using text path instead: res://character/gohan.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gohan.tscn:5 - ext_resource, invalid UID: uid://dxeun5y86nbg0 - using text path instead: res://assets/images/Gohan/gohanprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  84/150 ] WIN    30 turns   veldora, ryohei, todoroki  vs  korra, gohan, madoka
+[  85/150 ] WIN    23 turns   gon, hisoka, myotismon  vs  alphamon, gasai, edward
+WARNING: res://character/allmight.tscn:5 - ext_resource, invalid UID: uid://bhfvdt87k6r14 - using text path instead: res://assets/images/All Might/allmightprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  86/150 ] WIN    22 turns   byakuya, myotismon, itachi  vs  toga, lizandpatty, allmight
+ERROR: Failed loading resource: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: res://character/minene.tscn:20 - Parse Error: [ext_resource] referenced non-existent resource at: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:40)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tsuyu.tscn:3 - ext_resource, invalid UID: uid://dmux61407fhv2 - using text path instead: res://character/tsuyu.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tsuyu.tscn:5 - ext_resource, invalid UID: uid://bkwru3bicjwb8 - using text path instead: res://assets/images/Tsuyu Asui/tsuyuprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:3 - ext_resource, invalid UID: uid://bff17rk8065rc - using text path instead: res://character/ichibe.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:5 - ext_resource, invalid UID: uid://c6xox3jw634v6 - using text path instead: res://assets/images/Ichibe Hyosube/ichibeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  87/150 ] LOSS   20 turns   gatomon, goku, minene  vs  tsuyu, ichibe, astolfo
+WARNING: res://character/sakura.tscn:3 - ext_resource, invalid UID: uid://dkxup0e80k3cl - using text path instead: res://character/sakura.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/sakura.tscn:5 - ext_resource, invalid UID: uid://bj3dckey1sbel - using text path instead: res://assets/images/Haruno Sakura/sakuraprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/sakura.tscn:6 - ext_resource, invalid UID: uid://dt5qotac3nob4 - using text path instead: res://assets/images/Haruno Sakura/profile_mastery_sakura.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  88/150 ] LOSS   13 turns   gallantmon, uraraka, sakura  vs  squalo, mami, shiro
+ERROR: Failed loading resource: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: res://character/minene.tscn:20 - Parse Error: [ext_resource] referenced non-existent resource at: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:40)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  89/150 ] WIN    14 turns   rengoku, jupiter, nel  vs  blackstar, mavis, minene
+WARNING: res://character/uzui.tscn:3 - ext_resource, invalid UID: uid://dra3h2oe6x7nl - using text path instead: res://character/uzui.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/uzui.tscn:5 - ext_resource, invalid UID: uid://c3piyyj0vx8vu - using text path instead: res://assets/images/Tengen Uzui/uzuiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:3 - ext_resource, invalid UID: uid://bff17rk8065rc - using text path instead: res://character/ichibe.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:5 - ext_resource, invalid UID: uid://c6xox3jw634v6 - using text path instead: res://assets/images/Ichibe Hyosube/ichibeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  90/150 ] LOSS   23 turns   tamaki, uzui, blackwargreymon  vs  tsubasa, ichibe, mikasa
+[  91/150 ] LOSS   24 turns   sheele, tsubasa, maka  vs  lucy, gasai, genos
+WARNING: res://character/venus.tscn:5 - ext_resource, invalid UID: uid://c4sl3df8pymad - using text path instead: res://assets/images/Sailor Venus/venusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:3 - ext_resource, invalid UID: uid://bl6gat54uaep1 - using text path instead: res://character/yugi.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:4 - ext_resource, invalid UID: uid://dhjf4fcies2aw - using text path instead: res://assets/images/Yugi Mutou/yugiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  92/150 ] WIN    12 turns   king, gatomon, gasai  vs  venus, broly, yugi
+WARNING: res://character/uzui.tscn:3 - ext_resource, invalid UID: uid://dra3h2oe6x7nl - using text path instead: res://character/uzui.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/uzui.tscn:5 - ext_resource, invalid UID: uid://c3piyyj0vx8vu - using text path instead: res://assets/images/Tengen Uzui/uzuiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  93/150 ] WIN    34 turns   itachi, uzui, hawkmon  vs  cooler, koro, akame
+WARNING: res://character/venus.tscn:5 - ext_resource, invalid UID: uid://c4sl3df8pymad - using text path instead: res://assets/images/Sailor Venus/venusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tsuyu.tscn:3 - ext_resource, invalid UID: uid://dmux61407fhv2 - using text path instead: res://character/tsuyu.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tsuyu.tscn:5 - ext_resource, invalid UID: uid://bkwru3bicjwb8 - using text path instead: res://assets/images/Tsuyu Asui/tsuyuprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  94/150 ] WIN    29 turns   yuji, killua, myotismon  vs  nagisa, venus, tsuyu
+[  95/150 ] WIN    27 turns   aiohto, maka, toudou  vs  megumin, mars, yuno
+WARNING: res://character/crona.tscn:3 - ext_resource, invalid UID: uid://dcnkady2b7bmh - using text path instead: res://character/crona.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/crona.tscn:5 - ext_resource, invalid UID: uid://dj7ew3sxl6mja - using text path instead: res://assets/images/Crona/cronaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  96/150 ] WIN    18 turns   korra, aiohto, cooler  vs  asta, shokuhou, crona
+WARNING: res://character/crona.tscn:3 - ext_resource, invalid UID: uid://dcnkady2b7bmh - using text path instead: res://character/crona.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/crona.tscn:5 - ext_resource, invalid UID: uid://dj7ew3sxl6mja - using text path instead: res://assets/images/Crona/cronaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  97/150 ] LOSS   25 turns   crona, nel, uraraka  vs  rob, squalo, nimaiya
+WARNING: res://character/sasuke.tscn:3 - ext_resource, invalid UID: uid://c41ch8ku1n2p - using text path instead: res://character/sasuke.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/sasuke.tscn:5 - ext_resource, invalid UID: uid://cwfw2mydjytkd - using text path instead: res://assets/images/Sasuke Uchiha/sasukeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kaiba.tscn:3 - ext_resource, invalid UID: uid://do6banb66h602 - using text path instead: res://character/kaiba.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kaiba.tscn:5 - ext_resource, invalid UID: uid://cpldflrhcn3v1 - using text path instead: res://assets/images/Seto Kaiba/kaibaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  98/150 ] WIN    32 turns   rengoku, shokuhou, sasuke  vs  shinra, kaiba, inuyasha
+WARNING: res://character/kitara.tscn:3 - ext_resource, invalid UID: uid://dkigq5aytc22u - using text path instead: res://character/kitara.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kitara.tscn:5 - ext_resource, invalid UID: uid://jy5gbenj40rp - using text path instead: res://assets/images/Kitara/kitaraprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:3 - ext_resource, invalid UID: uid://cmo1e06kqbtmd - using text path instead: res://character/chrome.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:4 - ext_resource, invalid UID: uid://p23c0b52sebe - using text path instead: res://assets/images/Chrome Dokuro/chromeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:5 - ext_resource, invalid UID: uid://ctpem1eub5lfh - using text path instead: res://assets/images/Chrome Dokuro/rokudoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yoh.tscn:5 - ext_resource, invalid UID: uid://dfvlh6upg6oqe - using text path instead: res://assets/images/Asakura Yoh/yohprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[  99/150 ] WIN    18 turns   bakugo, shiro, kitara  vs  chrome, yoh, gunha
+WARNING: res://character/yoh.tscn:5 - ext_resource, invalid UID: uid://dfvlh6upg6oqe - using text path instead: res://assets/images/Asakura Yoh/yohprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+[ 100/150 ] WIN    26 turns   yoh, soul, mikasa  vs  goku, inosuke, tsubasa
+[ 101/150 ] LOSS   18 turns   yamamoto, eren, uranus  vs  zoro, sukuna, death
+WARNING: res://character/pegasus.tscn:3 - ext_resource, invalid UID: uid://23upvaul7bqa - using text path instead: res://character/pegasus.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/pegasus.tscn:5 - ext_resource, invalid UID: uid://crsl6rmh6yedm - using text path instead: res://assets/images/Maximillion Pegasus/pegasusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 102/150 ] WIN    30 turns   broly, uraraka, astolfo  vs  soul, pegasus, gatomon
+WARNING: res://character/gojo.tscn:3 - ext_resource, invalid UID: uid://cvwrw0cl2shld - using text path instead: res://character/gojo.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gojo.tscn:5 - ext_resource, invalid UID: uid://begwrafn52iv3 - using text path instead: res://assets/images/Satoru Gojo/gojoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 103/150 ] WIN    24 turns   midoriya, tsubaki, tamaki  vs  gojo, maka, toji
+WARNING: res://character/kitara.tscn:3 - ext_resource, invalid UID: uid://dkigq5aytc22u - using text path instead: res://character/kitara.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kitara.tscn:5 - ext_resource, invalid UID: uid://jy5gbenj40rp - using text path instead: res://assets/images/Kitara/kitaraprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 104/150 ] WIN    29 turns   frankenstein, ban, tatsumaki  vs  saitama, kitara, gunha
+WARNING: res://character/jaden.tscn:3 - ext_resource, invalid UID: uid://o74grnoamqwi - using text path instead: res://character/jaden.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jaden.tscn:5 - ext_resource, invalid UID: uid://b81k3ilxfqqi - using text path instead: res://assets/images/Jaden Yuki/jadenprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/sasuke.tscn:3 - ext_resource, invalid UID: uid://c41ch8ku1n2p - using text path instead: res://character/sasuke.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/sasuke.tscn:5 - ext_resource, invalid UID: uid://cwfw2mydjytkd - using text path instead: res://assets/images/Sasuke Uchiha/sasukeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 105/150 ] WIN    19 turns   neferpitou, sheele, jaden  vs  hisoka, sasuke, arthur
+WARNING: res://character/horohoro.tscn:5 - ext_resource, invalid UID: uid://b2qn7w6n56vvh - using text path instead: res://assets/images/Horohoro/horohoroprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gohan.tscn:3 - ext_resource, invalid UID: uid://bg2t58hpbs25u - using text path instead: res://character/gohan.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gohan.tscn:5 - ext_resource, invalid UID: uid://dxeun5y86nbg0 - using text path instead: res://assets/images/Gohan/gohanprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 106/150 ] WIN    30 turns   horohoro, bakugo, vegeta  vs  gohan, mavis, midoriya
+WARNING: res://character/gojo.tscn:3 - ext_resource, invalid UID: uid://cvwrw0cl2shld - using text path instead: res://character/gojo.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gojo.tscn:5 - ext_resource, invalid UID: uid://begwrafn52iv3 - using text path instead: res://assets/images/Satoru Gojo/gojoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gohan.tscn:3 - ext_resource, invalid UID: uid://bg2t58hpbs25u - using text path instead: res://character/gohan.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gohan.tscn:5 - ext_resource, invalid UID: uid://dxeun5y86nbg0 - using text path instead: res://assets/images/Gohan/gohanprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 107/150 ] WIN    16 turns   eren, seventeen, usopp  vs  asta, gojo, gohan
+WARNING: res://character/kitara.tscn:3 - ext_resource, invalid UID: uid://dkigq5aytc22u - using text path instead: res://character/kitara.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kitara.tscn:5 - ext_resource, invalid UID: uid://jy5gbenj40rp - using text path instead: res://assets/images/Kitara/kitaraprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 108/150 ] WIN    25 turns   bakugo, alphamon, kurapika  vs  kitara, toudou, ban
+WARNING: res://character/kaiba.tscn:3 - ext_resource, invalid UID: uid://do6banb66h602 - using text path instead: res://character/kaiba.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kaiba.tscn:5 - ext_resource, invalid UID: uid://cpldflrhcn3v1 - using text path instead: res://assets/images/Seto Kaiba/kaibaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 109/150 ] WIN    18 turns   sukuna, ryuko, byakuya  vs  yuji, kaiba, nagisa
+WARNING: res://character/esdeath.tscn:3 - ext_resource, invalid UID: uid://pmbdjmwo0r64 - using text path instead: res://character/esdeath.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/esdeath.tscn:5 - ext_resource, invalid UID: uid://cto4y04uyuwic - using text path instead: res://assets/images/Esdeath/esdeathprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 110/150 ] LOSS   10 turns   nonon, cooler, rob  vs  tsubasa, esdeath, machinedramon
+[ 111/150 ] LOSS   20 turns   midoriya, ichigo, bakugo  vs  kurotsuchi, ryuko, tsunayoshi
+WARNING: res://character/jesse.tscn:3 - ext_resource, invalid UID: uid://dkj2vbbufdg3r - using text path instead: res://character/jesse.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jesse.tscn:4 - ext_resource, invalid UID: uid://cufv0pfvmnagf - using text path instead: res://assets/images/Jesse Anderson/jesseprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/mercury.tscn:3 - ext_resource, invalid UID: uid://0elk6jbn3c1r - using text path instead: res://character/mercury.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/mercury.tscn:5 - ext_resource, invalid UID: uid://c7aalorxulq8n - using text path instead: res://assets/images/Sailor Mercury/mercuryprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 112/150 ] LOSS   17 turns   jesse, myotismon, mercury  vs  mash, nagisa, aiohto
+WARNING: res://character/yugi.tscn:3 - ext_resource, invalid UID: uid://bl6gat54uaep1 - using text path instead: res://character/yugi.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:4 - ext_resource, invalid UID: uid://dhjf4fcies2aw - using text path instead: res://assets/images/Yugi Mutou/yugiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/horohoro.tscn:5 - ext_resource, invalid UID: uid://b2qn7w6n56vvh - using text path instead: res://assets/images/Horohoro/horohoroprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 113/150 ] WIN    15 turns   hinata, mavis, megumin  vs  yugi, horohoro, alphamon
+WARNING: res://character/orihime.tscn:3 - ext_resource, invalid UID: uid://dt0wg4uiy2o8g - using text path instead: res://character/orihime.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/orihime.tscn:5 - ext_resource, invalid UID: uid://h372d51odf8s - using text path instead: res://assets/images/Orihime Inoue/orihimeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 114/150 ] LOSS   29 turns   nobara, orihime, gallantmon  vs  blackwargreymon, nimaiya, kurapika
+WARNING: res://character/gojo.tscn:3 - ext_resource, invalid UID: uid://cvwrw0cl2shld - using text path instead: res://character/gojo.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gojo.tscn:5 - ext_resource, invalid UID: uid://begwrafn52iv3 - using text path instead: res://assets/images/Satoru Gojo/gojoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 115/150 ] LOSS   31 turns   saber, natsu, gojo  vs  alphonse, nimaiya, satsuki
+SCRIPT ERROR: Invalid access of index '4' on a base object of type: 'Array'.
+   at: execute (res://abilities/jupiter1.gd:24)
+   GDScript backtrace (most recent call first):
+       [0] execute (res://abilities/jupiter1.gd:24)
+       [1] execute_ability (res://new multiplayer/battle_manager.gd:1205)
+       [2] perform_turn (res://scripts/player_component.gd:584)
+       [3] _dispatch (res://training/bot_trainer.gd:368)
+       [4] _drive_match (res://training/bot_trainer.gd:323)
+       [5] _process (res://training/bot_trainer.gd:184)
+[ 116/150 ] WIN    14 turns   jupiter, rengoku, satsuki  vs  noelle, rimuru, mine
+[ 117/150 ] WIN    19 turns   aiohto, shinra, astolfo  vs  hawkmon, renamon, maka
+WARNING: res://character/horohoro.tscn:5 - ext_resource, invalid UID: uid://b2qn7w6n56vvh - using text path instead: res://assets/images/Horohoro/horohoroprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:3 - ext_resource, invalid UID: uid://bff17rk8065rc - using text path instead: res://character/ichibe.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ichibe.tscn:5 - ext_resource, invalid UID: uid://c6xox3jw634v6 - using text path instead: res://assets/images/Ichibe Hyosube/ichibeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/esdeath.tscn:3 - ext_resource, invalid UID: uid://pmbdjmwo0r64 - using text path instead: res://character/esdeath.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/esdeath.tscn:5 - ext_resource, invalid UID: uid://cto4y04uyuwic - using text path instead: res://assets/images/Esdeath/esdeathprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ladydevimon.tscn:5 - ext_resource, invalid UID: uid://c1lm0hnw1jkdw - using text path instead: res://assets/images/LadyDevimon/ladydevimonprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 118/150 ] WIN    23 turns   horohoro, ichibe, esdeath  vs  lizandpatty, ladydevimon, megumin
+WARNING: res://character/gojo.tscn:3 - ext_resource, invalid UID: uid://cvwrw0cl2shld - using text path instead: res://character/gojo.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gojo.tscn:5 - ext_resource, invalid UID: uid://begwrafn52iv3 - using text path instead: res://assets/images/Satoru Gojo/gojoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 119/150 ] LOSS   16 turns   hibari, inuyasha, adam  vs  gojo, zenitsu, toudou
+WARNING: res://character/venus.tscn:5 - ext_resource, invalid UID: uid://c4sl3df8pymad - using text path instead: res://assets/images/Sailor Venus/venusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/sasuke.tscn:3 - ext_resource, invalid UID: uid://c41ch8ku1n2p - using text path instead: res://character/sasuke.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/sasuke.tscn:5 - ext_resource, invalid UID: uid://cwfw2mydjytkd - using text path instead: res://assets/images/Sasuke Uchiha/sasukeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 120/150 ] LOSS   21 turns   inosuke, venus, sasuke  vs  genos, alphamon, luffy
+WARNING: res://character/orihime.tscn:3 - ext_resource, invalid UID: uid://dt0wg4uiy2o8g - using text path instead: res://character/orihime.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/orihime.tscn:5 - ext_resource, invalid UID: uid://h372d51odf8s - using text path instead: res://assets/images/Orihime Inoue/orihimeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 121/150 ] WIN    18 turns   mikasa, shinra, semiramis  vs  orihime, ace, emiya
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 122/150 ] WIN    27 turns   gallantmon, machinedramon, aang  vs  diane, akame, shiro
+WARNING: res://character/yugi.tscn:3 - ext_resource, invalid UID: uid://bl6gat54uaep1 - using text path instead: res://character/yugi.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:4 - ext_resource, invalid UID: uid://dhjf4fcies2aw - using text path instead: res://assets/images/Yugi Mutou/yugiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:3 - ext_resource, invalid UID: uid://8dmjd6hcersd - using text path instead: res://character/tokoyami.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tokoyami.tscn:5 - ext_resource, invalid UID: uid://bghv1nrv5go33 - using text path instead: res://assets/images/Fumikage Tokoyami/tokoyamiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/crona.tscn:3 - ext_resource, invalid UID: uid://dcnkady2b7bmh - using text path instead: res://character/crona.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/crona.tscn:5 - ext_resource, invalid UID: uid://dj7ew3sxl6mja - using text path instead: res://assets/images/Crona/cronaprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: Failed loading resource: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: res://character/minene.tscn:20 - Parse Error: [ext_resource] referenced non-existent resource at: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:40)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+[ 123/150 ] LOSS   44 turns   cooler, yugi, diane  vs  tokoyami, crona, minene
+WARNING: res://character/gojo.tscn:3 - ext_resource, invalid UID: uid://cvwrw0cl2shld - using text path instead: res://character/gojo.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gojo.tscn:5 - ext_resource, invalid UID: uid://begwrafn52iv3 - using text path instead: res://assets/images/Satoru Gojo/gojoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/horohoro.tscn:5 - ext_resource, invalid UID: uid://b2qn7w6n56vvh - using text path instead: res://assets/images/Horohoro/horohoroprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 124/150 ] WIN    15 turns   gojo, luffy, itachi  vs  tanjiro, horohoro, mars
+[ 125/150 ] WIN    42 turns   halibel, edward, lucy  vs  mine, tatsumaki, gallantmon
+WARNING: res://character/jesse.tscn:3 - ext_resource, invalid UID: uid://dkj2vbbufdg3r - using text path instead: res://character/jesse.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/jesse.tscn:4 - ext_resource, invalid UID: uid://cufv0pfvmnagf - using text path instead: res://assets/images/Jesse Anderson/jesseprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/ladydevimon.tscn:5 - ext_resource, invalid UID: uid://c1lm0hnw1jkdw - using text path instead: res://assets/images/LadyDevimon/ladydevimonprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 126/150 ] LOSS   19 turns   jesse, mikasa, rengoku  vs  machinedramon, ladydevimon, vegeta
+WARNING: res://character/ladydevimon.tscn:5 - ext_resource, invalid UID: uid://c1lm0hnw1jkdw - using text path instead: res://assets/images/LadyDevimon/ladydevimonprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 127/150 ] LOSS   17 turns   hinata, ganta, gasai  vs  korra, ladydevimon, killua
+WARNING: res://character/venus.tscn:5 - ext_resource, invalid UID: uid://c4sl3df8pymad - using text path instead: res://assets/images/Sailor Venus/venusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 128/150 ] LOSS   21 turns   nezuko, zoro, tanjiro  vs  venus, nimaiya, alphamon
+[ 129/150 ] LOSS   20 turns   luffy, megumi, machinedramon  vs  yubel, seventeen, erza
+[ 130/150 ] WIN    39 turns   seventeen, astolfo, cooler  vs  ryohei, genos, saitama
+WARNING: res://character/allmight.tscn:5 - ext_resource, invalid UID: uid://bhfvdt87k6r14 - using text path instead: res://assets/images/All Might/allmightprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+[ 131/150 ] LOSS   31 turns   megumin, zoro, omnimon  vs  gogeta, diane, allmight
+[ 132/150 ] WIN    28 turns   gatomon, tanjiro, death  vs  toga, megumi, gasai
+WARNING: res://character/todoroki.tscn:5 - ext_resource, invalid UID: uid://bkio5ldesb5f - using text path instead: res://assets/images/Shoto Todoroki/todorokiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 133/150 ] WIN    21 turns   diane, alphamon, semiramis  vs  adam, todoroki, king
+[ 134/150 ] WIN    12 turns   madoka, midoriya, death  vs  aiohto, uraraka, gray
+WARNING: res://character/horohoro.tscn:5 - ext_resource, invalid UID: uid://b2qn7w6n56vvh - using text path instead: res://assets/images/Horohoro/horohoroprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:3 - ext_resource, invalid UID: uid://bl6gat54uaep1 - using text path instead: res://character/yugi.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/yugi.tscn:4 - ext_resource, invalid UID: uid://dhjf4fcies2aw - using text path instead: res://assets/images/Yugi Mutou/yugiprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+[ 135/150 ] WIN    27 turns   kuroko, soul, shiro  vs  rengoku, horohoro, yugi
+WARNING: res://character/kid.tscn:3 - ext_resource, invalid UID: uid://chlpf63ol4mxn - using text path instead: res://character/kid.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/kid.tscn:5 - ext_resource, invalid UID: uid://wyf222csoqvo - using text path instead: res://assets/images/Death the Kid/kidprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/horohoro.tscn:5 - ext_resource, invalid UID: uid://b2qn7w6n56vvh - using text path instead: res://assets/images/Horohoro/horohoroprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 136/150 ] WIN    19 turns   kid, shokuhou, nonon  vs  boruto, horohoro, ace
+Applying bleed effect! Checking special code
+[ 137/150 ] WIN    15 turns   misaka, rimuru, lizandpatty  vs  itachi, power, tamaki
+WARNING: res://character/chrome.tscn:3 - ext_resource, invalid UID: uid://cmo1e06kqbtmd - using text path instead: res://character/chrome.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:4 - ext_resource, invalid UID: uid://p23c0b52sebe - using text path instead: res://assets/images/Chrome Dokuro/chromeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:5 - ext_resource, invalid UID: uid://ctpem1eub5lfh - using text path instead: res://assets/images/Chrome Dokuro/rokudoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 138/150 ] LOSS   24 turns   ace, ganta, chrome  vs  ban, rimuru, zenitsu
+[ 139/150 ] WIN    31 turns   uranus, ryohei, eren  vs  boruto, halibel, tatsumi
+WARNING: res://character/chrome.tscn:3 - ext_resource, invalid UID: uid://cmo1e06kqbtmd - using text path instead: res://character/chrome.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:4 - ext_resource, invalid UID: uid://p23c0b52sebe - using text path instead: res://assets/images/Chrome Dokuro/chromeprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/chrome.tscn:5 - ext_resource, invalid UID: uid://ctpem1eub5lfh - using text path instead: res://assets/images/Chrome Dokuro/rokudoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: Failed loading resource: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+ERROR: res://character/minene.tscn:20 - Parse Error: [ext_resource] referenced non-existent resource at: res://assets/images/Minene Uryu/mineneprof.png.
+   at: _printerr (scene/resources/resource_format_text.cpp:40)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 140/150 ] WIN    19 turns   chrome, maka, nonon  vs  zoro, aang, minene
+WARNING: res://character/allmight.tscn:5 - ext_resource, invalid UID: uid://bhfvdt87k6r14 - using text path instead: res://assets/images/All Might/allmightprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 141/150 ] WIN    17 turns   korra, death, nimaiya  vs  edward, mash, allmight
+[ 142/150 ] WIN    18 turns   uranus, emiya, sheele  vs  vegeta, tsubaki, aiohto
+WARNING: res://character/tsuyu.tscn:3 - ext_resource, invalid UID: uid://dmux61407fhv2 - using text path instead: res://character/tsuyu.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/tsuyu.tscn:5 - ext_resource, invalid UID: uid://bkwru3bicjwb8 - using text path instead: res://assets/images/Tsuyu Asui/tsuyuprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 143/150 ] WIN    16 turns   hawkmon, ken, diane  vs  emiya, gray, tsuyu
+[ 144/150 ] WIN    21 turns   mavis, hawkmon, satsuki  vs  kurotsuchi, misaka, tsunayoshi
+[ 145/150 ] WIN    25 turns   nagisa, yamamoto, natsu  vs  vegeta, gatomon, levi
+WARNING: res://character/gojo.tscn:3 - ext_resource, invalid UID: uid://cvwrw0cl2shld - using text path instead: res://character/gojo.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/gojo.tscn:5 - ext_resource, invalid UID: uid://begwrafn52iv3 - using text path instead: res://assets/images/Satoru Gojo/gojoprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 146/150 ] WIN    20 turns   meliodas, hashirama, killua  vs  tamaki, madoka, gojo
+[ 147/150 ] LOSS   33 turns   korra, shokuhou, eren  vs  myotismon, inuyasha, satsuki
+WARNING: res://character/sakura.tscn:3 - ext_resource, invalid UID: uid://dkxup0e80k3cl - using text path instead: res://character/sakura.gd
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/sakura.tscn:5 - ext_resource, invalid UID: uid://bj3dckey1sbel - using text path instead: res://assets/images/Haruno Sakura/sakuraprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/sakura.tscn:6 - ext_resource, invalid UID: uid://dt5qotac3nob4 - using text path instead: res://assets/images/Haruno Sakura/profile_mastery_sakura.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+WARNING: res://character/veldora.tscn:5 - ext_resource, invalid UID: uid://cxgynkxnt0jlv - using text path instead: res://assets/images/Veldora/veldorisprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:275)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 148/150 ] WIN    24 turns   toji, noelle, sakura  vs  naruto, veldora, jinwoo
+[ 149/150 ] WIN    25 turns   sukuna, tsubaki, levi  vs  halibel, goku, koro
+WARNING: res://character/venus.tscn:5 - ext_resource, invalid UID: uid://c4sl3df8pymad - using text path instead: res://assets/images/Sailor Venus/venusprof.png
+   at: load (scene/resources/resource_format_text.cpp:500)
+   GDScript backtrace (most recent call first):
+       [0] from_character_name (res://scripts/character_component.gd:2044)
+       [1] _build_player (res://training/bot_trainer.gd:733)
+       [2] _setup_match (res://training/bot_trainer.gd:274)
+       [3] _process (res://training/bot_trainer.gd:182)
+[ 150/150 ] WIN    13 turns   uraraka, mine, venus  vs  genos, maka, toudou
+=== TRAINER RUN COMPLETE ===
+Matches: 150   W: 99   L: 51   D: 0   Win: 66.0%   (opponent: priority  [EVAL])
+[elo] gen_2: 1006   priority: 994
+ERROR: 3 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2641)
+ERROR: 8 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:810)

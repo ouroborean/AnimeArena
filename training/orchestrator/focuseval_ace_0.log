@@ -1,0 +1,508 @@
+Godot Engine v4.6.2.stable.official.71f334935 - https://godotengine.org
+
+[trainer] seed=77000 matches=300 opponent=policy:res://training/checkpoints/focused_current.json eval=true out=res://training/checkpoints/work.json checkpoint=res://training/checkpoints/focus_ace/merged.json
+[authored] loaded 1 authored character(s)
+[   1/300 ] WIN    15 turns   ace, seventeen, rengoku  vs  semiramis, nagisa, veldora
+Applying bleed effect! Checking special code
+[   2/300 ] WIN    17 turns   ace, ganta, ban  vs  power, yoh, jesse
+[   3/300 ] LOSS   14 turns   ace, mercury, allmight  vs  noelle, aang, nezuko
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   4/300 ] LOSS   22 turns   ace, uranus, rengoku  vs  luffy, itachi, minene
+[   5/300 ] LOSS   18 turns   ace, yugi, shiro  vs  tanjiro, tsubaki, genos
+[   6/300 ] WIN    18 turns   ace, toga, jinwoo  vs  megumin, renamon, nobara
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   7/300 ] LOSS   12 turns   ace, akame, koro  vs  nimaiya, ken, jack
+[   8/300 ] LOSS   25 turns   ace, uzui, tanjiro  vs  semiramis, emiyaarcher, marco
+[   9/300 ] LOSS   13 turns   ace, venus, tsunayoshi  vs  saturn, toga, asta
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  10/300 ] LOSS   22 turns   ace, tsunayoshi, nonon  vs  jinwoo, denji, broly
+Applying bleed effect! Checking special code
+[  11/300 ] LOSS   22 turns   ace, power, seventeen  vs  tokoyami, esdeath, yamamoto
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  12/300 ] WIN    20 turns   ace, muichiro, denji  vs  mami, emiya, koro
+[  13/300 ] WIN    24 turns   ace, yuno, frieren  vs  emiya, kitara, yoh
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  14/300 ] LOSS   19 turns   ace, denji, nimaiya  vs  gray, genos, aang
+[  15/300 ] LOSS   18 turns   ace, levi, yuji  vs  naruto, chrome, saitama
+[  16/300 ] LOSS   13 turns   ace, boruto, adam  vs  madoka, toudou, marco
+[  17/300 ] LOSS   19 turns   ace, satsuki, gohan  vs  nimaiya, meliodas, denji
+Applying bleed effect! Checking special code
+[  18/300 ] WIN    19 turns   ace, emiya, nel  vs  rengoku, jesse, akame
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  19/300 ] WIN    15 turns   ace, maka, uraraka  vs  death, sayaka, ken
+[  20/300 ] WIN    19 turns   ace, edward, madoka  vs  gohan, toph, eren
+Applying bleed effect! Checking special code
+[  21/300 ] WIN    14 turns   ace, kuroko, asta  vs  noelle, nezuko, inosuke
+[  22/300 ] WIN    12 turns   ace, sayaka, hisoka  vs  yuji, blackwargreymon, crona
+[  23/300 ] LOSS   17 turns   ace, tokoyami, misaka  vs  gray, ryohei, marco
+[  24/300 ] LOSS   21 turns   ace, minene, tanjiro  vs  veldora, uzui, jesse
+[  25/300 ] WIN    33 turns   ace, omnimon, tsubaki  vs  emiya, misaka, kaiba
+[  26/300 ] LOSS   19 turns   ace, diane, toji  vs  lizandpatty, hashirama, gohan
+Yubel's S1 Triggered!
+Yubel's S1 Triggered!
+Yubel's S1 Triggered!
+Yubel's S1 Triggered!
+[  27/300 ] WIN    22 turns   ace, meliodas, yubel  vs  usopp, astolfo, frankenstein
+[  28/300 ] LOSS   16 turns   ace, tsubaki, mercury  vs  veldora, kid, hashirama
+[  29/300 ] LOSS   31 turns   ace, muichiro, yugi  vs  sakura, eren, veldora
+[  30/300 ] WIN    19 turns   ace, edward, diane  vs  nel, horohoro, toph
+[  31/300 ] LOSS   17 turns   ace, frankenstein, tatsumaki  vs  lizandpatty, neferpitou, diane
+[  32/300 ] LOSS   23 turns   ace, tokoyami, saitama  vs  kuroko, uzui, noelle
+[  33/300 ] WIN    17 turns   ace, emiya, mikasa  vs  power, sukuna, usopp
+Applying bleed effect! Checking special code
+[  34/300 ] WIN    24 turns   ace, lyserg, uzui  vs  semiramis, power, tatsumaki
+[  35/300 ] LOSS   26 turns   ace, sasuke, ichigo  vs  kurapika, ichibe, yoh
+[  36/300 ] WIN    28 turns   ace, saitama, blackwargreymon  vs  muichiro, emiyaarcher, kaiba
+[  37/300 ] LOSS   14 turns   ace, korra, death  vs  xanxus, kitara, mavis
+[  38/300 ] LOSS   17 turns   ace, halibel, asta  vs  kaiba, ichigo, tanjiro
+[  39/300 ] LOSS   30 turns   ace, hisoka, orihime  vs  midoriya, kurotsuchi, cell
+[  40/300 ] LOSS   20 turns   ace, sayaka, mercury  vs  megumi, jesse, killua
+[  41/300 ] WIN    22 turns   ace, goku, emiyaarcher  vs  myotismon, todoroki, death
+Yubel's S1 Triggered!
+Applying bleed effect! Checking special code
+Yubel's S1 Triggered!
+[  42/300 ] WIN    19 turns   ace, yubel, saturn  vs  inosuke, nonon, kaiba
+[  43/300 ] WIN    14 turns   ace, bakugo, emiyaarcher  vs  allmight, minene, aiohto
+[  44/300 ] LOSS   18 turns   ace, shokuhou, death  vs  kid, satsuki, yuji
+[  45/300 ] WIN    23 turns   ace, toudou, diane  vs  levi, shinra, marco
+[  46/300 ] LOSS   17 turns   ace, noelle, byakuya  vs  uraraka, jack, renamon
+[  47/300 ] WIN    21 turns   ace, soul, gon  vs  rimuru, tsuyu, maka
+[  48/300 ] LOSS   28 turns   ace, jinwoo, misaka  vs  cooler, tsuyu, gallantmon
+Applying bleed effect! Checking special code
+[  49/300 ] WIN    33 turns   ace, rengoku, astolfo  vs  maka, nimaiya, mami
+[  50/300 ] WIN    22 turns   ace, aang, gasai  vs  impmon, jupiter, misaka
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  51/300 ] WIN    13 turns   ace, alphamon, toji  vs  denji, misaka, tatsumaki
+[  52/300 ] LOSS   21 turns   ace, noelle, sakura  vs  hashirama, madoka, nonon
+Applying bleed effect! Checking special code
+[  53/300 ] WIN    35 turns   ace, genos, kurotsuchi  vs  diane, goku, blackwargreymon
+[  54/300 ] WIN    22 turns   ace, hawkmon, chrome  vs  minene, itachi, akame
+[  55/300 ] LOSS   23 turns   ace, kitara, rimuru  vs  uraraka, itachi, hibari
+[  56/300 ] LOSS   10 turns   ace, lyserg, seventeen  vs  madoka, touka, zenitsu
+[  57/300 ] WIN    31 turns   ace, tokoyami, tatsumaki  vs  death, xanxus, natsu
+[  58/300 ] WIN    18 turns   ace, natsu, jaden  vs  ban, tsuyu, kitara
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  59/300 ] LOSS   20 turns   ace, king, tokoyami  vs  sukuna, ichibe, ladydevimon
+[  60/300 ] LOSS   31 turns   ace, naruto, hashirama  vs  nezuko, neferpitou, edward
+[  61/300 ] LOSS   19 turns   ace, rengoku, tsubasa  vs  tokoyami, frankenstein, marco
+[  62/300 ] WIN    31 turns   ace, omnimon, gasai  vs  tsubaki, sasuke, xanxus
+[  63/300 ] LOSS   14 turns   ace, tamaki, zenitsu  vs  aang, touka, broly
+[  64/300 ] WIN    46 turns   ace, bakugo, uzui  vs  midoriya, tanjiro, death
+[  65/300 ] WIN    32 turns   ace, boruto, esdeath  vs  gasai, tamaki, tsubaki
+[  66/300 ] LOSS   32 turns   ace, megumi, sheele  vs  blackstar, omnimon, kid
+[  67/300 ] WIN    32 turns   ace, akame, killua  vs  jupiter, toga, misaka
+[  68/300 ] LOSS   17 turns   ace, gallantmon, chrome  vs  semiramis, broly, eren
+[  69/300 ] LOSS   16 turns   ace, renamon, hibari  vs  yamamoto, lizandpatty, ladydevimon
+[  70/300 ] WIN    26 turns   ace, tsunayoshi, inuyasha  vs  yoh, shinoa, neferpitou
+[  71/300 ] LOSS   28 turns   ace, yugi, aang  vs  boruto, minene, itachi
+[  72/300 ] WIN    32 turns   ace, nagisa, lucy  vs  omnimon, allmight, power
+[  73/300 ] LOSS   22 turns   ace, saitama, gojo  vs  shinra, nel, lucy
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  74/300 ] WIN    40 turns   ace, naruto, broly  vs  touka, ichigo, king
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  75/300 ] LOSS   25 turns   ace, naruto, uranus  vs  power, neferpitou, bakugo
+[  76/300 ] LOSS   22 turns   ace, levi, ichigo  vs  broly, satsuki, shinoa
+[  77/300 ] LOSS   30 turns   ace, inuyasha, todoroki  vs  gilgamesh, kaiba, yoh
+[  78/300 ] WIN    27 turns   ace, yuji, ichibe  vs  nagisa, bakugo, minene
+[  79/300 ] LOSS   14 turns   ace, soul, toga  vs  veldora, uranus, naruto
+[  80/300 ] LOSS   19 turns   ace, nobara, midoriya  vs  aiohto, hawkmon, kurotsuchi
+[  81/300 ] LOSS   29 turns   ace, myotismon, yuji  vs  jinwoo, ichibe, ryohei
+[  82/300 ] LOSS   17 turns   ace, zoro, shokuhou  vs  midoriya, rob, tsubasa
+[  83/300 ] LOSS   25 turns   ace, esdeath, tamaki  vs  misaka, toji, gallantmon
+[  84/300 ] WIN    25 turns   ace, satsuki, chrome  vs  tatsumi, eren, impmon
+[  85/300 ] WIN    18 turns   ace, frieren, renamon  vs  mami, tatsumaki, maka
+[  86/300 ] WIN    24 turns   ace, kuroko, itachi  vs  semiramis, yuno, yamamoto
+[  87/300 ] WIN    24 turns   ace, blackstar, boruto  vs  marco, gogeta, minene
+[  88/300 ] LOSS   21 turns   ace, yuno, edward  vs  asta, yoh, levi
+[  89/300 ] WIN    21 turns   ace, misaka, gray  vs  gasai, allmight, horohoro
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  90/300 ] LOSS   22 turns   ace, megumin, mami  vs  rakko, tsunayoshi, mars
+[  91/300 ] LOSS   27 turns   ace, bakugo, vegeta  vs  chrome, saitama, uranus
+[  92/300 ] LOSS   30 turns   ace, madoka, aiohto  vs  toji, ichibe, kurotsuchi
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  93/300 ] WIN    11 turns   ace, king, seventeen  vs  cooler, squalo, hisoka
+[  94/300 ] LOSS   14 turns   ace, ryuko, xanxus  vs  shokuhou, alphamon, blackwargreymon
+[  95/300 ] WIN    34 turns   ace, kitara, shinoa  vs  jesse, semiramis, orihime
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  96/300 ] LOSS   17 turns   ace, diane, meliodas  vs  megumi, rakko, kurapika
+[  97/300 ] WIN    33 turns   ace, uraraka, yoh  vs  toph, emiya, naruto
+[  98/300 ] WIN    28 turns   ace, jaden, zenitsu  vs  kurotsuchi, mars, todoroki
+[  99/300 ] LOSS   16 turns   ace, inuyasha, emiya  vs  toga, todoroki, kuroko
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 100/300 ] LOSS   11 turns   ace, rakko, madoka  vs  jack, erza, satsuki
+[ 101/300 ] WIN    15 turns   ace, uzui, minene  vs  mami, koro, megumi
+[ 102/300 ] LOSS   22 turns   ace, minene, astolfo  vs  hinata, muichiro, meliodas
+[ 103/300 ] LOSS   16 turns   ace, jack, mash  vs  gon, alphamon, inosuke
+[ 104/300 ] LOSS   18 turns   ace, shokuhou, natsu  vs  toji, bakugo, neferpitou
+[ 105/300 ] WIN    12 turns   ace, nel, vegeta  vs  impmon, cooler, machinedramon
+[ 106/300 ] WIN    18 turns   ace, ichigo, minene  vs  jeanne, boruto, nobara
+[ 107/300 ] WIN    28 turns   ace, toph, nonon  vs  goku, venus, gohan
+[ 108/300 ] WIN    20 turns   ace, meliodas, pegasus  vs  jeanne, gogeta, yoh
+[ 109/300 ] WIN    15 turns   ace, gray, goku  vs  vegeta, hibari, sukuna
+[ 110/300 ] WIN    33 turns   ace, ladydevimon, mars  vs  hisoka, vegeta, misaka
+[ 111/300 ] LOSS   30 turns   ace, crona, broly  vs  naruto, jeanne, kitara
+[ 112/300 ] WIN    26 turns   ace, shinra, goku  vs  chrome, pegasus, jack
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 113/300 ] LOSS   14 turns   ace, uranus, allmight  vs  king, tatsumaki, tsubaki
+[ 114/300 ] LOSS   14 turns   ace, itachi, todoroki  vs  yoh, sayaka, mavis
+[ 115/300 ] WIN    29 turns   ace, arthur, rob  vs  jinwoo, mercury, touka
+[ 116/300 ] LOSS   17 turns   ace, byakuya, kid  vs  alphonse, eren, jupiter
+[ 117/300 ] WIN    33 turns   ace, kitara, minene  vs  edward, midoriya, machinedramon
+[ 118/300 ] LOSS   16 turns   ace, minene, gohan  vs  toga, inuyasha, power
+[ 119/300 ] LOSS   23 turns   ace, jeanne, yamamoto  vs  nonon, semiramis, chrome
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 120/300 ] LOSS   28 turns   ace, toudou, tatsumi  vs  rengoku, tokoyami, aang
+[ 121/300 ] LOSS   11 turns   ace, asta, cell  vs  rob, mavis, esdeath
+[ 122/300 ] WIN    24 turns   ace, cell, lizandpatty  vs  kaiba, tsubasa, sheele
+[ 123/300 ] WIN    13 turns   ace, aiohto, aang  vs  midoriya, zoro, edward
+[ 124/300 ] LOSS   16 turns   ace, king, emiya  vs  luffy, tsunayoshi, ganta
+[ 125/300 ] LOSS   19 turns   ace, jupiter, machinedramon  vs  noelle, tatsumi, satsuki
+[ 126/300 ] LOSS  164 turns   ace, uzui, eren  vs  edward, mami, jupiter
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 127/300 ] LOSS   21 turns   ace, power, denji  vs  sukuna, venus, nezuko
+[ 128/300 ] LOSS   22 turns   ace, shinra, emiya  vs  toga, yuno, genos
+[ 129/300 ] WIN    19 turns   ace, shiro, saber  vs  kitara, hashirama, yubel
+Yubel's S1 Triggered!
+Yubel's S1 Triggered!
+Yubel's S1 Triggered!
+[ 130/300 ] WIN    50 turns   ace, tsuyu, yubel  vs  impmon, kitara, nobara
+[ 131/300 ] LOSS   30 turns   ace, esdeath, maka  vs  cooler, kitara, tatsumaki
+[ 132/300 ] WIN    26 turns   ace, uzui, kaiba  vs  adam, saturn, inuyasha
+[ 133/300 ] WIN    22 turns   ace, jack, bakugo  vs  noelle, blackstar, emiyaarcher
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 134/300 ] WIN    21 turns   ace, king, levi  vs  asta, yuno, edward
+Applying bleed effect! Checking special code
+[ 135/300 ] WIN    18 turns   ace, myotismon, jack  vs  sayaka, inosuke, jesse
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 136/300 ] LOSS   15 turns   ace, jinwoo, kitara  vs  genos, denji, tsubaki
+[ 137/300 ] LOSS   29 turns   ace, orihime, itachi  vs  koro, arthur, nimaiya
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 138/300 ] WIN    15 turns   ace, nel, usopp  vs  akame, soul, rengoku
+[ 139/300 ] LOSS   12 turns   ace, bakugo, jack  vs  emiya, megumi, meliodas
+[ 140/300 ] WIN    15 turns   ace, genos, uraraka  vs  gatomon, saber, mami
+[ 141/300 ] LOSS   22 turns   ace, veldora, marco  vs  misaka, chrome, tatsumi
+[ 142/300 ] LOSS   15 turns   ace, eren, zenitsu  vs  gilgamesh, pegasus, astolfo
+[ 143/300 ] WIN    28 turns   ace, killua, neferpitou  vs  toph, seventeen, eren
+[ 144/300 ] LOSS   17 turns   ace, nonon, ganta  vs  aiohto, vegeta, kid
+[ 145/300 ] LOSS   21 turns   ace, gatomon, kaiba  vs  marco, itachi, ichigo
+[ 146/300 ] LOSS   16 turns   ace, ganta, kitara  vs  eren, saitama, ryuko
+[ 147/300 ] LOSS   20 turns   ace, gojo, tatsumaki  vs  bakugo, venus, sukuna
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 148/300 ] LOSS   21 turns   ace, kurapika, diane  vs  ken, midoriya, impmon
+[ 149/300 ] LOSS   20 turns   ace, machinedramon, seventeen  vs  eren, neferpitou, death
+[ 150/300 ] WIN    15 turns   ace, hashirama, gogeta  vs  venus, jinwoo, tamaki
+[ 151/300 ] LOSS   25 turns   ace, megumin, lizandpatty  vs  meliodas, muichiro, hawkmon
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 152/300 ] WIN    23 turns   ace, shinra, lucy  vs  king, kaiba, noelle
+Applying bleed effect! Checking special code
+[ 153/300 ] LOSS   11 turns   ace, denji, shokuhou  vs  hibari, squalo, asta
+[ 154/300 ] LOSS   22 turns   ace, mikasa, minene  vs  tatsumaki, inuyasha, cell
+[ 155/300 ] LOSS   33 turns   ace, tsubaki, jeanne  vs  pegasus, misaka, tatsumaki
+[ 156/300 ] LOSS   64 turns   ace, emiyaarcher, mine  vs  hisoka, tatsumi, orihime
+[ 157/300 ] LOSS   28 turns   ace, horohoro, emiyaarcher  vs  myotismon, blackstar, shinoa
+[ 158/300 ] WIN    33 turns   ace, jeanne, lucy  vs  maka, sayaka, uranus
+[ 159/300 ] WIN    23 turns   ace, horohoro, shinoa  vs  lucy, mars, kurotsuchi
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 160/300 ] WIN    21 turns   ace, ken, mars  vs  gatomon, edward, sayaka
+[ 161/300 ] WIN    13 turns   ace, gatomon, alphamon  vs  jinwoo, renamon, impmon
+[ 162/300 ] WIN    28 turns   ace, diane, astolfo  vs  nagisa, orihime, hashirama
+[ 163/300 ] WIN    21 turns   ace, yuji, toga  vs  zenitsu, yamamoto, emiyaarcher
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 164/300 ] LOSS   16 turns   ace, hisoka, mami  vs  inosuke, ban, sukuna
+[ 165/300 ] LOSS   18 turns   ace, muichiro, gon  vs  yamamoto, mash, myotismon
+Applying bleed effect! Checking special code
+[ 166/300 ] LOSS   20 turns   ace, adam, tamaki  vs  denji, ganta, broly
+[ 167/300 ] LOSS   35 turns   ace, killua, tsuyu  vs  yamamoto, kid, uraraka
+[ 168/300 ] LOSS   15 turns   ace, adam, crona  vs  kuroko, lucy, mine
+[ 169/300 ] LOSS   18 turns   ace, shiro, gohan  vs  kitara, yugi, vegeta
+[ 170/300 ] LOSS   19 turns   ace, rob, muichiro  vs  tamaki, gon, jupiter
+[ 171/300 ] WIN    21 turns   ace, nel, tamaki  vs  shiro, asta, edward
+[ 172/300 ] WIN    14 turns   ace, asta, mash  vs  hawkmon, minene, nezuko
+[ 173/300 ] WIN    21 turns   ace, aang, nel  vs  luffy, frankenstein, hashirama
+Applying bleed effect! Checking special code
+[ 174/300 ] LOSS   16 turns   ace, gojo, yuji  vs  myotismon, nimaiya, rengoku
+[ 175/300 ] LOSS   15 turns   ace, frankenstein, mash  vs  cell, astolfo, goku
+[ 176/300 ] LOSS   36 turns   ace, hawkmon, hashirama  vs  squalo, nimaiya, soul
+[ 177/300 ] WIN    31 turns   ace, frieren, toph  vs  toudou, tokoyami, edward
+[ 178/300 ] LOSS   31 turns   ace, xanxus, noelle  vs  akame, boruto, jinwoo
+[ 179/300 ] WIN    22 turns   ace, tsubasa, midoriya  vs  jack, shinoa, byakuya
+[ 180/300 ] LOSS   33 turns   ace, jaden, neferpitou  vs  usopp, veldora, esdeath
+[ 181/300 ] LOSS   29 turns   ace, madoka, soul  vs  mash, venus, mars
+[ 182/300 ] LOSS   18 turns   ace, uraraka, blackwargreymon  vs  mine, todoroki, goku
+[ 183/300 ] LOSS   27 turns   ace, sheele, minene  vs  tsubaki, todoroki, gatomon
+[ 184/300 ] WIN    20 turns   ace, mavis, cooler  vs  venus, minene, rimuru
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 185/300 ] LOSS   21 turns   ace, power, bakugo  vs  myotismon, seventeen, saturn
+[ 186/300 ] LOSS   16 turns   ace, gasai, shinra  vs  hawkmon, arthur, seventeen
+[ 187/300 ] WIN    18 turns   ace, sukuna, asta  vs  itachi, nagisa, frieren
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 188/300 ] LOSS   12 turns   ace, sukuna, hisoka  vs  tsubasa, rakko, mavis
+[ 189/300 ] WIN    16 turns   ace, misaka, alphamon  vs  cell, omnimon, myotismon
+[ 190/300 ] WIN    18 turns   ace, erza, gogeta  vs  shokuhou, ichibe, shinoa
+[ 191/300 ] WIN    27 turns   ace, toudou, killua  vs  minene, saitama, shokuhou
+[ 192/300 ] LOSS   24 turns   ace, tokoyami, boruto  vs  ladydevimon, cell, lizandpatty
+[ 193/300 ] LOSS   13 turns   ace, ladydevimon, soul  vs  neferpitou, gohan, gallantmon
+[ 194/300 ] WIN    11 turns   ace, asta, kuroko  vs  toga, sasuke, shokuhou
+[ 195/300 ] LOSS   18 turns   ace, meliodas, sasuke  vs  zoro, genos, gogeta
+[ 196/300 ] LOSS   31 turns   ace, tsunayoshi, esdeath  vs  ichigo, mars, alphamon
+[ 197/300 ] WIN    17 turns   ace, ganta, todoroki  vs  naruto, saitama, jesse
+[ 198/300 ] LOSS   28 turns   ace, muichiro, seventeen  vs  naruto, squalo, death
+[ 199/300 ] LOSS   29 turns   ace, nezuko, frankenstein  vs  nimaiya, kid, mash
+[ 200/300 ] LOSS   15 turns   ace, frankenstein, jesse  vs  myotismon, gohan, alphamon
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 201/300 ] LOSS   18 turns   ace, shinoa, todoroki  vs  rakko, boruto, crona
+[ 202/300 ] WIN    16 turns   ace, neferpitou, satsuki  vs  hinata, yuji, jack
+Applying bleed effect! Checking special code
+[ 203/300 ] LOSS   23 turns   ace, power, halibel  vs  gatomon, mikasa, ban
+[ 204/300 ] WIN    19 turns   ace, astolfo, naruto  vs  midoriya, venus, killua
+[ 205/300 ] WIN    18 turns   ace, gunha, frieren  vs  shiro, usopp, kitara
+[ 206/300 ] LOSS   29 turns   ace, toji, tamaki  vs  killua, semiramis, hawkmon
+[ 207/300 ] WIN    20 turns   ace, yuji, byakuya  vs  jeanne, mercury, sukuna
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 208/300 ] LOSS   34 turns   ace, rakko, megumi  vs  ban, power, natsu
+[ 209/300 ] WIN    13 turns   ace, naruto, misaka  vs  tatsumi, koro, muichiro
+[ 210/300 ] LOSS   32 turns   ace, myotismon, natsu  vs  uranus, tsubaki, tsunayoshi
+[ 211/300 ] WIN    24 turns   ace, nagisa, semiramis  vs  asta, mars, madoka
+Applying bleed effect! Checking special code
+[ 212/300 ] LOSS   23 turns   ace, sayaka, muichiro  vs  inosuke, jeanne, nagisa
+Applying bleed effect! Checking special code
+[ 213/300 ] WIN    22 turns   ace, ladydevimon, lyserg  vs  king, tamaki, naruto
+[ 214/300 ] LOSS   16 turns   ace, goku, halibel  vs  lizandpatty, saturn, broly
+[ 215/300 ] LOSS   30 turns   ace, natsu, kid  vs  gon, lizandpatty, luffy
+[ 216/300 ] WIN    18 turns   ace, cell, sakura  vs  impmon, tsunayoshi, squalo
+[ 217/300 ] LOSS   23 turns   ace, gohan, zenitsu  vs  jinwoo, nobara, genos
+[ 218/300 ] LOSS   17 turns   ace, toji, inosuke  vs  touka, vegeta, sheele
+[ 219/300 ] WIN    32 turns   ace, sasuke, crona  vs  tamaki, rimuru, inuyasha
+[ 220/300 ] WIN    18 turns   ace, vegeta, jesse  vs  kurotsuchi, meliodas, frankenstein
+[ 221/300 ] LOSS   13 turns   ace, ban, shiro  vs  ryuko, sasuke, bakugo
+[ 222/300 ] LOSS   37 turns   ace, tsuyu, orihime  vs  gogeta, muichiro, cell
+[ 223/300 ] WIN    15 turns   ace, ryuko, kitara  vs  yugi, misaka, killua
+[ 224/300 ] WIN    17 turns   ace, lizandpatty, gray  vs  omnimon, sukuna, hawkmon
+[ 225/300 ] LOSS   12 turns   ace, allmight, gogeta  vs  meliodas, aang, zenitsu
+[ 226/300 ] LOSS   18 turns   ace, nobara, kid  vs  hisoka, emiyaarcher, chrome
+[ 227/300 ] LOSS   14 turns   ace, shokuhou, hawkmon  vs  adam, bakugo, yuji
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 228/300 ] WIN    22 turns   ace, hawkmon, kurapika  vs  inosuke, ganta, misaka
+[ 229/300 ] WIN    23 turns   ace, ganta, lucy  vs  broly, blackwargreymon, toph
+[ 230/300 ] LOSS   19 turns   ace, semiramis, erza  vs  neferpitou, maka, zoro
+Applying bleed effect! Checking special code
+[ 231/300 ] WIN    18 turns   ace, rimuru, nimaiya  vs  jinwoo, shinra, king
+[ 232/300 ] WIN    16 turns   ace, shinra, halibel  vs  eren, toph, gasai
+Applying bleed effect! Checking special code
+[ 233/300 ] WIN    14 turns   ace, machinedramon, uranus  vs  gunha, denji, meliodas
+[ 234/300 ] WIN    14 turns   ace, tatsumi, frankenstein  vs  uranus, ladydevimon, boruto
+[ 235/300 ] LOSS   15 turns   ace, byakuya, xanxus  vs  genos, tsunayoshi, adam
+[ 236/300 ] WIN    16 turns   ace, seventeen, itachi  vs  impmon, esdeath, jinwoo
+[ 237/300 ] LOSS   24 turns   ace, minene, tatsumaki  vs  kaiba, myotismon, ichigo
+[ 238/300 ] WIN    18 turns   ace, noelle, death  vs  eren, lucy, meliodas
+[ 239/300 ] WIN    12 turns   ace, gasai, impmon  vs  nonon, kid, yoh
+[ 240/300 ] LOSS   19 turns   ace, genos, sakura  vs  gasai, misaka, shinra
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 241/300 ] LOSS   26 turns   ace, rakko, hinata  vs  denji, sakura, uranus
+[ 242/300 ] LOSS   15 turns   ace, sayaka, nimaiya  vs  machinedramon, levi, renamon
+Applying bleed effect! Checking special code
+[ 243/300 ] LOSS   21 turns   ace, tsubasa, hibari  vs  adam, usopp, rakko
+Applying bleed effect! Checking special code
+[ 244/300 ] WIN    13 turns   ace, myotismon, mavis  vs  diane, vegeta, ryohei
+[ 245/300 ] LOSS   17 turns   ace, saber, horohoro  vs  erza, arthur, gojo
+[ 246/300 ] LOSS   30 turns   ace, omnimon, erza  vs  minene, jaden, tsuyu
+[ 247/300 ] LOSS   18 turns   ace, rob, gray  vs  bakugo, toph, uzui
+[ 248/300 ] LOSS   16 turns   ace, sayaka, horohoro  vs  impmon, hashirama, ichibe
+[ 249/300 ] LOSS   20 turns   ace, toga, koro  vs  squalo, jaden, megumi
+[ 250/300 ] WIN    31 turns   ace, nagisa, toga  vs  noelle, ladydevimon, luffy
+[ 251/300 ] WIN    20 turns   ace, rob, koro  vs  ban, inuyasha, nimaiya
+Applying bleed effect! Checking special code
+[ 252/300 ] WIN    24 turns   ace, alphamon, misaka  vs  venus, mash, diane
+[ 253/300 ] WIN    22 turns   ace, rimuru, hawkmon  vs  frieren, hinata, akame
+[ 254/300 ] LOSS   26 turns   ace, denji, gatomon  vs  nezuko, sheele, esdeath
+[ 255/300 ] LOSS  124 turns   ace, zoro, veldora  vs  cooler, korra, nezuko
+[ 256/300 ] WIN    22 turns   ace, erza, maka  vs  mami, meliodas, kurotsuchi
+[ 257/300 ] LOSS   28 turns   ace, muichiro, natsu  vs  naruto, nonon, mash
+Applying bleed effect! Checking special code
+[ 258/300 ] LOSS   13 turns   ace, tanjiro, ken  vs  mine, edward, aiohto
+[ 259/300 ] WIN    14 turns   ace, asta, eren  vs  yuji, levi, impmon
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 260/300 ] WIN    19 turns   ace, mikasa, denji  vs  ban, muichiro, todoroki
+Applying bleed effect! Checking special code
+[ 261/300 ] LOSS   14 turns   ace, toji, saitama  vs  inosuke, ryohei, seventeen
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 262/300 ] LOSS   18 turns   ace, inosuke, rimuru  vs  koro, ladydevimon, asta
+[ 263/300 ] WIN    22 turns   ace, emiya, satsuki  vs  natsu, mine, madoka
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 264/300 ] WIN    49 turns   ace, denji, arthur  vs  asta, jesse, toph
+[ 265/300 ] LOSS   29 turns   ace, halibel, squalo  vs  tsuyu, usopp, erza
+[ 266/300 ] WIN    14 turns   ace, arthur, megumi  vs  blackwargreymon, tatsumi, tamaki
+[ 267/300 ] WIN    50 turns   ace, kurapika, toudou  vs  gunha, orihime, erza
+[ 268/300 ] WIN    24 turns   ace, frankenstein, esdeath  vs  minene, jack, pegasus
+[ 269/300 ] WIN    16 turns   ace, shinra, vegeta  vs  jupiter, emiya, inuyasha
+[ 270/300 ] LOSS   20 turns   ace, lyserg, lizandpatty  vs  cooler, nagisa, vegeta
+[ 271/300 ] WIN    17 turns   ace, blackwargreymon, esdeath  vs  jupiter, sasuke, emiya
+[ 272/300 ] LOSS   31 turns   ace, naruto, alphonse  vs  saitama, death, nonon
+[ 273/300 ] LOSS   21 turns   ace, kitara, genos  vs  midoriya, shokuhou, gogeta
+[ 274/300 ] WIN    16 turns   ace, diane, emiya  vs  yubel, zoro, lyserg
+[ 275/300 ] WIN    18 turns   ace, tsubasa, emiya  vs  goku, edward, gunha
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 276/300 ] WIN    19 turns   ace, gojo, kuroko  vs  impmon, rengoku, maka
+[ 277/300 ] WIN    18 turns   ace, jeanne, omnimon  vs  itachi, nonon, goku
+Applying bleed effect! Checking special code
+[ 278/300 ] WIN    17 turns   ace, jinwoo, rengoku  vs  saber, asta, frankenstein
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 279/300 ] WIN    38 turns   ace, ichibe, ryuko  vs  killua, denji, aiohto
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 280/300 ] LOSS   21 turns   ace, ken, gogeta  vs  machinedramon, arthur, aang
+[ 281/300 ] WIN    14 turns   ace, luffy, minene  vs  rob, nonon, bakugo
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 282/300 ] LOSS   26 turns   ace, orihime, ken  vs  luffy, saber, gatomon
+[ 283/300 ] WIN    16 turns   ace, hawkmon, ryuko  vs  pegasus, nezuko, rakko
+[ 284/300 ] WIN    11 turns   ace, lyserg, gray  vs  misaka, adam, diane
+[ 285/300 ] WIN    19 turns   ace, uzui, soul  vs  zoro, machinedramon, cooler
+[ 286/300 ] LOSS   19 turns   ace, genos, myotismon  vs  yoh, bakugo, nel
+[ 287/300 ] WIN    24 turns   ace, semiramis, hashirama  vs  lyserg, tsubaki, nel
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 288/300 ] WIN    16 turns   ace, esdeath, lucy  vs  yamamoto, ken, vegeta
+[ 289/300 ] WIN    19 turns   ace, saturn, neferpitou  vs  meliodas, rimuru, semiramis
+[ 290/300 ] WIN    20 turns   ace, nonon, ichigo  vs  nezuko, emiya, renamon
+[ 291/300 ] LOSS   24 turns   ace, saber, semiramis  vs  nonon, uzui, jack
+[ 292/300 ] LOSS   18 turns   ace, ban, kurotsuchi  vs  muichiro, madoka, gasai
+[ 293/300 ] WIN    18 turns   ace, uzui, gallantmon  vs  xanxus, sukuna, pegasus
+[ 294/300 ] WIN    16 turns   ace, aiohto, impmon  vs  blackwargreymon, emiya, gogeta
+[ 295/300 ] LOSS   30 turns   ace, yuno, gohan  vs  zenitsu, allmight, arthur
+[ 296/300 ] WIN    27 turns   ace, edward, jinwoo  vs  jesse, kurapika, usopp
+[ 297/300 ] LOSS   20 turns   ace, megumi, frieren  vs  hawkmon, tsuyu, gray
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 298/300 ] LOSS   17 turns   ace, yugi, mikasa  vs  hashirama, mavis, king
+[ 299/300 ] WIN    37 turns   ace, vegeta, sasuke  vs  adam, marco, blackstar
+[ 300/300 ] LOSS   20 turns   ace, gallantmon, crona  vs  nagisa, tsubasa, omnimon
+=== TRAINER RUN COMPLETE ===
+Matches: 300   W: 140   L: 160   D: 0   Win: 46.7%   (opponent: v3:focused_current.json  [EVAL])

@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/diane.gd" id="1_wkr82"]
+[ext_resource type="Texture2D" path="res://assets/images/Diane/profile_mastery_diane.png" id="2_0skj1"]
+[ext_resource type="Texture2D" path="res://assets/images/Diane/dianeprof.png" id="2_j16o1"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_sht5a"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_acp26"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_owumt"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_2r1dj"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_d6f0n"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_vdvbr"]
+
+[node name="Diane" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_wkr82")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_0skj1")
+mastery_name = "Balor Diane"
+portrait_texture = ExtResource("2_j16o1")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_sht5a")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_acp26")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_owumt")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_2r1dj")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_d6f0n")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_vdvbr")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

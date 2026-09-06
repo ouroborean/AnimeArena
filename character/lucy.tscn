@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/lucy.gd" id="1_bdord"]
+[ext_resource type="Texture2D" path="res://assets/images/Lucy Heartphilia/profile_mastery_lucy.png" id="2_3ha4n"]
+[ext_resource type="Texture2D" path="res://assets/images/Lucy Heartphilia/lucyprof.png" id="2_t3k5y"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="3_fm4jj"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="4_33m6y"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="5_eyb3n"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="6_eenuj"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="7_2jbio"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="8_lb8kj"]
+
+[node name="Lucy" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_bdord")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_3ha4n")
+mastery_name = "Maid Lucy"
+portrait_texture = ExtResource("2_t3k5y")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("3_fm4jj")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_33m6y")]
+
+[node name="StatComponent" parent="." instance=ExtResource("5_eyb3n")]
+
+[node name="NameComponent" parent="." instance=ExtResource("6_eenuj")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("7_2jbio")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("8_lb8kj")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

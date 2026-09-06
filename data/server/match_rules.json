@@ -1,0 +1,29 @@
+{
+  "_source": "components/match.gd",
+  "_symbols": [
+    "DRAFT_BAN_SECONDS",
+    "DRAFT_PICK_SECONDS",
+    "DRAFT_MAX_BANS",
+    "DRAFT_PICK_QUOTA",
+    "default_match_timer",
+    "AFK_PENALTY_STEP",
+    "AFK_MIN_TIMER",
+    "AFK_FORFEIT_MISSES"
+  ],
+  "_generated_by": "tools/reference_data.py",
+  "draft_ban_seconds": 60.0,
+  "draft_pick_seconds": 30.0,
+  "draft_max_bans": 3,
+  "draft_pick_quota": [
+    1,
+    2,
+    2,
+    1
+  ],
+  "default_match_timer": 120.0,
+  "afk_penalty_step": 30.0,
+  "afk_min_timer": 30.0,
+  "afk_forfeit_misses": 3,
+  "_afk_note": "Each turn a player lets TIME OUT shaves afk_penalty_step off their turn timer, cumulative and floored at afk_min_timer; finishing a turn MANUALLY resets it. Missing afk_forfeit_misses turns IN A ROW auto-forfeits. The effective timer is maxf(afk_min_timer, default_match_timer - afk_penalty_step * misses) (components/match.gd:713).",
+  "_draft_note": "draft_pick_quota is the alternating pick pattern (1,2,2,1). The whole ranked DRAFT path is currently DEAD CODE — start_ranked_draft() has zero callers — so these constants describe an unreachable feature. Kept as spec, not as a port requirement; see the roadmap's decision on whether to implement drafting."
+}

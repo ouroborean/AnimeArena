@@ -1,0 +1,39 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://character/touka.gd" id="1_sa5al"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_2k888"]
+[ext_resource type="Texture2D" path="res://assets/images/profile_mastery_touka.png" id="2_4rth8"]
+[ext_resource type="Texture2D" path="res://assets/images/toukaprof.png" id="2_lwom2"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_4ryes"]
+[ext_resource type="Texture2D" path="res://assets/images/toukaprof_2.png" id="3_irfjj"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_pfba6"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_ivrjs"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_l2rpu"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_mm1pe"]
+
+[node name="Touka" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_sa5al")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_4rth8")
+mastery_name = "Enraged Touka"
+portrait_texture = ExtResource("2_lwom2")
+alt_portraits = Array[Texture2D]([ExtResource("3_irfjj")])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_2k888")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_4ryes")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_pfba6")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_ivrjs")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_l2rpu")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_mm1pe")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

@@ -1,0 +1,76 @@
+{
+  "_comment": "PLACEHOLDER dialogue for chapter X. speaker=display name, portrait=roster path_name (real art as stand-in), pos=left|center|right, background=assets/backgrounds id. A line with `choices` shows buttons; a choice applies `set_flags` and optionally `goto`s another scene, else ends the scene.",
+
+  "dlg_hub_intro": { "background": "background_ingame_default", "lines": [
+    { "speaker": "Narrator", "pos": "center", "text": "[PLACEHOLDER] Chapter X opens at the Leaf Hub. Worlds are bleeding together." },
+    { "speaker": "Naruto", "pos": "left", "portrait": "naruto", "emotion": "shocked", "text": "[PLACEHOLDER] Whoa — where even are we? Everything feels... stitched together." },
+    { "speaker": "Guide", "pos": "right", "portrait": "itachi", "emotion": "serious", "text": "[PLACEHOLDER] A corruption spreads across the universes. Head to the Mist Village — something waits there." },
+    { "speaker": "Naruto", "pos": "left", "portrait": "naruto", "emotion": "happy", "text": "[PLACEHOLDER] Got it. Let's move! (Mist and the Market are now open on the map.)" }
+  ]},
+
+  "dlg_hub_train": { "background": "background_ingame_default", "lines": [
+    { "speaker": "Guide", "pos": "right", "portrait": "itachi", "text": "[PLACEHOLDER — REPEATABLE] Want to drill some fundamentals while you're here? You can revisit this any time." }
+  ]},
+
+  "dlg_hub_idle": { "background": "background_ingame_default", "lines": [
+    { "speaker": "Narrator", "pos": "center", "text": "[PLACEHOLDER — IDLE] The Leaf Hub is quiet. Nothing new right now." }
+  ]},
+
+  "dlg_hub_return_pre": { "background": "background_ingame_jack", "lines": [
+    { "speaker": "Sakura", "pos": "center", "portrait": "sakura", "text": "[PLACEHOLDER] You made it back! But the corruption followed you home — the Hub is under attack!" }
+  ]},
+
+  "dlg_hub_return_post": { "background": "background_ingame_default", "lines": [
+    { "speaker": "Sakura", "pos": "center", "portrait": "sakura", "text": "[PLACEHOLDER] We held them off. The Shrine has revealed itself to the east — that must be the source." }
+  ]},
+
+  "dlg_mist_pre": { "background": "background_ingame_misaka", "lines": [
+    { "speaker": "Narrator", "pos": "center", "text": "[PLACEHOLDER] The Mist Village is shrouded and hostile." },
+    { "speaker": "Rival", "pos": "right", "portrait": "zoro", "text": "[PLACEHOLDER] Turn back, outsiders. This fog belongs to us now." },
+    { "speaker": "Sasuke", "pos": "left", "portrait": "sasuke", "text": "[PLACEHOLDER] We're not asking permission." }
+  ]},
+
+  "dlg_mist_post": { "background": "background_ingame_misaka", "lines": [
+    { "speaker": "Rival", "pos": "right", "portrait": "zoro", "text": "[PLACEHOLDER] ...The corruption... it was using us. Go — warn the Leaf." },
+    { "speaker": "Narrator", "pos": "center", "text": "[PLACEHOLDER] Objective updated: return to the Leaf Hub." }
+  ]},
+
+  "dlg_mist_idle": { "background": "background_ingame_misaka", "lines": [
+    { "speaker": "Narrator", "pos": "center", "text": "[PLACEHOLDER — IDLE] The mist has cleared. The village is calm now." }
+  ]},
+
+  "dlg_market_quest": { "background": "background_ingame_ace", "lines": [
+    { "speaker": "Merchant", "pos": "left", "portrait": "usopp", "text": "[PLACEHOLDER — SIDE QUEST] Please! Bandits took my cart. Help me and I'll owe you one." },
+    { "speaker": "Naruto", "pos": "right", "portrait": "naruto", "text": "[PLACEHOLDER] What do you say?",
+      "choices": [
+        { "text": "Help the merchant", "set_flags": ["helped_merchant"], "unlocks": ["char:levi"], "goto": "dlg_market_help" },
+        { "text": "Not our problem", "set_flags": ["declined_merchant"], "goto": "dlg_market_decline" }
+      ] }
+  ]},
+
+  "dlg_market_help": { "background": "background_ingame_ace", "lines": [
+    { "speaker": "Merchant", "pos": "left", "portrait": "usopp", "text": "[PLACEHOLDER — HELPED] Bless you! Take this — and my thanks. (Reward flag set; a real unlock would be granted here.)" }
+  ]},
+
+  "dlg_market_decline": { "background": "background_ingame_ace", "lines": [
+    { "speaker": "Merchant", "pos": "left", "portrait": "usopp", "text": "[PLACEHOLDER — DECLINED] ...I see. Heroes, they said. Hmph." }
+  ]},
+
+  "dlg_market_after": { "background": "background_ingame_ace", "lines": [
+    { "speaker": "Merchant", "pos": "left", "portrait": "usopp", "text": "[PLACEHOLDER] My hero returns! The cart's back in business thanks to you." }
+  ]},
+
+  "dlg_market_idle": { "background": "background_ingame_ace", "lines": [
+    { "speaker": "Narrator", "pos": "center", "text": "[PLACEHOLDER — IDLE] The market bustles. Nothing needs you here right now." }
+  ]},
+
+  "dlg_shrine_final": { "background": "background_ingame_gatomon", "lines": [
+    { "speaker": "Narrator", "pos": "center", "text": "[PLACEHOLDER] The Convergence Shrine pulses with corrupted light." },
+    { "speaker": "Naruto", "pos": "left", "portrait": "naruto", "text": "[PLACEHOLDER] So this is where the worlds are tearing open." },
+    { "speaker": "Guide", "pos": "right", "portrait": "itachi", "text": "[PLACEHOLDER] End it here, and Chapter X is complete. (This is a placeholder finale.)" }
+  ]},
+
+  "dlg_shrine_idle": { "background": "background_ingame_gatomon", "lines": [
+    { "speaker": "Narrator", "pos": "center", "text": "[PLACEHOLDER — LOCKED] The Shrine is sealed. Something must happen at the Hub first." }
+  ]}
+}

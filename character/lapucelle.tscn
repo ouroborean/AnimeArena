@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://character/lapucelle.gd" id="1_4p6lf"]
+[ext_resource type="Texture2D" path="res://assets/images/La Pucelle/pucelleprof.png" id="2_j6ni3"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="3_tults"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="4_qwb7o"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="5_ori7c"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="6_risfm"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="7_7qjap"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="8_hoqf7"]
+
+[node name="LaPucelle" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_4p6lf")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+portrait_texture = ExtResource("2_j6ni3")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("3_tults")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_qwb7o")]
+
+[node name="StatComponent" parent="." instance=ExtResource("5_ori7c")]
+
+[node name="NameComponent" parent="." instance=ExtResource("6_risfm")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("7_7qjap")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("8_hoqf7")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

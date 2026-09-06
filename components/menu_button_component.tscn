@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/menu_button_component.gd" id="1_qpjin"]
+
+[node name="MenuButtonComponent" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qpjin")

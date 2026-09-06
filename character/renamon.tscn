@@ -1,0 +1,39 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://character/renamon.gd" id="1_mvclr"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_6c08b"]
+[ext_resource type="Texture2D" path="res://assets/images/Renamon/renamonaltprof.png" id="2_6h3g5"]
+[ext_resource type="Texture2D" path="res://assets/images/Renamon/renamonprof.png" id="2_6k8i2"]
+[ext_resource type="Texture2D" path="res://assets/images/Renamon/alt_prof_renamon.png" id="2_38ta1"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_82v2i"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_g4gxt"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_6r3ao"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_cpbo4"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_qqtwg"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_mvclr")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_38ta1")
+mastery_name = "Sakuyamon"
+portrait_texture = ExtResource("2_6k8i2")
+alt_portraits = Array[Texture2D]([ExtResource("2_6h3g5")])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_6c08b")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_82v2i")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_g4gxt")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_6r3ao")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_cpbo4")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_qqtwg")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

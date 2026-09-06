@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/byakuya.gd" id="1_jt6vm"]
+[ext_resource type="Texture2D" path="res://assets/images/Byakuya Kuchiki/byakuyaprof.png" id="2_hwv4u"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_t1gdm"]
+[ext_resource type="Texture2D" path="res://assets/images/Byakuya Kuchiki/alt_prof_byakuya.png" id="2_xqct8"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_y5dur"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_hrx85"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_0opju"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_tjjka"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_c73jm"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_jt6vm")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_xqct8")
+mastery_name = "Young Byakuya"
+portrait_texture = ExtResource("2_hwv4u")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_t1gdm")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_y5dur")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_hrx85")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_0opju")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_tjjka")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_c73jm")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

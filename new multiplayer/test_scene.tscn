@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqgdn28jtcx13"]
+
+[ext_resource type="Script" uid="uid://u5ijn2w5bql6" path="res://new multiplayer/test_battle_headless.gd" id="1_ayp75"]
+
+[node name="TestScene" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ayp75")
+verbose = false
+use_training_data = false

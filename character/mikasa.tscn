@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/mikasa.gd" id="1_mu04f"]
+[ext_resource type="Texture2D" path="res://assets/images/Mikasa Ackerman/mikasaprof.png" id="2_20kme"]
+[ext_resource type="Texture2D" path="res://assets/images/Mikasa Ackerman/alt_prof_mikasa.png" id="2_a1bmt"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_lpxdb"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_vyhmg"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_xu75f"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_o78q8"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_5j7gv"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_oqio5"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_mu04f")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_a1bmt")
+mastery_name = "Adult Mikasa"
+portrait_texture = ExtResource("2_20kme")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_lpxdb")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_vyhmg")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_xu75f")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_o78q8")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_5j7gv")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_oqio5")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

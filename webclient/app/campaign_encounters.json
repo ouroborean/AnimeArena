@@ -1,0 +1,5 @@
+{
+  "_comment": "PLACEHOLDER encounters for chapter X. Fought via the Phase-1 campaign battle path (no rank/AP). enemy_team = 3 distinct real-character path_names (campaign-only minions/bosses come in a later phase). enemy_name is the opponent card label.",
+  "enc_mist": { "enemy_name": "Mist Marauders", "enemy_team": ["zoro", "usopp", "luffy"] },
+  "enc_defense": { "enemy_name": "Corrupted Vanguard", "enemy_team": ["itachi", "bakugo", "vegeta"] }
+}

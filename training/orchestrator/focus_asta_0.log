@@ -1,0 +1,46 @@
+Godot Engine v4.6.2.stable.official.71f334935 - https://godotengine.org
+
+[trainer] seed=61000 matches=25 opponent=self eval=false out=res://training/checkpoints/focus_asta/w0.json checkpoint=res://training/checkpoints/focused_current.json
+[authored] loaded 1 authored character(s)
+[   1/25  ] WIN    14 turns   asta, jaden, kid  vs  saitama, jack, megumin
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   2/25  ] WIN    17 turns   asta, inosuke, rakko  vs  gon, soul, tatsumaki
+[   3/25  ] WIN    15 turns   asta, bakugo, gray  vs  tsubaki, yuno, machinedramon
+[   4/25  ] WIN    15 turns   asta, jupiter, yamamoto  vs  sayaka, ryuko, tsubaki
+[   5/25  ] WIN    14 turns   asta, hawkmon, touka  vs  jeanne, kid, inuyasha
+[   6/25  ] WIN    22 turns   asta, venus, hibari  vs  ganta, hisoka, veldora
+[   7/25  ] WIN    19 turns   asta, kitara, veldora  vs  akame, lyserg, gallantmon
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   8/25  ] WIN    16 turns   asta, cell, nel  vs  zenitsu, hinata, king
+[   9/25  ] WIN    14 turns   asta, sukuna, natsu  vs  gogeta, arthur, aang
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  10/25  ] WIN    18 turns   asta, toji, arthur  vs  gogeta, denji, venus
+[  11/25  ] LOSS   20 turns   asta, hinata, yubel  vs  blackstar, sayaka, byakuya
+[  12/25  ] WIN    19 turns   asta, tatsumaki, squalo  vs  kaiba, minene, kurapika
+[  13/25  ] WIN    19 turns   asta, alphonse, power  vs  jupiter, aiohto, tokoyami
+[  14/25  ] WIN    18 turns   asta, toga, satsuki  vs  nonon, mars, shinra
+[  15/25  ] WIN    14 turns   asta, cell, shinra  vs  rimuru, mash, ryuko
+[  16/25  ] WIN    20 turns   asta, seventeen, hinata  vs  todoroki, omnimon, lizandpatty
+[  17/25  ] WIN    18 turns   asta, alphamon, byakuya  vs  nobara, uraraka, erza
+[  18/25  ] WIN    16 turns   asta, halibel, venus  vs  ban, kaiba, omnimon
+[  19/25  ] WIN    28 turns   asta, hinata, xanxus  vs  yubel, myotismon, hibari
+[  20/25  ] WIN    34 turns   asta, mash, misaka  vs  gray, lyserg, korra
+[  21/25  ] LOSS   21 turns   asta, goku, zoro  vs  naruto, toph, halibel
+[  22/25  ] LOSS   13 turns   asta, sayaka, king  vs  nel, gatomon, akame
+[  23/25  ] WIN    17 turns   asta, eren, uraraka  vs  myotismon, midoriya, inosuke
+[  24/25  ] WIN    16 turns   asta, satsuki, tatsumaki  vs  semiramis, nobara, gilgamesh
+[  25/25  ] LOSS   18 turns   asta, orihime, semiramis  vs  esdeath, ladydevimon, renamon
+=== TRAINER RUN COMPLETE ===
+Matches: 25   W: 21   L: 4   D: 0   Win: 84.0%   (opponent: self)
+Policy saved to res://training/checkpoints/focus_asta/w0.json  (generation 5, trained_matches 10025)

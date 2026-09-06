@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/team_component.gd" id="1_bhsl8"]
+[ext_resource type="PackedScene" path="res://components/energypool.tscn" id="2_kuq22"]
+
+[node name="TeamComponent" type="Node" node_paths=PackedStringArray("energy")]
+script = ExtResource("1_bhsl8")
+energy = NodePath("Energy")
+
+[node name="Energy" parent="." instance=ExtResource("2_kuq22")]

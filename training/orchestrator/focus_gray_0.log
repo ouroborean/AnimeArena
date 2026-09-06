@@ -1,0 +1,55 @@
+Godot Engine v4.6.2.stable.official.71f334935 - https://godotengine.org
+
+[trainer] seed=61000 matches=25 opponent=self eval=false out=res://training/checkpoints/focus_gray/w0.json checkpoint=res://training/checkpoints/focused_current.json
+[authored] loaded 1 authored character(s)
+[   1/25  ] WIN    16 turns   gray, jaden, kid  vs  saitama, jack, megumin
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   2/25  ] WIN    18 turns   gray, inosuke, rakko  vs  gon, soul, tatsumaki
+[   3/25  ] WIN    15 turns   gray, bakugo, erza  vs  tsubaki, yuno, machinedramon
+[   4/25  ] LOSS   13 turns   gray, jupiter, yamamoto  vs  mami, ryuko, tsubaki
+[   5/25  ] WIN    18 turns   gray, hawkmon, touka  vs  jeanne, kid, inuyasha
+[   6/25  ] WIN    14 turns   gray, venus, hibari  vs  ganta, hisoka, veldora
+[   7/25  ] WIN    19 turns   gray, kitara, veldora  vs  akame, lyserg, gallantmon
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   8/25  ] LOSS   23 turns   gray, cell, nel  vs  zenitsu, hinata, king
+[   9/25  ] WIN    18 turns   gray, sukuna, natsu  vs  gogeta, arthur, aang
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  10/25  ] WIN    32 turns   gray, toji, arthur  vs  gogeta, denji, venus
+Yubel's S1 Triggered!
+[  11/25  ] WIN    31 turns   gray, hinata, yubel  vs  blackstar, mami, byakuya
+[  12/25  ] WIN    25 turns   gray, tatsumaki, squalo  vs  kaiba, minene, kurapika
+Applying bleed effect! Checking special code
+[  13/25  ] LOSS   20 turns   gray, alphonse, power  vs  jupiter, aiohto, tokoyami
+[  14/25  ] LOSS   19 turns   gray, toga, satsuki  vs  nonon, mars, shinra
+[  15/25  ] WIN    16 turns   gray, cell, shinra  vs  rimuru, mash, ryuko
+[  16/25  ] WIN    22 turns   gray, seventeen, hinata  vs  todoroki, omnimon, lizandpatty
+[  17/25  ] WIN    20 turns   gray, alphamon, byakuya  vs  nobara, uraraka, mavis
+[  18/25  ] WIN    16 turns   gray, halibel, venus  vs  ban, kaiba, omnimon
+Yubel's S1 Triggered!
+[  19/25  ] WIN    16 turns   gray, hinata, xanxus  vs  yubel, myotismon, hibari
+[  20/25  ] WIN    14 turns   gray, mash, misaka  vs  erza, lyserg, korra
+[  21/25  ] WIN    24 turns   gray, goku, zoro  vs  naruto, toph, halibel
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  22/25  ] WIN    19 turns   gray, mami, king  vs  nel, gatomon, akame
+[  23/25  ] WIN    17 turns   gray, eren, uraraka  vs  myotismon, midoriya, inosuke
+[  24/25  ] LOSS   15 turns   gray, satsuki, tatsumaki  vs  semiramis, nobara, gilgamesh
+[  25/25  ] LOSS   20 turns   gray, orihime, semiramis  vs  esdeath, ladydevimon, renamon
+=== TRAINER RUN COMPLETE ===
+Matches: 25   W: 19   L: 6   D: 0   Win: 76.0%   (opponent: self)
+Policy saved to res://training/checkpoints/focus_gray/w0.json  (generation 5, trained_matches 10025)

@@ -1,0 +1,36 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/zenitsu.gd" id="1_8ij33"]
+[ext_resource type="Texture2D" path="res://assets/images/Agamatsu Zenitsu/zenitsuprof.png" id="2_37lma"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_xq047"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_7683s"]
+[ext_resource type="Texture2D" path="res://assets/images/Agamatsu Zenitsu/zenitsuprof_2.png" id="3_ffvy0"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_2wpb7"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_j3iwp"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_1e7ld"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_2cwuk"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_8ij33")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+portrait_texture = ExtResource("2_37lma")
+alt_portraits = Array[Texture2D]([ExtResource("3_ffvy0")])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_xq047")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_7683s")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_2wpb7")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_j3iwp")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_1e7ld")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_2cwuk")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

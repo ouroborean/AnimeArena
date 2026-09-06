@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/gon.gd" id="1_ucnpt"]
+[ext_resource type="Texture2D" path="res://assets/images/Gon Freecss/gonprof.png" id="2_8lowp"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_akrat"]
+[ext_resource type="Texture2D" path="res://assets/images/Gon Freecss/profile_mastery_gon.png" id="2_dnl72"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_k2wu3"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_7051p"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_n83gy"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_biu14"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_2xyo7"]
+
+[node name="Gon" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_ucnpt")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_dnl72")
+mastery_name = "Super Gon"
+portrait_texture = ExtResource("2_8lowp")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_akrat")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_k2wu3")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_7051p")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_n83gy")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_biu14")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_2xyo7")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

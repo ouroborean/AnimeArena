@@ -1,0 +1,39 @@
+# systemd unit for the Anime Arena Discord bot.
+# Install:
+#   sudo cp animearena-bot.service /etc/systemd/system/
+#   (edit User/paths below to match your VM, then)
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now animearena-bot
+# Logs:   journalctl -u animearena-bot -f
+
+[Unit]
+Description=Anime Arena Discord Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Run as a non-root user that can read the game files (adjust to yours):
+User=animearena
+Group=animearena
+
+# Folder containing bot.py (adjust to where you copied the discord-bot/ folder):
+WorkingDirectory=/opt/animearena/discord-bot
+
+# Secrets + config live here (chmod 600, owned by the User above):
+EnvironmentFile=/opt/animearena/discord-bot/.env
+
+# Use the venv's python (see README for creating the venv):
+ExecStart=/opt/animearena/discord-bot/venv/bin/python -u bot.py
+
+Restart=on-failure
+RestartSec=5
+# Give the bot a moment to shut its Discord connection cleanly:
+TimeoutStopSec=15
+
+# Light hardening (optional, safe defaults):
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

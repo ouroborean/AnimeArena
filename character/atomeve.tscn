@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/atomeve.gd" id="1_2o6ku"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_4fjfu"]
+[ext_resource type="Texture2D" path="res://assets/images/Atom Eve/profile_mastery_atomeve.png" id="2_jhwku"]
+[ext_resource type="Texture2D" path="res://assets/images/Atom Eve/atomeveprof.png" id="2_o6ya2"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_actp3"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_2xhhd"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_6e64p"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_pqeoc"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_hd443"]
+
+[node name="Aang" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_2o6ku")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_jhwku")
+mastery_name = "Young Atom Eve"
+portrait_texture = ExtResource("2_o6ya2")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_4fjfu")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_actp3")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_2xhhd")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_6e64p")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_pqeoc")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_hd443")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://training/tests/creator_bypass_when_probe.gd" id="1"]
+
+[node name="CreatorBypassWhenProbe" type="Node"]
+script = ExtResource("1")

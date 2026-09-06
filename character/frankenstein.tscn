@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/frankenstein.gd" id="1_4q5lo"]
+[ext_resource type="Texture2D" path="res://assets/images/Frankenstein/frankensteinprof.png" id="2_3fqac"]
+[ext_resource type="Texture2D" path="res://assets/images/Frankenstein/alt_prof_frankenstein.png" id="2_jpivp"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="4_tu3j4"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="5_yco6n"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="6_3ga7k"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="7_nneib"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="8_1orra"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="9_mmwaj"]
+
+[node name="Frankenstein" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_4q5lo")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_jpivp")
+mastery_name = "Berserk Frankenstein"
+portrait_texture = ExtResource("2_3fqac")
+alt_portraits = Array[Texture2D]([null])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("4_tu3j4")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_yco6n")]
+
+[node name="StatComponent" parent="." instance=ExtResource("6_3ga7k")]
+
+[node name="NameComponent" parent="." instance=ExtResource("7_nneib")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("8_1orra")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("9_mmwaj")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

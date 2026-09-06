@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://character/snowwhite.gd" id="1_47g1u"]
+[ext_resource type="Texture2D" path="res://assets/images/Snow White/snowwhiteprof.png" id="2_t75lc"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="3_2b523"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="4_ky660"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="5_3lxjj"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="6_yewxr"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="7_ftpop"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="8_8bs4j"]
+
+[node name="SnowWhite" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_47g1u")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+portrait_texture = ExtResource("2_t75lc")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("3_2b523")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_ky660")]
+
+[node name="StatComponent" parent="." instance=ExtResource("5_3lxjj")]
+
+[node name="NameComponent" parent="." instance=ExtResource("6_yewxr")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("7_ftpop")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("8_8bs4j")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

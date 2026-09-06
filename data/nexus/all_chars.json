@@ -1,0 +1,4483 @@
+{
+  "_source": "components/bucket_handler.gd",
+  "_symbols": [
+    "all_chars"
+  ],
+  "_generated_by": "tools/reference_data.py",
+  "_note": "Insertion order preserved: initialize_buckets() iterates all_chars in order. `portrait` is the res:// path the GDScript load() resolves.",
+  "concepts": {
+    "baki": {
+      "name": "Baki Hanma",
+      "portrait": "res://assets/images/Baki Hanma/bakiprof.png",
+      "description": "t",
+      "universe": "BAKI",
+      "universe_ordinal": 49
+    },
+    "jackhanma": {
+      "name": "Jack Hanma",
+      "portrait": "res://assets/images/Jack Hanma/jackhanmaprof.png",
+      "description": "t",
+      "universe": "BAKI",
+      "universe_ordinal": 49
+    },
+    "yujirohanma": {
+      "name": "Yujiro Hanma",
+      "portrait": "res://assets/images/Yujiro Hanma/yujirohanmaprof.png",
+      "description": "t",
+      "universe": "BAKI",
+      "universe_ordinal": 49
+    },
+    "retsu": {
+      "name": "Retsu Kaioh",
+      "portrait": "res://assets/images/Retsu Kaioh/retsuprof.png",
+      "description": "t",
+      "universe": "BAKI",
+      "universe_ordinal": 49
+    },
+    "hanayama": {
+      "name": "Kaoru Hanayama",
+      "portrait": "res://assets/images/Kaoru Hanayama/hanayamaprof.png",
+      "description": "t",
+      "universe": "BAKI",
+      "universe_ordinal": 49
+    },
+    "biscuit": {
+      "name": "Biscuit Oliva",
+      "portrait": "res://assets/images/Biscuit Oliva/biscuitprof.png",
+      "description": "t",
+      "universe": "BAKI",
+      "universe_ordinal": 49
+    },
+    "chris": {
+      "name": "Chris Yukine",
+      "portrait": "res://assets/images/Chris Yukine/chrisprof.png",
+      "description": "t",
+      "universe": "SYMPHOGEAR",
+      "universe_ordinal": 50
+    },
+    "maria": {
+      "name": "Maria Cadenzavna Eve",
+      "portrait": "res://assets/images/Maria Cadenzavna Eve/mariaprof.png",
+      "description": "t",
+      "universe": "SYMPHOGEAR",
+      "universe_ordinal": 50
+    },
+    "kirika": {
+      "name": "Kirika Akatsuki",
+      "portrait": "res://assets/images/Kirika Akatsuki/kirikaprof.png",
+      "description": "t",
+      "universe": "SYMPHOGEAR",
+      "universe_ordinal": 50
+    },
+    "shirabe": {
+      "name": "Shirabe Tsukumo",
+      "portrait": "res://assets/images/Shirabe Tsukumo/shirabeprof.png",
+      "description": "t",
+      "universe": "SYMPHOGEAR",
+      "universe_ordinal": 50
+    },
+    "skullgreymon": {
+      "name": "SkullGreymon",
+      "portrait": "res://assets/images/SkullGreymon/skullgreymonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "excalibur": {
+      "name": "Excalibur",
+      "portrait": "res://assets/images/Excalibur/excaliburprof.png",
+      "description": "t",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    },
+    "kiba": {
+      "name": "Kiba Inuzuka",
+      "portrait": "res://assets/images/Kiba Inuzuka/kibaprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "shino": {
+      "name": "Shino Aburame",
+      "portrait": "res://assets/images/Shino Aburame/shinoprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "shikamaru": {
+      "name": "Shikamaru Nara",
+      "portrait": "res://assets/images/Shikamaru Nara/shikamaruprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "ino": {
+      "name": "Ino Yamanaka",
+      "portrait": "res://assets/images/Ino Yamanaka/inoprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "choji": {
+      "name": "Choji Akimichi",
+      "portrait": "res://assets/images/Choji Akimichi/chojiprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "neji": {
+      "name": "Neji Hyuga",
+      "portrait": "res://assets/images/Neji Hyuga/nejiprof.jpg",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "tenten": {
+      "name": "Tenten",
+      "portrait": "res://assets/images/Tenten/tentenprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "lee": {
+      "name": "Rock Lee",
+      "portrait": "res://assets/images/Rock Lee/leeprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "temari": {
+      "name": "Temari",
+      "portrait": "res://assets/images/Temari/temariprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "kankuro": {
+      "name": "Kankuro",
+      "portrait": "res://assets/images/Kankuro/kankuroprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "gaara": {
+      "name": "Gaara",
+      "portrait": "res://assets/images/Gaara/gaaraprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "kakashi": {
+      "name": "Kakashi Hatake",
+      "portrait": "res://assets/images/Kakashi Hatake/kakashiprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "akainu": {
+      "name": "Akainu",
+      "portrait": "res://assets/images/Akainu/akainuprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "amajiki": {
+      "name": "Tamaki Amajiki",
+      "portrait": "res://assets/images/Tamaki Amajiki/amajikiprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "arachne": {
+      "name": "Arachne Gorgon",
+      "portrait": "res://assets/images/Arachne Gorgon/arachneprof.png",
+      "description": "t",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    },
+    "as": {
+      "name": "As Nodt",
+      "portrait": "res://assets/images/As Nodt/asprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "asuma": {
+      "name": "Asuma Sarutobi",
+      "portrait": "res://assets/images/Asuma Sarutobi/asumaprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "bambietta": {
+      "name": "Bambietta Basterbine",
+      "portrait": "res://assets/images/Bambietta Basterbine/bambiettaprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "barragan": {
+      "name": "Barragan Luisenbarn",
+      "portrait": "res://assets/images/Barragan Luisenbarn/barraganprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "bg9": {
+      "name": "BG-9",
+      "portrait": "res://assets/images/BG-9/bg9prof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "blackbeard": {
+      "name": "Marshall D. Teach",
+      "portrait": "res://assets/images/Marshall D. Teach/blackbeardprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "candice": {
+      "name": "Candice Catnipp",
+      "portrait": "res://assets/images/Candice Catnipp/candiceprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "cang": {
+      "name": "Cang Du",
+      "portrait": "res://assets/images/Cang Du/cangprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "chad": {
+      "name": "Yasutora Sado",
+      "portrait": "res://assets/images/Yasutora Sado/chadprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "chopper": {
+      "name": "Tony Tony Chopper",
+      "portrait": "res://assets/images/Tony Tony Chopper/chopperprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "deidara": {
+      "name": "Deidara",
+      "portrait": "res://assets/images/Deidara/deidaraprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "doflamingo": {
+      "name": "Donquixote Doflamingo",
+      "portrait": "res://assets/images/Donquixote Doflamingo/doflamingoprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "endeavor": {
+      "name": "Endeavor",
+      "portrait": "res://assets/images/Endeavor/endeavorprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "enel": {
+      "name": "Enel",
+      "portrait": "res://assets/images/Enel/enelprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "eraser": {
+      "name": "Eraser Head",
+      "portrait": "res://assets/images/Eraser Head/eraserprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "eruka": {
+      "name": "Eruka Frog",
+      "portrait": "res://assets/images/Eruka Frog/erukaprof.png",
+      "description": "t",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    },
+    "eustass": {
+      "name": "Eustass Kid",
+      "portrait": "res://assets/images/Eustass Kid/eustassprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "franky": {
+      "name": "Franky",
+      "portrait": "res://assets/images/Franky/frankyprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "fujitora": {
+      "name": "Fujitora",
+      "portrait": "res://assets/images/Fujitora/fujitoraprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "gandlb": {
+      "name": "Gentle and La Brava",
+      "portrait": "res://assets/images/Gentle and La Brava/gandlbprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "genryuusai": {
+      "name": "Yamamoto Genryuusai",
+      "portrait": "res://assets/images/Yamamoto Genryuusai/genryuusaiprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "grimmjow": {
+      "name": "Grimmjow Jaegerjaquez",
+      "portrait": "res://assets/images/Grimmjow Jaegerjaquez/grimmjowprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "guy": {
+      "name": "Might Guy",
+      "portrait": "res://assets/images/Might Guy/guyprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "hawks": {
+      "name": "Hawks",
+      "portrait": "res://assets/images/Hawks/hawksprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "hiyori": {
+      "name": "Hiyori Sarugaki",
+      "portrait": "res://assets/images/Hiyori Sarugaki/hiyoriprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "ichimaru": {
+      "name": "Ichimaru Gin",
+      "portrait": "res://assets/images/Ichimaru Gin/ichimaruprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "ida": {
+      "name": "Tenya Ida",
+      "portrait": "res://assets/images/Tenya Ida/idaprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "ikkaku": {
+      "name": "Ikkaku Madarame",
+      "portrait": "res://assets/images/Ikkaku Madarame/ikkakuprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "jeanist": {
+      "name": "Best Jeanist",
+      "portrait": "res://assets/images/Best Jeanist/jeanistprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "kabuto": {
+      "name": "Yakushi Kabuto",
+      "portrait": "res://assets/images/Yakushi Kabuto/kabutoprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "kaien": {
+      "name": "Shiba Kaien",
+      "portrait": "res://assets/images/Shiba Kaien/kaienprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "kakuzu": {
+      "name": "Kakuzu",
+      "portrait": "res://assets/images/Kakuzu/kakuzuprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "kamui": {
+      "name": "Kamui Woods",
+      "portrait": "res://assets/images/Kamui Woods/kamuiprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "kensei": {
+      "name": "Kensei Muguruma",
+      "portrait": "res://assets/images/Kensei Muguruma/kenseiprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "killerbee": {
+      "name": "Killer Bee",
+      "portrait": "res://assets/images/Killer Bee/killerbeeprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "kirio": {
+      "name": "Kirio Hikifune",
+      "portrait": "res://assets/images/Kirio Hikifune/kirioprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "kisame": {
+      "name": "Hoshigaki Kisame",
+      "portrait": "res://assets/images/Hoshigaki Kisame/kisameprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "kishin": {
+      "name": "Kishin",
+      "portrait": "res://assets/images/Kishin/kishinprof.png",
+      "description": "t",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    },
+    "kizaru": {
+      "name": "Kizaru",
+      "portrait": "res://assets/images/Kizaru/kizaruprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "komamura": {
+      "name": "Komamura Sajin",
+      "portrait": "res://assets/images/Komamura Sajin/komamuraprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "konan": {
+      "name": "Konan",
+      "portrait": "res://assets/images/Konan/konanprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "kuma": {
+      "name": "Bartholomew Kuma",
+      "portrait": "res://assets/images/Bartholomew Kuma/kumaprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "kurenai": {
+      "name": "Yuhi Kurenai",
+      "portrait": "res://assets/images/Yuhi Kurenai/kurenaiprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "kyouraku": {
+      "name": "Shunsui Kyouraku",
+      "portrait": "res://assets/images/Shunsui Kyouraku/kyourakuprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "law": {
+      "name": "Trafalgar Law",
+      "portrait": "res://assets/images/Trafalgar Law/lawprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "liltotto": {
+      "name": "Liltotto Lamperd",
+      "portrait": "res://assets/images/Liltotto Lamperd/liltottoprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "luppi": {
+      "name": "Luppi Antenor",
+      "portrait": "res://assets/images/Luppi Antenor/luppiprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "madara": {
+      "name": "Uchiha Madara",
+      "portrait": "res://assets/images/Uchiha Madara/madaraprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "mashiro": {
+      "name": "Mashiro Kuna",
+      "portrait": "res://assets/images/Mashiro Kuna/mashiroprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "mask": {
+      "name": "Mask de Masculine",
+      "portrait": "res://assets/images/Mask de Masculine/maskprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "mei": {
+      "name": "Mei Terumi",
+      "portrait": "res://assets/images/Mei Terumi/meiprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "meihatsume": {
+      "name": "Mei Hatsume",
+      "portrait": "res://assets/images/Mei Hatsume/meihatsumeprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "mic": {
+      "name": "Present Mic",
+      "portrait": "res://assets/images/Present Mic/micprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "midnight": {
+      "name": "Midnight",
+      "portrait": "res://assets/images/Midnight/midnightprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "mifune": {
+      "name": "Mifune",
+      "portrait": "res://assets/images/Mifune/mifuneprof.png",
+      "description": "t",
+      "universe": "SOUL_EATER",
+      "universe_ordinal": 7
+    },
+    "mihawk": {
+      "name": "Dracule Mihawk",
+      "portrait": "res://assets/images/Dracule Mihawk/mihawkprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "mirko": {
+      "name": "Mirko",
+      "portrait": "res://assets/images/Mirko/mirkoprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "mtlady": {
+      "name": "Mt Lady",
+      "portrait": "res://assets/images/Mt Lady/mtladyprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "nagato": {
+      "name": "Nagato",
+      "portrait": "res://assets/images/Nagato/nagatoprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "nami": {
+      "name": "Nami",
+      "portrait": "res://assets/images/Nami/namiprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "nejire": {
+      "name": "Nejire Hado",
+      "portrait": "res://assets/images/Nejire Hado/nejireprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "nidaime": {
+      "name": "Tobirama Senju",
+      "portrait": "res://assets/images/Tobirama Senju/nidaimeprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "nighteye": {
+      "name": "Nighteye",
+      "portrait": "res://assets/images/Nighteye/nighteyeprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "obito": {
+      "name": "Uchiha Obito",
+      "portrait": "res://assets/images/Uchiha Obito/obitoprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "oonoki": {
+      "name": "Oonoki",
+      "portrait": "res://assets/images/Oonoki/oonokiprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "orochimaru": {
+      "name": "Orochimaru",
+      "portrait": "res://assets/images/Orochimaru/orochimaruprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "perona": {
+      "name": "Perona",
+      "portrait": "res://assets/images/Perona/peronaprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "redriot": {
+      "name": "Eijiro Kirishima",
+      "portrait": "res://assets/images/Eijiro Kirishima/redriotprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "renji": {
+      "name": "Abarai Renji",
+      "portrait": "res://assets/images/Abarai Renji/renjiprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "robin": {
+      "name": "Nico Robin",
+      "portrait": "res://assets/images/Nico Robin/robinprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "rose": {
+      "name": "Rose Otoribashi",
+      "portrait": "res://assets/images/Rose Otoribashi/roseprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "sabo": {
+      "name": "Sabo",
+      "portrait": "res://assets/images/Sabo/saboprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "sai": {
+      "name": "Sai",
+      "portrait": "res://assets/images/Sai/saiprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "sanji": {
+      "name": "Sanji",
+      "portrait": "res://assets/images/Sanji/sanjiprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "sasori": {
+      "name": "Sasori",
+      "portrait": "res://assets/images/Sasori/sasoriprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "senjumaru": {
+      "name": "Senjumaru Shutara",
+      "portrait": "res://assets/images/Senjumaru Shutara/senjumaruprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "shinji": {
+      "name": "Shinji Hirako",
+      "portrait": "res://assets/images/Shinji Hirako/shinjiprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "shinso": {
+      "name": "Hitoshi Shinso",
+      "portrait": "res://assets/images/Hitoshi Shinso/shinsoprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "smoker": {
+      "name": "Smoker",
+      "portrait": "res://assets/images/Smoker/smokerprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "soifon": {
+      "name": "Soi Fon",
+      "portrait": "res://assets/images/Soi Fon/soifonprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "stain": {
+      "name": "Stain",
+      "portrait": "res://assets/images/Stain/stainprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "starrk": {
+      "name": "Coyote Starrk",
+      "portrait": "res://assets/images/Coyote Starrk/starrkprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "szayel": {
+      "name": "Szayel Aporro Granz",
+      "portrait": "res://assets/images/Szayel Aporro Granz/szayelprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "toshiro": {
+      "name": "Toshiro Hitsugaya",
+      "portrait": "res://assets/images/Toshiro Hitsugaya/toshiroprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "tousen": {
+      "name": "Kaname Tousen",
+      "portrait": "res://assets/images/Kaname Tousen/tousenprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "tsunade": {
+      "name": "Tsunade",
+      "portrait": "res://assets/images/Tsunade/tsunadeprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "ukitake": {
+      "name": "Juushiro Ukitake",
+      "portrait": "res://assets/images/Juushiro Ukitake/ukitakeprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "unohana": {
+      "name": "Retsu Unohana",
+      "portrait": "res://assets/images/Retsu Unohana/unohanaprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "wonderweiss": {
+      "name": "Wonderweiss Margera",
+      "portrait": "res://assets/images/Wonderweiss Margera/wonderweissprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "yachiru": {
+      "name": "Yachiru Kusajishi",
+      "portrait": "res://assets/images/Yachiru Kusajishi/yachiruprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "yammy": {
+      "name": "Yammy Riyalgo",
+      "portrait": "res://assets/images/Yammy Riyalgo/yammyprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "yaoyorozu": {
+      "name": "Momo Yaoyorozu",
+      "portrait": "res://assets/images/Momo Yaoyorozu/yaoyorozuprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "yumichika": {
+      "name": "Yumichika Ayasegawa",
+      "portrait": "res://assets/images/Yumichika Ayasegawa/yumichikaprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "zommari": {
+      "name": "Zommari Leroux",
+      "portrait": "res://assets/images/Zommari Leroux/zommariprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "akaza": {
+      "name": "Akaza",
+      "portrait": "res://assets/images/Akaza/akazaprof.png",
+      "description": "t",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "allforone": {
+      "name": "All For One",
+      "portrait": "res://assets/images/All For One/allforoneprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "annie": {
+      "name": "Annie Leonhart",
+      "portrait": "res://assets/images/Annie Leonhart/annieprof.png",
+      "description": "t",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "armin": {
+      "name": "Armin Arlert",
+      "portrait": "res://assets/images/Armin Arlert/arminprof.png",
+      "description": "t",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "bertolt": {
+      "name": "Bertolt Hoover",
+      "portrait": "res://assets/images/Bertolt Hoover/bertoltprof.png",
+      "description": "t",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "bickslow": {
+      "name": "Bickslow",
+      "portrait": "res://assets/images/Bickslow/bickslowprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "boros": {
+      "name": "Boros",
+      "portrait": "res://assets/images/Boros/borosprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "cana": {
+      "name": "Cana Alberona",
+      "portrait": "res://assets/images/Cana Alberona/canaprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "childemperor": {
+      "name": "Child Emperor",
+      "portrait": "res://assets/images/Child Emperor/childemperorprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "choso": {
+      "name": "Choso",
+      "portrait": "res://assets/images/Choso/chosoprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "compress": {
+      "name": "Mr Compress",
+      "portrait": "res://assets/images/Mr Compress/compressprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "curious": {
+      "name": "Curious",
+      "portrait": "res://assets/images/Curious/curiousprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "dabi": {
+      "name": "Dabi",
+      "portrait": "res://assets/images/Dabi/dabiprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "daki": {
+      "name": "Daki",
+      "portrait": "res://assets/images/Daki/dakiprof.png",
+      "description": "t",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "deathgatling": {
+      "name": "Death Gatling",
+      "portrait": "res://assets/images/Death Gatling/deathgatlingprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "driveknight": {
+      "name": "Drive Knight",
+      "portrait": "res://assets/images/Drive Knight/driveknightprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "elfman": {
+      "name": "Elfman",
+      "portrait": "res://assets/images/Elfman/elfmanprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "enmu": {
+      "name": "Enmu",
+      "portrait": "res://assets/images/Enmu/enmuprof.png",
+      "description": "t",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "erwin": {
+      "name": "Erwin Smith",
+      "portrait": "res://assets/images/Erwin Smith/erwinprof.png",
+      "description": "t",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "feitan": {
+      "name": "Feitan",
+      "portrait": "res://assets/images/Feitan/feitanprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "flashy": {
+      "name": "Flashy Flash",
+      "portrait": "res://assets/images/Flashy Flash/flashyprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "franklin": {
+      "name": "Franklin Bordeau",
+      "portrait": "res://assets/images/Franklin Bordeau/franklinprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "freed": {
+      "name": "Freed Justine",
+      "portrait": "res://assets/images/Freed Justine/freedprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "gabi": {
+      "name": "Gabi Braun",
+      "portrait": "res://assets/images/Gabi Braun/gabiprof.png",
+      "description": "t",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "gamefowl": {
+      "name": "Game Fowl",
+      "portrait": "res://assets/images/Game Fowl/gamefowlprof.png",
+      "description": "t",
+      "universe": "DEADMAN_WONDERLAND",
+      "universe_ordinal": 20
+    },
+    "genthru": {
+      "name": "Genthru",
+      "portrait": "res://assets/images/Genthru/genthruprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "genya": {
+      "name": "Genya Shinazugawa",
+      "portrait": "res://assets/images/Genya Shinazugawa/genyaprof.png",
+      "description": "t",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "gigantomachia": {
+      "name": "Gigantomachia",
+      "portrait": "res://assets/images/Gigantomachia/gigantomachiaprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "gildarts": {
+      "name": "Gildarts Clive",
+      "portrait": "res://assets/images/Gildarts Clive/gildartsprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "gotoh": {
+      "name": "Gotoh",
+      "portrait": "res://assets/images/Gotoh/gotohprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "gyokko": {
+      "name": "Gyokko",
+      "portrait": "res://assets/images/Gyokko/gyokkoprof.png",
+      "description": "t",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "gyutaro": {
+      "name": "Gyutaro",
+      "portrait": "res://assets/images/Gyutaro/gyutaroprof.png",
+      "description": "t",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "hanami": {
+      "name": "Hanami",
+      "portrait": "res://assets/images/Hanami/hanamiprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "hantengu": {
+      "name": "Hantengu",
+      "portrait": "res://assets/images/Hantengu/hantenguprof.png",
+      "description": "t",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "homura": {
+      "name": "Homura Akemi",
+      "portrait": "res://assets/images/Homura Akemi/homuraprof.png",
+      "description": "t",
+      "universe": "MADOKA_MAGICA",
+      "universe_ordinal": 5
+    },
+    "kyoko": {
+      "name": "Kyoko Sakura",
+      "portrait": "res://assets/images/Kyoko Sakura/kyokoprof.png",
+      "description": "t",
+      "universe": "MADOKA_MAGICA",
+      "universe_ordinal": 5
+    },
+    "hummingbird": {
+      "name": "Hummingbird",
+      "portrait": "res://assets/images/Hummingbird/hummingbirdprof.png",
+      "description": "t",
+      "universe": "DEADMAN_WONDERLAND",
+      "universe_ordinal": 20
+    },
+    "jellal": {
+      "name": "Jellal Fernandez",
+      "portrait": "res://assets/images/Jellal Fernandez/jellalprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "juvia": {
+      "name": "Juvia Lockser",
+      "portrait": "res://assets/images/Juvia Lockser/juviaprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "kamo": {
+      "name": "Noritoshi Kamo",
+      "portrait": "res://assets/images/Noritoshi Kamo/kamoprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "kastro": {
+      "name": "Kastro",
+      "portrait": "res://assets/images/Kastro/kastroprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "kenny": {
+      "name": "Kenny Ackerman",
+      "portrait": "res://assets/images/Kenny Ackerman/kennyprof.png",
+      "description": "t",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "kento": {
+      "name": "Kento Nanami",
+      "portrait": "res://assets/images/Kento Nanami/kentoprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "kingopm": {
+      "name": "King (One Punch Man)",
+      "portrait": "res://assets/images/King (One Punch Man)/kingopmprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "kite": {
+      "name": "Kite",
+      "portrait": "res://assets/images/Kite/kiteprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "knov": {
+      "name": "Knov",
+      "portrait": "res://assets/images/Knov/knovprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "knuckle": {
+      "name": "Knuckle Bine",
+      "portrait": "res://assets/images/Knuckle Bine/knuckleprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "kurogiri": {
+      "name": "Kurogiri",
+      "portrait": "res://assets/images/Kurogiri/kurogiriprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "mahito": {
+      "name": "Mahito",
+      "portrait": "res://assets/images/Mahito/mahitoprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "maizenin": {
+      "name": "Mai Zen'in",
+      "portrait": "res://assets/images/Mai Zen'in/maizeninprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "maki": {
+      "name": "Maki Zen'in",
+      "portrait": "res://assets/images/Maki Zen'in/makiprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "mechamaru": {
+      "name": "Kokichi Muta",
+      "portrait": "res://assets/images/Kokichi Muta/mechamaruprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "meimei": {
+      "name": "Mei Mei",
+      "portrait": "res://assets/images/Mei Mei/meimeiprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "menthuthuyoup": {
+      "name": "Menthuthuyoup",
+      "portrait": "res://assets/images/Menthuthuyoup/menthuthuyoupprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "meredy": {
+      "name": "Meredy",
+      "portrait": "res://assets/images/Meredy/meredyprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "meruem": {
+      "name": "Meruem",
+      "portrait": "res://assets/images/Meruem/meruemprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "metalbat": {
+      "name": "Metal Bat",
+      "portrait": "res://assets/images/Metal Bat/metalbatprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "minerva": {
+      "name": "Minerva Orland",
+      "portrait": "res://assets/images/Minerva Orland/minervaprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "mirajane": {
+      "name": "Mirajane Strauss",
+      "portrait": "res://assets/images/Mirajane Strauss/mirajaneprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "mitsuri": {
+      "name": "Mitsuri Kanroji",
+      "portrait": "res://assets/images/Mitsuri Kanroji/mitsuriprof.png",
+      "description": "t",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "miwa": {
+      "name": "Kasumi Miwa",
+      "portrait": "res://assets/images/Kasumi Miwa/miwaprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "mockingbird": {
+      "name": "Mockingbird",
+      "portrait": "res://assets/images/Mockingbird/mockingbirdprof.png",
+      "description": "t",
+      "universe": "DEADMAN_WONDERLAND",
+      "universe_ordinal": 20
+    },
+    "morel": {
+      "name": "Morel Mackernasey",
+      "portrait": "res://assets/images/Morel Mackernasey/morelprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "muscular": {
+      "name": "Muscular",
+      "portrait": "res://assets/images/Muscular/muscularprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "naobito": {
+      "name": "Naobito Zenin",
+      "portrait": "res://assets/images/Naobito Zenin/naobitoprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "netero": {
+      "name": "Isaac Netero",
+      "portrait": "res://assets/images/Isaac Netero/neteroprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "nishimiya": {
+      "name": "Momo Nishimiya",
+      "portrait": "res://assets/images/Momo Nishimiya/nishimiyaprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "nobunaga": {
+      "name": "Nobunaga Hazama",
+      "portrait": "res://assets/images/Nobunaga Hazama/nobunagaprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "orochi": {
+      "name": "Orochi",
+      "portrait": "res://assets/images/Orochi/orochiprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "panda": {
+      "name": "Panda",
+      "portrait": "res://assets/images/Panda/pandaprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "phinks": {
+      "name": "Phinks Magcub",
+      "portrait": "res://assets/images/Phinks Magcub/phinksprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "pieck": {
+      "name": "Pieck Finger",
+      "portrait": "res://assets/images/Pieck Finger/pieckprof.png",
+      "description": "t",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "porco": {
+      "name": "Porco Galliard",
+      "portrait": "res://assets/images/Porco Galliard/porcoprof.png",
+      "description": "t",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "razor": {
+      "name": "Razor",
+      "portrait": "res://assets/images/Razor/razorprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "redestro": {
+      "name": "Re-Destro",
+      "portrait": "res://assets/images/Re-Destro/redestroprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "reiner": {
+      "name": "Reiner Braun",
+      "portrait": "res://assets/images/Reiner Braun/reinerprof.png",
+      "description": "t",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "rogue": {
+      "name": "Rogue Cheney",
+      "portrait": "res://assets/images/Rogue Cheney/rogueprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "rui": {
+      "name": "Rui",
+      "portrait": "res://assets/images/Rui/ruiprof.png",
+      "description": "t",
+      "universe": "DEMON_SLAYER",
+      "universe_ordinal": 10
+    },
+    "shaiapouf": {
+      "name": "Shaiapouf",
+      "portrait": "res://assets/images/Shaiapouf/shaiapoufprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "shalnark": {
+      "name": "Shalnark Ryusei",
+      "portrait": "res://assets/images/Shalnark Ryusei/shalnarkprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "shizuku": {
+      "name": "Shizuku Murasaki",
+      "portrait": "res://assets/images/Shizuku Murasaki/shizukuprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "shoot": {
+      "name": "Shoot McMahon",
+      "portrait": "res://assets/images/Shoot McMahon/shootprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "spinner": {
+      "name": "Spinner",
+      "portrait": "res://assets/images/Spinner/spinnerprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "sting": {
+      "name": "Sting Eucliffe",
+      "portrait": "res://assets/images/Sting Eucliffe/stingprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "suguru": {
+      "name": "Suguru Geto",
+      "portrait": "res://assets/images/Suguru Geto/suguruprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "twice": {
+      "name": "Twice",
+      "portrait": "res://assets/images/Twice/twiceprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "ultear": {
+      "name": "Ultear Milkovich",
+      "portrait": "res://assets/images/Ultear Milkovich/ultearprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "uvogin": {
+      "name": "Uvogin",
+      "portrait": "res://assets/images/Uvogin/uvoginprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "yuta": {
+      "name": "Yuta Okkotsu",
+      "portrait": "res://assets/images/Yuta Okkotsu/yutaprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "zazan": {
+      "name": "Zazan",
+      "portrait": "res://assets/images/Zazan/zazanprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "zeke": {
+      "name": "Zeke Yaeger",
+      "portrait": "res://assets/images/Zeke Yaeger/zekeprof.png",
+      "description": "t",
+      "universe": "ATTACK_ON_TITAN",
+      "universe_ordinal": 13
+    },
+    "zeref": {
+      "name": "Zeref Dragneel",
+      "portrait": "res://assets/images/Zeref Dragneel/zerefprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "zombieman": {
+      "name": "Zombieman",
+      "portrait": "res://assets/images/Zombieman/zombiemanprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "achilles": {
+      "name": "Achilles",
+      "portrait": "res://assets/images/Achilles/achillesprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "acnologia": {
+      "name": "Acnologia",
+      "portrait": "res://assets/images/Acnologia/acnologiaprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "akitaru": {
+      "name": "Akitaru Obi",
+      "portrait": "res://assets/images/Akitaru Obi/akitaruprof.png",
+      "description": "t",
+      "universe": "FIRE_FORCE",
+      "universe_ordinal": 15
+    },
+    "angel": {
+      "name": "Angel",
+      "portrait": "res://assets/images/Angel/angelprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "arthursds": {
+      "name": "Arthur Pendragon",
+      "portrait": "res://assets/images/Arthur Pendragon/arthursdsprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "atalanta": {
+      "name": "Atalanta",
+      "portrait": "res://assets/images/Atalanta/atalantaprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "ayato": {
+      "name": "Ayato Kirishima",
+      "portrait": "res://assets/images/Ayato Kirishima/ayatoprof.png",
+      "description": "t",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "azuma": {
+      "name": "Azuma",
+      "portrait": "res://assets/images/Azuma/azumaprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "bacchus": {
+      "name": "Bacchus Groh",
+      "portrait": "res://assets/images/Bacchus Groh/bacchusprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "basil": {
+      "name": "Basil",
+      "portrait": "res://assets/images/Basil/basilprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "belphegor": {
+      "name": "Belphegor",
+      "portrait": "res://assets/images/Belphegor/belphegorprof.png",
+      "description": "Belphegor, also known as Bel, is an assassin working for the Varia, the independent assassination squad of the Vongola Famiglia.",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "benimaruff": {
+      "name": "Benimaru Shinmon",
+      "portrait": "res://assets/images/Benimaru Shinmon/benimaruffprof.png",
+      "description": "t",
+      "universe": "FIRE_FORCE",
+      "universe_ordinal": 15
+    },
+    "bluebeard": {
+      "name": "Bluebeard",
+      "portrait": "res://assets/images/Bluebeard/bluebeardprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "bluebell": {
+      "name": "Bluebell",
+      "portrait": "res://assets/images/Bluebell/bluebellprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "bors": {
+      "name": "Bors",
+      "portrait": "res://assets/images/Bors/borsprof.png",
+      "description": "t",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "byakuran": {
+      "name": "Byakuran",
+      "portrait": "res://assets/images/Byakuran/byakuranprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "caprico": {
+      "name": "Caprico",
+      "portrait": "res://assets/images/Caprico/capricoprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "carrion": {
+      "name": "Carrion",
+      "portrait": "res://assets/images/Carrion/carrionprof.png",
+      "description": "t",
+      "universe": "THAT_TIME_I_GOT_REINCARNATED_AS_A_SLIME",
+      "universe_ordinal": 22
+    },
+    "chandler": {
+      "name": "Chandler",
+      "portrait": "res://assets/images/Chandler/chandlerprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "charlotte": {
+      "name": "Charlotte Roselei",
+      "portrait": "res://assets/images/Charlotte Roselei/charlotteprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "charmy": {
+      "name": "Charmy Pappitson",
+      "portrait": "res://assets/images/Charmy Pappitson/charmyprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "charon": {
+      "name": "Charon",
+      "portrait": "res://assets/images/Charon/charonprof.png",
+      "description": "t",
+      "universe": "FIRE_FORCE",
+      "universe_ordinal": 15
+    },
+    "clayman": {
+      "name": "Clayman",
+      "portrait": "res://assets/images/Clayman/claymanprof.png",
+      "description": "t",
+      "universe": "THAT_TIME_I_GOT_REINCARNATED_AS_A_SLIME",
+      "universe_ordinal": 22
+    },
+    "cobra": {
+      "name": "Cobra",
+      "portrait": "res://assets/images/Cobra/cobraprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "crimson": {
+      "name": "Guy Crimson",
+      "portrait": "res://assets/images/Guy Crimson/crimsonprof.png",
+      "description": "t",
+      "universe": "THAT_TIME_I_GOT_REINCARNATED_AS_A_SLIME",
+      "universe_ordinal": 22
+    },
+    "cusack": {
+      "name": "Cusack",
+      "portrait": "res://assets/images/Cusack/cusackprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "daidara": {
+      "name": "Daidara",
+      "portrait": "res://assets/images/Daidara/daidaraprof.png",
+      "description": "t",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "daisy": {
+      "name": "Daisy",
+      "portrait": "res://assets/images/Daisy/daisyprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "dante": {
+      "name": "Dante Zogratis",
+      "portrait": "res://assets/images/Dante Zogratis/danteprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "demonking": {
+      "name": "Demon King",
+      "portrait": "res://assets/images/Demon King/demonkingprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "derieri": {
+      "name": "Derieri",
+      "portrait": "res://assets/images/Derieri/derieriprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "diarmuid": {
+      "name": "Diarmuid Ua Duibhne",
+      "portrait": "res://assets/images/Diarmuid Ua Duibhne/diarmuidprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "dino": {
+      "name": "Dino Cavallone",
+      "portrait": "res://assets/images/Dino Cavallone/dinoprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "doppelganger": {
+      "name": "Doppelganger",
+      "portrait": "res://assets/images/Doppelganger/doppelgangerprof.png",
+      "description": "t",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "doranbolt": {
+      "name": "Doranbolt",
+      "portrait": "res://assets/images/Doranbolt/doranboltprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "dorothy": {
+      "name": "Dorothy Unsworth",
+      "portrait": "res://assets/images/Dorothy Unsworth/dorothyprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "drole": {
+      "name": "Drole",
+      "portrait": "res://assets/images/Drole/droleprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "elaine": {
+      "name": "Elaine",
+      "portrait": "res://assets/images/Elaine/elaineprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "elizabeth": {
+      "name": "Elizabeth Liones",
+      "portrait": "res://assets/images/Elizabeth Liones/elizabethprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "estarossa": {
+      "name": "Estarossa",
+      "portrait": "res://assets/images/Estarossa/estarossaprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "fraudrin": {
+      "name": "Fraudrin",
+      "portrait": "res://assets/images/Fraudrin/fraudrinprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "fuegoleon": {
+      "name": "Fuegoleon",
+      "portrait": "res://assets/images/Fuegoleon/fuegoleonprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "gabiru": {
+      "name": "Gabiru",
+      "portrait": "res://assets/images/Gabiru/gabiruprof.png",
+      "description": "t",
+      "universe": "THAT_TIME_I_GOT_REINCARNATED_AS_A_SLIME",
+      "universe_ordinal": 22
+    },
+    "galand": {
+      "name": "Galand",
+      "portrait": "res://assets/images/Galand/galandprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "gamma": {
+      "name": "Lightning Gamma",
+      "portrait": "res://assets/images/Lightning Gamma/gammaprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "genkishi": {
+      "name": "Genkishi",
+      "portrait": "res://assets/images/Genkishi/genkishiprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "ghost": {
+      "name": "Ghost",
+      "portrait": "res://assets/images/Ghost/ghostprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "gilthunder": {
+      "name": "Gilthunder",
+      "portrait": "res://assets/images/Gilthunder/gilthunderprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "gloxinia": {
+      "name": "Gloxinia",
+      "portrait": "res://assets/images/Gloxinia/gloxiniaprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "gowther": {
+      "name": "Gowther",
+      "portrait": "res://assets/images/Gowther/gowtherprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "grayroad": {
+      "name": "Grayroad",
+      "portrait": "res://assets/images/Grayroad/grayroadprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "griamore": {
+      "name": "Griamore",
+      "portrait": "res://assets/images/Griamore/griamoreprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "guila": {
+      "name": "Guila",
+      "portrait": "res://assets/images/Guila/guilaprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "hades": {
+      "name": "Precht Gaebolg",
+      "portrait": "res://assets/images/Precht Gaebolg/hadesprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "hassan": {
+      "name": "Hassan of the Hundred Faces",
+      "portrait": "res://assets/images/Hassan of the Hundred Faces/hassanprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "helbram": {
+      "name": "Helbram",
+      "portrait": "res://assets/images/Helbram/helbramprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "hendrickson": {
+      "name": "Hendrickson",
+      "portrait": "res://assets/images/Hendrickson/hendricksonprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "hercules": {
+      "name": "Hercules",
+      "portrait": "res://assets/images/Hercules/herculesprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "howzer": {
+      "name": "Howzer",
+      "portrait": "res://assets/images/Howzer/howzerprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "iris": {
+      "name": "Iris",
+      "portrait": "res://assets/images/Iris/irisprof.png",
+      "description": "t",
+      "universe": "FIRE_FORCE",
+      "universe_ordinal": 15
+    },
+    "ishtar": {
+      "name": "Ishtar",
+      "portrait": "res://assets/images/Ishtar/ishtarprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "iskander": {
+      "name": "Iskander",
+      "portrait": "res://assets/images/Iskander/iskanderprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "jacktheripper": {
+      "name": "Jack the Ripper (Black Clover)",
+      "portrait": "res://assets/images/Jack the Ripper (Black Clover)/jacktheripperprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "jericho": {
+      "name": "Jericho",
+      "portrait": "res://assets/images/Jericho/jerichoprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "joker": {
+      "name": "Joker",
+      "portrait": "res://assets/images/Joker/jokerprof.png",
+      "description": "t",
+      "universe": "FIRE_FORCE",
+      "universe_ordinal": 15
+    },
+    "julius": {
+      "name": "Julius Nova Chrono",
+      "portrait": "res://assets/images/Julius Nova Chrono/juliusprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "jura": {
+      "name": "Jura Neekis",
+      "portrait": "res://assets/images/Jura Neekis/juraprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "kagura": {
+      "name": "Kagura Mikazuchi",
+      "portrait": "res://assets/images/Kagura Mikazuchi/kaguraprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "karna": {
+      "name": "Karna",
+      "portrait": "res://assets/images/Karna/karnaprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "kikyo": {
+      "name": "Kikyo",
+      "portrait": "res://assets/images/Kikyo/kikyoprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "kongou": {
+      "name": "Kongou Mitsuko",
+      "portrait": "res://assets/images/Kongou Mitsuko/kongouprof.png",
+      "description": "t",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "kyoka": {
+      "name": "Kyoka",
+      "portrait": "res://assets/images/Kyoka/kyokaprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "lalmirch": {
+      "name": "Lal Mirch",
+      "portrait": "res://assets/images/Lal Mirch/lalmirchprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "leonardo": {
+      "name": "Leonardo Burns",
+      "portrait": "res://assets/images/Leonardo Burns/leonardoprof.png",
+      "description": "t",
+      "universe": "FIRE_FORCE",
+      "universe_ordinal": 15
+    },
+    "leonidas": {
+      "name": "Leonidas",
+      "portrait": "res://assets/images/Leonidas/leonidasprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "leviathan": {
+      "name": "Levi A Than",
+      "portrait": "res://assets/images/Levi A Than/leviathanprof.png",
+      "description": "Levi A Than, also known as Levi, is an assassin working for the Varia, the independent assassination squad of the Vongola Famiglia. He was chosen as the tenth generation Lightning Guardian candidate along with Lambo.",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "licht": {
+      "name": "Licht",
+      "portrait": "res://assets/images/Licht/lichtprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "luck": {
+      "name": "Luck Voltia",
+      "portrait": "res://assets/images/Luck Voltia/luckprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "ludociel": {
+      "name": "Ludociel",
+      "portrait": "res://assets/images/Ludociel/ludocielprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "lussuria": {
+      "name": "Lussuria",
+      "portrait": "res://assets/images/Lussuria/lussuriaprof.png",
+      "description": "Lussuria, is an assassin working for the Varia, the independent assassination squad of the Vongola Famiglia.",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "lyon": {
+      "name": "Lyon Vastia",
+      "portrait": "res://assets/images/Lyon Vastia/lyonprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "magna": {
+      "name": "Magna Swing",
+      "portrait": "res://assets/images/Magna Swing/magnaprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "makiff": {
+      "name": "Maki Oze",
+      "portrait": "res://assets/images/Maki Oze/makiffprof.png",
+      "description": "t",
+      "universe": "FIRE_FORCE",
+      "universe_ordinal": 15
+    },
+    "mammon": {
+      "name": "Mammon",
+      "portrait": "res://assets/images/Mammon/mammonprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "mardgeer": {
+      "name": "Mard Geer",
+      "portrait": "res://assets/images/Mard Geer/mardgeerprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "medusafate": {
+      "name": "Medusa (Rider)",
+      "portrait": "res://assets/images/Medusa (Rider)/medusafateprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "mereoleona": {
+      "name": "Mereoleona Vermillion",
+      "portrait": "res://assets/images/Mereoleona Vermillion/mereoleonaprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "merlin": {
+      "name": "Merlin",
+      "portrait": "res://assets/images/Merlin/merlinprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "midnightft": {
+      "name": "Midnight (Fairy Tail)",
+      "portrait": "res://assets/images/Midnight (Fairy Tail)/midnightftprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "mitori": {
+      "name": "Kouzaku Mitori",
+      "portrait": "res://assets/images/Kouzaku Mitori/mitoriprof.png",
+      "description": "t",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "monspeet": {
+      "name": "Monspeet",
+      "portrait": "res://assets/images/Monspeet/monspeetprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "mordred": {
+      "name": "Mordred",
+      "portrait": "res://assets/images/Mordred/mordredprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "nishio": {
+      "name": "Nishio Nishiki",
+      "portrait": "res://assets/images/Nishio Nishiki/nishioprof.png",
+      "description": "t",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "nozel": {
+      "name": "Nozel Silva",
+      "portrait": "res://assets/images/Nozel Silva/nozelprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "nyau": {
+      "name": "Nyau",
+      "portrait": "res://assets/images/Nyau/nyauprof.png",
+      "description": "t",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "oomori": {
+      "name": "Yakumo Oomori",
+      "portrait": "res://assets/images/Yakumo Oomori/oomoriprof.png",
+      "description": "t",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "orga": {
+      "name": "Orga Nanagear",
+      "portrait": "res://assets/images/Orga Nanagear/orgaprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "quetzalcoatl": {
+      "name": "Quetzalcoatl",
+      "portrait": "res://assets/images/Quetzalcoatl/quetzalcoatlprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "racer": {
+      "name": "Racer",
+      "portrait": "res://assets/images/Racer/racerprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "rasiel": {
+      "name": "Rasiel",
+      "portrait": "res://assets/images/Rasiel/rasielprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "sariel": {
+      "name": "Sariel",
+      "portrait": "res://assets/images/Sariel/sarielprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "seilah": {
+      "name": "Seilah",
+      "portrait": "res://assets/images/Seilah/seilahprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "serena": {
+      "name": "God Serena",
+      "portrait": "res://assets/images/God Serena/serenaprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "sherria": {
+      "name": "Sherria Blendy",
+      "portrait": "res://assets/images/Sherria Blendy/sherriaprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "shizuri": {
+      "name": "Mugino Shizuri",
+      "portrait": "res://assets/images/Mugino Shizuri/shizuriprof.png",
+      "description": "t",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "shou": {
+      "name": "Shou Kusakabe",
+      "portrait": "res://assets/images/Shou Kusakabe/shouprof.png",
+      "description": "t",
+      "universe": "FIRE_FORCE",
+      "universe_ordinal": 15
+    },
+    "shuu": {
+      "name": "Shuu Tsukiyama",
+      "portrait": "res://assets/images/Shuu Tsukiyama/shuuprof.png",
+      "description": "t",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "sieg": {
+      "name": "Sieg",
+      "portrait": "res://assets/images/Sieg/siegprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "silver": {
+      "name": "Silver Fullbuster",
+      "portrait": "res://assets/images/Silver Fullbuster/silverprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "susanoo": {
+      "name": "Susano'o",
+      "portrait": "res://assets/images/Susano'o/susanooprof.png",
+      "description": "t",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "takehisa": {
+      "name": "Takehisa Hinawa",
+      "portrait": "res://assets/images/Takehisa Hinawa/takehisaprof.png",
+      "description": "t",
+      "universe": "FIRE_FORCE",
+      "universe_ordinal": 15
+    },
+    "tarmiel": {
+      "name": "Tarmiel",
+      "portrait": "res://assets/images/Tarmiel/tarmielprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "touma": {
+      "name": "Kamijou Touma",
+      "portrait": "res://assets/images/Kamijou Touma/toumaprof.png",
+      "description": "t",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "uni": {
+      "name": "Uni",
+      "portrait": "res://assets/images/Uni/uniprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "ushiwakamaru": {
+      "name": "Ushiwakamaru",
+      "portrait": "res://assets/images/Ushiwakamaru/ushiwakamaruprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "vlad": {
+      "name": "Vlad the Impaler",
+      "portrait": "res://assets/images/Vlad the Impaler/vladprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "william": {
+      "name": "William Vangeance",
+      "portrait": "res://assets/images/William Vangeance/williamprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "yami": {
+      "name": "Yami Sukehiro",
+      "portrait": "res://assets/images/Yami Sukehiro/yamiprof.png",
+      "description": "t",
+      "universe": "BLACK_CLOVER",
+      "universe_ordinal": 4
+    },
+    "yukino": {
+      "name": "Yukino Eucliffe",
+      "portrait": "res://assets/images/Yukino Eucliffe/yukinoprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "yukinori": {
+      "name": "Yukinori Shinohara",
+      "portrait": "res://assets/images/Yukinori Shinohara/yukinoriprof.png",
+      "description": "t",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "zakuro": {
+      "name": "Zakuro",
+      "portrait": "res://assets/images/Zakuro/zakuroprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "zancrow": {
+      "name": "Zancrow",
+      "portrait": "res://assets/images/Zancrow/zancrowprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "zaratras": {
+      "name": "Zaratras",
+      "portrait": "res://assets/images/Zaratras/zaratrasprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "zeldris": {
+      "name": "Zeldris",
+      "portrait": "res://assets/images/Zeldris/zeldrisprof.png",
+      "description": "t",
+      "universe": "SEVEN_DEADLY_SINS",
+      "universe_ordinal": 11
+    },
+    "agumon": {
+      "name": "Agumon",
+      "portrait": "res://assets/images/Agumon/agumonprof.png",
+      "description": "Tai Kamiya’s digimon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "gabumon": {
+      "name": "Gabumon",
+      "portrait": "res://assets/images/Gabumon/gabumonprof.png",
+      "description": "Matt Ishida’s digimon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "biyomon": {
+      "name": "Biyomon",
+      "portrait": "res://assets/images/Biyomon/biyomonprof.png",
+      "description": "Sora Takenouchi’s digimon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "tentomon": {
+      "name": "Tentomon",
+      "portrait": "res://assets/images/Tentomon/tentomonprof.png",
+      "description": "Izzy Izumi’s digimon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "palmon": {
+      "name": "Palmon",
+      "portrait": "res://assets/images/Palmon/palmonprof.png",
+      "description": "Mimi Tachikawa’s digimon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "gomamon": {
+      "name": "Gomamon",
+      "portrait": "res://assets/images/Gomamon/gomamonprof.png",
+      "description": "Joe Kido’s digimon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "patamon": {
+      "name": "Patamon",
+      "portrait": "res://assets/images/Patamon/patamonprof.png",
+      "description": "T.K. Takaishi’s digimon",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "devimon": {
+      "name": "Devimon",
+      "portrait": "res://assets/images/Devimon/devimonprof.png",
+      "description": "Digimon Adventure villain",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "etemon": {
+      "name": "Etemon",
+      "portrait": "res://assets/images/Etemon/etemonprof.png",
+      "description": "Digimon Adventure villain",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "apocalymon": {
+      "name": "Apocalymon",
+      "portrait": "res://assets/images/Apocalymon/apocalymonprof.png",
+      "description": "Digimon Adventure villain",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "metalseadramon": {
+      "name": "MetalSeadramon",
+      "portrait": "res://assets/images/MetalSeadramon/metalseadramonprof.png",
+      "description": "Digimon Adventure Dark Master",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "puppetmon": {
+      "name": "Puppetmon",
+      "portrait": "res://assets/images/Puppetmon/puppetmonprof.png",
+      "description": "Digimon Adventure Dark Master",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "piedmon": {
+      "name": "Piedmon",
+      "portrait": "res://assets/images/Piedmon/piedmonprof.png",
+      "description": "Digimon Adventure Dark Master",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "sailormoon": {
+      "name": "Sailor Moon",
+      "portrait": "res://assets/images/Sailor Moon/sailormoonprof.png",
+      "description": "Sailor Moon",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "sailorneptune": {
+      "name": "Sailor Neptune",
+      "portrait": "res://assets/images/Sailor Neptune/sailorneptuneprof.png",
+      "description": "Minako Aino aka Sailor Venus",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "sailorpluto": {
+      "name": "Sailor Pluto",
+      "portrait": "res://assets/images/Sailor Pluto/sailorplutoprof.png",
+      "description": "Sailor Pluto",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "tuxedomask": {
+      "name": "Tuxedo Mask",
+      "portrait": "res://assets/images/Tuxedo Mask/tuxedomaskprof.png",
+      "description": "Tuxedo Mask",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "atomic": {
+      "name": "Atomic Samurai",
+      "portrait": "res://assets/images/Atomic Samurai/atomicprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "crocodile": {
+      "name": "Crocodile",
+      "portrait": "res://assets/images/Crocodile/crocodileprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "deepseaking": {
+      "name": "Deep Sea King",
+      "portrait": "res://assets/images/Deep Sea King/deepseakingprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "evilnaturalwater": {
+      "name": "Evil Natural Water",
+      "portrait": "res://assets/images/Evil Natural Water/evilnaturalwaterprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "garou": {
+      "name": "Garou",
+      "portrait": "res://assets/images/Garou/garouprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "jogo": {
+      "name": "Jogo",
+      "portrait": "res://assets/images/Jogo/jogoprof.png",
+      "description": "t",
+      "universe": "JUJUTSU_KAISEN",
+      "universe_ordinal": 23
+    },
+    "juuzou": {
+      "name": "Juuzou Suzuya",
+      "portrait": "res://assets/images/Juuzou Suzuya/juuzouprof.png",
+      "description": "t",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "kureo": {
+      "name": "Kureo Mado",
+      "portrait": "res://assets/images/Kureo Mado/kureoprof.png",
+      "description": "t",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "max": {
+      "name": "Lightning Max",
+      "portrait": "res://assets/images/Lightning Max/maxprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "puripuri": {
+      "name": "Puri Puri Prisoner",
+      "portrait": "res://assets/images/Puri Puri Prisoner/puripuriprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "rize": {
+      "name": "Rize Kamishiro",
+      "portrait": "res://assets/images/Rize Kamishiro/rizeprof.png",
+      "description": "t",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "urahara": {
+      "name": "Urahara Kisuke",
+      "portrait": "res://assets/images/Urahara Kisuke/uraharaprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "watchdog": {
+      "name": "Watchdog",
+      "portrait": "res://assets/images/Watchdog/watchdogprof.png",
+      "description": "t",
+      "universe": "ONE_PUNCH_MAN",
+      "universe_ordinal": 14
+    },
+    "naruha": {
+      "name": "Sakuragi Naruha",
+      "portrait": "res://assets/images/Sakuragi Naruha/naruhaprof.png",
+      "description": "t",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "frenda": {
+      "name": "Frenda Seivelun",
+      "portrait": "res://assets/images/Frenda Seivelun/frendaprof.png",
+      "description": "t",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "accelerator": {
+      "name": "Accelerator",
+      "portrait": "res://assets/images/Accelerator/acceleratorprof.png",
+      "description": "t",
+      "universe": "A_CERTAIN_SCIENTIFIC_RAILGUN",
+      "universe_ordinal": 17
+    },
+    "chu": {
+      "name": "Chu Chulainn",
+      "portrait": "res://assets/images/Chu Chulainn/chuprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "medea": {
+      "name": "Medea",
+      "portrait": "res://assets/images/Medea/medeaprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "shigaraki": {
+      "name": "Tomura Shigaraki",
+      "portrait": "res://assets/images/Tomura Shigaraki/shigarakiprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "mirio": {
+      "name": "Togata Mirio",
+      "portrait": "res://assets/images/Togata Mirio/mirioprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "rukia": {
+      "name": "Rukia Kuchiki",
+      "portrait": "res://assets/images/Rukia Kuchiki/rukiaprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "aizen": {
+      "name": "Aizen Sosuke",
+      "portrait": "res://assets/images/Aizen Sosuke/aizenprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "angstrom": {
+      "name": "Angstrom Levy",
+      "portrait": "res://assets/images/Angstrom Levy/angstromprof.png",
+      "description": "Angstrom Levy",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "thragg": {
+      "name": "Thragg",
+      "portrait": "res://assets/images/Thragg/thraggprof.png",
+      "description": "Grand Regent Thragg",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "kidomniman": {
+      "name": "Kid Omni-Man",
+      "portrait": "res://assets/images/Kid Omni-Man/kidomnimanprof.png",
+      "description": "Oliver Grayson",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "conquest": {
+      "name": "Conquest",
+      "portrait": "res://assets/images/Conquest/conquestprof.png",
+      "description": "Conquest",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "darkwing2": {
+      "name": "Darkwing II",
+      "portrait": "res://assets/images/Darkwing II/darkwing2prof.png",
+      "description": "Darkwing II",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "rex": {
+      "name": "Rex Splode",
+      "portrait": "res://assets/images/Rex Splode/rexprof.png",
+      "description": "Rex Splode",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "immortal": {
+      "name": "Immortal",
+      "portrait": "res://assets/images/Immortal/immortalprof.png",
+      "description": "Immortal",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "robot": {
+      "name": "Robot",
+      "portrait": "res://assets/images/Robot/robotprof.png",
+      "description": "Robot",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "monstergirl": {
+      "name": "Monster Girl",
+      "portrait": "res://assets/images/Monster Girl/monstergirlprof.png",
+      "description": "Monster Girl",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "duplikate": {
+      "name": "Dupli-Kate",
+      "portrait": "res://assets/images/DupliKate/duplikateprof.png",
+      "description": "Dupli-Kate",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "multipaul": {
+      "name": "Multi-Paul",
+      "portrait": "res://assets/images/MultiPaul/multipaulprof.png",
+      "description": "Multi-Paul",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "powerplex": {
+      "name": "Powerplex",
+      "portrait": "res://assets/images/Powerplex/powerplexprof.png",
+      "description": "Powerplex",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "battlebeast": {
+      "name": "Battle Beast",
+      "portrait": "res://assets/images/Battle Beast/battlebeastprof.png",
+      "description": "Battle Beast",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "allen": {
+      "name": "Allen the Alien",
+      "portrait": "res://assets/images/Allen/allenprof.png",
+      "description": "Allen the Alien",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "cecil": {
+      "name": "Cecil Stedman",
+      "portrait": "res://assets/images/Cecil Stedman/cecilprof.png",
+      "description": "t",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "killcannon": {
+      "name": "Killcannon",
+      "portrait": "res://assets/images/Killcannon/killcannonprof.png",
+      "description": "t",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "shapesmith": {
+      "name": "Shapesmith",
+      "portrait": "res://assets/images/Shapesmith/shapesmithprof.png",
+      "description": "t",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "maulertwins": {
+      "name": "The Mauler Twins",
+      "portrait": "res://assets/images/Maulers/maulertwinsprof.png",
+      "description": "t",
+      "universe": "INVINCIBLE",
+      "universe_ordinal": 26
+    },
+    "wormmon": {
+      "name": "Wormmon",
+      "portrait": "res://assets/images/Wormmon/wormmonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "veemon": {
+      "name": "Veemon",
+      "portrait": "res://assets/images/Veemon/veemonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "susanoomon": {
+      "name": "Susanoomon",
+      "portrait": "res://assets/images/Susanoomon/susanoomonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "monodramon": {
+      "name": "Monodramon",
+      "portrait": "res://assets/images/Monodramon/monodramonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "meicoomon": {
+      "name": "Meicoomon",
+      "portrait": "res://assets/images/Meicoomon/meicoomonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "magnamon": {
+      "name": "Magnamon",
+      "portrait": "res://assets/images/Magnamon/magnamonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "lobomon": {
+      "name": "Lobomon",
+      "portrait": "res://assets/images/Lobomon/lobomonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "leomon": {
+      "name": "Leomon",
+      "portrait": "res://assets/images/Leomon/leomonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "kumamon": {
+      "name": "Kumamon",
+      "portrait": "res://assets/images/Kumamon/kumamonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "kudamon": {
+      "name": "Kudamon",
+      "portrait": "res://assets/images/Kudamon/kudamonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "kimeramon": {
+      "name": "Kimeramon",
+      "portrait": "res://assets/images/Kimeramon/kimeramonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "keramon": {
+      "name": "Keramon",
+      "portrait": "res://assets/images/Keramon/keramonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "kazemon": {
+      "name": "Kazemon",
+      "portrait": "res://assets/images/Kazemon/kazemonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "gankoomon": {
+      "name": "Gankoomon",
+      "portrait": "res://assets/images/Gankoomon/gankoomonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "ebonwumon": {
+      "name": "Ebonwumon",
+      "portrait": "res://assets/images/Ebonwumon/ebonwumonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "dynasmon": {
+      "name": "Dynasmon",
+      "portrait": "res://assets/images/Dynasmon/dynasmonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "duskmon": {
+      "name": "Duskmon",
+      "portrait": "res://assets/images/Duskmon/duskmonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "duftmon": {
+      "name": "Duftmon",
+      "portrait": "res://assets/images/Duftmon/duftmonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "crusadermon": {
+      "name": "Crusadermon",
+      "portrait": "res://assets/images/Crusadermon/crusadermonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "beetlemon": {
+      "name": "Beetlemon",
+      "portrait": "res://assets/images/Beetlemon/beetlemonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "baihumon": {
+      "name": "Baihumon",
+      "portrait": "res://assets/images/Baihumon/baihumonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "armadillomon": {
+      "name": "Armadillomon",
+      "portrait": "res://assets/images/Armadillomon/armadillomonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "agunimon": {
+      "name": "Agunimon",
+      "portrait": "res://assets/images/Agunimon/agunimonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "zarbon": {
+      "name": "Zarbon",
+      "portrait": "res://assets/images/Zarbon/zarbonprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "yamcha": {
+      "name": "Yamcha",
+      "portrait": "res://assets/images/Yamcha/yamchaprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "tien": {
+      "name": "Tien",
+      "portrait": "res://assets/images/Tien/tienprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "tao": {
+      "name": "Tao",
+      "portrait": "res://assets/images/Tao/taoprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "supremekai": {
+      "name": "Supreme Kai",
+      "portrait": "res://assets/images/Supreme Kai/supremekaiprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "roshi": {
+      "name": "Roshi",
+      "portrait": "res://assets/images/Roshi/roshiprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "recoome": {
+      "name": "Recoome",
+      "portrait": "res://assets/images/Recoome/recoomeprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "raditz": {
+      "name": "Raditz",
+      "portrait": "res://assets/images/Raditz/raditzprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "pikkon": {
+      "name": "Pikkon",
+      "portrait": "res://assets/images/Pikkon/pikkonprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "pan": {
+      "name": "Pan",
+      "portrait": "res://assets/images/Pan/panprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "nappa": {
+      "name": "Nappa",
+      "portrait": "res://assets/images/Nappa/nappaprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "kingcold": {
+      "name": "King Cold",
+      "portrait": "res://assets/images/King Cold/kingcoldprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "kidtrunks": {
+      "name": "Kid Trunks",
+      "portrait": "res://assets/images/Kid Trunks/kidtrunksprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "kidgoku": {
+      "name": "Kid Goku",
+      "portrait": "res://assets/images/Kid Goku/kidgokuprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "jeice": {
+      "name": "Jeice",
+      "portrait": "res://assets/images/Jeice/jeiceprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "janemba": {
+      "name": "Janemba",
+      "portrait": "res://assets/images/Janemba/janembaprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "hirudegarn": {
+      "name": "Hirudegarn",
+      "portrait": "res://assets/images/Hirudegarn/hirudegarnprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "hercule": {
+      "name": "Hercule",
+      "portrait": "res://assets/images/Hercule/herculeprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "guldo": {
+      "name": "Guldo",
+      "portrait": "res://assets/images/Guldo/guldoprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "goten": {
+      "name": "Goten",
+      "portrait": "res://assets/images/Goten/gotenprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "gotenks": {
+      "name": "Gotenks",
+      "portrait": "res://assets/images/Gotenks/gotenksprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "ginyu": {
+      "name": "Ginyu",
+      "portrait": "res://assets/images/Ginyu/ginyuprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "gero": {
+      "name": "Gero",
+      "portrait": "res://assets/images/Gero/geroprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "garlicjr": {
+      "name": "Garlic Jr",
+      "portrait": "res://assets/images/Garlic Jr/garlicjrprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "dodoria": {
+      "name": "Dodoria",
+      "portrait": "res://assets/images/Dodoria/dodoriaprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "dabura": {
+      "name": "Dabura",
+      "portrait": "res://assets/images/Dabura/daburaprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "chiaotzu": {
+      "name": "Chiaotzu",
+      "portrait": "res://assets/images/Chiaotzu/chiaotzuprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "burter": {
+      "name": "Burter",
+      "portrait": "res://assets/images/Burter/burterprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "bojack": {
+      "name": "Bojack",
+      "portrait": "res://assets/images/Bojack/bojackprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "blue": {
+      "name": "Blue",
+      "portrait": "res://assets/images/Blue/blueprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "bardock": {
+      "name": "Bardock",
+      "portrait": "res://assets/images/Bardock/bardockprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "babidi": {
+      "name": "Babidi",
+      "portrait": "res://assets/images/Babidi/babidiprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "android19": {
+      "name": "Android 19",
+      "portrait": "res://assets/images/Android 19/android19prof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "android18": {
+      "name": "Android 18",
+      "portrait": "res://assets/images/Android 18/android18prof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "android16": {
+      "name": "Android 16",
+      "portrait": "res://assets/images/Android 16/android16prof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "android13": {
+      "name": "Android 13",
+      "portrait": "res://assets/images/Android 13/android13prof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "android8": {
+      "name": "Android 8",
+      "portrait": "res://assets/images/Android 8/android8prof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "zuko": {
+      "name": "Zuko",
+      "portrait": "res://assets/images/Zuko/zukoprof.png",
+      "description": "t",
+      "universe": "AVATAR",
+      "universe_ordinal": 8
+    },
+    "mako": {
+      "name": "Mako",
+      "portrait": "res://assets/images/Mako/makoprof.png",
+      "description": "t",
+      "universe": "AVATAR",
+      "universe_ordinal": 8
+    },
+    "ozai": {
+      "name": "Ozai",
+      "portrait": "res://assets/images/Ozai/ozaiprof.png",
+      "description": "t",
+      "universe": "AVATAR",
+      "universe_ordinal": 8
+    },
+    "iroh": {
+      "name": "Iroh",
+      "portrait": "res://assets/images/Iroh/irohprof.png",
+      "description": "t",
+      "universe": "AVATAR",
+      "universe_ordinal": 8
+    },
+    "bolin": {
+      "name": "Bolin",
+      "portrait": "res://assets/images/Bolin/bolinprof.png",
+      "description": "t",
+      "universe": "AVATAR",
+      "universe_ordinal": 8
+    },
+    "azula": {
+      "name": "Azula",
+      "portrait": "res://assets/images/Azula/azulaprof.png",
+      "description": "t",
+      "universe": "AVATAR",
+      "universe_ordinal": 8
+    },
+    "amon": {
+      "name": "Amon",
+      "portrait": "res://assets/images/Amon/amonprof.png",
+      "description": "t",
+      "universe": "AVATAR",
+      "universe_ordinal": 8
+    },
+    "jeannefate": {
+      "name": "Jeanne D'arc",
+      "portrait": "res://assets/images/Jeanne D'arc/jeannefateprof.png",
+      "description": "t",
+      "universe": "FATE",
+      "universe_ordinal": 18
+    },
+    "wendy": {
+      "name": "Wendy Marvell",
+      "portrait": "res://assets/images/Wendy Marvell/wendyprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "kurome": {
+      "name": "Kurome",
+      "portrait": "res://assets/images/Kurome/kuromeprof.png",
+      "description": "t",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "seryu": {
+      "name": "Seryu Ubiquitas",
+      "portrait": "res://assets/images/Seryu Ubiquitas/seryuprof.png",
+      "description": "t",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "chelsea": {
+      "name": "Chelsea",
+      "portrait": "res://assets/images/Chelsea/chelseaprof.png",
+      "description": "t",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "leone": {
+      "name": "Leone",
+      "portrait": "res://assets/images/Leone/leoneprof.png",
+      "description": "t",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "raba": {
+      "name": "Raba",
+      "portrait": "res://assets/images/Raba/rabaprof.png",
+      "description": "t",
+      "universe": "AKAME_GA_KILL",
+      "universe_ordinal": 9
+    },
+    "gokudera": {
+      "name": "Hayato Gokudera",
+      "portrait": "res://assets/images/Hayato Gokudera/gokuderaprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "lambo": {
+      "name": "Lambo",
+      "portrait": "res://assets/images/Lambo/lamboprof.png",
+      "description": "t",
+      "universe": "KATEKYO_HITMAN_REBORN",
+      "universe_ordinal": 12
+    },
+    "thomas": {
+      "name": "Thomas Andre",
+      "portrait": "res://assets/images/Thomas Andre/thomasprof.png",
+      "description": "t",
+      "universe": "SOLO_LEVELING",
+      "universe_ordinal": 31
+    },
+    "stark": {
+      "name": "Stark",
+      "portrait": "res://assets/images/Stark/starkprof.png",
+      "description": "t",
+      "universe": "FRIEREN",
+      "universe_ordinal": 30
+    },
+    "ryoh": {
+      "name": "Ryoh Grantz",
+      "portrait": "res://assets/images/Ryoh Grantz/ryohprof.png",
+      "description": "t",
+      "universe": "MASHLE",
+      "universe_ordinal": 28
+    },
+    "rayne": {
+      "name": "Rayne Ames",
+      "portrait": "res://assets/images/Rayne Ames/rayneprof.png",
+      "description": "t",
+      "universe": "MASHLE",
+      "universe_ordinal": 28
+    },
+    "rakan": {
+      "name": "Rakan",
+      "portrait": "res://assets/images/Rakan/rakanprof.png",
+      "description": "t",
+      "universe": "SOLO_LEVELING",
+      "universe_ordinal": 31
+    },
+    "popstep": {
+      "name": "Pop Step",
+      "portrait": "res://assets/images/Pop Step/popstepprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "orter": {
+      "name": "Orter Madl",
+      "portrait": "res://assets/images/Orter Madl/orterprof.png",
+      "description": "t",
+      "universe": "MASHLE",
+      "universe_ordinal": 28
+    },
+    "min": {
+      "name": "Min Byung-gyu",
+      "portrait": "res://assets/images/Min Byung-gyu/minprof.png",
+      "description": "t",
+      "universe": "SOLO_LEVELING",
+      "universe_ordinal": 31
+    },
+    "lemon": {
+      "name": "Lemon Irvine",
+      "portrait": "res://assets/images/Lemon Irvine/lemonprof.png",
+      "description": "t",
+      "universe": "MASHLE",
+      "universe_ordinal": 28
+    },
+    "lance": {
+      "name": "Lance Crown",
+      "portrait": "res://assets/images/Lance Crown/lanceprof.png",
+      "description": "t",
+      "universe": "MASHLE",
+      "universe_ordinal": 28
+    },
+    "kuin": {
+      "name": "Kuin Hachisuka",
+      "portrait": "res://assets/images/Kuin Hachisuka/kuinprof.png",
+      "description": "t",
+      "universe": "MY_HERO_ACADEMIA",
+      "universe_ordinal": 3
+    },
+    "kaldo": {
+      "name": "Kaldo Gehenna",
+      "portrait": "res://assets/images/Kaldo Gehenna/kaldoprof.png",
+      "description": "t",
+      "universe": "MASHLE",
+      "universe_ordinal": 28
+    },
+    "irism": {
+      "name": "Iris Midgar",
+      "portrait": "res://assets/images/Iris Midgar/irisprof.png",
+      "description": "t",
+      "universe": "EMINENCE_IN_SHADOW",
+      "universe_ordinal": 29
+    },
+    "innocent": {
+      "name": "Innocent Zero",
+      "portrait": "res://assets/images/Innocent Zero/innocentprof.png",
+      "description": "t",
+      "universe": "MASHLE",
+      "universe_ordinal": 28
+    },
+    "himmel": {
+      "name": "Himmel",
+      "portrait": "res://assets/images/Himmel/himmelprof.png",
+      "description": "t",
+      "universe": "FRIEREN",
+      "universe_ordinal": 30
+    },
+    "finn": {
+      "name": "Finn Ames",
+      "portrait": "res://assets/images/Finn Ames/finnprof.png",
+      "description": "t",
+      "universe": "MASHLE",
+      "universe_ordinal": 28
+    },
+    "fern": {
+      "name": "Fern",
+      "portrait": "res://assets/images/Fern/fernprof.png",
+      "description": "t",
+      "universe": "FRIEREN",
+      "universe_ordinal": 30
+    },
+    "dot": {
+      "name": "Dot Barret",
+      "portrait": "res://assets/images/Dot Barret/dotprof.png",
+      "description": "t",
+      "universe": "MASHLE",
+      "universe_ordinal": 28
+    },
+    "delta": {
+      "name": "Delta",
+      "portrait": "res://assets/images/Delta/deltaprof.png",
+      "description": "t",
+      "universe": "EMINENCE_IN_SHADOW",
+      "universe_ordinal": 29
+    },
+    "cid": {
+      "name": "Cid Kagenou",
+      "portrait": "res://assets/images/Cid Kagenou/cidprof.png",
+      "description": "t",
+      "universe": "EMINENCE_IN_SHADOW",
+      "universe_ordinal": 29
+    },
+    "choi": {
+      "name": "Choi Jon-in",
+      "portrait": "res://assets/images/Choi Jon-in/choiprof.png",
+      "description": "t",
+      "universe": "SOLO_LEVELING",
+      "universe_ordinal": 31
+    },
+    "cha": {
+      "name": "Cha Hae-in",
+      "portrait": "res://assets/images/Cha Hae-in/chaprof.png",
+      "description": "t",
+      "universe": "SOLO_LEVELING",
+      "universe_ordinal": 31
+    },
+    "cellwar": {
+      "name": "Cell War",
+      "portrait": "res://assets/images/Cell War/cellwarprof.png",
+      "description": "t",
+      "universe": "MASHLE",
+      "universe_ordinal": 28
+    },
+    "beatrix": {
+      "name": "Beatrix",
+      "portrait": "res://assets/images/Beatrix/beatrixprof.png",
+      "description": "t",
+      "universe": "EMINENCE_IN_SHADOW",
+      "universe_ordinal": 29
+    },
+    "baek": {
+      "name": "Baek Yoon-ho",
+      "portrait": "res://assets/images/Baek Yoon-ho/baekprof.png",
+      "description": "t",
+      "universe": "SOLO_LEVELING",
+      "universe_ordinal": 31
+    },
+    "alexia": {
+      "name": "Alexia Midgar",
+      "portrait": "res://assets/images/Alexia Midgar/alexiaprof.png",
+      "description": "t",
+      "universe": "EMINENCE_IN_SHADOW",
+      "universe_ordinal": 29
+    },
+    "razorabyss": {
+      "name": "Abyss Razor",
+      "portrait": "res://assets/images/Abyss Razor/razorprof.png",
+      "description": "t",
+      "universe": "MASHLE",
+      "universe_ordinal": 28
+    },
+    "abel": {
+      "name": "Abel Walker",
+      "portrait": "res://assets/images/Abel Walker/abelprof.png",
+      "description": "A third-year student at Easton Magic Academy, Abel is the leader of Magia Lupus. His magic allows him control the people around him as puppets.",
+      "universe": "MASHLE",
+      "universe_ordinal": 28
+    },
+    "chrollo": {
+      "name": "Chrollo Lucilfer",
+      "portrait": "res://assets/images/Chrollo Lucilfer/chrolloprof.png",
+      "description": "t",
+      "universe": "HUNTER_X_HUNTER",
+      "universe_ordinal": 16
+    },
+    "makima": {
+      "name": "Makima",
+      "portrait": "res://assets/images/Makima/makimaprof.png",
+      "description": "t",
+      "universe": "CHAINSAW_MAN",
+      "universe_ordinal": 32
+    },
+    "kobeni": {
+      "name": "Higashiyama Kobeni",
+      "portrait": "res://assets/images/Higashiyama Kobeni/kobeniprof.png",
+      "description": "t",
+      "universe": "CHAINSAW_MAN",
+      "universe_ordinal": 32
+    },
+    "beam": {
+      "name": "Beam",
+      "portrait": "res://assets/images/Beam/beamprof.png",
+      "description": "t",
+      "universe": "CHAINSAW_MAN",
+      "universe_ordinal": 32
+    },
+    "reze": {
+      "name": "Reze",
+      "portrait": "res://assets/images/Reze/rezeprof.png",
+      "description": "t",
+      "universe": "CHAINSAW_MAN",
+      "universe_ordinal": 32
+    },
+    "aki": {
+      "name": "Hayakawa Aki",
+      "portrait": "res://assets/images/Hayakawa Aki/akiprof.png",
+      "description": "t",
+      "universe": "CHAINSAW_MAN",
+      "universe_ordinal": 32
+    },
+    "angeldevil": {
+      "name": "Angel Devil",
+      "portrait": "res://assets/images/Angel Devil/angeldevilprof.png",
+      "description": "t",
+      "universe": "CHAINSAW_MAN",
+      "universe_ordinal": 32
+    },
+    "borushiki": {
+      "name": "Uzumaki Borushiki",
+      "portrait": "res://assets/images/Uzumaki Borushiki/borushikiprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "takizawa": {
+      "name": "Takizawa Seido",
+      "portrait": "res://assets/images/Takizawa Seido/takizawaprof.png",
+      "description": "A former Rank 2 Ghoul Investigator, Takizawa inherited the Ukaku from Yoshimura and became a half-ghoul. His abilities cause a significant degradation to his mental state.",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "furuta": {
+      "name": "Furuta Nimura",
+      "portrait": "res://assets/images/Furuta Nimura/furutaprof.png",
+      "description": "Also known as Kichimura Washuu, Furuta is a half-ghoul who also served as a ghoul investigator and even the head of the Commission of Counter Ghoul. ",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "eto": {
+      "name": "Eto Yoshimura",
+      "portrait": "res://assets/images/Eto Yoshimura/etoprof.png",
+      "description": "The founding leader of Aogiri Tree, Eto Yoshimura is a half-ghoul known as the One-Eyed Owl. Her control over her Ukaku far surpasses most other ghouls, sporting a versatile set of appendages and attacks. ",
+      "universe": "TOKYO_GHOUL",
+      "universe_ordinal": 21
+    },
+    "ira": {
+      "name": "Gamagori Ira",
+      "portrait": "res://assets/images/Gamagori Ira/iraprof.png",
+      "description": "t",
+      "universe": "KILL_LA_KILL",
+      "universe_ordinal": 19
+    },
+    "nui": {
+      "name": "Harime Nui",
+      "portrait": "res://assets/images/Harime Nui/nuiprof.png",
+      "description": "t",
+      "universe": "KILL_LA_KILL",
+      "universe_ordinal": 19
+    },
+    "yukio": {
+      "name": "Yukio Okumura",
+      "portrait": "res://assets/images/Yukio Okumura/yukioprof.png",
+      "description": "Despite being the son of Satan, and Rin's twin brother, Yukio Okumura was born fully human, inheriting none of his father's demonic traits or aptitudes.",
+      "universe": "AO_NO_EXORCIST",
+      "universe_ordinal": 33
+    },
+    "rin": {
+      "name": "Rin Okumura",
+      "portrait": "res://assets/images/Rin Okumura/rinprof.png",
+      "description": "Rin Okumura is the main protagonist of Ao no Exorcist. The son of Satan and twin brother of Yukio Okumura, he trains at a special Academy in the hopes of defeating his father.",
+      "universe": "AO_NO_EXORCIST",
+      "universe_ordinal": 33
+    },
+    "joey": {
+      "name": "Joey Wheeler",
+      "portrait": "res://assets/images/Joey Wheeler/joeyprof.png",
+      "description": "t",
+      "universe": "YUGIOH",
+      "universe_ordinal": 34
+    },
+    "bakura": {
+      "name": "Bakura Ryou",
+      "portrait": "res://assets/images/Bakura Ryou/bakuraprof.png",
+      "description": "t",
+      "universe": "YUGIOH",
+      "universe_ordinal": 34
+    },
+    "marik": {
+      "name": "Marik Ishtar",
+      "portrait": "res://assets/images/Marik Ishtar/marikprof.png",
+      "description": "t",
+      "universe": "YUGIOH",
+      "universe_ordinal": 34
+    },
+    "sesshomaru": {
+      "name": "Sesshomaru",
+      "portrait": "res://assets/images/Sesshomaru/sesshomaruprof.png",
+      "description": "t",
+      "universe": "INUYASHA",
+      "universe_ordinal": 35
+    },
+    "kenpachi": {
+      "name": "Kenpachi Zaraki",
+      "portrait": "res://assets/images/Kenpachi Zaraki/kenpachiprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "rudo": {
+      "name": "Rudo Surebrec",
+      "portrait": "res://assets/images/Rudo Surebrec/rudoprof.png",
+      "description": "t",
+      "universe": "GACHIAKUTA",
+      "universe_ordinal": 41
+    },
+    "nnoitra": {
+      "name": "Nnoitra Gilga",
+      "portrait": "res://assets/images/Nnoitra Gilga/nnoitraprof.png",
+      "description": "t",
+      "universe": "BLEACH",
+      "universe_ordinal": 1
+    },
+    "guilmon": {
+      "name": "Guilmon",
+      "portrait": "res://assets/images/Guilmon/guilmonprof.png",
+      "description": "t",
+      "universe": "DIGIMON",
+      "universe_ordinal": 24
+    },
+    "lubu": {
+      "name": "Lu Bu",
+      "portrait": "res://assets/images/Lu Bu/lubuprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "kojiro": {
+      "name": "Sasaki Kojiro",
+      "portrait": "res://assets/images/Sasaki Kojiro/kojiroprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "jackror": {
+      "name": "Jack the Reaper",
+      "portrait": "res://assets/images/Jack the Ripper (ROR)/jackrorprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "raiden": {
+      "name": "Tameemon Raiden",
+      "portrait": "res://assets/images/Tameemon Raiden/raidenprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "buddha": {
+      "name": "Buddha",
+      "portrait": "res://assets/images/Buddha/buddhaprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "huang": {
+      "name": "Qin Shi Huang",
+      "portrait": "res://assets/images/Qin Shi Huang/huangprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "tesla": {
+      "name": "Nikola Tesla",
+      "portrait": "res://assets/images/Nikola Tesla/teslaprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "leonidasror": {
+      "name": "Leonidas",
+      "portrait": "res://assets/images/Leonidas (ROR)/leonidasrorprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "hayha": {
+      "name": "Simo Hayha",
+      "portrait": "res://assets/images/Simo Hayha/hayhaprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "okita": {
+      "name": "Soji Okita",
+      "portrait": "res://assets/images/Soji Okita/okitaprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "zeus": {
+      "name": "Zeus",
+      "portrait": "res://assets/images/Zeus/zeusprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "thor": {
+      "name": "Thor",
+      "portrait": "res://assets/images/Thor/thorprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "poseidon": {
+      "name": "Poseidon",
+      "portrait": "res://assets/images/Poseidon/poseidonprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "heracles": {
+      "name": "Heracles",
+      "portrait": "res://assets/images/Heracles/heraclesprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "shiva": {
+      "name": "Shiva",
+      "portrait": "res://assets/images/Shiva/shivaprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "zerofuku": {
+      "name": "Zerofuku",
+      "portrait": "res://assets/images/Zerofuku/zerofukuprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "hadesror": {
+      "name": "Hades",
+      "portrait": "res://assets/images/Hades (ROR)/hadesrorprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "beelzebub": {
+      "name": "Beelzebub",
+      "portrait": "res://assets/images/Beelzebub/beelzebubprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "apollo": {
+      "name": "Apollo",
+      "portrait": "res://assets/images/Apollo/apolloprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "susanooror": {
+      "name": "Susanoo no Mikoto",
+      "portrait": "res://assets/images/Susanoo no Mikoto/susanoororprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "loki": {
+      "name": "Loki",
+      "portrait": "res://assets/images/Loki/lokiprof.png",
+      "description": "t",
+      "universe": "RECORD_OF_RAGNAROK",
+      "universe_ordinal": 43
+    },
+    "seiya": {
+      "name": "Seiya",
+      "portrait": "res://assets/images/Seiya/seiyaprof.png",
+      "description": "t",
+      "universe": "SAINT_SEIYA",
+      "universe_ordinal": 44
+    },
+    "ikki": {
+      "name": "Ikki",
+      "portrait": "res://assets/images/Ikki/ikkiprof.png",
+      "description": "t",
+      "universe": "SAINT_SEIYA",
+      "universe_ordinal": 44
+    },
+    "shiryuu": {
+      "name": "Shiryuu",
+      "portrait": "res://assets/images/Shiryuu/shiryuuprof.png",
+      "description": "t",
+      "universe": "SAINT_SEIYA",
+      "universe_ordinal": 44
+    },
+    "hyouga": {
+      "name": "Hyouga",
+      "portrait": "res://assets/images/Hyouga/hyougaprof.png",
+      "description": "t",
+      "universe": "SAINT_SEIYA",
+      "universe_ordinal": 44
+    },
+    "shun": {
+      "name": "Shun",
+      "portrait": "res://assets/images/Shun/shunprof.png",
+      "description": "t",
+      "universe": "SAINT_SEIYA",
+      "universe_ordinal": 44
+    },
+    "geminisaga": {
+      "name": "Gemini Saga",
+      "portrait": "res://assets/images/Gemini Saga/geminisagaprof.png",
+      "description": "t",
+      "universe": "SAINT_SEIYA",
+      "universe_ordinal": 44
+    },
+    "yusuke": {
+      "name": "Urameshi Yusuke",
+      "portrait": "res://assets/images/Urameshi Yusuke/yusukeprof.png",
+      "description": "t",
+      "universe": "YU_YU_HAKUSHO",
+      "universe_ordinal": 45
+    },
+    "kuwabara": {
+      "name": "Kuwabara Kazuma",
+      "portrait": "res://assets/images/Kuwabara Kazuma/kuwabaraprof.png",
+      "description": "t",
+      "universe": "YU_YU_HAKUSHO",
+      "universe_ordinal": 45
+    },
+    "kurama": {
+      "name": "Kurama",
+      "portrait": "res://assets/images/Kurama/kuramaprof.png",
+      "description": "t",
+      "universe": "YU_YU_HAKUSHO",
+      "universe_ordinal": 45
+    },
+    "hiei": {
+      "name": "Hiei",
+      "portrait": "res://assets/images/Hiei/hieiprof.png",
+      "description": "t",
+      "universe": "YU_YU_HAKUSHO",
+      "universe_ordinal": 45
+    },
+    "genkai": {
+      "name": "Genkai",
+      "portrait": "res://assets/images/Genkai/genkaiprof.png",
+      "description": "t",
+      "universe": "YU_YU_HAKUSHO",
+      "universe_ordinal": 45
+    },
+    "shinobu": {
+      "name": "Sensui Shinobu",
+      "portrait": "res://assets/images/Sensui Shinobu/shinobuprof.png",
+      "description": "t",
+      "universe": "YU_YU_HAKUSHO",
+      "universe_ordinal": 45
+    },
+    "toguro": {
+      "name": "Toguro",
+      "portrait": "res://assets/images/Toguro/toguroprof.png",
+      "description": "t",
+      "universe": "YU_YU_HAKUSHO",
+      "universe_ordinal": 45
+    },
+    "karasu": {
+      "name": "Karasu",
+      "portrait": "res://assets/images/Karasu/karasuprof.png",
+      "description": "t",
+      "universe": "YU_YU_HAKUSHO",
+      "universe_ordinal": 45
+    },
+    "yomi": {
+      "name": "Yomi",
+      "portrait": "res://assets/images/Yomi/yomiprof.png",
+      "description": "t",
+      "universe": "YU_YU_HAKUSHO",
+      "universe_ordinal": 45
+    },
+    "chuu": {
+      "name": "Chuu",
+      "portrait": "res://assets/images/Chuu/chuuprof.png",
+      "description": "t",
+      "universe": "YU_YU_HAKUSHO",
+      "universe_ordinal": 45
+    },
+    "duke": {
+      "name": "Duke Devlin",
+      "portrait": "res://assets/images/Duke Devlin/dukeprof.png",
+      "description": "t",
+      "universe": "YUGIOH",
+      "universe_ordinal": 34
+    },
+    "mai": {
+      "name": "Mai Valentine",
+      "portrait": "res://assets/images/Mai Valentine/maiprof.png",
+      "description": "t",
+      "universe": "YUGIOH",
+      "universe_ordinal": 34
+    },
+    "ishizu": {
+      "name": "Ishizu Ishtar",
+      "portrait": "res://assets/images/Ishizu Ishtar/ishizuprof.png",
+      "description": "t",
+      "universe": "YUGIOH",
+      "universe_ordinal": 34
+    },
+    "piccolo": {
+      "name": "Piccolo",
+      "portrait": "res://assets/images/Piccolo/piccoloprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "majinbuu": {
+      "name": "Majin Buu",
+      "portrait": "res://assets/images/Majin Buu/majinbuuprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "kidbuu": {
+      "name": "Kid Buu",
+      "portrait": "res://assets/images/Kid Buu/kidbuuprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "eisshenron": {
+      "name": "Eis Shenron",
+      "portrait": "res://assets/images/Eis Shenron/eisshenronprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "nuovashenron": {
+      "name": "Nuova Shenron",
+      "portrait": "res://assets/images/Nuova Shenron/nuovashenronprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "synshenron": {
+      "name": "Syn Shenron",
+      "portrait": "res://assets/images/Syn Shenron/synshenronprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "miroku": {
+      "name": "Miroku",
+      "portrait": "res://assets/images/Miroku/mirokuprof.png",
+      "description": "t",
+      "universe": "INUYASHA",
+      "universe_ordinal": 35
+    },
+    "kohaku": {
+      "name": "Kohaku",
+      "portrait": "res://assets/images/Kohaku/kohakuprof.png",
+      "description": "t",
+      "universe": "INUYASHA",
+      "universe_ordinal": 35
+    },
+    "kagome": {
+      "name": "Kagome",
+      "portrait": "res://assets/images/Kagome/kagomeprof.png",
+      "description": "t",
+      "universe": "INUYASHA",
+      "universe_ordinal": 35
+    },
+    "shiki": {
+      "name": "Shiki Ichinose",
+      "portrait": "res://assets/images/Shiki Ichinose/shikiprof.png",
+      "description": "t",
+      "universe": "TOUGEN_ANKI",
+      "universe_ordinal": 46
+    },
+    "yukiteru": {
+      "name": "Yukiteru Amano",
+      "portrait": "res://assets/images/Yukiteru Amano/yukiteruprof.png",
+      "description": "t",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "takao": {
+      "name": "Takao Hiyama",
+      "portrait": "res://assets/images/Takao Hiyama/takaoprof.png",
+      "description": "t",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "kasugano": {
+      "name": "Tsubaki Kasugano",
+      "portrait": "res://assets/images/Tsubaki Kasugano/kasuganoprof.png",
+      "description": "t",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "reisuke": {
+      "name": "Reisuke Houjou",
+      "portrait": "res://assets/images/Reisuke Houjou/reisukeprof.png",
+      "description": "t",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "keigo": {
+      "name": "Keigo Kurusu",
+      "portrait": "res://assets/images/Keigo Kurusu/keigoprof.png",
+      "description": "t",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "ikusuba": {
+      "name": "Marco Ikusuba",
+      "portrait": "res://assets/images/Marco Ikusuba/ikusubaprof.png",
+      "description": "t",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "ai": {
+      "name": "Ai Mikami",
+      "portrait": "res://assets/images/Ai Mikami/aiprof.png",
+      "description": "t",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "rika": {
+      "name": "Rika Kawai",
+      "portrait": "res://assets/images/Rika Kawai/rikaprof.png",
+      "description": "A washed-up former child idol with a caustic tongue and a self-destructive streak, weighed down by guilt over a devoted fan who took her own life. One of the girls fighting through the Wonder Egg world.",
+      "universe": "WONDER_EGG_PRIORITY",
+      "universe_ordinal": 51
+    },
+    "neiru": {
+      "name": "Neiru Aonuma",
+      "portrait": "res://assets/images/Neiru Aonuma/neiruprof.png",
+      "description": "A brilliant, emotionally guarded teenage company president who approaches the Wonder Egg world with detached, analytical calm - all to bring back her late sister, Airu.",
+      "universe": "WONDER_EGG_PRIORITY",
+      "universe_ordinal": 51
+    },
+    "kamado": {
+      "name": "Kamado Ueshita",
+      "portrait": "res://assets/images/Kamado Ueshita/kamadoprof.png",
+      "description": "t",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "karyuudo": {
+      "name": "Karyuudo Tsukishima",
+      "portrait": "res://assets/images/Karyuudo Tsukishima/karyuudoprof.png",
+      "description": "t",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "johnbacchus": {
+      "name": "John Bacchus",
+      "portrait": "res://assets/images/John Bacchus/johnbacchusprof.png",
+      "description": "t",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "yomotsu": {
+      "name": "Yomotsu Hirasaka",
+      "portrait": "res://assets/images/Yomotsu Hirasaka/yomotsuprof.png",
+      "description": "t",
+      "universe": "MIRAI_NIKKI",
+      "universe_ordinal": 47
+    },
+    "emilia": {
+      "name": "Emilia",
+      "portrait": "res://assets/images/Emilia/emiliaprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "rem": {
+      "name": "Rem",
+      "portrait": "res://assets/images/Rem/remprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "ram": {
+      "name": "Ram",
+      "portrait": "res://assets/images/Ram/ramprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "beatrice": {
+      "name": "Beatrice",
+      "portrait": "res://assets/images/Beatrice/beatriceprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "roswaal": {
+      "name": "Roswaal L Mathers",
+      "portrait": "res://assets/images/Roswaal L Mathers/roswaalprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "garfiel": {
+      "name": "Garfiel Tinsel",
+      "portrait": "res://assets/images/Garfiel Tinsel/garfielprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "frederica": {
+      "name": "Frederica Baumann",
+      "portrait": "res://assets/images/Frederica Baumann/fredericaprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "felt": {
+      "name": "Felt",
+      "portrait": "res://assets/images/Felt/feltprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "reinhard": {
+      "name": "Reinhard van Astrea",
+      "portrait": "res://assets/images/Reinhard van Astrea/reinhardprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "crusch": {
+      "name": "Crusch Karsten",
+      "portrait": "res://assets/images/Crusch Karsten/cruschprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "priscilla": {
+      "name": "Priscilla Barielle",
+      "portrait": "res://assets/images/Priscilla Barielle/priscillaprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "al": {
+      "name": "Aldebaran",
+      "portrait": "res://assets/images/Aldebaran/alprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "euclius": {
+      "name": "Julius Euclius",
+      "portrait": "res://assets/images/Julius Euclius/eucliusprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "echidna": {
+      "name": "Echidna",
+      "portrait": "res://assets/images/Echidna/echidnaprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "satella": {
+      "name": "Satella",
+      "portrait": "res://assets/images/Satella/satellaprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "petelgeuse": {
+      "name": "Petelgeuse Romanee-Conti",
+      "portrait": "res://assets/images/Petelgeuse Romanee-Conti/petelgeuseprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "regulus": {
+      "name": "Regulus Corneas",
+      "portrait": "res://assets/images/Regulus Corneas/regulusprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "capella": {
+      "name": "Capella Emerada Lugunica",
+      "portrait": "res://assets/images/Capella Emerada Lugunica/capellaprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "sirius": {
+      "name": "Sirius",
+      "portrait": "res://assets/images/Sirius/siriusprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "lye": {
+      "name": "Lye Batenkaitos",
+      "portrait": "res://assets/images/Lye Batenkaitos/lyeprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "elsa": {
+      "name": "Elsa Granhiert",
+      "portrait": "res://assets/images/Elsa Granhiert/elsaprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "meili": {
+      "name": "Meili Portroute",
+      "portrait": "res://assets/images/Meili Portroute/meiliprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "pandora": {
+      "name": "Pandora",
+      "portrait": "res://assets/images/Pandora/pandoraprof.png",
+      "description": "t",
+      "universe": "RE_ZERO",
+      "universe_ordinal": 48
+    },
+    "laxus": {
+      "name": "Laxus Dreyar",
+      "portrait": "res://assets/images/Laxus Dreyar/laxusprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "mystogan": {
+      "name": "Mystogan",
+      "portrait": "res://assets/images/Mystogan/mystoganprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "gajeel": {
+      "name": "Gajeel Redfox",
+      "portrait": "res://assets/images/Gajeel Redfox/gajeelprof.png",
+      "description": "t",
+      "universe": "FAIRY_TAIL",
+      "universe_ordinal": 6
+    },
+    "kaidou": {
+      "name": "Kaidou",
+      "portrait": "res://assets/images/Kaidou/kaidouprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "bigmom": {
+      "name": "Big Mom",
+      "portrait": "res://assets/images/Big Mom/bigmomprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "katakuri": {
+      "name": "Charlotte Katakuri",
+      "portrait": "res://assets/images/Charlotte Katakuri/katakuriprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "whitebeard": {
+      "name": "Whitebeard",
+      "portrait": "res://assets/images/Whitebeard/whitebeardprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "aokiji": {
+      "name": "Aokiji",
+      "portrait": "res://assets/images/Aokiji/aokijiprof.png",
+      "description": "t",
+      "universe": "ONE_PIECE",
+      "universe_ordinal": 2
+    },
+    "beerus": {
+      "name": "Beerus",
+      "portrait": "res://assets/images/Beerus/beerusprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "jiren": {
+      "name": "Jiren",
+      "portrait": "res://assets/images/Jiren/jirenprof.png",
+      "description": "t",
+      "universe": "DRAGON_BALL",
+      "universe_ordinal": 27
+    },
+    "kaguya": {
+      "name": "Kaguya",
+      "portrait": "res://assets/images/Kaguya/kaguyaprof.png",
+      "description": "t",
+      "universe": "NARUTO",
+      "universe_ordinal": 0
+    },
+    "kikyoinuyasha": {
+      "name": "Kikyo",
+      "portrait": "res://assets/images/Kikyo/kikyoinuyashaprof.png",
+      "description": "t",
+      "universe": "INUYASHA",
+      "universe_ordinal": 35
+    },
+    "zodyl": {
+      "name": "Zodyl",
+      "portrait": "res://assets/images/Zodyl/zodylprof.png",
+      "description": "Zodyl",
+      "universe": "GACHIAKUTA",
+      "universe_ordinal": 41
+    },
+    "amo": {
+      "name": "Amo",
+      "portrait": "res://assets/images/Amo/amoprof.png",
+      "description": "Amo",
+      "universe": "GACHIAKUTA",
+      "universe_ordinal": 41
+    },
+    "enjin": {
+      "name": "Enjin",
+      "portrait": "res://assets/images/Enjin/enjinprof.png",
+      "description": "Enjin",
+      "universe": "GACHIAKUTA",
+      "universe_ordinal": 41
+    },
+    "riyo": {
+      "name": "Riyo",
+      "portrait": "res://assets/images/Riyo/riyoprof.png",
+      "description": "Riyo",
+      "universe": "GACHIAKUTA",
+      "universe_ordinal": 41
+    },
+    "tamsy": {
+      "name": "Tamsy",
+      "portrait": "res://assets/images/Tamsy/tamsyprof.png",
+      "description": "Tamsy",
+      "universe": "GACHIAKUTA",
+      "universe_ordinal": 41
+    },
+    "semiu": {
+      "name": "Semiu",
+      "portrait": "res://assets/images/Semiu/semiuprof.png",
+      "description": "Semiu",
+      "universe": "GACHIAKUTA",
+      "universe_ordinal": 41
+    },
+    "zanka": {
+      "name": "Zanka",
+      "portrait": "res://assets/images/Zanka/zankaprof.png",
+      "description": "Zanka",
+      "universe": "GACHIAKUTA",
+      "universe_ordinal": 41
+    },
+    "jabber": {
+      "name": "Jabber",
+      "portrait": "res://assets/images/Jabber/jabberprof.png",
+      "description": "Jabber",
+      "universe": "GACHIAKUTA",
+      "universe_ordinal": 41
+    },
+    "chibimoon": {
+      "name": "Sailor Chibi Moon",
+      "portrait": "res://assets/images/Sailor Chibi Moon/chibimoonprof.png",
+      "description": "Sailor Chibi Moon",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "ceres": {
+      "name": "Sailor Ceres",
+      "portrait": "res://assets/images/Sailor Ceres/ceresprof.png",
+      "description": "Sailor Ceres",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "nehellenia": {
+      "name": "Queen Nehellenia",
+      "portrait": "res://assets/images/Queen Nehellenia/nehelleniaprof.png",
+      "description": "Queen Nehellenia",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "starfighter": {
+      "name": "Sailor Star Fighter",
+      "portrait": "res://assets/images/Sailor Star Fighter/starfighterprof.png",
+      "description": "Sailor Star Fighter",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "starmaker": {
+      "name": "Sailor Star Maker",
+      "portrait": "res://assets/images/Sailor Star Maker/starmakerprof.png",
+      "description": "Sailor Star Maker",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "starhealer": {
+      "name": "Sailor Star Healer",
+      "portrait": "res://assets/images/Sailor Star Healer/starhealerprof.png",
+      "description": "Sailor Star Healer",
+      "universe": "SAILOR_MOON",
+      "universe_ordinal": 25
+    },
+    "kirito": {
+      "name": "Kirito",
+      "portrait": "res://assets/images/Kirito/kiritoprof.png",
+      "description": "Kirito",
+      "universe": "SWORD_ART_ONLINE",
+      "universe_ordinal": 53
+    },
+    "asuna": {
+      "name": "Asuna",
+      "portrait": "res://assets/images/Asuna/asunaprof.png",
+      "description": "Asuna",
+      "universe": "SWORD_ART_ONLINE",
+      "universe_ordinal": 53
+    },
+    "heathcliff": {
+      "name": "Heathcliff",
+      "portrait": "res://assets/images/Heathcliff/heathcliffprof.png",
+      "description": "Heathcliff",
+      "universe": "SWORD_ART_ONLINE",
+      "universe_ordinal": 53
+    },
+    "klein": {
+      "name": "Klein",
+      "portrait": "res://assets/images/Klein/kleinprof.png",
+      "description": "Klein",
+      "universe": "SWORD_ART_ONLINE",
+      "universe_ordinal": 53
+    },
+    "yui": {
+      "name": "Yui",
+      "portrait": "res://assets/images/Yui/yuiprof.png",
+      "description": "Yui",
+      "universe": "SWORD_ART_ONLINE",
+      "universe_ordinal": 53
+    }
+  }
+}

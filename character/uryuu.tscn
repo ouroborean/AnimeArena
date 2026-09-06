@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/uryuu.gd" id="1_yihep"]
+[ext_resource type="Texture2D" path="res://assets/images/Ishida Uryuu/uryuuprof.png" id="2_5x0ag"]
+[ext_resource type="Texture2D" path="res://assets/images/Ishida Uryuu/profile_mastery_uryu.png" id="2_sre5v"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_x2ux5"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_nmquh"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_8bboa"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_doo8t"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_bbgwb"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_oa2g5"]
+
+[node name="Uryu" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_yihep")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_sre5v")
+mastery_name = "Heilig Pfeil Uryu"
+portrait_texture = ExtResource("2_5x0ag")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_x2ux5")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_nmquh")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_8bboa")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_doo8t")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_bbgwb")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_oa2g5")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

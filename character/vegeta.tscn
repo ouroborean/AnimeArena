@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/vegeta.gd" id="1_eqr7n"]
+[ext_resource type="Texture2D" path="res://assets/images/Vegeta/profile_mastery_vegeta.png" id="2_54nx0"]
+[ext_resource type="Texture2D" path="res://assets/images/Vegeta/vegeta.png" id="2_qtv2n"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_shvyy"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_ac3iq"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_t1m6i"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_7j77k"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_v7kpe"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_pbuib"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_eqr7n")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_54nx0")
+mastery_name = "Super Saiyan Vegeta"
+portrait_texture = ExtResource("2_qtv2n")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_shvyy")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_ac3iq")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_t1m6i")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_7j77k")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_v7kpe")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_pbuib")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

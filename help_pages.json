@@ -1,0 +1,1523 @@
+{
+	"": [
+		{
+			"widgets": [
+				{
+					"rect": [
+						530.153686523438,
+						44.5533752441406,
+						332.588623046875,
+						128.914184570313
+					],
+					"text": "If you haven't yet registered, simply type your desired username and password, click Register, and then click Login!",
+					"type": "text"
+				},
+				{
+					"rect": [
+						252.423217773438,
+						216.882690429688,
+						389.349731445313,
+						77.8984375
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						471.2412109375,
+						346.129638671875,
+						150.543701171875,
+						52.6795043945313
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						278.723388671875,
+						346.129638671875,
+						148.439697265625,
+						53.7303466796875
+					],
+					"type": "highlight"
+				}
+			]
+		}
+	],
+	"a_p_panel|char_select_scene|entry_panel|filter_panel|panel|player_info_panel": [
+		{
+			"widgets": [
+				{
+					"rect": [
+						394.0,
+						405.0,
+						389.0,
+						105.0
+					],
+					"text": "This is the Nexus, where the community votes with their AP (Anime Points) to decide who gets added to the game next!",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						367.0,
+						397.0,
+						328.0,
+						102.0
+					],
+					"text": "On the front page, we always show the top 5 Characters so you can see who the community is interested in!",
+					"type": "text"
+				},
+				{
+					"rect": [
+						255.0,
+						100.0,
+						580.0,
+						227.0
+					],
+					"type": "highlight"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						354.0,
+						379.0,
+						287.0,
+						105.0
+					],
+					"text": "Select a Universe on the left side to see the available characters from that Universe!",
+					"type": "text"
+				},
+				{
+					"rect": [
+						16.0,
+						100.0,
+						240.0,
+						463.0
+					],
+					"type": "highlight"
+				}
+			]
+		}
+	],
+	"ability_description_panel|char_select_scene|filter_panel|info_avatar_panel|player_info_panel": [
+		{
+			"widgets": [
+				{
+					"rect": [
+						181.0,
+						203.0,
+						82.0,
+						84.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						274.0,
+						193.0,
+						427.0,
+						128.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						595.0,
+						63.0,
+						266.0,
+						105.0
+					],
+					"text": "A skill's cost. Try to build a team that uses multiple colors evenly.",
+					"type": "text"
+				},
+				{
+					"from": [
+						738.0,
+						169.0
+					],
+					"to": [
+						682.0,
+						201.0
+					],
+					"type": "arrow"
+				},
+				{
+					"rect": [
+						50.0,
+						382.0,
+						225.0,
+						130.0
+					],
+					"text": "A skill's classes. These determine interactions with other effects like Stuns and Counters.",
+					"type": "text"
+				},
+				{
+					"from": [
+						273.0,
+						384.0
+					],
+					"to": [
+						304.0,
+						315.0
+					],
+					"type": "arrow"
+				},
+				{
+					"rect": [
+						597.0,
+						407.0,
+						260.0,
+						110.0
+					],
+					"text": "A skill's cooldown. Impactful skills require longer between each use.",
+					"type": "text"
+				},
+				{
+					"from": [
+						704.0,
+						407.0
+					],
+					"to": [
+						664.0,
+						320.0
+					],
+					"type": "arrow"
+				}
+			]
+		}
+	],
+	"battle_scene|character_panel|energy_display_panel|player_panel": [
+		{
+			"widgets": [
+				{
+					"rect": [
+						286.0,
+						217.0,
+						318.0,
+						82.0
+					],
+					"text": "You're in battle! Let's quickly go over the key areas.",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						305.0,
+						191.0,
+						264.0,
+						170.0
+					],
+					"text": "Your team is shown on the left, with their health bars beneath their pictures.",
+					"type": "text"
+				},
+				{
+					"rect": [
+						54.0,
+						77.0,
+						92.0,
+						114.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						56.0,
+						202.0,
+						90.0,
+						111.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						58.0,
+						324.0,
+						88.0,
+						110.0
+					],
+					"type": "highlight"
+				},
+				{
+					"from": [
+						303.0,
+						194.0
+					],
+					"to": [
+						147.0,
+						133.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						303.0,
+						272.0
+					],
+					"to": [
+						145.0,
+						260.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						304.0,
+						360.0
+					],
+					"to": [
+						145.0,
+						377.0
+					],
+					"type": "arrow"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						327.0,
+						206.0,
+						285.0,
+						77.0
+					],
+					"text": "The enemy team is shown on the right side.",
+					"type": "text"
+				},
+				{
+					"from": [
+						615.0,
+						204.0
+					],
+					"to": [
+						744.0,
+						127.0
+					],
+					"type": "arrow"
+				},
+				{
+					"rect": [
+						750.0,
+						69.0,
+						85.0,
+						113.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						750.0,
+						199.0,
+						84.0,
+						110.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						750.0,
+						328.0,
+						85.0,
+						112.0
+					],
+					"type": "highlight"
+				},
+				{
+					"from": [
+						614.0,
+						244.0
+					],
+					"to": [
+						752.0,
+						256.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						614.0,
+						283.0
+					],
+					"to": [
+						751.0,
+						384.0
+					],
+					"type": "arrow"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						337.0,
+						35.0,
+						212.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						291.0,
+						102.0,
+						319.0,
+						152.0
+					],
+					"text": "Your energy pool is shown here. You receive 1 random color of energy for each member of your team left alive each turn (with the exception of the player who goes first).",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						167.0,
+						106.0,
+						346.0,
+						343.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						526.0,
+						155.0,
+						313.0,
+						166.0
+					],
+					"text": "Your skills are shown here. Skills that you can use will appear brightly colored. Clicking one of them will highlight any Character's portrait that the skill could target.",
+					"type": "text"
+				},
+				{
+					"rect": [
+						396.0,
+						466.0,
+						486.0,
+						132.0
+					],
+					"type": "highlight"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						339.0,
+						0.0,
+						216.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						322.0,
+						129.0,
+						342.0,
+						174.0
+					],
+					"text": "Once you've completed your move selection, press this button to end your turn! Once you've allocated any generic energy costs you've spent, all of your selected moves will occur in the order you used them!",
+					"type": "text"
+				},
+				{
+					"from": [
+						429.0,
+						123.0
+					],
+					"to": [
+						447.0,
+						39.0
+					],
+					"type": "arrow"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						251.0,
+						378.0,
+						347.0,
+						77.0
+					],
+					"text": "Any buffs and debuffs will show up in a row near the character's portrait.",
+					"type": "text"
+				},
+				{
+					"rect": [
+						193.0,
+						192.0,
+						248.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						193.0,
+						76.0,
+						246.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						192.0,
+						318.0,
+						251.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						628.0,
+						70.0,
+						121.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						631.0,
+						203.0,
+						118.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						632.0,
+						334.0,
+						117.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"from": [
+						246.0,
+						423.0
+					],
+					"to": [
+						221.0,
+						360.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						473.0,
+						374.0
+					],
+					"to": [
+						437.0,
+						232.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						507.0,
+						377.0
+					],
+					"to": [
+						439.0,
+						111.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						532.0,
+						377.0
+					],
+					"to": [
+						620.0,
+						83.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						568.0,
+						376.0
+					],
+					"to": [
+						629.0,
+						222.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						600.0,
+						378.0
+					],
+					"to": [
+						634.0,
+						350.0
+					],
+					"type": "arrow"
+				}
+			]
+		}
+	],
+	"bounty_panel|char_select_scene|complete_panel|filter_panel|panel|player_info_panel|with_panel": [
+		{
+			"widgets": [
+				{
+					"rect": [
+						224.0,
+						93.0,
+						73.0,
+						91.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						224.0,
+						186.0,
+						73.0,
+						88.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						224.0,
+						277.0,
+						73.0,
+						91.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						224.0,
+						371.0,
+						74.0,
+						87.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						224.0,
+						461.0,
+						74.0,
+						90.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						627.0,
+						422.0,
+						218.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						345.0,
+						234.0,
+						259.0,
+						132.0
+					],
+					"text": "Complete any row, column, or diagonal and then hand in the Bounty to unlock the character!",
+					"type": "text"
+				}
+			]
+		}
+	],
+	"bounty_panel|char_select_scene|filter_panel|player_info_panel": [
+		{
+			"widgets": [
+				{
+					"rect": [
+						251.0,
+						102.0,
+						298.0,
+						184.0
+					],
+					"text": "Welcome to the Bounty menu! Here you can take on Bounties to unlock characters! First simply choose a character on the left from the list of characters you don't have unlocked!",
+					"type": "text"
+				},
+				{
+					"rect": [
+						11.0,
+						96.0,
+						206.0,
+						454.0
+					],
+					"type": "highlight"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						225.0,
+						91.0,
+						391.0,
+						484.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						625.0,
+						159.0,
+						233.0,
+						210.0
+					],
+					"text": "Once a Bounty has been selected, this section will show a list of 'Bounty Cards'. Each Card shows an objective, wins with or against a character or type of character. ",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						630.0,
+						94.0,
+						208.0,
+						264.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						345.0,
+						240.0,
+						250.0,
+						99.0
+					],
+					"text": "Click a Bounty Card to see expanded details here!",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						224.0,
+						95.0,
+						73.0,
+						88.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						224.0,
+						186.0,
+						73.0,
+						90.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						224.0,
+						279.0,
+						73.0,
+						87.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						224.0,
+						369.0,
+						73.0,
+						90.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						224.0,
+						462.0,
+						74.0,
+						90.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						626.0,
+						422.0,
+						218.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						345.0,
+						240.0,
+						285.0,
+						126.0
+					],
+					"text": "Complete any 5 Bounties in a row, column or diagonal and then press the Complete button!",
+					"type": "text"
+				},
+				{
+					"from": [
+						480.0,
+						368.0
+					],
+					"to": [
+						629.0,
+						446.0
+					],
+					"type": "arrow"
+				}
+			]
+		}
+	],
+	"char_select_scene|character_description_panel|filter_panel|info_avatar_panel|player_info_panel": [
+		{
+			"widgets": [
+				{
+					"rect": [
+						199.822875976563,
+						336.672546386719,
+						419.905395507813,
+						101.593688964844
+					],
+					"text": "This is the Character Info Panel! Here you can preview a character's skills and costs before adding them to your team!",
+					"type": "text"
+				},
+				{
+					"rect": [
+						146.170288085938,
+						63.4675903320313,
+						569.243530273438,
+						262.837158203125
+					],
+					"type": "highlight"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						277.671508789063,
+						92.8896484375,
+						408.286010742188,
+						96.8126220703125
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						8.3568115234375,
+						22.48681640625,
+						222.127563476563,
+						227.688232421875
+					],
+					"text": "Here you will see a list of the character's skills. If a character has more than 5, there will be a scroll bar across the bottom so you can access any extra moves.",
+					"type": "text"
+				},
+				{
+					"from": [
+						232.43505859375,
+						133.870361328125
+					],
+					"to": [
+						279.858032226563,
+						139.229370117188
+					],
+					"type": "arrow"
+				},
+				{
+					"rect": [
+						501.749389648438,
+						342.977233886719,
+						337.848510742188,
+						100.542846679688
+					],
+					"text": "Clicking on a skill will update this label with the skill's description, cost, cooldown, etc.",
+					"type": "text"
+				},
+				{
+					"from": [
+						671.122802734375,
+						340.875671386719
+					],
+					"to": [
+						482.895874023438,
+						302.1015625
+					],
+					"type": "arrow"
+				},
+				{
+					"rect": [
+						275.5673828125,
+						193.765380859375,
+						407.234130859375,
+						105.218933105469
+					],
+					"type": "highlight"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						502.801391601563,
+						62.4168395996094,
+						199.98828125,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						599.58642578125,
+						163.292419433594,
+						258.94775390625,
+						203.520141601563
+					],
+					"text": "Here you will see tokens representing the Archetypes that the character is a part of. These are used to classify characters for Bounty missions.",
+					"type": "text"
+				},
+				{
+					"from": [
+						720.5673828125,
+						161.190856933594
+					],
+					"to": [
+						599.6689453125,
+						103.502624511719
+					],
+					"type": "arrow"
+				}
+			]
+		}
+	],
+	"char_select_scene|cosmetics_menu|filter_panel|panel|player_info_panel": [
+		{
+			"widgets": [
+				{
+					"rect": [
+						466.0,
+						273.0,
+						277.0,
+						155.0
+					],
+					"text": "This is the Cosmetics Panel, where you can select any cosmetics you've purchased or earned from the Shop or Masteries!",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						498.0,
+						326.0,
+						271.0,
+						131.0
+					],
+					"text": "These dropdown boxes will allow you to change the Skill Panels that your characters' skills show up on in-game.",
+					"type": "text"
+				},
+				{
+					"rect": [
+						128.0,
+						218.0,
+						272.0,
+						336.0
+					],
+					"type": "highlight"
+				},
+				{
+					"from": [
+						496.0,
+						326.0
+					],
+					"to": [
+						318.0,
+						238.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						496.0,
+						393.0
+					],
+					"to": [
+						317.0,
+						347.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						496.0,
+						457.0
+					],
+					"to": [
+						312.0,
+						454.0
+					],
+					"type": "arrow"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						213.0,
+						220.0,
+						234.0,
+						124.0
+					],
+					"text": "These dropdown boxes control the frame that the character's Portraits appear on in-game. ",
+					"type": "text"
+				},
+				{
+					"rect": [
+						30.0,
+						213.0,
+						98.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						29.0,
+						324.0,
+						98.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						25.0,
+						434.0,
+						106.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"from": [
+						212.0,
+						222.0
+					],
+					"to": [
+						130.0,
+						233.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						210.0,
+						287.0
+					],
+					"to": [
+						124.0,
+						342.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						211.0,
+						346.0
+					],
+					"to": [
+						130.0,
+						452.0
+					],
+					"type": "arrow"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						225.0,
+						277.0,
+						252.0,
+						148.0
+					],
+					"text": "These dropdowns control the character Hats, extra cosmetics that wrap around the portrait and frame in-game.",
+					"type": "text"
+				},
+				{
+					"rect": [
+						25.0,
+						238.0,
+						110.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						26.0,
+						345.0,
+						105.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						28.0,
+						456.0,
+						105.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"from": [
+						223.0,
+						280.0
+					],
+					"to": [
+						134.0,
+						257.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						223.0,
+						361.0
+					],
+					"to": [
+						131.0,
+						364.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						224.0,
+						425.0
+					],
+					"to": [
+						135.0,
+						476.0
+					],
+					"type": "arrow"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						351.0,
+						278.0,
+						335.0,
+						79.0
+					],
+					"text": "You can also change your Playercard and Background images!",
+					"type": "text"
+				},
+				{
+					"rect": [
+						22.0,
+						102.0,
+						296.0,
+						117.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						593.0,
+						104.0,
+						229.0,
+						84.0
+					],
+					"type": "highlight"
+				},
+				{
+					"from": [
+						349.0,
+						278.0
+					],
+					"to": [
+						271.0,
+						206.0
+					],
+					"type": "arrow"
+				},
+				{
+					"from": [
+						525.0,
+						276.0
+					],
+					"to": [
+						592.0,
+						189.0
+					],
+					"type": "arrow"
+				}
+			]
+		}
+	],
+	"char_select_scene|filter_panel|mastery_info_menu|player_info_panel": [
+		{
+			"widgets": [
+				{
+					"rect": [
+						449.0,
+						216.0,
+						260.0,
+						126.0
+					],
+					"text": "This is the Mastery Panel, where you can track your progress with each individual character!",
+					"type": "text"
+				},
+				{
+					"rect": [
+						149.0,
+						98.0,
+						566.0,
+						408.0
+					],
+					"type": "highlight"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						156.0,
+						148.0,
+						545.0,
+						69.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						566.0,
+						231.0,
+						264.0,
+						128.0
+					],
+					"text": "Select a character from the scrollbox at the top of the panel to view their Mastery level and experience.",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						158.0,
+						320.0,
+						541.0,
+						178.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						562.0,
+						184.0,
+						290.0,
+						124.0
+					],
+					"text": "Here you can see the required levels for each Mastery Reward, as well as a preview of the Cosmetics!",
+					"type": "text"
+				}
+			]
+		}
+	],
+	"char_select_scene|filter_panel|player_info_panel": [
+		{
+			"widgets": [
+				{
+					"rect": [
+						166.158325195313,
+						208.476379394531,
+						346.2646484375,
+						134.168212890625
+					],
+					"text": "Welcome to Character Select! \n\nBelow you can see the available roster, with arrows to switch pages.",
+					"type": "text"
+				},
+				{
+					"rect": [
+						107.245727539063,
+						392.364318847656,
+						420.91015625,
+						182.977233886719
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						531.205688476563,
+						461.71630859375,
+						40.0,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						64.113525390625,
+						461.71630859375,
+						40.0,
+						40.0
+					],
+					"type": "highlight"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						107.245849609375,
+						393.4150390625,
+						421.962158203125,
+						180.875610351563
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						591.170166015625,
+						500.595458984375,
+						215.768310546875,
+						84.2031860351563
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						161.9501953125,
+						256.812561035156,
+						341.004760742188,
+						110.0
+					],
+					"text": "Double click an unlocked character to place them on your team!",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						78.841552734375,
+						365.043823242188,
+						478.770751953125,
+						40.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						12.56494140625,
+						442.802124023438,
+						40.082763671875,
+						149.351989746094
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						25.1890869140625,
+						227.390563964844,
+						327.32861328125,
+						122.609436035156
+					],
+					"text": "You can use these filters to sort characters by Anime, Archetype, and even by the color of energy they use!",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						588.01416015625,
+						499.544677734375,
+						222.080322265625,
+						90.5078735351563
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						236.64306640625,
+						304.09814453125,
+						191.572143554688,
+						46.3748168945313
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						521.737670898438,
+						247.35546875,
+						260.0,
+						110.0
+					],
+					"text": "Once your team has three characters, you can queue up for a match!",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						349.0,
+						1.0,
+						72.0,
+						77.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						250.0,
+						110.0,
+						294.0,
+						78.0
+					],
+					"text": "Visit the Nexus to spend AP voting on the next Character!",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						3.0,
+						108.0,
+						80.0,
+						86.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						105.0,
+						98.0,
+						270.0,
+						124.0
+					],
+					"text": "This button takes you to the Bounty menu, where you can unlock new characters for use!",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						419.0,
+						0.0,
+						70.0,
+						78.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						330.0,
+						104.0,
+						299.0,
+						104.0
+					],
+					"text": "Track your Mastery progress with each character as you earn a variety of Cosmetics!",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						282.0,
+						-1.0,
+						69.0,
+						77.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						200.0,
+						97.0,
+						280.0,
+						109.0
+					],
+					"text": "Spend excess AP at the Shop to unlock panels, frames and backgrounds!",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"widgets": [
+				{
+					"rect": [
+						214.0,
+						-1.0,
+						70.0,
+						77.0
+					],
+					"type": "highlight"
+				},
+				{
+					"rect": [
+						151.0,
+						96.0,
+						261.0,
+						105.0
+					],
+					"text": "Check or set your earned cosmetics here to see them in game!",
+					"type": "text"
+				}
+			]
+		}
+	]
+}

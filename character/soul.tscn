@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/soul.gd" id="1_fxois"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_5a7ap"]
+[ext_resource type="Texture2D" path="res://assets/images/Soul/profile_mastery_soul.png" id="2_6lmu2"]
+[ext_resource type="Texture2D" path="res://assets/images/Soul/soulprof.png" id="2_16jba"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_qxvhc"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_6aic1"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_lf7qk"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_uow0y"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_yk048"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_fxois")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_6lmu2")
+mastery_name = "Insane Soul"
+portrait_texture = ExtResource("2_16jba")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_5a7ap")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_qxvhc")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_6aic1")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_lf7qk")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_uow0y")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_yk048")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

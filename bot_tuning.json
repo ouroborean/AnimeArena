@@ -1,0 +1,19 @@
+{
+	"_readme": "Hand-tuning overlay for the v3 bot (never touched by training; hot-reloaded by mtime). global.aggression/defense multiply Harmful/Helpful candidate scores; energy_thrift subtracts per energy pip spent; difficulty_tiers are softmax temperatures (higher = sloppier play). Per-character: ability_offsets add to a skill's score, ability_multipliers scale it, banned_abilities are never cast. Ability names are display names, e.g. \"Rasengan\".",
+	"characters": {
+
+	},
+	"format": "aa-bot-tuning",
+	"global": {
+		"aggression": 1.0,
+		"default_tier": "normal",
+		"defense": 1.0,
+		"difficulty_tiers": {
+			"easy": 1.2,
+			"hard": 0.12,
+			"normal": 0.45
+		},
+		"energy_thrift": 0.0
+	},
+	"version": 1.0
+}

@@ -1,0 +1,30 @@
+; Headless server root — the ONLY scene the dedicated server instantiates.
+;
+; Replaces game.tscn on the server path. game.tscn is the desktop client shell
+; (login UI, char select, battle scene: 38 nodes pulling in scenes/ and ui/),
+; and the server was building all of it at boot just to reach the
+; ServerConnection node hanging off it. This scene carries only what the server
+; actually needs: ServerConnection, its heartbeat Timer, and the BucketHandler,
+; with the same three signal wirings game.tscn declared between them.
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://components/server_connection.gd" id="1_srv"]
+[ext_resource type="PackedScene" path="res://components/bucket_handler.tscn" id="2_bkt"]
+
+[node name="ServerRoot" type="Node"]
+
+[node name="ServerConnection" type="Node" parent="." node_paths=PackedStringArray("bucket_handler", "heartbeat_timer")]
+script = ExtResource("1_srv")
+is_server = true
+bucket_handler = NodePath("../BucketHandler")
+heartbeat_timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="ServerConnection"]
+wait_time = 10.0
+
+[node name="BucketHandler" parent="." node_paths=PackedStringArray("server") instance=ExtResource("2_bkt")]
+server = NodePath("../ServerConnection")
+
+[connection signal="character_bucket_info_broadcast" from="ServerConnection" to="BucketHandler" method="receive_character_bucket_information"]
+[connection signal="broadcast_player_contribution" from="BucketHandler" to="ServerConnection" method="send_player_contribution"]
+[connection signal="request_character_buckets" from="BucketHandler" to="ServerConnection" method="request_character_buckets"]

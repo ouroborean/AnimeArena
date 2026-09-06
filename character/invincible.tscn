@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/invincible.gd" id="1_4n7g0"]
+[ext_resource type="Texture2D" path="res://assets/images/Invincible/profile_mastery_invincible.png" id="2_fdul7"]
+[ext_resource type="Texture2D" path="res://assets/images/Invincible/invincibleprof.png" id="2_xoc22"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="3_xt6ay"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="4_gx0m2"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="5_43skx"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="6_248md"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="7_qjctu"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="8_a7q24"]
+
+[node name="Aang" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_4n7g0")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_fdul7")
+mastery_name = "Invincible (Blue)"
+portrait_texture = ExtResource("2_xoc22")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("3_xt6ay")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_gx0m2")]
+
+[node name="StatComponent" parent="." instance=ExtResource("5_43skx")]
+
+[node name="NameComponent" parent="." instance=ExtResource("6_248md")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("7_qjctu")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("8_a7q24")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

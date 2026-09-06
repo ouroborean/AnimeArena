@@ -1,0 +1,47 @@
+Godot Engine v4.6.2.stable.official.71f334935 - https://godotengine.org
+
+[trainer] seed=77097 matches=30 opponent=policy:res://training/checkpoints/focused_current.json eval=true out=res://training/checkpoints/work.json checkpoint=res://training/checkpoints/focus_asta/merged.json
+[authored] loaded 1 authored character(s)
+[   1/30  ] WIN    14 turns   asta, satsuki, tamaki  vs  venus, mercury, luffy
+[   2/30  ] LOSS   30 turns   asta, xanxus, boruto  vs  lizandpatty, zenitsu, jinwoo
+[   3/30  ] LOSS   16 turns   asta, gatomon, jaden  vs  aiohto, blackstar, hashirama
+[   4/30  ] WIN    21 turns   asta, lyserg, toji  vs  sukuna, toph, horohoro
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   5/30  ] WIN    16 turns   asta, byakuya, gallantmon  vs  rakko, tatsumaki, saitama
+[   6/30  ] WIN    34 turns   asta, zoro, yoh  vs  kurapika, kid, bakugo
+[   7/30  ] WIN    13 turns   asta, mavis, aang  vs  zoro, naruto, pegasus
+[   8/30  ] WIN    23 turns   asta, koro, death  vs  ace, adam, squalo
+[   9/30  ] WIN    20 turns   asta, ichigo, boruto  vs  astolfo, uraraka, shinoa
+[  10/30  ] WIN    21 turns   asta, kid, tsubasa  vs  mars, adam, ladydevimon
+[  11/30  ] LOSS   19 turns   asta, kitara, jeanne  vs  zoro, kurotsuchi, rimuru
+[  12/30  ] WIN    14 turns   asta, tokoyami, renamon  vs  kitara, madoka, korra
+Applying bleed effect! Checking special code
+[  13/30  ] WIN    29 turns   asta, inosuke, killua  vs  edward, gogeta, venus
+[  14/30  ] LOSS   16 turns   asta, shinoa, shiro  vs  astolfo, tatsumi, sakura
+[  15/30  ] WIN    19 turns   asta, jesse, midoriya  vs  ladydevimon, mine, gon
+[  16/30  ] WIN    14 turns   asta, jupiter, renamon  vs  kid, jinwoo, emiya
+[  17/30  ] LOSS   20 turns   asta, maka, noelle  vs  sasuke, jaden, gasai
+[  18/30  ] LOSS   15 turns   asta, chrome, soul  vs  gray, shinoa, tsuyu
+[  19/30  ] LOSS   18 turns   asta, toji, semiramis  vs  jesse, mavis, jack
+[  20/30  ] WIN    16 turns   asta, rob, kurotsuchi  vs  byakuya, shinoa, megumi
+[  21/30  ] WIN    11 turns   asta, shinra, naruto  vs  meliodas, usopp, frankenstein
+[  22/30  ] WIN    19 turns   asta, ganta, nonon  vs  yuji, megumi, misaka
+[  23/30  ] WIN    27 turns   asta, jinwoo, uraraka  vs  tokoyami, veldora, kuroko
+[  24/30  ] WIN    12 turns   asta, gon, ladydevimon  vs  madoka, death, ban
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  25/30  ] WIN    30 turns   asta, frieren, adam  vs  rakko, ganta, nezuko
+[  26/30  ] WIN    14 turns   asta, mavis, blackwargreymon  vs  myotismon, impmon, jaden
+[  27/30  ] LOSS   17 turns   asta, kitara, allmight  vs  toji, toga, shinra
+[  28/30  ] LOSS   34 turns   asta, rob, ace  vs  kitara, gatomon, horohoro
+[  29/30  ] LOSS   24 turns   asta, denji, gray  vs  impmon, seventeen, natsu
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  30/30  ] LOSS   34 turns   asta, ryuko, emiya  vs  tsuyu, diane, soul
+=== TRAINER RUN COMPLETE ===
+Matches: 30   W: 19   L: 11   D: 0   Win: 63.3%   (opponent: v3:focused_current.json  [EVAL])

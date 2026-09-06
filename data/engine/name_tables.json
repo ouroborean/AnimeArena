@@ -1,0 +1,48 @@
+{
+  "_source": "scripts/character_component.gd",
+  "_symbols": [
+    "RESERVED_EFFECT_NAMES",
+    "HERO_SHIELD_BOUND"
+  ],
+  "_generated_by": "tools/reference_data.py",
+  "reserved_effect_names": {
+    "Nirvana": "converts all damage the marked character DEALS into an equal Nullify on itself",
+    "Plasmantle": "converts all Harmful damage the marked character TAKES into an equal Shield",
+    "Blood Spear": "absorbs every non-Bleed hit into a same-named DAMAGE effect instead of dealing it",
+    "Saturn Crystal": "halves all incoming damage and redirects the rest to an ally",
+    "Silence Wall": "halves all incoming damage and redirects the rest to a random ENEMY",
+    "Ruinous Scythe": "turns the Saturn Crystal redirect into HEALING for the ally",
+    "Heavenly Intervention": "reduces a lethal hit to 0 and deals 35 back to the attacker",
+    "Fourth Form: Shifting Flow Slash": "while the holder is Blinded, incoming damage is discarded entirely",
+    "Embrace Pain": "instant_kill returns early — immune to every execute",
+    "Sealed Nightmare": "an IGNORE_DAMAGE effect of this name also makes instant_kill return early",
+    "Post-Mortem Nen": "converts the holder's death into a free 3-turn immortality",
+    "Unexpected Beheading": "check_beheading runs on EVERY hp change and executes when mag >= hp; `mag` is authorable",
+    "Iron Maiden": "a self-applied mark makes the holder untargetable by everyone",
+    "Sealed King": "a self-applied mark makes the holder untargetable by everyone",
+    "Gibbet": "restricts who may target the marked character to the mark's own user",
+    "Tsubaki Mode: Kusarigama": "is_invuln() returns false for every skill the marked character uses — free invuln-piercing",
+    "Fairy Star Blessing": "cost() returns all zeros — every skill on the marked character is free",
+    "Named Reconstitution": "the marked character generates NO energy at turn start",
+    "Terror Incarnate": "reflects every harmful hit received back at the attacker in full",
+    "Ultimate Nightmare": "reflects every harmful hit received at the WHOLE enemy team",
+    "Lord of Gluttony": "heals the marked dealer mag% of ALL damage it deals; `mag` is authorable",
+    "Blade of the Dragon King": "an ability of this name gains a permanent stacking +5 every time it meets a shield/barrier/DR",
+    "Rankyaku Gaicho": "an ability of this name erases every counter and reflect from its targets before executing",
+    "Uranus Lip Rod": "pairs with World Shaking for +5 damage on every hit",
+    "World Shaking": "pairs with Uranus Lip Rod for +5 damage on every hit",
+    "Snake Fire": "lets a trigger planted on an ENEMY fire on the author's own team's attacks",
+    "Data Collection": "on a Kurotsuchi ally, permanently reveals every invisible enemy effect",
+    "Crush Card Virus": "a MARK branch separate from its DAMAGE_CAP one (:179) — forces every invisible effect the holder applies to become VISIBLE, and needs no particular teammate",
+    "Warp Digivolve - Beelzemon": "marked_by() heal multiplier (:1095) reading `mag` as a percent — a plain authored mark leaves mag at 0, so `healing * 0 / 100` means the marked ENEMY can never be healed again",
+    "Soul Gem: Madoka": "calls gain_corruption() on the holder — a method only Madoka has"
+  },
+  "_reserved_effect_names_note": "name -> WHY it is reserved. These are effect names the engine special-cases by STRING, so any content system that lets a user pick an effect name must refuse these.",
+  "hero_shield_bound": [
+    "Elemental HERO Flame Wingman",
+    "Elemental HERO Rampart Blaster",
+    "Elemental HERO Mudballman",
+    "Elemental HERO Mariner"
+  ],
+  "_hero_shield_bound_note": "Elemental HERO fusions whose whole effect ends when their Shield breaks. Absences are deliberate (Clayman, Avian, Burstinatrix, Bubbleman) — see the source comment."
+}

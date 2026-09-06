@@ -1,0 +1,40 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://character/ichigo.gd" id="1_u03ha"]
+[ext_resource type="Texture2D" path="res://assets/images/Kurosaki Ichigo/alt_prof_ichigo.png" id="2_1fwki"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_63tpy"]
+[ext_resource type="Texture2D" path="res://assets/images/Kurosaki Ichigo/ichigoprof.png" id="2_g01tf"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_3v5kb"]
+[ext_resource type="Texture2D" path="res://assets/images/Kurosaki Ichigo/ichigoprof_2.png" id="3_b1p6q"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_5c13v"]
+[ext_resource type="Texture2D" path="res://assets/images/Kurosaki Ichigo/ichigoprof_3.png" id="4_ooi33"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_4utcs"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_y4yi0"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_mo3i2"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_u03ha")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_1fwki")
+mastery_name = "Mugetsu Ichigo"
+portrait_texture = ExtResource("2_g01tf")
+alt_portraits = Array[Texture2D]([ExtResource("3_b1p6q"), ExtResource("4_ooi33")])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_63tpy")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_3v5kb")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_5c13v")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_4utcs")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_y4yi0")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_mo3i2")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

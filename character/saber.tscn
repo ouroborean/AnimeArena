@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/saber.gd" id="1_my1yx"]
+[ext_resource type="Texture2D" path="res://assets/images/Saber/profile_mastery_saber.png" id="2_hcm76"]
+[ext_resource type="Texture2D" path="res://assets/images/Saber/saberprof.png" id="2_ux73k"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="3_i3s2r"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="4_6v0xl"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="5_06xqh"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="6_r5heg"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="7_5pvhi"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="8_dt7gr"]
+
+[node name="Saber" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_my1yx")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_hcm76")
+mastery_name = "Saber Alter"
+portrait_texture = ExtResource("2_ux73k")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("3_i3s2r")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_6v0xl")]
+
+[node name="StatComponent" parent="." instance=ExtResource("5_06xqh")]
+
+[node name="NameComponent" parent="." instance=ExtResource("6_r5heg")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("7_5pvhi")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("8_dt7gr")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

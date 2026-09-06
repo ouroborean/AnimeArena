@@ -1,0 +1,51 @@
+{
+  "_source": "character/jinwoo.gd",
+  "_symbols": [
+    "FORM_KITS",
+    "DEFAULT_KEYS"
+  ],
+  "_generated_by": "tools/reference_data.py",
+  "form_kits": {
+    "": [
+      "jinwoo1",
+      "jinwoo2",
+      "jinwoo3",
+      "jinwoo4"
+    ],
+    "red": [
+      "jinwoored1",
+      "jinwoored2",
+      "jinwoored3",
+      "jinwoored4",
+      "jinwoored5"
+    ],
+    "green": [
+      "jinwoogreen1",
+      "jinwoogreen2",
+      "jinwoogreen3",
+      "jinwoogreen4",
+      "jinwoogreen5"
+    ],
+    "white": [
+      "jinwoowhite1",
+      "jinwoowhite2",
+      "jinwoowhite3",
+      "jinwoowhite4",
+      "jinwoowhite5"
+    ],
+    "blue": [
+      "jinwooblue1",
+      "jinwooblue2",
+      "jinwooblue3",
+      "jinwooblue4",
+      "jinwooblue5"
+    ]
+  },
+  "default_keys": [
+    "jinwoo1",
+    "jinwoo2",
+    "jinwoo3",
+    "jinwoo4"
+  ],
+  "_note": "Colour forms list 5 keys: index 4 is the hidden swap-in the slot-2 Summon pulls in; only indices 0-3 are ever displayed. An unbuilt form falls back to the basic kit."
+}

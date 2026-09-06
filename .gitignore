@@ -1,0 +1,65 @@
+# Godot-specific ignores
+.godot/
+*.import
+export_preset.cfg
+import/
+*.uid
+*.txt
+*.py
+# ...but the reference-data toolchain MUST be tracked. `*.py` above was aimed at throwaway scratch
+# scripts; it also swallowed tools/reference_data.py, which is the checker that proves data/*.json
+# still matches its GDScript sources. An untracked guarantee is not a guarantee.
+!tools/**/*.py
+!backend_port/**/*.py
+game/
+*.zip
+*.x86_64
+# OS-specific ignores
+.DS_Store
+Thumbs.db
+*.exe
+*.pck
+issue_images/
+replays/
+ausers/
+# Season-reset snapshots. Same contents as ausers/ (pass_hash included) - never commit these.
+ausers_backup_*/
+*.tmp
+html/
+stats/
+*.sh
+*.ps1
+.claude/
+mastery.db
+mastery.db-wal
+mastery.db-shm
+stats.db
+stats.db-wal
+stats.db-shm
+metrics.db
+metrics.db-wal
+metrics.db-shm
+deploy/
+
+# Player-authored characters + uploaded art (user data, not source)
+authored/
+authored_assets/
+
+# Server feature flags (admin-toggled runtime state, not source)
+server_flags.json
+
+# Python bytecode from the reference-data extractor (tools/)
+__pycache__/
+
+# iOS/macOS build libraries shipped with the godot-sqlite addon (~270MB; this project does not
+# build for iOS — re-fetch from the addon if ever needed).
+*.xcframework/
+
+# Training run stderr logs (transient, ~50MB each).
+*.err
+
+# Cloudflare Wrangler build cache / account metadata (regenerated; not source).
+.wrangler/
+
+# Obsidian vault editor state (workspace layout, plugins — machine-specific, not source).
+.obsidian/

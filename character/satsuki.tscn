@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/satsuki.gd" id="1_jn4u6"]
+[ext_resource type="Texture2D" path="res://assets/images/Satsuki Kiryuin/satsuki.png" id="2_30nlb"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_pkmue"]
+[ext_resource type="Texture2D" path="res://assets/images/Satsuki Kiryuin/profile_mastery_satsuki.png" id="2_x2066"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_bhbqi"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_t38yy"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_7uffw"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_v30ti"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_q605c"]
+
+[node name="Satsuki" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_jn4u6")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_x2066")
+mastery_name = "Underdog Satsuki"
+portrait_texture = ExtResource("2_30nlb")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_pkmue")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_bhbqi")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_t38yy")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_7uffw")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_v30ti")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_q605c")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

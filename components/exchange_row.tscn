@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://components/exchange_row.gd" id="1_bu3eo"]
+[ext_resource type="Texture2D" path="res://assets/ui/skill_execution/minus button.png" id="2_fdfur"]
+[ext_resource type="Texture2D" path="res://assets/images/random_energy.png" id="2_s0nr0"]
+[ext_resource type="Texture2D" path="res://assets/ui/skill_execution/plus button.png" id="4_etnhf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4tyww"]
+line_spacing = 0.0
+outline_size = 7
+outline_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k376f"]
+texture = ExtResource("2_fdfur")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gpbuw"]
+texture = ExtResource("4_etnhf")
+
+[sub_resource type="LabelSettings" id="LabelSettings_vbcnp"]
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ExchangeRow" type="HBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -16.0
+offset_right = 63.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 8
+alignment = 1
+script = ExtResource("1_bu3eo")
+
+[node name="OwnedLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5"
+label_settings = SubResource("LabelSettings_4tyww")
+horizontal_alignment = 1
+
+[node name="RemoveButton" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_k376f")
+
+[node name="EnergyTexture" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_s0nr0")
+
+[node name="OfferButton" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_gpbuw")
+
+[node name="OfferedLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+label_settings = SubResource("LabelSettings_vbcnp")
+horizontal_alignment = 1
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+volume_db = -13.0
+
+[connection signal="gui_input" from="RemoveButton" to="." method="click_remove_offer"]
+[connection signal="mouse_entered" from="RemoveButton" to="." method="_on_remove_button_mouse_entered"]
+[connection signal="mouse_exited" from="RemoveButton" to="." method="_on_remove_button_mouse_exited"]
+[connection signal="gui_input" from="OfferButton" to="." method="click_offer"]
+[connection signal="mouse_entered" from="OfferButton" to="." method="_on_offer_button_mouse_entered"]
+[connection signal="mouse_exited" from="OfferButton" to="." method="_on_offer_button_mouse_exited"]

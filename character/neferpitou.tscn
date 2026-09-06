@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/neferpitou.gd" id="1_gpvwv"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_6c08b"]
+[ext_resource type="Texture2D" path="res://assets/images/Neferpitou/neferpitouprof.png" id="2_noqei"]
+[ext_resource type="Texture2D" path="res://assets/images/Neferpitou/profile_mastery_neferpitou.png" id="2_plu6r"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_82v2i"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_g4gxt"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_6r3ao"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_cpbo4"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_qqtwg"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_gpvwv")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_plu6r")
+mastery_name = "Deadly Neferpitou"
+portrait_texture = ExtResource("2_noqei")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_6c08b")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_82v2i")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_g4gxt")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_6r3ao")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_cpbo4")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_qqtwg")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

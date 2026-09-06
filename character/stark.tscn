@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://character/stark.gd" id="1_stark1"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_stark2"]
+[ext_resource type="Texture2D" path="res://assets/images/Stark/starkprof.png" id="2_stark4"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_stark5"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_stark6"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_stark7"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_stark8"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_stark9"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_stark1")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+portrait_texture = ExtResource("2_stark4")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_stark2")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_stark5")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_stark6")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_stark7")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_stark8")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_stark9")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

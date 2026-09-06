@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://character/blackwargreymon.gd" id="1_bwg1"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_bwg2"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_bwg5"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_bwg6"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_bwg7"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_bwg8"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_bwg9"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_bwg1")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_bwg2")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_bwg5")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_bwg6")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_bwg7")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_bwg8")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_bwg9")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

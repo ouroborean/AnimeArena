@@ -1,0 +1,1956 @@
+[
+ {
+  "path_name": "aang",
+  "name": "Aang",
+  "universe": "Avatar",
+  "gate": "always",
+  "colors": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "bio": "Hailing from the Air Nomads, Aang is not just any Airbender—he's the last of his kind and the current Avatar. Gifted with the ability to master all four elements, Aang's playful demeanor belies a deep sense of responsibility and an attachment to his duty as the Avatar that will change the world."
+ },
+ {
+  "path_name": "zenitsu",
+  "name": "Agatsuma Zenitsu",
+  "universe": "Demon Slayer",
+  "gate": "zenitsu_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Zenitsu Agatsuma is a member of the Demon Slayer Corps, who was once a timid and cowardly individual. However, when he is forced to face his fears during a demon attack, he awakens to his true potential and becomes a formidable warrior."
+ },
+ {
+  "path_name": "akame",
+  "name": "Akame",
+  "universe": "Akame ga Kill",
+  "gate": "akame_unlock",
+  "colors": [
+   0,
+   2,
+   3
+  ],
+  "bio": "Akame, the most talented killer of the assassin group Night Raid. Raised from a young age by the corrupt Empire, a chance assignment saw Akame turning on the nation that raised her. Now, she wields the fearsome blade Murasame to free the oppressed people from the tyranny of the Prime Minister."
+ },
+ {
+  "path_name": "allmight",
+  "name": "All Might",
+  "universe": "My Hero Academia",
+  "gate": "allmight_unlock",
+  "colors": [
+   1,
+   2,
+   3
+  ],
+  "bio": "Toshinori Yagi, the Symbol of Peace and the eighth wielder of the One For All quirk. Even as the embers of his power dwindle, he stands at the front of every fight and grins so the people behind him do not have to be afraid. Now he turns toward the next generation, ready to entrust the torch."
+ },
+ {
+  "path_name": "alphamon",
+  "name": "Alphamon",
+  "universe": "Digimon",
+  "gate": "alphamon_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Alphamon, the leader of the 13 Royal Knights. The Aloof Hermit wields the Seiken Gradalpha to cleave through enemies of the digital world, and stands behind a wall of Digi-Force avoidance fields that turn aside even the strongest of attacks."
+ },
+ {
+  "path_name": "alphonse",
+  "name": "Alphonse Elric",
+  "universe": "Fullmetal Alchemist",
+  "gate": "alphonse_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Alphonse Elric, the soul of a boy trapped in a suit of armor. After an ill-fated attempt at resurrecting his mother, Alphonse's body was lost in the exchange. After his brother Edward traded his arm and leg to seal his soul in armor, Alphonse joined him on a quest to restore what was taken from them."
+ },
+ {
+  "path_name": "seventeen",
+  "name": "Android 17",
+  "universe": "Dragon Ball",
+  "gate": "seventeen_unlock",
+  "colors": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "bio": "Once Dr. Gero's reluctant creation, Android 17 is a cyborg with a limitless internal energy reactor. Cool-headed and free-spirited, he fights at his own pace — cycling infinite energy into overwhelming barrages, barriers, and blasts."
+ },
+ {
+  "path_name": "arthur",
+  "name": "Arthur Boyle",
+  "universe": "Fire Force",
+  "gate": "arthur_unlock",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "A Third Generation pyrokinetic of Company 8 and the self-styled Knight King. Convinced of his own chivalric legend, Arthur's delusions are not madness but fuel — the harder he believes, the sharper his Plasma blade cuts, splitting the very moon."
+ },
+ {
+  "path_name": "yoh",
+  "name": "Asakura Yoh",
+  "universe": "Shaman King",
+  "gate": "always",
+  "colors": [
+   0
+  ],
+  "bio": "Asakura Yoh, an easygoing teenage shaman who hopes to win the Shaman Fight so he can laze about the rest of his life. Partnered with the six-hundred-year-old samurai spirit Amidamaru, Yoh fuses his soul with his ally to wield the Halo Blade, trusting in his bonds and his ability to find peace amid any storm."
+ },
+ {
+  "path_name": "asta",
+  "name": "Asta",
+  "universe": "Black Clover",
+  "gate": "always",
+  "colors": [
+   0,
+   1,
+   3
+  ],
+  "bio": "A Magic Knight of the Clover Kingdom, Asta wields the five-leaf clover grimoire and a variety of anti-magic swords."
+ },
+ {
+  "path_name": "tsuyu",
+  "name": "Asui Tsuyu (Froppy)",
+  "universe": "My Hero Academia",
+  "gate": "tsuyu_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Asui Tsuyu, the Rainy Season Hero: Froppy. A compassionate and cooperative girl, her Quirk, Frog, lets her do anything a frog can do."
+ },
+ {
+  "path_name": "bakugo",
+  "name": "Bakugo Katsuki",
+  "universe": "My Hero Academia",
+  "gate": "bakugo_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "One of the best UA rookies from the class 1-A. Bakugou has a short and aggressive temperament. His inviduality allows him to expel nitroglycerin from the palms and create forms of explosion. Besides this factor, Bakugou has a keen instinct and intelligence above the others."
+ },
+ {
+  "path_name": "ban",
+  "name": "Ban",
+  "universe": "Seven Deadly Sins",
+  "gate": "ban_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Undead Ban, the Fox's Sin of Greed. With his unique ability to 'rob' his targets of their strength, combined with the immortality he gained from the Fountain of Youth, Ban is a terrifying and unstoppable fighter."
+ },
+ {
+  "path_name": "blackstar",
+  "name": "Black Star",
+  "universe": "Soul Eater",
+  "gate": "blackstar_unlock",
+  "colors": [
+   0,
+   2
+  ],
+  "bio": "An assassin who loves the spotlight, Black Star is one of the top Maesters of the DWMA, along with his partner, Tsubaki Nakatsukasa."
+ },
+ {
+  "path_name": "broly",
+  "name": "Broly",
+  "universe": "Dragon Ball",
+  "gate": "broly_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "The Legendary Super Saiyan. Broly is a living engine of escalating destruction — every blow he takes only stokes his rage, swelling his power without limit until the battlefield itself is shattered beneath planet-cracking energy."
+ },
+ {
+  "path_name": "byakuya",
+  "name": "Byakuya Kuchiki",
+  "universe": "Bleach",
+  "gate": "byakuya_unlock",
+  "colors": [
+   1,
+   2,
+   3
+  ],
+  "bio": "Byakuya Kuchiki, the 28th head of the Kuchiki Clan, serves as the Captain of the 6th squad of the Gotei 13. He controls thousands of blades at once using his zanpakutou, crushing enemies beneath a storm of cherry blossoms."
+ },
+ {
+  "path_name": "cell",
+  "name": "Cell",
+  "universe": "Dragon Ball",
+  "gate": "cell_unlock",
+  "colors": [
+   0,
+   1
+  ],
+  "bio": "Cell, the Bio-Android assembled from the cells of every champion Gero could harvest. He fights as a curator of perfection, devouring the genetic record of his opponents to make his own form irreplaceable."
+ },
+ {
+  "path_name": "chrome",
+  "name": "Chrome Dokuro",
+  "universe": "Katekyo Hitman Reborn",
+  "gate": "chrome_unlock",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "Chrome Dokuro, one of the Vongola Mist Guardians. Despite being physically frail, Chrome is the vessel for Rokudo Mukuro, one of the most powerful illusionists in the world. Through her connection to Mukuro, Chrome can create devastatingly real illusions."
+ },
+ {
+  "path_name": "cooler",
+  "name": "Cooler",
+  "universe": "Dragon Ball",
+  "gate": "cooler_unlock",
+  "colors": [
+   0,
+   1,
+   3
+  ],
+  "bio": "Cooler, the elder brother of Frieza and an Armored Squadron commander whose patience and pride run deeper than his sibling's tantrums. A perfectionist conqueror who treats every opponent as an experiment in calibrated cruelty — strike them with what they can survive, then make sure they can never recover."
+ },
+ {
+  "path_name": "crona",
+  "name": "Crona",
+  "universe": "Soul Eater",
+  "gate": "crona_unlock",
+  "colors": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "bio": "Crona, a sad child who was raised by the witch Medusa. His mother's torment made him a prime vessel for the Black Blade Ragnarok, whose twisted power makes Crona a fearsome opponent while steadily driving him insane."
+ },
+ {
+  "path_name": "kid",
+  "name": "Death the Kid",
+  "universe": "Soul Eater",
+  "gate": "kid_unlock",
+  "colors": [
+   0,
+   1
+  ],
+  "bio": "Death the Kid, son of the Grim Reaper. A neurotic and symmetry-obsessed young meister, Kid's powers as a fledgling reaper are only just beginning to manifest."
+ },
+ {
+  "path_name": "diane",
+  "name": "Diane",
+  "universe": "Seven Deadly Sins",
+  "gate": "diane_unlock",
+  "colors": [
+   0,
+   1
+  ],
+  "bio": "Diane, the Serpent's Sin of Envy. A member of the Giant Clan, she wields her Sacred Treasure Gideon together with her ability to control the earth to cause wide-spread havoc."
+ },
+ {
+  "path_name": "edward",
+  "name": "Edward Elric",
+  "universe": "Fullmetal Alchemist",
+  "gate": "always",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "Edward Elric, the Fullmetal Alchemist. After a brush with forbidden alchemy cost him an arm and a leg and his brother's entire body, Edward became a state alchemist with the goal of uncovering the secret of the Philosopher's Stone to bring back everything he's lost."
+ },
+ {
+  "path_name": "emiyaarcher",
+  "name": "EMIYA (Archer)",
+  "universe": "Fate",
+  "gate": "emiyaarcher_unlock",
+  "colors": [
+   0,
+   3
+  ],
+  "bio": "EMIYA, an Archer-class Servant with no history. An enigma even among the Heroic Spirits, EMIYA possesses an arsenal of powerful artifacts and an unerring knowledge of other Heroic Spirits and their Noble Phantasms. When combined with his own ferocity and sharp battle acumen, EMIYA is a powerful and unpredictable foe."
+ },
+ {
+  "path_name": "emiya",
+  "name": "Emiya Shirou",
+  "universe": "Fate/stay night",
+  "gate": "always",
+  "colors": [
+   3
+  ],
+  "bio": "Emiya Shirou, a young mage thrust unwillingly into a Holy Grail War. His magic lets him trace the properties of other artifacts, reinforcing the mundane and even conjuring copies of enemy weapons."
+ },
+ {
+  "path_name": "eren",
+  "name": "Eren Yeager",
+  "universe": "Attack on Titan",
+  "gate": "always",
+  "colors": [
+   0
+  ],
+  "bio": "Eren Yeager is a teenager who swears revenge against Titans who killed his mother and destroyed his hometown. During the Battle of Trost, Eren's impulsiveness and brash nature lead him to making a near-fatal mistake that revealed he can become a Titan."
+ },
+ {
+  "path_name": "erza",
+  "name": "Erza Scarlet",
+  "universe": "Fairy Tail",
+  "gate": "erza_unlock",
+  "colors": [
+   0,
+   1,
+   3
+  ],
+  "bio": "Erza Scarlet, contender for the position of strongest mage in Fairy Tail. Her magic allows her to manifest suits of armor and powerful weapons, giving her a versatile edge."
+ },
+ {
+  "path_name": "esdeath",
+  "name": "Esdeath",
+  "universe": "Akame ga Kill",
+  "gate": "esdeath_unlock",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "Esdeath, the strongest general in the Empire's army, and the appointed leader of the Jaegers. Her philosophy is simple: the strong deserve to live, and the weak are toys to be played with."
+ },
+ {
+  "path_name": "frankenstein",
+  "name": "Frankenstein",
+  "universe": "Fate",
+  "gate": "frankenstein_unlock",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "Created through science, Frankenstein was summoned to serve as a Berserker servant of the Black Faction in the Great Holy Grail War. Her attacks carry devastating weight and she can channel lightning to destructive effect."
+ },
+ {
+  "path_name": "frieren",
+  "name": "Frieren",
+  "universe": "Frieren",
+  "gate": "always",
+  "colors": [
+   2
+  ],
+  "bio": "Frieren, Mage of the Hero's Party. After the defeat of the demon king and the death of Himmel the Hero, Frieren commits herself to getting to know humans a little more closely, despite her absurdly long lifespan and unusually strong powers."
+ },
+ {
+  "path_name": "tokoyami",
+  "name": "Fumikage Tokoyami",
+  "universe": "My Hero Academia",
+  "gate": "tokoyami_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Fumikage Tokoyami, the Jet-Black Hero: Tsukuyomi. His Quirk, Dark Shadow, allows him to manifest a sentient shadow with terrifying strength. As darkness gathers, Dark Shadow's power grows exponentially."
+ },
+ {
+  "path_name": "megumi",
+  "name": "Fushiguro Megumi",
+  "universe": "Jujutsu Kaisen",
+  "gate": "megumi_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Fushiguro Megumi, a jujutsu sorceror who summons shadow spirits to do his bidding. With a versatile array of various puppets, Megumi can adapt to a variety of situations."
+ },
+ {
+  "path_name": "gallantmon",
+  "name": "Gallantmon",
+  "universe": "Digimon",
+  "gate": "gallantmon_unlock",
+  "colors": [
+   0,
+   3
+  ],
+  "bio": "Gallantmon, one of the 13 Royal Knights. Tasked with defending the digital world from the 7 Demon Lords, Gallantmon wields its shield and spear to protect the weak and to eradicate evil wherever it exists."
+ },
+ {
+  "path_name": "ganta",
+  "name": "Ganta Igarashi",
+  "universe": "Deadman Wonderland",
+  "gate": "always",
+  "colors": [
+   3
+  ],
+  "bio": "Ganta Igarashi, the Deadman known as Woodpecker. After being framed for the murder of his classmates, Ganta is taken to the prison known as Deadman Wonderland, where he finds himself at the heart of a literal bloodbath."
+ },
+ {
+  "path_name": "gatomon",
+  "name": "Gatomon",
+  "universe": "Digimon",
+  "gate": "always",
+  "colors": [
+   0,
+   2
+  ],
+  "bio": "A Holy Beast Digimon. With a small body and a curious, prank-loving nature, its appearance does not match the true strength it possesses. "
+ },
+ {
+  "path_name": "genos",
+  "name": "Genos",
+  "universe": "One Punch Man",
+  "gate": "genos_unlock",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "Genos, the Rank-12 S Class Hero Demon Cyborg. Apprenticed to Saitama, Genos is an advanced fighting machine capable of unleashing blisteringly fast attacks and overwhelming energy assaults."
+ },
+ {
+  "path_name": "gilgamesh",
+  "name": "Gilgamesh",
+  "universe": "Fate",
+  "gate": "gilgamesh_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Gilgamesh, the legendary King of Heroes and a Heroic Spirit summoned in the role of Archer. Gilgamesh is a proud warrior, and can summon a myriad of Noble Phantasms from the endless vaults he amassed during his life to overwhelm his foes with their individual power or the sheer weight of their blades."
+ },
+ {
+  "path_name": "gogeta",
+  "name": "Gogeta",
+  "universe": "Dragon Ball",
+  "gate": "gogeta_unlock",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "Gogeta, the fusion between Goku and Vegeta. When the two strongest Saiyans combine, the result is a warrior so overwhelmingly powerful that even the mightiest beings in the universe become weaklings to toy with."
+ },
+ {
+  "path_name": "gon",
+  "name": "Gon Freecss",
+  "universe": "Hunter x Hunter",
+  "gate": "always",
+  "colors": [
+   0,
+   1
+  ],
+  "bio": "Gon Freecss, known for his unwavering determination and boundless potential, has faced countless challenges in his journey as a Hunter. Using his unique capacity for Nen, Gon utilizes his own Janken-style fighting technique to overwhelm his enemies."
+ },
+ {
+  "path_name": "gray",
+  "name": "Gray Fullbuster",
+  "universe": "Fairy Tail",
+  "gate": "gray_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Gray Fullbuster, ice mage of Fairy Tail. Natsu's number one rival, Gray is a cool and collected mage that uses ice moulding magic to craft wondrous creations from ice."
+ },
+ {
+  "path_name": "sakura",
+  "name": "Haruno Sakura",
+  "universe": "Naruto",
+  "gate": "sakura_unlock",
+  "colors": [
+   2,
+   3
+  ],
+  "bio": "Sakura is often seen as having a sharp intellect, excellent chakra control, and a deep admiration for Sasuke Uchiha. Initially perceived as having a more supportive role, her training under the Fifth Hokage, Tsunade, elevates her combat abilities, particularly in the area of medical ninjutsu and superhuman strength."
+ },
+ {
+  "path_name": "inosuke",
+  "name": "Hashibira Inosuke",
+  "universe": "Demon Slayer",
+  "gate": "inosuke_unlock",
+  "colors": [
+   0,
+   2
+  ],
+  "bio": "Hashibira Inosuke, the wild and uncontrollable beast man. From his trademark boar helmet to his chipped and jagged blades, everything about Inosuke is hazardous and free."
+ },
+ {
+  "path_name": "hashirama",
+  "name": "Hashirama Senju",
+  "universe": "Naruto",
+  "gate": "hashirama_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "The first Hokage, founder of the Leaf Village and God of Shinobi, Hashirama Senju. A shinobi of nearly unrivaled strength, the famous nemesis of Madara Uchiha boasts nearly limitless versatility and strength with his signature Wood-Style techniques. Thanks to: Hashirama Senju (lol)"
+ },
+ {
+  "path_name": "hawkmon",
+  "name": "Hawkmon",
+  "universe": "Digimon",
+  "gate": "hawkmon_unlock",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "Hawkmon, a calm and collected Avian Digimon. It attacks using its claws and beaks until it has stored enough energy to Digivolve. It works best when coordinating with teammates."
+ },
+ {
+  "path_name": "hibari",
+  "name": "Hibari Kyouya",
+  "universe": "Katekyo Hitman Reborn",
+  "gate": "hibari_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "The fearsome leader of the Namimori Disciplinary Committee and the Vongola Famiglia's Cloud Guardian. A lone wolf who answers to no one, Hibari drifts at the edge of the family like a cloud — and bites to death anyone who disturbs the peace of Namimori."
+ },
+ {
+  "path_name": "toga",
+  "name": "Himiko Toga",
+  "universe": "My Hero Academia",
+  "gate": "toga_unlock",
+  "colors": [],
+  "bio": "Himiko Toga is a cheerful girl with a sadistic streak, boasting membership in multiple powerful Villain groups. Once her attacks have siphoned blood from a victim, she can use her Quirk to Transform into them, allowing for easy infiltration and surprise attacks."
+ },
+ {
+  "path_name": "shinoa",
+  "name": "Hiragi Shinoa",
+  "universe": "Seraph Of The End",
+  "gate": "always",
+  "colors": [
+   3
+  ],
+  "bio": "Shinoa Hiragi is a sergeant of the Japanese Imperial Demon Army and the leader of Shinoa Squad. Armed with Shikama Doji, a demon-possessed scythe, she leads her squad with sharp wit and tactical cunning."
+ },
+ {
+  "path_name": "hisoka",
+  "name": "Hisoka Morow",
+  "universe": "Hunter x Hunter",
+  "gate": "hisoka_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Hisoka Morow, a pro hunter and former member of the Phantom Troupe. Hisoka is a fearsome fighter and insatiable killer, known to murder without a thought and to spare those he thinks might one day be enough to challenge him."
+ },
+ {
+  "path_name": "horohoro",
+  "name": "Horohoro",
+  "universe": "Shaman King",
+  "gate": "horohoro_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Horohoro, an Ainu shaman who competes in the Shaman Fight to win back the lands stolen from his people and create a vast coltsfoot field for the Koropokkuru. Partnered with the ice spirit Kororo, he channels biting winter winds and jagged icicles with a snowboard he treats as both weapon and stage."
+ },
+ {
+  "path_name": "hinata",
+  "name": "Hyuuga Hinata",
+  "universe": "Naruto",
+  "gate": "hinata_unlock",
+  "colors": [
+   0,
+   1
+  ],
+  "bio": "Hinata Hyuuga, heir to the prestigious Hyuuga family. Though she is normally kind and gentle, she has a fiercely loyal and protective spirit that awakens in defense of her loved ones."
+ },
+ {
+  "path_name": "ichibe",
+  "name": "Ichibe Hyosube",
+  "universe": "Bleach",
+  "gate": "ichibe_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Ichibe Hyosube, the monk of Squad Zero and the man who gives everything its true name. With his limitless ink, Ichibe strips his enemies of their meaning, diminishing their power until they are nothing before him."
+ },
+ {
+  "path_name": "ichigo",
+  "name": "Ichigo Kurosaki",
+  "universe": "Bleach",
+  "gate": "always",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "Ichigo is a substitute Shinigami who initially borrowed Rukia's power. Since then, Ichigo has unlocked and learned how to use his sword Zangetsu while developing a close bond with him."
+ },
+ {
+  "path_name": "inuyasha",
+  "name": "Inuyasha",
+  "universe": "InuYasha",
+  "gate": "always",
+  "colors": [
+   3
+  ],
+  "bio": "Inuyasha, the half-demon spawn of a powerful yokai and a human woman. Though powerful in his own right, his half-breed blood causes him to intermittently lose his abilities by becoming fully human, or become an unstoppable monster when his demonic blood takes over."
+ },
+ {
+  "path_name": "jeanne",
+  "name": "Iron Maiden Jeanne",
+  "universe": "Shaman King",
+  "gate": "jeanne_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Iron Maiden Jeanne, the saintly figurehead of the X-Laws. Entombed within a spiked iron maiden as eternal penance, Jeanne channels the judgment of the ancient god Shamash to cleanse the wicked from the Shaman Fight. Her frail body belies an iron conviction and a willingness to suffer so that evil may be purged."
+ },
+ {
+  "path_name": "yuji",
+  "name": "Itadori Yuuji",
+  "universe": "Jujutsu Kaisen",
+  "gate": "always",
+  "colors": [
+   1
+  ],
+  "bio": "Itadori Yuji, an up-and-coming jujutsu sorcerer. The tenuous vessel of the special grade cursed object Ryomen Sukuna, Yuji has an unbelievable capacity for cursed energy and a potential that he is only just beginning to explore."
+ },
+ {
+  "path_name": "jack",
+  "name": "Jack the Ripper",
+  "universe": "Fate",
+  "gate": "jack_unlock",
+  "colors": [
+   0,
+   2
+  ],
+  "bio": "Jack the Ripper, a Heroic Spirit summoned in the role of Assassin. Jack is an embodiment of the vengeful spirits of the lost and neglected children who died on the streets of London. She can call forth London's bleak smog and steal her enemies away to its cold streets."
+ },
+ {
+  "path_name": "jaden",
+  "name": "Jaden Yuki",
+  "universe": "Yu-Gi-Oh!",
+  "gate": "jaden_unlock",
+  "colors": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "bio": "Jaden Yuki, a new duelist in the next generation. Able to hear the voices inside the cards, he and his Elemental Hero cards are a force for righteousness."
+ },
+ {
+  "path_name": "jesse",
+  "name": "Jesse Anderson",
+  "universe": "Yu-Gi-Oh!",
+  "gate": "jesse_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Jesse Anderson, a duelist from North Academy who enters the Duel Academy. Jesse is kind and excitable, and his Crystal Beast monsters linger on the field to continue lending their strength to the battle."
+ },
+ {
+  "path_name": "nezuko",
+  "name": "Kamado Nezuko",
+  "universe": "Demon Slayer",
+  "gate": "nezuko_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Kamado Nezuko is the younger sister of Tanjiro and a demon herself, though she retains her human emotions and consciousness. After being turned into a demon by a powerful demon, Nezuko struggles to maintain her humanity and resist the urge to feed on humans."
+ },
+ {
+  "path_name": "tanjiro",
+  "name": "Kamado Tanjiro",
+  "universe": "Demon Slayer",
+  "gate": "always",
+  "colors": [
+   1
+  ],
+  "bio": "A kind-hearted and determined young man, Tanjiro Kamado is a demon slayer in search of a cure for his sister's demon curse. His journey is filled with danger and difficulty as he battles demons and uncovers the secrets of his past."
+ },
+ {
+  "path_name": "kitara",
+  "name": "Katara",
+  "universe": "Avatar",
+  "gate": "kitara_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "A Waterbender from the Southern Water Tribe. Kitara fights alongside the Avatar and commands water in every form — from slicing waves to deflecting ice and mending wounds."
+ },
+ {
+  "path_name": "ken",
+  "name": "Ken Kaneki",
+  "universe": "Tokyo Ghoul",
+  "gate": "always",
+  "colors": [
+   2
+  ],
+  "bio": "A human who's life changed forever after having a Ghoul's organ transplanted into his body. Kaneki is effectively both human and ghoul, and lives in two worlds where he doesn't feel like he belongs."
+ },
+ {
+  "path_name": "killua",
+  "name": "Killua Zoldyck",
+  "universe": "Hunter x Hunter",
+  "gate": "killua_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "A highly skilled assassin and a close friend of Gon, Killua Zoldyck is a complex and enigmatic young man. Trained since birth to be a lethal killer, Killua possesses incredible NORMAL and mental abilities that make him a formidable opponent. Despite his past, he befriends Gon and learns to value friendship and loyalty above all else."
+ },
+ {
+  "path_name": "king",
+  "name": "King",
+  "universe": "Seven Deadly Sins",
+  "gate": "king_unlock",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "The Fairy King Harlequin, known simply as King, and the Grizzly's Sin of Sloth. King is the protector of the Fairy Realm, and wields his shape-shifting spear Chastiefol to rule over the cycle of life and death."
+ },
+ {
+  "path_name": "koro",
+  "name": "Koro-sensei",
+  "universe": "Assassination Classroom",
+  "gate": "koro_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Koro-sensei, an enigmatic alien creature. After destroying half of the moon and threatening the entire world, an uneasy Earth grants him his one request: to teach a class of troubled students the art of how to end a life. Thanks to: Fghop"
+ },
+ {
+  "path_name": "korra",
+  "name": "Korra",
+  "universe": "Avatar",
+  "gate": "korra_unlock",
+  "colors": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "bio": "Korra, the successor to Avatar Aang. Korra is a willful Water Tribe woman who demonstrated a prodigious talent for bending from a young age. Her adaptability and Avatar talents make her an unpredictable and implacable opponent."
+ },
+ {
+  "path_name": "nobara",
+  "name": "Kugisaki Nobara",
+  "universe": "Jujutsu Kaisen",
+  "gate": "nobara_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Nobara is a first year sorceror studying alongside Itadori Yuji. Her special technique involves linking a doll to her enemy and channeling her cursed energy through her hammer and nails."
+ },
+ {
+  "path_name": "kurapika",
+  "name": "Kurapika",
+  "universe": "Hunter x Hunter",
+  "gate": "kurapika_unlock",
+  "colors": [
+   0,
+   2,
+   3
+  ],
+  "bio": "Kurapika is a Blacklist Hunter on the hunt for the thieves that murdered his clan. Using a vast repertoire of knowledge and a thirst for vengeance, Kurapika is on the hunt for the Scarlet Eyes of his clan."
+ },
+ {
+  "path_name": "rengoku",
+  "name": "Kyojuro Rengoku",
+  "universe": "Demon Slayer",
+  "gate": "rengoku_unlock",
+  "colors": [
+   0,
+   3
+  ],
+  "bio": "A Hashira of the Demon Slayer Corps, Rengoku is a eccentric yet enthusiastic swordsman, who harnesses his Flame Breathing style for devastating swordplay."
+ },
+ {
+  "path_name": "ladydevimon",
+  "name": "LadyDevimon",
+  "universe": "Digimon",
+  "gate": "ladydevimon_unlock",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "LadyDevimon, a Fallen Angel Digimon who haunts the dark corners of the Digital World on tattered, blackened wings. Cruel and patient, she returns every blow tenfold by leaving her own venom in the wounds, content to let her enemies rot from within."
+ },
+ {
+  "path_name": "lucy",
+  "name": "Lucy Heartfilia",
+  "universe": "Fairy Tail",
+  "gate": "lucy_unlock",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "Lucy Heartfilia, proud Celestial Spirit wizard of Fairy Tail. After a chance meeting with Natsu Dragneel, Lucy joined his guild and started a life of adventure. As a Celestial Spirit wizard, Lucy uses Zodiac Keys to summon outsiders to fight with her."
+ },
+ {
+  "path_name": "lyserg",
+  "name": "Lyserg Diethel",
+  "universe": "Shaman King",
+  "gate": "lyserg_unlock",
+  "colors": [
+   0,
+   3
+  ],
+  "bio": "Lyserg Diethel, a young English shaman-detective who entered the Shaman Fight to avenge the parents he lost to Hao's fire. Armed with a dowsing pendulum and his fairy guardian Morphin, Lyserg tracks his marks with relentless precision, weighing his thirst for vengeance against the righteousness of the X-Laws."
+ },
+ {
+  "path_name": "machinedramon",
+  "name": "Machinedramon",
+  "universe": "Digimon",
+  "gate": "machinedramon_unlock",
+  "colors": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "bio": "Machinedramon is a Machine Digimon, built by synthesizing the parts of many Cyborg Digimon."
+ },
+ {
+  "path_name": "madoka",
+  "name": "Madoka Kaname",
+  "universe": "Puella Magi Madoka Magica",
+  "gate": "always",
+  "colors": [
+   2
+  ],
+  "bio": "Madoka Kaname, the strongest magical girl. A girl with no wish, caught at the conflux of a destiny so incredible that it transcends time and space. As a magical girl, Madoka fights with her enchanted bow and arrow, and does everything she can to keep her friends safe from harm."
+ },
+ {
+  "path_name": "maka",
+  "name": "Maka Albarn",
+  "universe": "Soul Eater",
+  "gate": "always",
+  "colors": [
+   3
+  ],
+  "bio": "Maka Albarn is a two-star meister at Death Weapon Meister Academy. The daughter of Death's weapon partner, she became a scythe-meister and partnered with the demon scythe, Soul Evans."
+ },
+ {
+  "path_name": "mami",
+  "name": "Mami Tomoe",
+  "universe": "Puella Magi Madoka Magica",
+  "gate": "mami_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Mami Tomoe, a kind and generous classmate who becomes Madoka and Sayaka's mentor as magical girls. Her magic lets her control ribbons and summon a wide array of firearms and artillery."
+ },
+ {
+  "path_name": "marco",
+  "name": "Marco the Phoenix",
+  "universe": "One Piece",
+  "gate": "marco_unlock",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "Marco the Phoenix, former commander of the 1st Division of the Whitebeard Pirates. Using the power of the Hito Hito no Mi, Marco can transform into a nearly immortal phoenix, fighting on par with Admirals or healing the injured with his blue flames."
+ },
+ {
+  "path_name": "mash",
+  "name": "Mash Kyrielight",
+  "universe": "Fate",
+  "gate": "mash_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Mash Kyrielight is a Demi-Servant human fused with the Heroic Spirit Galahad. Created artifically to be a vessel for a Heroic Spirit's soul, she wields a Shield made from the Round Table to protect her Master."
+ },
+ {
+  "path_name": "mavis",
+  "name": "Mavis Vermillion",
+  "universe": "Fairy Tail",
+  "gate": "mavis_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Mavis Vermillion, the First Master of the Fairy Tail guild and the architect of the Strategy of Holy Stars. From behind the safety of her allies, Mavis pulls every thread of the battlefield at once — coordinating her guild with calm clarity, and unleashing the three Great Magics of Fairy Tail when fate demands it."
+ },
+ {
+  "path_name": "pegasus",
+  "name": "Maximillion Pegasus",
+  "universe": "Yu-Gi-Oh!",
+  "gate": "pegasus_unlock",
+  "colors": [
+   0,
+   1
+  ],
+  "bio": "Maximillion Pegasus, creator of Duel Monsters and host of the Duelist Kingdom tournament. With the power of the Millennium Eye, Pegasus reads his opponent's mind and traps them in shifting illusions, binding their strongest moves until they bend to his will."
+ },
+ {
+  "path_name": "kurotsuchi",
+  "name": "Mayuri Kurotsuchi",
+  "universe": "Bleach",
+  "gate": "kurotsuchi_unlock",
+  "colors": [
+   1,
+   2,
+   3
+  ],
+  "bio": "Captain of the 12th Division and head of the Shinigami Research and Development Institute, Mayuri Kurotsuchi treats every fight as an experiment with himself as the only protected variable. A self-modifying scientist who measures victory in data harvested and contingencies survived, his cruelty is methodical — every dose, every banishment, every poison is calibrated to produce a more interesting outcome."
+ },
+ {
+  "path_name": "megumin",
+  "name": "Megumin",
+  "universe": "Konosuba",
+  "gate": "megumin_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Megumin, the foremost archmage among Crimson Demons. Though her Explosion magic is dramatic and powerful, she will quickly find herself depleted and in need of allied support."
+ },
+ {
+  "path_name": "meliodas",
+  "name": "Meliodas",
+  "universe": "Seven Deadly Sins",
+  "gate": "always",
+  "colors": [
+   3
+  ],
+  "bio": "Meliodas, the captain of the Seven Deadly Sins and the Dragon's Sin of Wrath. Despite his appearance, Meliodas is ancient, and his experience leading the armies of demons and men have made him an unparalleled combatant."
+ },
+ {
+  "path_name": "midoriya",
+  "name": "Midoriya Izuku (Deku)",
+  "universe": "My Hero Academia",
+  "gate": "always",
+  "colors": [
+   0
+  ],
+  "bio": "Although he was born Quirkless, Midoriya Izuku earned the right to wield the mantle of One For All through his innate heroism and strong sense of justice."
+ },
+ {
+  "path_name": "mikasa",
+  "name": "Mikasa Ackerman",
+  "universe": "Attack on Titan",
+  "gate": "mikasa_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Mikasa Ackerman, a symbol of resilience, strength, and unwavering loyalty, lived in a world plagued by the constant threat of Titans. Her life, marked by battles and the quest for survival, made her one of the most skilled fighters of her time."
+ },
+ {
+  "path_name": "mine",
+  "name": "Mine",
+  "universe": "Akame ga Kill",
+  "gate": "mine_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Mine, a member of the assassin group Night Raid. A sharp-tongued genius sniper who wields the Teigu known as Pumpkin, a powerful long-range weapon that becomes more dangerous the more cornered its user is."
+ },
+ {
+  "path_name": "misaka",
+  "name": "Misaka Mikoto",
+  "universe": "A Certain Scientific Railgun",
+  "gate": "always",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "Misaka Mikoto, the ace of Tokiwadai Middle School. Misaka is one of seven Level 5 espers in Academy City, the world's bastion of esper research. Her abilities as an electromaster have her ranked third among the city's top espers."
+ },
+ {
+  "path_name": "luffy",
+  "name": "Monkey D. Luffy",
+  "universe": "One Piece",
+  "gate": "always",
+  "colors": [
+   3
+  ],
+  "bio": "Monkey D. Luffy, also known as 'Straw Hat Luffy', is the founder and captain of the increasingly infamous and powerful Straw Hat Pirates, as well as the most powerful of its top fighters. He believes that being the Pirate King means having the most freedom in the world. At age 7, Luffy accidentally ate the Gomu Gomu no Mi, which turned his body into rubber."
+ },
+ {
+  "path_name": "muichiro",
+  "name": "Muichiro Tokito",
+  "universe": "Demon Slayer",
+  "gate": "muichiro_unlock",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "The young Mist Hashira, Muichiro Tokito, is a remarkable prodigy in the Demon Slayer Corps, achieving his high rank with incredible speed. Initially, he appears detached and forgetful; a consequence of amnesia stemming from a past tragedy. In combat, he wields the Mist Breathing style with exceptional mastery."
+ },
+ {
+  "path_name": "myotismon",
+  "name": "Myotismon",
+  "universe": "Digimon",
+  "gate": "myotismon_unlock",
+  "colors": [
+   2,
+   3
+  ],
+  "bio": "Myotismon, the king of Undead Digimon. Originally a computer virus, Myotismon is a malignant and extremely cruel Digimon who uses his dark powers to debilitate his foes and extend his own unnatural life."
+ },
+ {
+  "path_name": "nagisa",
+  "name": "Nagisa Shiota",
+  "universe": "Assassination Classroom",
+  "gate": "always",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "Nagisa is a calm and somewhat reserved boy, with a sharp eye and a kind heart. Despite all this, after a chance meeting with Koro-sensei, he discovers that he has a natural talent for assassination. Thanks to: Fghop"
+ },
+ {
+  "path_name": "naruto",
+  "name": "Naruto Uzumaki",
+  "universe": "Naruto",
+  "gate": "always",
+  "colors": [
+   0,
+   1,
+   2
+  ],
+  "bio": "Naruto is known for his boisterous personality, unwavering determination, and dream of becoming the Hokage. Despite being ostracized for having the Nine-Tailed Fox sealed within him, he remains optimistic and seeks recognition from his peers. Naruto's main techniques during this period include the Shadow Clone Jutsu and the Rasengan."
+ },
+ {
+  "path_name": "natsu",
+  "name": "Natsu Dragneel",
+  "universe": "Fairy Tail",
+  "gate": "always",
+  "colors": [
+   3
+  ],
+  "bio": "Natsu Dragneel, infamous fire mage of Fairy Tail. He was raised by a dragon, Igneel, who taught him dragon-slaying magic that he wields with a pure heart and a quick temper."
+ },
+ {
+  "path_name": "neferpitou",
+  "name": "Neferpitou",
+  "universe": "Hunter x Hunter",
+  "gate": "neferpitou_unlock",
+  "colors": [
+   0,
+   3
+  ],
+  "bio": "Neferpitou, firstborn of the Chimera Ant King's three Royal Guards. Though easily distracted and eager for opportunities to play, Neferpitou places the King's goals far above their own safety or life."
+ },
+ {
+  "path_name": "nel",
+  "name": "Nelliel tu Odelschwank",
+  "universe": "Bleach",
+  "gate": "nel_unlock",
+  "colors": [
+   0,
+   2
+  ],
+  "bio": "Nelliel tu Odelschwank, the former Tres Espada. With her zanpakuto Gamuza unleashed, Nel shields her allies from harm and punishes enemies who would dare take advantage of their weaknesses."
+ },
+ {
+  "path_name": "nimaiya",
+  "name": "Nimaiya Oetsu",
+  "universe": "Bleach",
+  "gate": "nimaiya_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "The God of the Sword, Divine General of the West, Third Officer of the Zero Division and the creator of Zanpakutou, Nimaiya Oetsu sits at the pinnacle of swordsmanship. His blade Sayafushi is so sharp that it has been deemed a failure as a zanpakutou, though he wields it to deadly effect."
+ },
+ {
+  "path_name": "noelle",
+  "name": "Noelle Silva",
+  "universe": "Black Clover",
+  "gate": "noelle_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Noelle Silva is a noblewoman and junior Magic Knight of the Royal Knights. Though proud and reserved, Noelle is driven by kindness and a desire to prove herself to the world."
+ },
+ {
+  "path_name": "nonon",
+  "name": "Nonon Jakazure",
+  "universe": "Kill la Kill",
+  "gate": "nonon_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Nonon Jakazure, one of the Elite Four of Honnoji Academy's Student Council. Her Three-Star Goku uniform transforms into a gigantic LRAD capable of launching barrages of musical attacks."
+ },
+ {
+  "path_name": "omnimon",
+  "name": "Omnimon",
+  "universe": "Digimon",
+  "gate": "omnimon_unlock",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "One of the Royal Knights, a Digimon created for the singular purpose of defeating the Demon Lords. A fusion of WarGreymon and MetalGarurumon, Omnimon combines the strengths of both Digimon into a formidable duelist. Thanks to: Kiru Kasai"
+ },
+ {
+  "path_name": "orihime",
+  "name": "Orihime Inoue",
+  "universe": "Bleach",
+  "gate": "orihime_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Orihime Inoue, comrade of Kurosaki Ichigo. Though not a Shinigami herself, in a time of true crisis Orihime awakened the Shun Shun Rikka, a clade of six heavenly flowers that protect her and those important to her from harm."
+ },
+ {
+  "path_name": "ace",
+  "name": "Portgas D. Ace",
+  "universe": "One Piece",
+  "gate": "ace_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "The pirate known as \"Fire Fist\" Ace, wielder of the Mera Mera no Mi, is a proud and talented member of the Whitebeard Pirates. With a body made of fire and a fearsome stubbornness, Ace is a resilient fighter and a dangerous foe."
+ },
+ {
+  "path_name": "renamon",
+  "name": "Renamon",
+  "universe": "Digimon",
+  "gate": "renamon_unlock",
+  "colors": [
+   0,
+   1,
+   2
+  ],
+  "bio": "This vulpine Digimon is a refined and agile fighter. Renamon specializes in high-speed combat, often utilizing its agility and illusionary techniques to confuse opponents before delivering a decisive blow."
+ },
+ {
+  "path_name": "rimuru",
+  "name": "Rimuru Tempest",
+  "universe": "That Time I Got Reincarnated as a Slime",
+  "gate": "always",
+  "colors": [
+   0,
+   2,
+   3
+  ],
+  "bio": "Rimuru is the founder and King of the monster country Tempest of the Jura Forest. He is regarded as one of the strongest among the Eight Star Demon Lords."
+ },
+ {
+  "path_name": "rob",
+  "name": "Rob Lucci",
+  "universe": "One Piece",
+  "gate": "rob_unlock",
+  "colors": [
+   2,
+   3
+  ],
+  "bio": "Rob Lucci, the 'Massacre Weapon' of Cipher Pol. Known amongst the organization as the strongest assassin in history, Rob's mastery over Rokushiki is unparalleled. With his Devil Fruit's power to transform him into a powerful leopard, Rob does the dirty work of the World Government with cold-blooded effectiveness."
+ },
+ {
+  "path_name": "law",
+  "name": "Trafalgar Law",
+  "universe": "One Piece",
+  "gate": "law_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Trafalgar D. Water Law, the \"Surgeon of Death\" and captain of the Heart Pirates. With the Ope Ope no Mi he raises a ROOM and rearranges everything within it — swapping positions, cutting without a wound, and turning his enemies' own strikes against their allies."
+ },
+ {
+  "path_name": "zoro",
+  "name": "Roronoa Zoro",
+  "universe": "One Piece",
+  "gate": "zoro_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "As a master of the Three Sword Style, which he created during his childhood, Zoro is one of the most powerful combatants of the Straw Hat pirate crew. His dream is to become the greatest swordsman in the world."
+ },
+ {
+  "path_name": "ryohei",
+  "name": "Ryohei Sasagawa",
+  "universe": "Katekyo Hitman Reborn",
+  "gate": "ryohei_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Sasagawa Ryohei, the Vongola Guardian of the Sun. Ryohei is an exuberant, if slightly oblivious, member of Sawada Tsunayoshi's growing Mafia family. An avid boxer, his motto is to live 'to the extreme!', which is something that he extends to all facets of life. He immediately and enthusiastically wants to be included in anything he sees."
+ },
+ {
+  "path_name": "sukuna",
+  "name": "Ryomen Sukuna",
+  "universe": "Jujutsu Kaisen",
+  "gate": "sukuna_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Ryomen Sukuna, the strongest Jujutsu sorcerer in history. Thought to originally be a demon, Sukuna actually split his soul between his 20 indestructible fingers to gain immortality. He bides his time until he has a chance to walk the earth once again."
+ },
+ {
+  "path_name": "ryuko",
+  "name": "Ryuko Matoi",
+  "universe": "Kill la Kill",
+  "gate": "always",
+  "colors": [
+   0,
+   3
+  ],
+  "bio": "Ryuko Matoi, a hybrid human fused with Life Fibers. Bearing one half of a red Scissor Blade, Ryuko searches for the person bearing the other half, who used that weapon to murder her father."
+ },
+ {
+  "path_name": "saber",
+  "name": "Saber (Arturia Pendragon)",
+  "universe": "Fate",
+  "gate": "saber_unlock",
+  "colors": [
+   0,
+   1
+  ],
+  "bio": "Saber, the Heroic Spirit Arturia Pendragon. The famous wielder of Excalibur, Saber has top notch combat and defensive abilities and can go toe-to-toe with nearly any combatant. Her powerful blade can demolish entire fortresses."
+ },
+ {
+  "path_name": "jupiter",
+  "name": "Sailor Jupiter",
+  "universe": "Sailor Moon",
+  "gate": "jupiter_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Makoto Kino, the girl known as Sailor Jupiter. A naturally strong girl with a tomboyish presentation, Jupiter is actually a gentle and kind Sailor Senshi. Though her specialty is her physical strength, she can also control plants and devastating electrical energy."
+ },
+ {
+  "path_name": "mars",
+  "name": "Sailor Mars",
+  "universe": "Sailor Moon",
+  "gate": "mars_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Rei Hino is a Shinto Priestess better known as her alter ego, Sailor Mars. Together with the rest of the Sailor Guardians, they protect the Solar System from evil."
+ },
+ {
+  "path_name": "mercury",
+  "name": "Sailor Mercury",
+  "universe": "Sailor Moon",
+  "gate": "mercury_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Sailor Mercury, also known as Ami Mizuno, is the brain of the Sailor Guardians, possessing an incredible IQ and a calm, analytical nature. Despite her shy demeanor, her unwavering dedication to her friends and her dream of becoming a doctor make her a vital pillar of the team."
+ },
+ {
+  "path_name": "saturn",
+  "name": "Sailor Saturn",
+  "universe": "Sailor Moon",
+  "gate": "saturn_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Tomoe Hotaru, the girl known as Sailor Saturn. After being killed in a laboratory accident as a child, Hotaru's father makes a sinister bargain to restore her to life. Armed with the Silence Glaive, Sailor Saturn fights with the power of death itself."
+ },
+ {
+  "path_name": "uranus",
+  "name": "Sailor Uranus",
+  "universe": "Sailor Moon",
+  "gate": "uranus_unlock",
+  "colors": [
+   1,
+   2,
+   3
+  ],
+  "bio": "Tenoh Haruka, the soldier of the sky. Sworn to defend the Outer Solar System alongside Neptune, Uranus carries the Space Sword and answers every threat with the resolve of a knight."
+ },
+ {
+  "path_name": "venus",
+  "name": "Sailor Venus",
+  "universe": "Sailor Moon",
+  "gate": "venus_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Minako Aino is the Sailor Guardian of Love and Beauty, known as Sailor Venus. As the leader of the Inner Senshi and a skilled combatant, she uses her radiant attacks and chain whip to dazzle enemies and protect her allies."
+ },
+ {
+  "path_name": "saitama",
+  "name": "Saitama",
+  "universe": "One Punch Man",
+  "gate": "always",
+  "colors": [
+   0
+  ],
+  "bio": "Saitama is the titular One Punch Man. As the current strongest known being in the universe, he has lost all joy and meaning since the only wish he has is to have a good fight."
+ },
+ {
+  "path_name": "sasuke",
+  "name": "Sasuke Uchiha",
+  "universe": "Naruto",
+  "gate": "sasuke_unlock",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "Uchiha Sasuke, last remaining member of the Uchiha clan. When his brother murdered his entire family in the dead of night, it set Sasuke on a path of vengeance that would take him to the heights and depths of the shinobi world."
+ },
+ {
+  "path_name": "gojo",
+  "name": "Satoru Gojo",
+  "universe": "Jujutsu Kaisen",
+  "gate": "gojo_unlock",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "Satoru Gojo, a special grade jujutsu sorceror and widely accepted to be the strongest in the world. With the use of his Infinity technique, he has total control over space and a nearly limitless amount of energy and power."
+ },
+ {
+  "path_name": "satsuki",
+  "name": "Satsuki Kiryuin",
+  "universe": "Kill la Kill",
+  "gate": "satsuki_unlock",
+  "colors": [
+   0,
+   1
+  ],
+  "bio": "Satsuki Kiryuin, the president of Honnoji Academy's Student Council. A revered figure of absolute authority, Satsuki is a talented user of her inherited Kamui, a proud perfectionist who does not tolerate mistakes."
+ },
+ {
+  "path_name": "tsunayoshi",
+  "name": "Sawada Tsunayoshi",
+  "universe": "Katekyo Hitman Reborn",
+  "gate": "always",
+  "colors": [
+   1
+  ],
+  "bio": "Sawada Tsunayoshi, the tenth head of the Vongola Family. Unconfident and timid, yet fiercely loyal to his friends, Tsuna is the unwilling head of a mafia family, and wielder of the Vongola Flames of the Sky."
+ },
+ {
+  "path_name": "sayaka",
+  "name": "Sayaka Miki",
+  "universe": "Puella Magi Madoka Magica",
+  "gate": "sayaka_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Sayaka Miki, Madoka's close friend. A rash, stubborn, but ultimately kind warrior, Sayaka becamse a Magical Girl to protect Madoka from harm, but carries on her duties with a heart full of justice and a resolute wish."
+ },
+ {
+  "path_name": "semiramis",
+  "name": "Semiramis",
+  "universe": "Fate",
+  "gate": "semiramis_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "The Wise Queen of Assyria, Semiramis is an Assassin and Caster-type Servant summoned by Shirou Kotomine in the Holy Grail War of Fate/Apocrypha."
+ },
+ {
+  "path_name": "kaiba",
+  "name": "Seto Kaiba",
+  "universe": "Yu-Gi-Oh!",
+  "gate": "kaiba_unlock",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "Seto Kaiba, wealthy owner of Kaiba Corp and talented duelist. Though he tends to wield his wealth as a cudgel to solve problems, he is also an undeniably skilled duelist, and one of the only true rivals of Yugi Mutou, the King of Games."
+ },
+ {
+  "path_name": "sheele",
+  "name": "Sheele",
+  "universe": "Akame ga Kill",
+  "gate": "sheele_unlock",
+  "colors": [
+   2,
+   3
+  ],
+  "bio": "Sheele, an assassin of Night Raid. A compassionate woman who, in a moment of life-threatening danger, discovered she had a talent for murder. She wields Extase, a pair of giant scissors that can cut through anything."
+ },
+ {
+  "path_name": "shinra",
+  "name": "Shinra Kusakabe",
+  "universe": "Fire Force",
+  "gate": "always",
+  "colors": [
+   0
+  ],
+  "bio": "Shinra Kusakabe is a pyrokinetic in the Special Fire Force Company 8. Shinra wants to become a hero, protecting the innocent from Spontaneous Human Combustion with the power of his own flames."
+ },
+ {
+  "path_name": "kuroko",
+  "name": "Shirai Kuroko",
+  "universe": "A Certain Scientific Railgun",
+  "gate": "kuroko_unlock",
+  "colors": [
+   0,
+   3
+  ],
+  "bio": "Shirai Kuroko, level 4 esper and Misaka Mikoto's devoted underclassman. A talented member of Judgement, Academy City's organized esper task force, Kuroko puts her all into her work, constantly improving while maintaining a strict code of justice. Her ability to teleport both objects and herself make her an unpredictable foe."
+ },
+ {
+  "path_name": "shiro",
+  "name": "Shiro",
+  "universe": "Deadman Wonderland",
+  "gate": "shiro_unlock",
+  "colors": [],
+  "bio": "Shiro is a childhood friend of Ganta Igarashi. Carefree, loyal and friendly, Shiro loves sweets and will do anything to protect Ganta from harm."
+ },
+ {
+  "path_name": "shokuhou",
+  "name": "Shokuhou Misaki",
+  "universe": "A Certain Scientific Railgun",
+  "gate": "shokuhou_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Shokuhou Misaki, the Majesty of Tokiwadai. The 5th ranked Esper of Academy City, with the most powerful mind control power on record, 'Mental Out'. Though she is the leader of the school's largest clique, her ability to compel others has left her personally isolated."
+ },
+ {
+  "path_name": "gunha",
+  "name": "Sogiita Gunha",
+  "universe": "A Certain Scientific Railgun",
+  "gate": "gunha_unlock",
+  "colors": [
+   2,
+   3
+  ],
+  "bio": "Sogiita Gunha, 7th-ranked esper in Academy City. Gunha's power is a mystery to even the most experienced scientists, though he personally believes that with a little guts, anything is possible."
+ },
+ {
+  "path_name": "gohan",
+  "name": "Son Gohan",
+  "universe": "Dragon Ball",
+  "gate": "gohan_unlock",
+  "colors": [
+   0,
+   2
+  ],
+  "bio": "Son Gohan, first child of Son Goku. Though he's only half-Saiyan, his strength surpassed that of his father when he was still a teenager. When his allies are hurt, an unbelievable latent power awakens in him."
+ },
+ {
+  "path_name": "goku",
+  "name": "Son Goku",
+  "universe": "Dragon Ball",
+  "gate": "always",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "Son Goku, a Saiyan raised on Earth. A lifelong martial artist with a pure heart, Goku shook free of the shackles of his warrior race and became Earth's greatest champion."
+ },
+ {
+  "path_name": "soul",
+  "name": "Soul Evans",
+  "universe": "Soul Eater",
+  "gate": "soul_unlock",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "Soul Evans is a demon weapon born into a family of famous musicians. After discovering his weapon abilities, Soul joined Death Weapon Meister Academy where he partnered with the scythe-meister, Maka Albarn."
+ },
+ {
+  "path_name": "squalo",
+  "name": "Superbia Squalo",
+  "universe": "Katekyo Hitman Reborn",
+  "gate": "squalo_unlock",
+  "colors": [
+   0,
+   2
+  ],
+  "bio": "Superbia Squalo, second-in-command of the Varia. A savage and proud swordsman, Squalo has travelled the world defeating swordmasters, all for the sake of crowning himself Sword Emperor."
+ },
+ {
+  "path_name": "tamaki",
+  "name": "Tamaki Kotatsu",
+  "universe": "Fire Force",
+  "gate": "tamaki_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Tamaki Kotatsu is a Third Generation pyrokinetic firefighter who fights alongside Company 8. She uses her Nekomata Ignition to manifest feline flames for enhanced combat agility. Despite struggling with a supernatural clumsiness called Lucky Lecher Lure, she remains fiercely dedicated to protecting her allies."
+ },
+ {
+  "path_name": "tatsumaki",
+  "name": "Tatsumaki",
+  "universe": "One Punch Man",
+  "gate": "tatsumaki_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Tatsumaki, the Tornado of Terror, is the Hero Associations Rank 2 hero, and the most powerful esper in the world. She prefers to work alone, using her unparalleled psychic powers and caustic personality to ward off both threats and allies."
+ },
+ {
+  "path_name": "tatsumi",
+  "name": "Tatsumi",
+  "universe": "Akame ga Kill",
+  "gate": "always",
+  "colors": [
+   0
+  ],
+  "bio": "Tatsumi, the newest member of Night Raid. Heading to the big city with dreams of fame and fortune, Tatsumi's dreams are quickly dashed as he is introduced to the darkness that lurks there. He decided to join Night Raid, a group of rebel assassins, to help make the country a safe and just place for all."
+ },
+ {
+  "path_name": "uzui",
+  "name": "Tengen Uzui",
+  "universe": "Demon Slayer",
+  "gate": "uzui_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Tengen Uzui, the Sound Hashira of the Demon Slayer Corps. A ninja by trade, Tengen is a versatile swordsman with exceptional hearing. Using his ninja training and Sound Breathing techniques, he can orchestrate miracles on the battlefield."
+ },
+ {
+  "path_name": "muzan",
+  "name": "Muzan Kibutsuji",
+  "universe": "Demon Slayer",
+  "gate": "muzan_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Muzan Kibutsuji, the progenitor of all demons and King of Demons. He bleeds his enemies dry with his Blood Demon Art, experiments on his own to grow stronger, and seals every wound the instant it is made."
+ },
+ {
+  "path_name": "lizandpatty",
+  "name": "The Thompson Sisters (Liz and Patty)",
+  "universe": "Soul Eater",
+  "gate": "lizandpatty_unlock",
+  "colors": [
+   0,
+   1
+  ],
+  "bio": "Liz and Patty Thompson are demon weapon sisters from Brooklyn. Originally a pair of mugger pistols who terrorized the streets, they were taken in by Death the Kid and became his Demon Twin Guns. They share a single body, switching between Liz and Patty as the active sister."
+ },
+ {
+  "path_name": "halibel",
+  "name": "Tia Halibel",
+  "universe": "Bleach",
+  "gate": "halibel_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Tia Halibel, the Tres Espada and Aspect of Sacrifice. Stoic and dutiful, she shields her allies by drawing damage onto herself, then unleashes the building tide as her Resurrección, Tiburón, is forced into release."
+ },
+ {
+  "path_name": "todoroki",
+  "name": "Todoroki Shoto",
+  "universe": "My Hero Academia",
+  "gate": "todoroki_unlock",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "Todoroki Shoto from UA's class 1-A. Son of the No. 2 hero Endeavor, he wields both fire and ice through his Half-Hot Half-Cold individuality. He balances both sides of his power to overwhelm opponents with either frozen barrages or blistering heat."
+ },
+ {
+  "path_name": "toph",
+  "name": "Toph Beifong",
+  "universe": "Avatar",
+  "gate": "toph_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Toph Beifong, one of the most powerful earthbenders of her time. Despite being born blind, she acts with startling precision using her sense of touch and her earthbending prowess."
+ },
+ {
+  "path_name": "toudou",
+  "name": "Toudou Touka",
+  "universe": "Chivalry of a Failed Knight",
+  "gate": "toudou_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Toudou Touka, the heir to the Toudou-ryu school of swordsmanship. A prodigious fighter with a stoic exterior, Touka's lightning-fast draw is said to be able to cut down any opponent the moment they reveal an opening."
+ },
+ {
+  "path_name": "touka",
+  "name": "Touka Kirishima",
+  "universe": "Tokyo Ghoul",
+  "gate": "touka_unlock",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "Touka Kirishima is a fiercely independent and determined character in the world of Tokyo Ghoul. She is a ghoul, a creature that must consume human flesh to survive, and is a member of the ghoul group known as Anteiku."
+ },
+ {
+  "path_name": "tsubaki",
+  "name": "Tsubaki Nakatsukasa",
+  "universe": "Soul Eater",
+  "gate": "tsubaki_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Tsubaki Nakatsukasa, a talented Demon Weapon and the devoted partner of Black Star. She can change into a variety of different weapon forms to fit the situation, a rarity among Weapons."
+ },
+ {
+  "path_name": "itachi",
+  "name": "Uchiha Itachi",
+  "universe": "Naruto",
+  "gate": "itachi_unlock",
+  "colors": [
+   2,
+   3
+  ],
+  "bio": "Uchiha Itachi, the prodigy of the Uchiha clan and a member of the Akatsuki. A pacifist torn between his village and his family, he wields the Mangekyou Sharingan's three sacred techniques — Tsukuyomi, Amaterasu, and Susanoo — and a will sharp enough to play every side at once."
+ },
+ {
+  "path_name": "uraraka",
+  "name": "Uraraka Ochaco",
+  "universe": "My Hero Academia",
+  "gate": "uraraka_unlock",
+  "colors": [
+   0,
+   2
+  ],
+  "bio": "A skilled fighter and member of the U.A. High School's Hero Course, Uraraka is a cheerful and optimistic young woman with a heart of gold. Her Quirk, Zero Gravity, allows her to manipulate gravity, making objects weightless with a touch."
+ },
+ {
+  "path_name": "usopp",
+  "name": "Usopp",
+  "universe": "One Piece",
+  "gate": "usopp_unlock",
+  "colors": [],
+  "bio": "C'mon, you know him, he's Usopp. Slingshot guy, yeah."
+ },
+ {
+  "path_name": "boruto",
+  "name": "Uzumaki Boruto",
+  "universe": "Naruto",
+  "gate": "boruto_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Uzumaki Boruto, son of Naruto. Though similar in personality, Boruto's upbringing was the polar opposite of Naruto's: surrounded by friends, encouraged and nurtured by his doting parents, Boruto's talents as a shinobi are only matched by his pride and urge to prove himself."
+ },
+ {
+  "path_name": "vegeta",
+  "name": "Vegeta",
+  "universe": "Dragon Ball",
+  "gate": "vegeta_unlock",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "Vegeta, legendary prince of the Saiyans. A powerful and relentless warrior, Vegeta bears the pride of his fallen race on his back and never accepts defeat."
+ },
+ {
+  "path_name": "veldora",
+  "name": "Veldora Tempest",
+  "universe": "That Time I Got Reincarnated as a Slime",
+  "gate": "veldora_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Veldora Tempest, the True Storm Dragon and one of the Four True Dragons. Sealed away for centuries, his vast aura and storm-bending power return like an earthquake whenever the slumbering dragon is roused to act."
+ },
+ {
+  "path_name": "xanxus",
+  "name": "Xanxus",
+  "universe": "Katekyo Hitman Reborn",
+  "gate": "xanxus_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Xanxus is the son of the Vongola family's Ninth Boss, and the leader of the Varia, its independent assassination squad. He possesses the Flames of Wrath, a power made even more devastating when used in conjunction with his handguns."
+ },
+ {
+  "path_name": "yamamoto",
+  "name": "Yamamoto Takeshi",
+  "universe": "Katekyo Hitman Reborn",
+  "gate": "yamamoto_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Yamamoto Takeshi, the Vongola Guardian of Rain. The heir to the Shigure Soen Ryu style of swordsmanship, Yamamoto is a mild-mannered teenager who has more interest in enjoying his time with his friends than improving the Vongola Mafia family."
+ },
+ {
+  "path_name": "yubel",
+  "name": "Yubel",
+  "universe": "Yu-Gi-Oh!",
+  "gate": "yubel_unlock",
+  "colors": [
+   2,
+   3
+  ],
+  "bio": "Yubel is a spirit-bonded Duel Monster from the Duel Academy era, devoted to Jaden Yuki to the point of obsession. Possessing the body of those who once swore to protect her, she manifests as a serpentine fiend whose love is inseparable from torment — every cruelty she inflicts is offered as proof of devotion."
+ },
+ {
+  "path_name": "yugi",
+  "name": "Yugi Mutou",
+  "universe": "Yu-Gi-Oh!",
+  "gate": "always",
+  "colors": [
+   2
+  ],
+  "bio": "Yugi Mutou, bearer of the Millenium Puzzle and vessel for the ancient pharaoh Atem. Though his heart is peaceful and kind, when pushed into a corner he calls forth Atem's power to become the King of Games."
+ },
+ {
+  "path_name": "rakko",
+  "name": "Yumiya Rakko",
+  "universe": "A Certain Scientific Railgun",
+  "gate": "rakko_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Yumiya Rakko, a Hound Company sniper trained to hunt espers from outside their range. Patient and analytical, she opens engagements with a single bleeding round and lets the wound do the rest of the work."
+ },
+ {
+  "path_name": "yuno",
+  "name": "Yuno Grinberryall",
+  "universe": "Black Clover",
+  "gate": "yuno_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Yuno is an orphan left at a church after the downfall of his family, the rulers of the Spade Kingdom. Along with his partner, the wind spirit Sylph, Yuno wields his four-leaf clover grimoire in service of the Royal Knights."
+ },
+ {
+  "path_name": "impmon",
+  "name": "Impmon",
+  "universe": "Digimon",
+  "gate": "impmon_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Impmon, a small but vicious Rookie Digimon with a chip on its shoulder. Quick to anger and eager to prove itself, it hurls Badaboom fireballs at anyone who looks down on it - and when pushed to the brink, Warp Digivolves into the demon lord Beelzemon."
+ },
+ {
+  "path_name": "adam",
+  "name": "Adam",
+  "universe": "Record of Ragnarok",
+  "gate": "adam_unlock",
+  "colors": [
+   2,
+   3
+  ],
+  "bio": "The First Human. Created by God in His own image and cast out of Eden, Adam fights on behalf of humanity in Ragnarok, wielding Divine Reflection to turn the gods' own power against them. His unblinking Eyes of the Lord let him endure any blow."
+ },
+ {
+  "path_name": "toji",
+  "name": "Fushiguro Toji",
+  "universe": "Jujutsu Kaisen",
+  "gate": "toji_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Toji Fushiguro, the Sorcerer Killer. Born into the Zenin clan with Heavenly Restriction, he traded all cursed energy for a peerless body - able to hunt jujutsu sorcerers with an arsenal of cursed tools no technique can anticipate."
+ },
+ {
+  "path_name": "levi",
+  "name": "Levi Ackerman",
+  "universe": "Attack on Titan",
+  "gate": "levi_unlock",
+  "colors": [
+   0,
+   3
+  ],
+  "bio": "Humanity's Strongest Soldier. Captain of the Survey Corps' Special Operations Squad, Levi cuts down Titans with unmatched speed and precision on his ODM gear - relentless, disciplined, and never willing to let a comrade's death go unanswered."
+ },
+ {
+  "path_name": "gasai",
+  "name": "Yuno Gasai",
+  "universe": "Mirai Nikki",
+  "gate": "gasai_unlock",
+  "colors": [
+   0,
+   2,
+   3
+  ],
+  "bio": "The Yandere. Armed with her Future Diary and a devotion to Yukiteru Amano that borders on madness, Yuno Gasai will cut down anyone who threatens him - reading their every move, deflecting their strikes, and answering each attack with an axe."
+ },
+ {
+  "path_name": "blackwargreymon",
+  "name": "BlackWarGreymon",
+  "universe": "Digimon",
+  "gate": "blackwargreymon_unlock",
+  "colors": [],
+  "bio": "An artificially-created Mega Digimon born from a hundred Control Spires, BlackWarGreymon is a being of overwhelming power searching for the meaning of its own existence. Cold and methodical, it cleaves through defenses with its Dramon Destroyers and tears its foes apart with the Black Tornado."
+ },
+ {
+  "path_name": "astolfo",
+  "name": "Astolfo",
+  "universe": "Fate",
+  "gate": "astolfo_unlock",
+  "colors": [
+   0,
+   2,
+   3
+  ],
+  "bio": "The Rider of Black. A cheerful, fearless knight of Charlemagne who rides the Hippogriff into battle, Astolfo wields a trove of Noble Phantasms - the maddening lance Trap of Argalia, the anti-magic tome Casseur de Logistille, and La Black Luna to sweep the field."
+ },
+ {
+  "path_name": "aiohto",
+  "name": "Ai Ohto",
+  "universe": "Wonder Egg Priority",
+  "gate": "aiohto_unlock",
+  "colors": [
+   0,
+   3
+  ],
+  "bio": "A withdrawn 14-year-old with heterochromatic eyes, isolated after the suicide of her only friend, Koito. To bring her back, Ai descends into a dream world each night and arms herself with gachapon weapons to battle the Wonder Killers that torment other grieving girls - fragile and full of doubt, but refusing to give up."
+ },
+ {
+  "path_name": "jinwoo",
+  "name": "Sung Jin-woo",
+  "universe": "Solo Leveling",
+  "gate": "jinwoo_unlock",
+  "colors": [],
+  "bio": "The Shadow Monarch. Once ranked the world's weakest E-rank hunter, Sung Jin-woo alone can grow without limit. Before battle he raises one of his shadow soldiers - Igris, Beru, Tank, or Tusk - reshaping his entire arsenal around it."
+ },
+ {
+  "path_name": "minene",
+  "name": "Minene Uryuu",
+  "universe": "Mirai Nikki",
+  "gate": "minene_unlock",
+  "colors": [
+   3,
+   0
+  ],
+  "bio": "The Ninth. A cold-blooded terrorist and bomber who wields the Escape Diary to slip any trap, Minene Uryu answers the Survival Game with grenades, landmines, and a talent for vanishing the instant the odds turn against her."
+ },
+ {
+  "path_name": "tsubasa",
+  "name": "Tsubasa Kazanari",
+  "universe": "Symphogear",
+  "gate": "tsubasa_unlock",
+  "colors": [
+   1
+  ],
+  "bio": "Tsubasa Kazanari, wielder of the Blue Symphogear Ame no Habakiri. Heir to the Kazanari sword arts, she fights with the disciplined grace of a swordmaster and a fierce, self-sacrificing devotion to protecting those she calls comrades."
+ },
+ {
+  "path_name": "death",
+  "name": "Death",
+  "universe": "Soul Eater",
+  "gate": "death_unlock",
+  "colors": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "bio": "Death, the Shinigami and founder of the DWMA. To seal away the first Kishin he anchored his own soul to Death City, trading his freedom of movement for an unbreakable vigil. The Grim Reaper meets every threat to the world's order with overwhelming, inevitable force."
+ },
+ {
+  "path_name": "denji",
+  "name": "Denji",
+  "universe": "Chainsaw Man",
+  "gate": "always",
+  "colors": [
+   2,
+   3
+  ],
+  "bio": "A dirt-poor devil hunter fused with his pet devil Pochita to become the Chainsaw Devil. Reckless and blunt, Denji tears through enemies with roaring chainsaws, bleeding them dry and feeding on the wounds he opens."
+ },
+ {
+  "path_name": "power",
+  "name": "Power",
+  "universe": "Chainsaw Man",
+  "gate": "power_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "The Blood Fiend — a devil in human form, loud, vain, and gleefully violent. Power weaponizes blood itself, hurling it as blades and spears, feasting on every wound she opens and turning the enemy's own bleeding into a weapon."
+ },
+ {
+  "path_name": "frieza",
+  "name": "Frieza",
+  "universe": "Dragon Ball",
+  "gate": "frieza_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Frieza, the emperor of Universe 7. He rules through casual, unhurried cruelty - picking his prey apart with pinpoint death beams, shrugging off retaliation behind a wall of energy, and leaving a planet-killing sphere hanging overhead as a promise rather than a threat."
+ },
+ {
+  "path_name": "yoruichi",
+  "name": "Yoruichi Shihouin",
+  "universe": "Bleach",
+  "gate": "yoruichi_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Yoruichi Shihouin, the Flash Goddess. Former captain of the Second Division and commander of the Onmitsukido, she abandoned the Soul Society rather than her own principles. She fights bare-handed and impossibly fast, wrapping herself in the lightning of Shunko and making every swing an enemy takes cost them the tempo of the fight."
+ },
+ {
+  "path_name": "fern",
+  "name": "Fern",
+  "universe": "Frieren",
+  "gate": "fern_unlock",
+  "colors": [
+   1,
+   2
+  ],
+  "bio": "Fern, Frieren's apprentice and the most gifted mage of her generation. Raised to treat magic as discipline rather than wonder, she fights with immaculate efficiency - suppressing her mana until the moment it matters, then spending every drop of it at once."
+ },
+ {
+  "path_name": "stark",
+  "name": "Stark",
+  "universe": "Frieren",
+  "gate": "stark_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Stark, the warrior who never stopped being afraid. He shakes before every fight and steps in front of his friends anyway - taking the blows meant for them, and swinging hardest at the moment his nerve should have failed."
+ },
+ {
+  "path_name": "escanor",
+  "name": "Escanor",
+  "universe": "Seven Deadly Sins",
+  "gate": "escanor_unlock",
+  "colors": [
+   0,
+   3
+  ],
+  "bio": "Escanor, the Lion's Sin of Pride of the Seven Deadly Sins. His magic, Sunshine, swells without limit as the day wears on — until at high noon 'The One' stands as the mightiest being alive. Every stack of Sunshine he gathers makes his pride, and his power, burn hotter."
+ },
+ {
+  "path_name": "hibiki",
+  "name": "Hibiki Tachibana",
+  "universe": "Symphogear",
+  "gate": "hibiki_unlock",
+  "colors": [
+   2
+  ],
+  "bio": "Hibiki Tachibana, wielder of the Symphogear Gungnir. With a shard of the relic fused to her heart, she throws herself into every fight with her bare fists and an unbreakable will to reach out and save others, no matter how many times she is knocked down."
+ },
+ {
+  "path_name": "piccolo",
+  "name": "Piccolo",
+  "universe": "Dragon Ball",
+  "gate": "piccolo_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Piccolo, the Namekian warrior born of the Demon King Piccolo. Once Goku's fiercest rival, he became Earth's guardian and Gohan's mentor — a patient tactician who fuses with Nail and Kami to grow ever stronger, regenerating from near death and charging techniques that split the sky."
+ },
+ {
+  "path_name": "mashburnedead",
+  "name": "Mash Burnedead",
+  "universe": "Mashle",
+  "gate": "mashburnedead_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Mash Burnedead is a boy born without a shred of magic in a world that lives and dies by it — so he trained his body to the absurd instead, cracking spells in half with raw muscle. Stoic and endlessly hungry for cream puffs, he punches through magic that should be impossible to beat by hand."
+ },
+ {
+  "path_name": "ainz",
+  "name": "Ainz Ooal Gown",
+  "universe": "Overlord",
+  "gate": "ainz_unlock",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "Ainz Ooal Gown, the undead Sorcerer King and supreme ruler of the Great Tomb of Nazarick. Once the human Momonga, he now commands death itself — turning aside the curses and bindings hurled at him and answering with super-tier magic."
+ },
+ {
+  "path_name": "baki",
+  "name": "Baki Hanma",
+  "universe": "Baki",
+  "gate": "baki_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Baki Hanma is the champion of an underground fighting circuit in Japan. Known as \"The Strongest Boy on Earth,\" he is a martial artist who trains relentlessly in pursuit of the goal of surpassing his father, Yujiro."
+ },
+ {
+  "path_name": "yusuke",
+  "name": "Urameshi Yusuke",
+  "universe": "Yu Yu Hakusho",
+  "gate": "yusuke_unlock",
+  "colors": [
+   1,
+   3
+  ],
+  "bio": "Yusuke Urameshi is a delinquent turned Spirit Detective. After dying to save a child and earning his life back, he channels his spirit energy into the Rei Gun — concentrated blasts fired from his fingertip."
+ },
+ {
+  "path_name": "arima",
+  "name": "Kishou Arima",
+  "universe": "Tokyo Ghoul",
+  "gate": "arima_unlock",
+  "colors": [
+   3
+  ],
+  "bio": "Kishou Arima is the CCG's undefeated \"White Reaper\", a legendary Ghoul Investigator who wields the quinques Narukami and IXA. Secretly the One-Eyed Owl, he is a half-human said to have never lost a battle."
+ },
+ {
+  "path_name": "sesshomaru",
+  "name": "Sesshomaru",
+  "universe": "InuYasha",
+  "gate": "sesshomaru_unlock",
+  "colors": [
+   0
+  ],
+  "bio": "Sesshomaru, the Killing Perfection - a full-blooded daiyokai and Inuyasha's elder half-brother. Cold and merciless, he wields Bakusaiga's corrosive power and the life-and-death blades Tenseiga and Tokijin to grind lesser beings to nothing."
+ }
+]

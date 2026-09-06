@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/meliodas.gd" id="1_bqr03"]
+[ext_resource type="Texture2D" path="res://assets/images/Meliodas/profile_mastery_meliodas.png" id="2_hwj3l"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_j7q4p"]
+[ext_resource type="Texture2D" path="res://assets/images/Meliodas/meliodas.png" id="2_pk00x"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_vkxy1"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_mi5v1"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_ajrhk"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_0cgin"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_uqba1"]
+
+[node name="Meliodas" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_bqr03")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_hwj3l")
+mastery_name = "Demon Blood Meliodas"
+portrait_texture = ExtResource("2_pk00x")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_j7q4p")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_vkxy1")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_mi5v1")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_ajrhk")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_0cgin")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_uqba1")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

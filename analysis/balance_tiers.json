@@ -1,0 +1,792 @@
+[
+ {
+  "path_name": "aang",
+  "tier": "B",
+  "justification": "P2: severe 4-color burden (G+B+W+R) earns the high control density, but P5 setup tax (1-turn combo marks + alignment sequencing) and the unimplemented 'Avatar State' (P9 dead flavor) plus no scaling/sustain and a 55 ceiling cap him at solid-but-disruptable core."
+ },
+ {
+  "path_name": "ace",
+  "tier": "B",
+  "justification": "P5 heavy setup tax: DR-to-Affliction ramp is gated behind a 3-CD Flame Pillar (P3) and weak early; mono-Blue specific load (P1/P2) justifies the unblockable scaling, but the slow back-loaded payoff and zero utility keep him a dependable mid-tier attrition bruiser, not a first-pick."
+ },
+ {
+  "path_name": "akame",
+  "tier": "A",
+  "justification": "P4: a genuinely unconditional HP/shield/DR-bypassing kill (not a soft threshold) with a 0-CD trigger is high-impact, but the ~3-turn telegraph, visible 2-turn timer, near-zero fallback damage, and easy counterplay (kill her / cleanse / swap) are real costs that hold her at top-of-fair, not S."
+ },
+ {
+  "path_name": "allmight",
+  "tier": "B",
+  "justification": "Turn-1 online with all-Piercing+Uncounterable hits (high effective damage vs DR) and an immortality+control-immunity panic; but he pays Affliction HP for everything with zero sustain (P5 negative ramp on himself), is single-target only with an 80 ceiling, and US-Smash needs B+W+R in one turn \u2014 balanced, not a clear A."
+ },
+ {
+  "path_name": "alphamon",
+  "tier": "B",
+  "justification": "Permanent action-free ~30/enemy/turn engine on a light mono-Green/mostly-Random economy (P1 cheap to pilot) with self-sufficient defenses, but ALL damage is Normal (fully mitigable, leans on Shatter), burst ceiling is only 30, and there's no hard CC \u2014 a dependable but capped and stallable grind engine."
+ },
+ {
+  "path_name": "alphonse",
+  "tier": "C",
+  "justification": "P5 turn-1 transmutation tax leaves him near-inert on open, and his low-color (4/5 Random, P1) economy means the easy cost earns no extra potency; Piercing + team Shatter are useful enabler tools but his energy denial is soft (P6) and his own damage (35 ST) is too low to carry \u2014 functional, modest support."
+ },
+ {
+  "path_name": "arthur",
+  "tier": "C",
+  "justification": "Hard Blue/White no-random dependency (P1/2 unforgiving) on a conditional, reactive payoff: Violet Flash only spikes if the enemy attacks into his setup, and his only guaranteed burst (P4 sub-20 execute) is self-terminal \u2014 strong vs aggressors but collapses to a 20-base poke vs passive foes; niche and swingy."
+ },
+ {
+  "path_name": "asta",
+  "tier": "C",
+  "justification": "P5 very slow ramp behind HP thresholds plus RANDOM targeting (can't focus or secure kills, gutting finisher value) and an all-self-cast kit with no on-demand board interaction; Affliction conversion and sustain are nice in a grind but energy denial is soft (P6) and per-tick damage is low \u2014 low-impact engine."
+ },
+ {
+  "path_name": "bakugo",
+  "tier": "A",
+  "justification": "Uncapped per-instance ramp stacked on an elite anti-defense profile (Piercing + invuln-ignore + Shatter + ignore-Shield) on a light-Red, mostly-Random economy (P1 easy to pilot, P3 0-CD spammable primary); Hauser's swap+Red:2 gate and stack-reset plus single-target-only damage are the real costs that keep him at strong A rather than S."
+ },
+ {
+  "path_name": "ban",
+  "tier": "A",
+  "justification": "Permanent immortality + 20-HP self-revive makes the survival-rewards-scaling loop reliably reachable, and ban2's uncapped double-counted DR-ignoring Piercing nuke (P2 heavy White load earns it) becomes near-unblockable; back-loaded ramp (P5), single-target-only, and hard counters (banish/HP-set/stack-wipe) cap him just below S."
+ },
+ {
+  "path_name": "blackstar",
+  "tier": "B",
+  "justification": "Cheap fast tempo (Speed Star CD0) and a barrier/DR/counter-bypassing 55 Piercing burst with stacked self-invuln, but fully single-target with zero AoE and low sustain; much value is conditional on the taunt sticking and the enemy actually attacking him, and the dual Green/White load (Principle 1/2) and CD4 stance setup (Principle 3/5) keep him a strong but narrow B rather than A."
+ },
+ {
+  "path_name": "boruto",
+  "tier": "B",
+  "justification": "All-Piercing damage that hard-counters DR/shields with two stuns and an invuln counter, but only 1 specific (Blue) pip means the kit is easy to fund and therefore doesn't earn outsized potency (Principle 1/2); fixed ~50 numbers, Shadow-Clones ramp dependency on CD3 (Principle 3/5) and forced-random Rasengan slot hurt consistency \u2014 dependable core, no oppression."
+ },
+ {
+  "path_name": "broly",
+  "tier": "B",
+  "justification": "Excellent economy (mostly Green/Random, CD1 spam \u2014 Principle 1/3) with uncapped scaling, but the ramp is entirely out of his control (Principle 5: a passive enemy keeps him at a modest 15-AoE/25-ST floor) and Geyser self-resets all stacks; a solid balanced bruiser, not a meta-definer."
+ },
+ {
+  "path_name": "byakuya",
+  "tier": "A",
+  "justification": "Permanent AoE Piercing+Bypassing DoT that ignores both defense AND invuln, sustained from a CD0 1-Red engine, with a 2-turn stun and unbounded long-game scaling \u2014 near-unmitigable attrition (Principle 8/9); the Bankai gate (4 skills, Principle 5), tri-color load (Principle 1) and weak front-loaded burst are real costs that hold it at top-of-fair A rather than S."
+ },
+ {
+  "path_name": "cell",
+  "tier": "B",
+  "justification": "65 bypassing single-target for 3 energy is strong and the two redundant transform triggers make the ramp reliable, but the best kit sits behind TWO transformations (heavy setup tax, Principle 5) and the Nullify/energy-denial is only a supporting tool (Principle 6/8); modest early game and squishy assassin frame put it solidly in B."
+ },
+ {
+  "path_name": "chrome",
+  "tier": "C",
+  "justification": "All offense is delayed a full turn and conditional \u2014 fully negated if the enemy breaks the Nullify (Principle 8 = soft offensive debuff, not a threat), with small fixed 15-25 numbers and no scaling; cheap and flexible but a low-throughput, fragile low-HP attrition kit that races lose to \u2014 functional but modest."
+ },
+ {
+  "path_name": "cooler",
+  "tier": "B",
+  "justification": "Self-sustaining stun-lock/Final-Form loop with a permanent uncleansable HP-cap that hard-counters healers and CD0 core tempo, but zero AoE, a heavy three-color Green/Blue/Red burden (Principle 1), modest ~60 peak, and 'execute' framing that's really a finisher loop (Principle 4) keep him a solid single-target duelist, not above-curve."
+ },
+ {
+  "path_name": "crona",
+  "tier": "B",
+  "justification": "Shield/DR-bypassing Affliction AoE+DoT with a global energy tax (soft disruption, Principle 6) and a Ragnarok passive that fixes his nominal 4-color burden to Random (Principle 1), but the 45+ burst is gated behind a CD4 swap (Principle 3/5), hit numbers are modest, and he self-damages with no hard CC/heal/cleanse \u2014 a dependable attrition core."
+ },
+ {
+  "path_name": "diane",
+  "tier": "C",
+  "justification": "Very low, delayed burst that is Normal-typed and thus mitigable despite 'bypass' wording (Principle 9 verified), zero AoE, and an anti-invuln stun that only fires situationally; the team 15 DR also shields enemies and Ground Gladius is gated behind Embrace \u2014 cheap and supportive but low-impact, a niche setup/control C."
+ },
+ {
+  "path_name": "edward",
+  "tier": "B",
+  "justification": "High-quality unmitigable output (45 Affliction + 20 Piercing bypass all defense) with a unique max-HP-cap anti-heal, CD0 repeatable self-invuln, and flexible shield/nullify/buff utility, but zero AoE, no hard CC, no scaling, a two-color Blue+Red load (Principle 1) and a CD1 nuke (~45 every other turn, Principle 3) cap his volume \u2014 a solid utility-striker B."
+ },
+ {
+  "path_name": "emiya",
+  "tier": "C",
+  "justification": "P1/P3 reward it (mostly free/1-pip, 0 CD, all-Piercing bypasses DR per P2's reliability logic), but P5 setup tax (6 Trace uses for True Projection) plus heavy RNG means its hard CC (stun/silence) requires landing the SAME mark twice while the swap roll actively fights that; with a 10-15 damage ceiling it is a reliable cheap chip+shield+conditional-CC piece, i.e. functional-but-modest, not core-defining."
+ },
+ {
+  "path_name": "emiyaarcher",
+  "tier": "A",
+  "justification": "True/part-True on nearly every hit bypasses shields/barriers/all DR (effective damage ~= face value, the strongest expression of P2-style reliability), with cheap low-color cost and excellent P3 tempo (0-CD spammable nuke, self-reducing invuln CD); the 40 finisher is only soft-ramped (P5: core works turn 1), so it is a reliable first-pick assassin held below S only by zero AoE/CC/support."
+ },
+ {
+  "path_name": "eren",
+  "tier": "C",
+  "justification": "Discounted hard by P5 (irreversible transformation around a fixed 40-HP threshold that can be denied, fragile self-damaging pre-transform that gifts value if burst down) AND by all-Normal damage that is fully walled by DR/barriers/shields/invuln; the post-form 65 nuke is real but expensive and counterable, so the gated, single-target, mitigable payoff lands functional-but-conditional."
+ },
+ {
+  "path_name": "erza",
+  "tier": "A",
+  "justification": "All-Piercing/Affliction means mitigation almost never applies (P2 reliability ceiling), backed by a triple-immunity stack, a free shield+invuln+CD-reset panic button, soft energy denial (P6), and a Nakagami CD-ramp trending toward spammable; the tri-color cost and weak first-cast activation modes (P5) are genuine costs that justify the broad toolkit, but the capped ~30 ceiling keeps it top-of-fair rather than warping."
+ },
+ {
+  "path_name": "esdeath",
+  "tier": "A",
+  "justification": "Mahapadma is a board-wide 2-turn hard stun (one of the strongest control swings) that doubles as execute setup, with cheap 0-CD pierce spam and a CC-scaling kill threshold; but P4 marks the execute as a conditional finisher (not a true instakill), and the built-in drawback of self-stunning her AND her allies for 2 turns is a heavy real cost (per the CD/commitment weighting), pulling it down from S to strong-A."
+ },
+ {
+  "path_name": "frankenstein",
+  "tier": "C",
+  "justification": "Her cooldown-push control is the soft, opponent-dependent interference P6 warns against (near-useless vs low-CD kits), baseline damage is low, and the ~99 payoff is a one-shot self-instant-kill that removes her from the fight with a built-in anti-synergy (Galvanism heals up, shrinking the nuke); the 2-turn anti-CC window is nice but the kit is a situational disruptor, functional-but-modest."
+ },
+ {
+  "path_name": "frieren",
+  "tier": "B",
+  "justification": "Permanent irremovable stacking Affliction DoT bypasses shields/DR and permanent Stealth (P7: acts without triggering reactive effects) is a genuinely strong unblockable snowball, but it is heavily discounted by P5 ramp/time-dependence and a severe self-imposed handicap (Mana Concealment zeroes her own energy gen) on a mono-White color burden, with short empowered windows and no CC/heal/team utility \u2014 solid balanced core, not above."
+ },
+ {
+  "path_name": "gallantmon",
+  "tier": "B",
+  "justification": "Piercing+True damage undersells its effective output vs tanks (P2 reliability) and it brings counter/reflect ally protection, a stun, soft cost denial (P6) and multiple invuln; but zero AoE/DoT, a ~40 ceiling, and its best tools (Shield-of-the-Just invuln/stun) gated behind conditional opponent-dependent swaps that can whiff to zero keep it a dependable single-target duelist with no glaring strength \u2014 squarely B."
+ },
+ {
+  "path_name": "ganta",
+  "tier": "C",
+  "justification": "Cheap 0-CD DR-bypassing pierce spam plus a missing-HP/execute ceiling and a 1-turn immortality counter are real, but P5 back-loads the payoff behind being near death while the kit actively self-destructs (9-15 self-Affliction/turn, no sustain/defense) and the Ganbare finisher is Normal (mitigable) and damages his own team \u2014 a high-variance glass cannon that is functional but heavily self-punishing and gated."
+ },
+ {
+  "path_name": "gatomon",
+  "tier": "A",
+  "justification": "Despite a steep P5 setup tax (~4 ramp turns), the Ophanimon payoff is a premium control/attrition package \u2014 AoE True+Piercing, a self-extending team-wide blind lock, Sefirot that bypasses invuln, team cleanse, plus 10 permanent DR and 10 HP/turn making her near-unkillable late, and Digivolve is usable while stunned so hard CC can't deny it; the ramp is the only thing holding this oppressive late-game lock below S."
+ },
+ {
+  "path_name": "genos",
+  "tier": "A",
+  "justification": "Cheap (only 2 specific pips) with two CD-0 spammable buttons (P3 tempo), and layered defense-bypass (Affliction + 40-Piercing, P9 effective-damage) gives real burst + a full stun; the finisher's 1-turn setup tax (P5) is light and the uncapped ramp is genuine \u2014 top-of-fair, no glaring weakness besides zero AoE."
+ },
+ {
+  "path_name": "gilgamesh",
+  "tier": "B",
+  "justification": "Hard mono-Red burden (P1/P2) earns his potency but leaves him color-screwable; the Gate nuke is Normal multi-hit gutted by flat DR/barriers, and his ramp is slow/telegraphed and competes with his own free invuln for the same stacks \u2014 solid, dependable, but flawed core."
+ },
+ {
+  "path_name": "gogeta",
+  "tier": "B",
+  "justification": "Strong self-compounding tempo/economy engine (gogeta2 cuts all CDs + self-converts colors toward Random), but all damage is Normal (fully mitigated), his 50 burst is delayed and self-cancellable, and much of his output is reactive/enemy-dependent \u2014 balanced but unspectacular."
+ },
+ {
+  "path_name": "gohan",
+  "tier": "C",
+  "justification": "Comeback ramp is weakest-while-ahead and only spikes as allies die; the Kamehameha nuke is gated behind an ally death (P5 setup tax) and the executes are 10-HP kill-thresholds (P4 finisher-value only) on Normal base strikes \u2014 functional but conditional and selfish."
+ },
+ {
+  "path_name": "gojo",
+  "tier": "A",
+  "justification": "Heavy mono-Blue burden (P1/P2) is paid back by barrier-ignoring Piercing AoE (P9 above-curve vs DR), reliable CD1 damage, channel-cancel disrupt, and a cheap invuln + full-cleanse panic button \u2014 reliable high-value first-pick despite flat (non-ramping) numbers."
+ },
+ {
+  "path_name": "goku",
+  "tier": "B",
+  "justification": "All-Piercing core stays consistent vs DR with a strong burst+stun ceiling and a great CD-0 economy engine, but the heaviest specific-color load in the batch (6 Blue+Red pips, P1) plus genuine self-affliction self-kill risk and slow ramp (P5) keep him in the dependable middle rather than top-of-fair."
+ },
+ {
+  "path_name": "gon",
+  "tier": "C",
+  "justification": "Every Stance stack is an idle no-damage turn and all stacks are spent at once (steep P5 setup tax), payoff is only ~50-60 after 3+ ramp turns, the execute is a 25-HP threshold (P4 finisher), and he's fragile/telegraphed while ramping \u2014 cheap and flexible but slow and easily disrupted."
+ },
+ {
+  "path_name": "gray",
+  "tier": "A",
+  "justification": "Permanent, uninteractable team-wide Piercing/True attrition plus Iced Shell's uncounterable permanent stun + true-DoT that bypasses death-prevention and persists past his death (P9 mitigation-proof, near-guaranteed removal) is oppressive in long games; held below S by a very slow start and HP<=30 desperation gating (P5)."
+ },
+ {
+  "path_name": "gunha",
+  "tier": "B",
+  "justification": "Low ceiling (45), all-Normal damage and finite inverse-ramp Guts cap his offense, but stun-immunity + on-demand invuln + self-heal refuel + team-wide Shatter/damage-reduction is genuinely strong cheap utility with excellent tempo \u2014 dependable with no glaring weakness."
+ },
+ {
+  "path_name": "halibel",
+  "tier": "C",
+  "justification": "Mitigation-resistant Piercing/Affliction and unbounded permanent +5 stacks are real, but the payoff is buried behind a compound setup tax (P5): protect allies AND have them hit to bank stacks AND fall below 60 HP to unlock AoE/DoT \u2014 and she self-damages with no heal, so she's fragile and modest until fully online."
+ },
+ {
+  "path_name": "hashirama",
+  "tier": "A",
+  "justification": "P5 setup tax + P1 mono-Red burden (3 specific Red) keep him out of S, but the Affliction/Piercing bypass loop (P2/P8: effective >> raw, skips shields/DR) plus whole-team heals+shields+control on a no-CD, energy-only-gated engine make him a reliable, oppressive attrition first-pick once he survives to turn 3; the heavy color load justifies the potency."
+ },
+ {
+  "path_name": "hawkmon",
+  "tier": "C",
+  "justification": "Double-gated (P5): transformation stacks AND prior ally-CC both required before the Silphymon payoff comes online, so large chunks are dead weight on an uncoordinated team and raw damage is low (25-30); cheap flexible base (1 specific pip, P1) and triple self-invuln keep it functional but the compounded setup tax caps impact."
+ },
+ {
+  "path_name": "hibari",
+  "tier": "B",
+  "justification": "Light color (2 Red, rest Random = easy to pilot, P1) and clean 2-pip stun+isolate lockdown plus Piercing/Affliction bypass (P8) give a dependable core, but the punish field does nothing vs patient enemies and Cloud Flames is a dead passive vs non-stealth (P7), so impact is swingy/matchup-capped rather than top-tier."
+ },
+ {
+  "path_name": "hinata",
+  "tier": "B",
+  "justification": "Genuinely energy-efficient (free stances, Air Palm to 0 cost) with layered DR/thorns/shields/sticky-taunt and light color (P1), but the Twin Lions transformation is opponent-dependent (P5 \u2014 may never fire) and pre-transform offense is low with no heal/cleanse, making her a solid balanced support with no carry ceiling."
+ },
+ {
+  "path_name": "hisoka",
+  "tier": "B",
+  "justification": "Per P4 his 'unconditional' execute is really a finisher: hard-locked to the lowest-HP enemy, gated behind a 5-stack ramp (P5) on a cleansable mark, and counterable by invuln; real per-turn damage is only ~25 with random scatter, so despite the cheap color-flexible Piercing loop and Catch invuln he lands as a solid-but-conditional dueler, not A."
+ },
+ {
+  "path_name": "horohoro",
+  "tier": "A",
+  "justification": "Heavy mono-Blue (6/8 pips, P1) is the real cost, but unlike opponent-gated kits his setup is self-enabled (his own Frostbite/stuns prime the payoff): dense on-demand hard CC, self-Invuln on every stun (near-permanent durability), guaranteed board-wide Avalanche AoE with a Bypassing follow-up, a heal, and two 0-CD skills make this a strong, complete top-of-fair pick justified by its color tax."
+ },
+ {
+  "path_name": "ichibe",
+  "tier": "S",
+  "justification": "One of P4's true unconditional instant-kills (not a threshold): Futen is uncounterable, ignores Immortality, and is NOT lowest-HP-locked, paired with best-in-class permanent single-target lockdown (Silence + Strategic-stun + 10 outgoing-damage cap removes an enemy from the match) and an unbounded growing Shield wall + self-revive; the 10-stack ramp is a real tax (P5) but the anti-carry/anti-immortal ceiling is format-warping."
+ },
+ {
+  "path_name": "ichigo",
+  "tier": "B",
+  "justification": "Excellent economy (only 2 specific pips, mostly Random, P1) and an unbounded permanent +5 ramp on a free 0-CD basic with a Piercing nuke that ignores invuln under Bankai, but P5 docks the slow start and there is zero CC/heal/shield/utility, so he is a clean, dependable solo carry with no team contribution and real burst-vulnerability \u2014 balanced core, not A."
+ },
+ {
+  "path_name": "inosuke",
+  "tier": "C",
+  "justification": "Reliable Piercing/Bleed bypass (P8: effective > raw) on a free 0-CD applier with uncounterable counter-strip tech keeps him functional, but with NO AoE, NO CC, NO support, a low ~50 single-target ceiling, and the anti-counter skill being dead vs non-counter comps, his impact is narrow and modest rather than a balanced-core threat."
+ },
+ {
+  "path_name": "inuyasha",
+  "tier": "B",
+  "justification": "Iron Reaver's full buff-strip + Piercing on a 2-pip 0-CD skill plus Affliction bypass and cheap mono-Red mostly-Random costs (P1) are real strengths, but the uncontrollable 1d2 Hanyo Cycle leaves ~half his uptime penalized (poor consistency), a single passive carries the kit, and he has no CC/heal/support \u2014 a functional but swingy balanced striker."
+ },
+ {
+  "path_name": "itachi",
+  "tier": "A",
+  "justification": "P5/P4: Susanoo is gated behind dropping below 50 HP (discounted setup tax), but the core value\u2014a repeatable 1-turn BANISH on a 1-CD, low-specific-color ability (P1, only White-anchored)\u2014is premium, online-early hard removal that bypasses defenses; Uncounterable+Piercing payoff post-form is real bonus. High-floor control assassin, just shy of S without unconditional dominance."
+ },
+ {
+  "path_name": "jack",
+  "tier": "B",
+  "justification": "P4/P5 gating: every payoff (jack1/jack3/jack4) is dead until Isolated+Fog is established, and jack3's 30 needs BOTH conditions (narrow), so the kill engine is heavily conditional; offset by high shield/DR-bypassing Affliction fraction, anti-heal, cheap low-color economy (P1). Solid single-target executioner, no glaring strength = core B."
+ },
+ {
+  "path_name": "jaden",
+  "tier": "C",
+  "justification": "P1/P2/P5 all push down: extreme all-specific 4-color rainbow economy (zero Random\u2014worst-case color screw) feeding a very back-loaded fusion ramp (2-3 dead turns, dies to rush), with low burst (35 Normal, shield-blocked). Permanent payoffs and flexibility keep it functional, but the setup tax plus brutal economy make it heavily gated/modest = C."
+ },
+ {
+  "path_name": "jeanne",
+  "tier": "B",
+  "justification": "P4: Guillotine is a kill-THRESHOLD (\u226435 HP), valued as a finisher you must slowly grind toward (~25/turn, no AoE); P6: energy denial is mild (+1R/1turn). But permanent single-target isolation/taunt is genuinely strong control, color burden is near-zero (1W+6R, splashable, P1), cd-0 grind engine + revive/invuln support. Well-rounded, slow = upper B."
+ },
+ {
+  "path_name": "jesse",
+  "tier": "B",
+  "justification": "P5: heavy ramp\u20147-stack transformation gate with a single point of failure (one mark strip resets everything) and weak T1 (only 20)\u2014discounts the headline. Offset by cheap single-Green low-color kit (P1), 0-CD ramp engines, self-sustain (heal+invuln), and a strong 75 Piercing Uncounterable payoff once online. Real floor, gated ceiling = B."
+ },
+ {
+  "path_name": "jupiter",
+  "tier": "B",
+  "justification": "P1/P5: severe mono-Blue burden (5/6 Blue\u2014heavy color-screw risk) atop hard ramp dependency (needs 3+ banked stacks, weak 20-damage openers, feast-or-famine dumps). Unbounded Piercing AoE scaling (P2 partly earns the color tax) plus team shield/Shatter give real ceiling, but the gated, color-fragile engine keeps it at core B."
+ },
+ {
+  "path_name": "kaiba",
+  "tier": "A",
+  "justification": "Two CD-0 core skills (ramp+nuke, no downtime) with Piercing+Uncounterable hits (high effective vs DR), low specific-color (mostly Random, P1), and strong self-sufficiency (stacking shields, two invulns, damage cap). P5 ramp is only moderate with a fine floor; Crush Card's big reflect is correctly discounted as reactive/enemy-controlled. Reliable, oppressive tempo = A."
+ },
+ {
+  "path_name": "kakashi",
+  "tier": "A",
+  "justification": "No ramp\u2014fully online T1 (P5: zero setup tax)\u2014with all-Piercing single-target (DR-agnostic) and dense disruption (non-mental stun, 100% single-skill damage-nullify, drain) plus rare damage-character team protection (ally+self invuln, damaging counter) and an uncounterable passive. P1: heavy 4-color burden and no AoE cap it, but P2 justifies the potency; high-floor reliable = A."
+ },
+ {
+  "path_name": "ken",
+  "tier": "C",
+  "justification": "Low immediate burst (~35) and purely selfish (no team utility, no CC); win condition is a slow permanent-bleed engine with RANDOM retargeting (unreliable) and long 4-CD peels. Piercing+Bleed bypass mitigation and low color cost (2 White) keep it functional, but low impact and slow-to-close with no disruption = C."
+ },
+ {
+  "path_name": "kid",
+  "tier": "C",
+  "justification": "P5: headline Death Cannon is gated behind a 2-pip, 5-CD Stable Resonance field plus several turns of uptime, with weak pre-ramp numbers (10/20/25) and no native AoE; strengths are narrow (best specifically vs turtle/counter comps). Dual Green/Blue requirement and conditional bursts. Multi-tool but each tool conditional/slow = functional-but-modest C."
+ },
+ {
+  "path_name": "killua",
+  "tier": "B",
+  "justification": "P5 setup tax + P4: the big Affliction detonation needs 3-4 ramp turns and the 'execute' is just an HP<=20 finisher threshold, not a true instakill; P1/P2 heavy mono-Green (3 specific pips) is genuine color-screw risk that the Piercing/Affliction bypass and CD0 mark engine pay for but don't elevate past solid single-target."
+ },
+ {
+  "path_name": "king",
+  "tier": "B",
+  "justification": "P5/P3: the whole Empowered AoE-Bleed-plus-counter package is gated behind a CD6 transform with weak pre-form numbers (15 nuke, 5/turn), and CD6 is a heavy availability cost; shield-bypassing DoT + strong defensive suite over two-color Blue/Red (P1) make him dependable but low-burst and back-loaded, not top-of-fair."
+ },
+ {
+  "path_name": "kitara",
+  "tier": "C",
+  "justification": "Low-impact single-target support: peak ~30, no scaling/AoE, and the permanent Piercing channel self-conflicts (P5-style tension) since heal/invuln/stun all cancel it; light Blue (P1) keeps her easy to pilot but she can't proactively shut anyone down or win a damage race."
+ },
+ {
+  "path_name": "koro",
+  "tier": "C",
+  "justification": "Defensive enabler with modest impact: base damage is 20 Normal fully blocked by DR/shields (only Pitch-Black bypass after multi-turn setup, P5), heavy Green (P1), and Hard Lessons shielding ENEMIES too is a real footgun; valuable cleanse and layered protection keep it functional but back-loaded and low-ceiling."
+ },
+ {
+  "path_name": "korra",
+  "tier": "A",
+  "justification": "High-impact toolbox: color-agnostic all-Random opening (P1 favorable) funds universal counter coverage, two bypass damage types, shield-shatter AoE, plus rare permanent uncleansable Silence and an 8-turn delay; real costs (two-step stance tempo, 5-use Avatar ramp per P5, CD8 nuke) keep it fair rather than oppressive."
+ },
+ {
+  "path_name": "kurapika",
+  "tier": "B",
+  "justification": "P4/P6: Judgement Chain reads as instant-kill but the execute needs the target to use 3 new skills (smart opponents just eat 10 Affliction/turn) and the energy drain isn't a wincon; gates entirely on landing Chain Jail and ends when he dies, with zero AoE and tiny numbers, so it's a solid conditional lockdown, not A."
+ },
+ {
+  "path_name": "kuroko",
+  "tier": "B",
+  "justification": "P1 favorable (4 pips, 1 Green + 1 Red) funds dense denial per energy \u2014 Silence/conditional-Stun/Shatter/Isolate/drain \u2014 plus near-every-turn self-invuln on CD1; but P6 the drain is supporting only, damage caps at 35 single-target with no close, and all premium effects are combo-gated, landing her as a solid matchup-dependent disruptor."
+ },
+ {
+  "path_name": "kurotsuchi",
+  "tier": "A",
+  "justification": "P9-verified all-Affliction DoT bypasses shields/barriers/DR so effective damage far exceeds printed numbers, layered with anti-sustain Deadly Gas (ignore-heal AND ignore-cleanse) and near-uncounterable self-preservation; the double ramp (5-use Bankai + Data Collection, P5) is a real early-game tax that keeps this strong-but-fair rather than S."
+ },
+ {
+  "path_name": "ladydevimon",
+  "tier": "C",
+  "justification": "Permanent uncapped Affliction poison is unmitigable but reactive (P6-adjacent: enemies who don't attack her and a one-target Taunt throttle the engine), with near-zero burst (~20-25), zero AoE, no heal/cleanse/CC, and only a CD4 1-turn invuln; functional attrition tank that loses short races and caps low."
+ },
+ {
+  "path_name": "lizandpatty",
+  "tier": "C",
+  "justification": "P1: colorless 1-Random activation is exceptionally cheap, and ally color-cost conversion + layered protection are genuine enabler value, but independent output is ~25 with no AoE/CC/enemy pressure, value is binary on having a good wield target, and peak is gated behind a specific partner (Kid) \u2014 a functional niche support, not a core pick."
+ },
+ {
+  "path_name": "lucy",
+  "tier": "C",
+  "justification": "P5/P1: payoff gated behind the Gemini window (setup tax) and every point of damage is NORMAL-typed with zero bypass, so she is soft into any shield/DR comp; cheap two-color kit but modest 15-25 immediate numbers and DoT that must be re-cast keep her low-impact and conditional."
+ },
+ {
+  "path_name": "luffy",
+  "tier": "B",
+  "justification": "P4/P1: his anti-invuln riders are finisher-value dead weight against the bulk of the roster that never goes Invulnerable, and all damage is Normal under a heavy mono-Red burden (P2: no exceptional potency to pay for it); reliable tempo, 40 single-target and free self-shield make him a dependable but narrow core."
+ },
+ {
+  "path_name": "lyserg",
+  "tier": "B",
+  "justification": "P4/P5: the 'execute' is a mark-scaling kill-THRESHOLD and Big Ben is doubly gated (3+ marks + a 2-turn fuse + CD2, P3), with all-Normal damage; the cheap repeatable AoE stun engine and self-sustain are genuine value, landing a solid ramp-controller squarely at B."
+ },
+ {
+  "path_name": "machinedramon",
+  "tier": "B",
+  "justification": "P1: a four-color rainbow economy is the steepest color burden in the batch and P2 grants no standout potency to justify it, plus energy drain is only soft tempo-interference (P6); pervasive taunt control + Affliction pierce + a death-detonation keep him functional but the consistency tax and flat damage cap him at low B."
+ },
+ {
+  "path_name": "madoka",
+  "tier": "A",
+  "justification": "P1/P8: cheap mostly-Random single-White economy pilots easily, Rose Barrage's Piercing AoE DoT ignores the defensive stacking that walls the batch, and the package (team shields, cleanse+heal+invuln, revive, and a permanent through-death team Silence) is high-impact reliable support; self-kill liabilities are the real cost that holds her at top-of-fair rather than S."
+ },
+ {
+  "path_name": "maka",
+  "tier": "A",
+  "justification": "P2/P1: nearly the entire kit bypasses defenses (Piercing + True for ~50 effective/turn) including a repeatable 1cd true-damage execute, all on a light mono-Red-but-mostly-Random cost; the only-mild setup turn and single-target-only weakness keep her A rather than S, but true damage that ignores the meta's shields/DR is reliably strong."
+ },
+ {
+  "path_name": "mami",
+  "tier": "B",
+  "justification": "P5/P4: the 120+ ceiling is all-Normal and double-gated (Soul Gem 3 + a Ribbon-Wrapped target) while the Soul Gem self-kill at 8 imposes a hard finite lifespan, and Concert punish is conditional on enemies casting; cheap kit, team cleanse, stun-immunity and a counter make her a strong but swingy high-B, not A."
+ },
+ {
+  "path_name": "marco",
+  "tier": "B",
+  "justification": "A free no-CD 25 heal, full 1-turn team Invulnerability, a reflect, AoE regen and a self-sustaining damage-sink passive make him an efficient, dependable support anchor; P4-adjacent, his near-zero offense (one 20 poke) means he cannot threaten or close, so he is a solid balanced core rather than a first-pick A."
+ },
+ {
+  "path_name": "mars",
+  "tier": "C",
+  "justification": "P5: the whole kit is hard-gated behind Ofuda marks \u2014 turn 1 must be spent on the enabler and she literally cannot touch unmarked enemies \u2014 and the second mark is random/imprecise with no AoE and no self-defense; the Affliction DoT bypass and on-demand stun are nice but the heavy setup tax and narrow reach keep her a high-C."
+ },
+ {
+  "path_name": "mash",
+  "tier": "A",
+  "justification": "P8/P3: permanent ally invulnerability + damage-reflect for a cheap CD3, plus a 2-turn full-team invuln ultimate, taunt and break-vow retaliation make her elite, reliable prevention that swings burst turns; the Blue-lock (P1) and intentionally low shield-gated damage are acceptable costs for a dedicated protector, landing her at low A."
+ },
+ {
+  "path_name": "mavis",
+  "tier": "A",
+  "justification": "P3/P5: Fairy Sphere team ignore-ALL-damage is gated to CD7 and Fairy Star Strategy is a living-ally ramp (setup tax), but Bestow's reliable 40 True/turn outsourced to an ally (DR/shield-bypass) plus permanent team damage buffs and two invuln layers make her a top-of-fair protector; the mono-White 5-pip burden (P1) is earned by that potency (P2)."
+ },
+ {
+  "path_name": "megumi",
+  "tier": "C",
+  "justification": "P4: class-specific 'stun' is conditional CC keyed to a RANDOM class roll that frequently whiffs, not a true stun; cheap/fast but low damage, no AoE/DoT/support, and two of four buttons do nothing on bad rolls \u2014 functional but swingy and niche."
+ },
+ {
+  "path_name": "megumin",
+  "tier": "D",
+  "justification": "P5: a single hard-capped 65 Piercing nuke behind a crippling 3-turn self-lockout (massive tempo tax) plus 1-2 cast ramp; no scaling, AoE, CC, or sustain \u2014 a one-trick below the curve despite the invuln/counter bypass."
+ },
+ {
+  "path_name": "meliodas",
+  "tier": "B",
+  "justification": "P3: cheap fast counter-punisher, but damage is heavily reactive \u2014 Revenge Counter locks him out 2 turns for a modest payoff and a kiting/passive enemy denies most of it; Hellblaze shield-pierce + heal-deny is good value, netting a solid but conditional core."
+ },
+ {
+  "path_name": "mercury",
+  "tier": "C",
+  "justification": "P6: near-spammable 1-turn invuln gives great survivability and cooldown-side disruption, but cooldown interference is soft (no pip denial) and damage is hard-capped at 25 Normal with no AoE/DoT \u2014 low-impact single-target defensive disruptor."
+ },
+ {
+  "path_name": "midoriya",
+  "tier": "A",
+  "justification": "P3: full stun + full silence + Helpful-lock at CD1 is exceptional control density from turn 1, and the Faux 100% end-state (self-invuln every action + bypass-invuln + Piercing) is near-oppressive; the mono-Green burden (P1) and self-damage transformation ramp (P5) are real costs that keep him just inside fair."
+ },
+ {
+  "path_name": "mikasa",
+  "tier": "B",
+  "justification": "P4: stuns are class-restricted partial CC and raw damage is ~25, but team-wide ramping immortality, self-invuln, CC-immunity, anti-shield tech and a free utility \u2014 all cheap/Random (P1) \u2014 make a dependable balanced protector with a weak independent wincon."
+ },
+ {
+  "path_name": "mine",
+  "tier": "B",
+  "justification": "P5/glass-cannon: 0-CD repeatable Piercing burst (up to ~90) and 3-turn Uncounterable+bypass counters defensive comps, but the reverse-HP scaling is anti-synergistic \u2014 peak damage requires being near death with zero sustain \u2014 capping reliability to a high-variance high-B."
+ },
+ {
+  "path_name": "misaka",
+  "tier": "A",
+  "justification": "P2/P8: Bypassing+Uncounterable damage cleanly ignores invuln/counter/reflect on a 1-cost 0-CD nuke plus 1-cost 0-CD shield every turn with permanent ramp and only 2 color pips (P1) \u2014 outstanding reliable tempo; held off S only because damage stays Normal (DR/shield-mitigated)."
+ },
+ {
+  "path_name": "muichiro",
+  "tier": "B",
+  "justification": "P4/P5: the heal/shield/barrier-bypassing execute hard-counters sustain comps but is gated entirely on Blind (cleanse/blind-immunity neutralizes the wincon) and ramps slowly vs full-HP targets \u2014 a conditional finisher, not a delete button; strong cd0 team dodge + counter support keep him a solid B."
+ },
+ {
+  "path_name": "myotismon",
+  "tier": "B",
+  "justification": "Cheap fast 1-CD rotation with Piercing DoT that bypasses DR (P2/P9 \u2014 reliable into tanks) and a permanent irreversible anti-heal debuff, but low ~50 burst, purely single-target/no AoE, and half the kit (anti-support/Disintegrate counter) is matchup-dependent and reactive (P4-style conditionality), so dependable but niche."
+ },
+ {
+  "path_name": "nagisa",
+  "tier": "A",
+  "justification": "CD1-reapplied Silence-lock plus two on-demand defensive layers (invuln CD3, full immunity + counter-silence CD5) and Affliction that bypasses all mitigation (P2) make him a near-unkillable single-target controller; silence is real control not just energy-drain (P6), and the lock ceiling needs only smooth ramp not a transformation (P5), but no AoE and low raw damage keep him top-of-fair, not S."
+ },
+ {
+  "path_name": "naruto",
+  "tier": "C",
+  "justification": "Live .gd is flat-value 35/40 Normal fully stopped by DR/shields (P9 \u2014 stale JSON transformation/clones don't exist), no AoE, no hard CC, no scaling; cheap reliable single-target poke with a self-heal and CD4 invuln is functional but low-impact and falls off vs tanky/DR targets."
+ },
+ {
+  "path_name": "natsu",
+  "tier": "A",
+  "justification": "Two 0-CD damage skills on a light Red/mostly-Random economy (P1/P3 \u2014 near-free cost, excellent tempo) outputting Affliction that bypasses DR/shields/barriers (P2), with an uncapped self-sustaining ramp and a cleanse+scaling self-heal that hard-counters debuff comps; reliable rather than fragile ramp (P5), single-target ceiling is the only thing keeping it off S."
+ },
+ {
+  "path_name": "neferpitou",
+  "tier": "A",
+  "justification": "All-1-pip 4-cost kit (P1 \u2014 minimal color tax, great tempo) stacking multiple uncapped permanent Piercing ramps (P2) plus a self-shield, CD4 invuln and a one-time death-save that buy the turns the snowball needs; heavily back-loaded so discounted per P5, but the cheapness and irreversible compounding make it a strong, reliable first-pick rather than a fragile ramp."
+ },
+ {
+  "path_name": "nel",
+  "tier": "B",
+  "justification": "Near-free team sustain that procs off every energy pip spent via two 0-CD enablers (P3 \u2014 high uptime), overheal-to-shield, and anti-stun/anti-invuln tech with two self-protect layers on a very light 2-fixed-pip color cost (P1); but personal damage is low and fully blockable, zero AoE, and the best protection is gated behind Gamuza's CD5 window \u2014 a dependable support core without dominance."
+ },
+ {
+  "path_name": "nezuko",
+  "tier": "B",
+  "justification": "Two spammable 0-CD buttons on a cheap mono-White, half-Random kit (P1/P3) with strong heal+full-cleanse, AoE cleanse, and Affliction that bypasses shields/DR; but damage is low/slow, payoff needs 2-3 turns of one-mark-per-turn setup (P5), and with no CC or shields she relies on teammates to convert \u2014 a flexible but modest support."
+ },
+ {
+  "path_name": "nimaiya",
+  "tier": "A",
+  "justification": "Unbounded single-target ramp that is True + Bypassing \u2014 DR, shields, barriers and invuln never reduce it (P2/P8) \u2014 on a near-color-agnostic 4-cost economy (P1), plus invuln+stealth panic and a permanent ally economy buff; fully ramp-dependent with weak early turns and no AoE/heal/CC (P5 discount) holds it below S, but the unmitigable late-game delete is genuine top-of-fair payoff."
+ },
+ {
+  "path_name": "nobara",
+  "tier": "C",
+  "justification": "Persistent single-target lockdown (permanent Isolate + a 4-turn rotating multi-class stun) and anti-execute resilience, but all damage is low/slow Normal blocked by shields/DR, the payoff is heavily conditional and RNG-driven inside the Resonance window (P3/P5), a key debuff is unimplemented (P9), and there's no AoE or team support \u2014 a narrow, gated controller."
+ },
+ {
+  "path_name": "noelle",
+  "tier": "B",
+  "justification": "Piercing burst (45) that ignores flat/%DR (P2 \u2014 earns its specific-Blue cost), strong self-peel (flat DR + on-demand invuln), and a genuine but soft energy tax (P6 \u2014 removed by the enemy's next action); but a hard 45 ceiling with no scaling, no team support, no AoE, and burst gated behind the CD4 Valkyrie Dress + holding a Cradle (P5) make her solid and balanced rather than oppressive."
+ },
+ {
+  "path_name": "nonon",
+  "tier": "B",
+  "justification": "P5 setup tax is severe (near-zero T1 ~20-25, needs 2-3 ramp turns) and P3 the engine is binary vs stun (control_cancel wipes the swap chain); but Piercing on 3/5, anti-invuln Climax tech, and a cd0 repeatable detonator on cheap 1-pip skills (P1: only 2 specific Red) make her a dependable ramp core once online -> solid B, down from iso 6.5."
+ },
+ {
+  "path_name": "omnimon",
+  "tier": "B",
+  "justification": "P5: payoff is gated behind connecting a kill on a RANDOM Nemesis, and pre-kill he is a vanilla 30-Piercing striker with a low ~60/turn ceiling and no scaling/AoE; cheap low-color (P1: 2 specific of 6) reliable Piercing + strong self-protect keep him dependable but unexceptional -> B."
+ },
+ {
+  "path_name": "orihime",
+  "tier": "B",
+  "justification": "P1/P2 max color burden (mono-White, 3x White:1) and near-zero damage with no CC cap her ceiling, but layered sustain + full cleanse + unstunnable enabler make her a dependable, spammable support that just cannot close games -> B, not lifted by tiny Piercing chip."
+ },
+ {
+  "path_name": "pegasus",
+  "tier": "B",
+  "justification": "P5: the counter->mark->Thousand-Eyes transformation is multi-step and enemy-behavior-gated, and base damage is lowest-tier/flat; but the hidden payoff is a 4-turn full-Harmful-class single-target lockdown behind a 40 shield off a cheap mostly-Random kit -> conditional high-value control lands at B."
+ },
+ {
+  "path_name": "rakko",
+  "tier": "D",
+  "justification": "P9-verified broken signature (rakko5 passive is a no-op, free-cast condition is dead code), so the intended economy/team-Shatter payoff never comes online; left with low single-target-only grind damage, no AoE and no utility -> below-curve D, down from iso 4 once the dead engine is discounted."
+ },
+ {
+  "path_name": "renamon",
+  "tier": "C",
+  "justification": "P1 worst-case color greed (G+B+W, zero Random pips) plus P5 ~3-turn install ramp and low capped base numbers (triggers install once, don't multi-stack) make her easily starved and slow; selective/conditional invuln and good post-ramp tempo save her from D but the heavy tax holds her at C."
+ },
+ {
+  "path_name": "rengoku",
+  "tier": "A",
+  "justification": "Shatter strips DR AND invuln for himself AND allies (rare high-leverage enabler), and his Piercing instants + barrier-ignoring Bleed are defense-agnostic on a cheap spammable bar; per P5 only the 40 finisher is transform-gated while the baseline is already strong -> reliable first-pick A."
+ },
+ {
+  "path_name": "rimuru",
+  "tier": "A",
+  "justification": "Permanent uncleansable team-wide Affliction (true inevitability bypassing shields/DR per P8/P9) plus repeatable cheap stun, full-CD Paralyze, skill-theft counter, and heavy team sustain form a deep toolbox; discounted for P5 once-per-game spike dependence and P1 three-color G+W+R burden, but the sticky payoff and reliability keep him top-of-A."
+ },
+ {
+  "path_name": "rob",
+  "tier": "A",
+  "justification": "Oppressive anti-defense stack: Piercing/Affliction routing, rob5 bypasses invuln, rob6 strips all team counter/reflect uncounterably, Leopard grants blanket CC-immunity; the rob7 execute is conditional (P4) but its 2-of-3 defensive triggers are trivially met in tanky metas and he self-supplies <60 -> a cheap, fast, self-funding hard-counter at the top of A (just short of meta-warping S since the execute whiffs on squishy >60 HP targets)."
+ },
+ {
+  "path_name": "ryohei",
+  "tier": "B",
+  "justification": "P3/economy self-throttle is the key discount: uncapped punishment scaling is real but each consumed stack adds +1 cost so a big Cannon balloons to 5-8 pips, and it is Normal damage unless cd4 Headgear is up; P5 weak cold-open and single-target-only offense offset the rare offense+heal+DR+stun-immunity hybrid -> dependable but spiky B."
+ },
+ {
+  "path_name": "ryuko",
+  "tier": "B",
+  "justification": "P3/P5: 0-CD 20-Normal nuke + FREE AoE toggle is excellent tempo, but the standout +10/kill snowball is a gated ceiling (needs actual kills), and all-Normal output (P-mitigation) is stopped by barriers/DR/invuln; floor is a mediocre 20-poke, so solid-core not top-tier."
+ },
+ {
+  "path_name": "saber",
+  "tier": "A",
+  "justification": "P4/P8-adjacent: 45 PIERCING that is uncounterable AND unreflectable + Silence is genuine defense-bypass burst, backed by permanent regen, invuln and near-free economy \u2014 high impact with real costs (CD2 nuke starts on CD, zero AoE, single-target only), a reliable first-pick that stops short of S."
+ },
+ {
+  "path_name": "saitama",
+  "tier": "S",
+  "justification": "P4: one of the few TRUE unconditional-ceiling instant-kills (9999), and even the non-kill package \u2014 universal shield-shatter on basics, whole-team 2-turn DEF-negate, and one-button full-team invuln+cleanse \u2014 is independently oppressive on cheap mono-Green/mostly-Random costs; reactive kill-gate is the only brake, format-warping overall."
+ },
+ {
+  "path_name": "sakura",
+  "tier": "B",
+  "justification": "P2/anti-meta: DR-strip-to-zero before every cd-0 hit hard-counters tank/DR stacking and a full cleanse+heal is rare value on low color, but raw ceiling is only 20-30, all-Normal (stopped by invuln/unstripped DR), sustain is single-target and AoE is gated behind cd-3 Rampage Gloves \u2014 a strong but modest niche-defined core."
+ },
+ {
+  "path_name": "satsuki",
+  "tier": "C",
+  "justification": "P5/variance: online turn 1 with cheap Piercing, but the ENTIRE kit is binary-gated on full HP and any chip \u2014 DoT/Affliction/Bleed, the most common pressure \u2014 switches every upgrade off at once; base numbers are mediocre, zero AoE, no team utility, so she is high-variance and easily dismantled by sustained pressure."
+ },
+ {
+  "path_name": "sasuke",
+  "tier": "B",
+  "justification": "P4/P5: Kirin is uncounterable with an execute THRESHOLD (finisher value, not a true kill) and is slow to arm \u2014 land Great Dragon Fire + ~3-turn swap is real setup tax; otherwise all-Normal with low non-Kirin burst and a conditional counter, making him a functional but gated single-target assassin."
+ },
+ {
+  "path_name": "saturn",
+  "tier": "C",
+  "justification": "P4/P5: the true uncapped execute is heavily discounted by an 8-CD + 3-turn arm (~once per 11 turns) and is telegraphed/removable; direct damage is trivial 15 with no AoE and the redirect 'tankiness' is reactive/random and even chips her own team \u2014 functional support but low-impact and slow."
+ },
+ {
+  "path_name": "sayaka",
+  "tier": "B",
+  "justification": "P1/P5: heal-to-damage scaling is theoretically unbounded but hard-capped by a self-kill 10-stack death clock and front-loaded ramp; heavy Blue (3 pips) invites color screw and the carry is Normal \u2014 yet a reliable Piercing-floor finisher + energy-free sustain make her a dependable balanced-core duelist."
+ },
+ {
+  "path_name": "semiramis",
+  "tier": "B",
+  "justification": "P-bypass: pure Affliction ignores ALL defense (shields/barriers/%+flat DR) and stacks permanently as premier anti-shield/heal tech with self-shield+invuln windows, but P5 setup tax is severe \u2014 she opens BANISHED 2 turns (forced 2v3), burst is tiny, payoff is back-loaded and dead vs no-defense teams, landing a high-B."
+ },
+ {
+  "path_name": "seventeen",
+  "tier": "B",
+  "justification": "P1/P-bypass: all Affliction/Piercing makes defenses nearly irrelevant and the permanent re-stackable DoT scales over long games on two 0-CD skills, and the 4-color base is eased by the passive flooding RANDOM pips (P1); but ramp self-resets (no snowball), burst is low and it has no CC/closing or ally support \u2014 a solid inevitable-chip engine with no glaring strength."
+ },
+ {
+  "path_name": "sheele",
+  "tier": "C",
+  "justification": "P5/P4: low fixed ceiling (40 only vs a target keeping BOTH Shield+DR; otherwise 20/35, no ramp), and the anti-defense bonus is conditional finisher-value. Piercing reliability and the rare sheele3 ally-Immortality + AoE Shatter team-save are real, but it is a CD5 one-shot and a two-color W+R load keeps total impact modest."
+ },
+ {
+  "path_name": "shinoa",
+  "tier": "B",
+  "justification": "P5: heavy front-load discount \u2014 near-useless T1 and the marker hits a RANDOM enemy (unreliable priority targeting), best effects gated behind a CD5 transform. Once online, CD0 Shatter + CD1 AoE stun + mitigation-bypassing Affliction (P8-adjacent) give solid control on a light mono-Red mostly-Random cost (P1). Dependable core, not a carry."
+ },
+ {
+  "path_name": "shinra",
+  "tier": "C",
+  "justification": "P5: high ramp + per-turn Ignition setup tax for only 5 affliction/hit, single-target, no AoE; permanent uncapped DoT (P9 bypass) is real but slow and cleanse-fragile, with weak 25/40 burst. Mono-Green is light (P1) but standalone kill speed is below curve."
+ },
+ {
+  "path_name": "shiro",
+  "tier": "C",
+  "justification": "P3/P5: spammable but a 25 ceiling, all Normal (fully mitigable, no bypass), zero real AoE, self-vulnerability, and short 1-turn riders (stun only non-Strategic). Color-free cost (P1) is cheap because the kit is low-impact; whole-team taunt + lockdown keep it a functional control anchor, nothing more."
+ },
+ {
+  "path_name": "shokuhou",
+  "tier": "A",
+  "justification": "Top-of-fair disruption: a 2-CD (P3 real cost) stun that ALSO steals the target's full kit, with borrowed scaling that punches up at carries; robust self-defense (cleanse + reactive stun + invuln), all 1-pip mono-White (P1). Ramp tax is soft (1-turn baseline works); single-target-only and zero innate damage hold it just under S."
+ },
+ {
+  "path_name": "soul",
+  "tier": "C",
+  "justification": "P5/partner-gated: enemy output locked at 30 Affliction with self-harm, and the carry buff ramps slowly behind a 100-dmg gate; heavily Maka-dependent (low value as a lone pick). AoE Strategic-delay soft control and self-heal are nice, but standalone impact is low."
+ },
+ {
+  "path_name": "squalo",
+  "tier": "A",
+  "justification": "No ramp tax \u2014 immediate ~70 burst that lands unmitigated on a permanent-Shatter target (2 pips/1CD), all-Piercing + Bypassing DoT that ticks through Invuln (P9), excellent tempo (0-CD shield-strip). White-heavy load (P2) justifies the potency. No AoE and one CD4 defensive button keep it off S, but a reliable anti-defense first-pick."
+ },
+ {
+  "path_name": "sukuna",
+  "tier": "B",
+  "justification": "P5 max setup tax: permanently stunned/untargetable, does NOTHING until an ally crosses HP thresholds or is sacrificed \u2014 effectively a 2-man team early and can collapse if the marked ally dies. P4: uncapped board-wide execute + bypass DoT + uncounterable is a huge payoff, but slow to mature and can clip own allies; the untargetable self-protection while ramping saves it from C. High-variance."
+ },
+ {
+  "path_name": "tamaki",
+  "tier": "A",
+  "justification": "Mitigation-proof compounding permanent Affliction (P8/P9 bypass) on a very cheap mono-Blue CD1 loop (P1/P3), with anti-invuln via Cage and strong self-sustain/peel. P5 ramp discount applies (weak T1, Fireball gated behind CD4 Ignition), but the clock is cheap, reliable, and accelerating \u2014 a strong fair carry with a sound floor."
+ },
+ {
+  "path_name": "tanjiro",
+  "tier": "B",
+  "justification": "Solid balanced core: versatile self-contained toolbox (Piercing chip, scaling AoE finisher, three defensive layers) on a cheap mostly-Random cost (P1). But the RNG loadout makes the Seventh\u2192Eighth combo and Tenth Form unreliable, and Tenth's +20/dead payoff is back-loaded (P5) \u2014 low per-hit numbers and inconsistency pin it to the middle."
+ },
+ {
+  "path_name": "tatsumaki",
+  "tier": "A",
+  "justification": "Premier layered hard-CC: a CD0 invuln-bypassing Bind (P3 spammable), a 2-turn full stun, a global stun-duration extender enabling near-perpetual lock, plus a rare 2-turn TEAM invuln; discounted from S because mono-Green is color-screwable (P1) and the 75 Spear is doubly gated by Twisting-swap + a stunned target (P5 setup tax) with best alts on CD5 (P3)."
+ },
+ {
+  "path_name": "tatsumi",
+  "tier": "B",
+  "justification": "Reliable 35 Piercing/turn (up to 75) from CD0 skills for one Green pip with 3/5 Random (P1 cheap, P3 spammable) and slippery invuln stacking, but everything is hard-gated behind Incursio (CD3, P5 setup tax), the 'stun' is only a damage tag not real CC, single-target only and purely selfish keep it solid-not-top."
+ },
+ {
+  "path_name": "todoroki",
+  "tier": "B",
+  "justification": "Affliction on Jet Burn/Fire Wall bypasses shields/DR (high effective dmg, P8-adjacent) with a hard stun + 15 DoT, but the see-saw ramp is deliberately self-throttled (Hot self-burns, Cold inflates cost \u2014 P5 high setup, anti-snowball) capping realistic output ~40-50, and the Blue+Red two-color load (P1) plus CD2/CD4 gates (P3) hold it to a balanced core."
+ },
+ {
+  "path_name": "toga",
+  "tier": "B",
+  "justification": "Zero color dependency makes her maximally splashable (P1, Random pips ~free) and her Piercing+Bleed bypass DR/shields for high effective damage, but raw numbers are modest (45 single, 25 delayed AoE) and the real payoffs gate behind 3/4/5 Twisted Love stacks (P5 ramp tax \u2014 turn-1 she is a 15-dmg piercer), landing her as a dependable B not higher."
+ },
+ {
+  "path_name": "tokoyami",
+  "tier": "C",
+  "justification": "Damage is flat and lowest-tier (10/15, never scales) and the entire kit is HIGH-ramp gated on Black Abyss stacks (P5) that any stun/silence/blind resets, while energy-denial is only a supporting tool (P6); the 3-stack AoE-stun/counter/team-invuln package is real utility but too gated, fragile, and low-impact for more than functional-niche."
+ },
+ {
+  "path_name": "toph",
+  "tier": "C",
+  "justification": "All-Normal damage is fully blunted by shields/DR (P8-adjacent, almost no kill pressure), energy denial is supporting not a wincon (P6), and the permanent lockdown only disables Physical-class skills (non-Physical attackers walk through); cheap mono-Green with anti-stealth (P7 largely unnecessary) and a CD5 team invuln make her a functional but narrow, low-impact controller."
+ },
+ {
+  "path_name": "toudou",
+  "tier": "A",
+  "justification": "Raikiri is 45 Piercing AND Uncounterable \u2014 a mitigation-proof finisher beating DR-stackers, shields-as-DR, and counter chars \u2014 delivered from a 3-pip, near-zero-color kit that is online turn 1 with three CD1 skills + a CD0 nuke (P1/P3 excellent tempo) plus full-damage invuln and a counter-stance; only the reactive/single-target/no-scaling weaknesses keep her off S."
+ },
+ {
+  "path_name": "touka",
+  "tier": "B",
+  "justification": "Burst + a 1-turn full stun on the same 45-dmg button plus Piercing bleed-through is strong tempo, but it is gated behind a CD4 self-empower with a ~1-turn window and mutually-exclusive modes (P5), damage is flat-capped ~65 with a dead-code bug eating an advertised bonus, and the cooldown-lock energy denial is soft (P6) \u2014 a cheap, solid balanced-core unit."
+ },
+ {
+  "path_name": "tsubaki",
+  "tier": "C",
+  "justification": "Near-zero standalone damage with power routed through a wielded partner (Black Star), so most of the kit is dead weight without an ally to enable; the cheap spammable shields, partner invuln-bypass, and rare cleanse access are genuinely valuable but the 40 Uncanny Sword consumes the wielder's action (P5 conditional/telegraphed), keeping her a niche enabler."
+ },
+ {
+  "path_name": "tsunayoshi",
+  "tier": "B",
+  "justification": "All damage is Normal so it is fully stopped by shields/barriers and reduced by DR (P8-adjacent), with no scaling and a hard ~45/35 cap whose top end needs the enemy to attack him with Energy/Affliction (P5 conditional); a cheap mostly-Random kit (P1) with two 1-turn stuns and a self-invuln/counter on CD4 makes him a functional but unremarkable balanced-core dealer."
+ },
+ {
+  "path_name": "tsuyu",
+  "tier": "B",
+  "justification": "P1/P3: cheap (2 Green/4 pips), spammable (CD1) ramp-free dual-mode peel with stun + ally invuln; but P4-irrelevant trivial Normal damage (~30, no scaling) and no heal/cleanse/energy-denial keep her a contingent low-impact protector, not above the core."
+ },
+ {
+  "path_name": "uranus",
+  "tier": "B",
+  "justification": "Cheap ramp-free layered single-ally peel (perma DR + shield + near-perma 1-CD counter + invuln); P9 confirms the advertised +5 amp is dead code, and all value funnels to one positionally-gated ally with low flat damage \u2014 reliable but bounded, solid-core B."
+ },
+ {
+  "path_name": "uraraka",
+  "tier": "D",
+  "justification": "P6: energy-drain is not a wincon and her cost-tax is the soft cousin; AoE deals 0 and peak ST is ~20-35, so despite the Float 'bug' being a P9 false-positive (shield/counter DO apply, uraraka4.gd L32-33), she is a one-dimensional disruptor useless solo \u2014 below curve."
+ },
+ {
+  "path_name": "uryu",
+  "tier": "B",
+  "justification": "All-Piercing + Bypassing anti-defense with low CDs and two invuln tools earns potency via P2 heavy Blue burden (P1), but P5 the 55 burst is self-cannibalizing (recharge tax + CD2 reload), single-target only, and the mark-engine is cleanse-erasable \u2014 strong-fair, top of B."
+ },
+ {
+  "path_name": "usopp",
+  "tier": "B",
+  "justification": "P1 zero-specific-color (max splashability) + 0-CD AoE and team Blind that amps damage and enables a counter-stun; but all Normal (P-blockable by DR/shields), P3 the Smoke Star enabler is CD2-gated, and the whole kit dies to Blind cleanse/immunity \u2014 upper-B controller."
+ },
+ {
+  "path_name": "uzui",
+  "tier": "B",
+  "justification": "Whole-kit Piercing + cd0 spam + full cooldown-reset and layered self-defense, but P5/P4 The Score payoff is RNG-gated and self-terminating, P1 mono-Red (4/6) is a heavy color burden, and raw ~30 ST with self-only utility holds him at solid-core B."
+ },
+ {
+  "path_name": "vegeta",
+  "tier": "B",
+  "justification": "Uncapped Piercing ramp + Uncounterable nuke with flexible (half-random) economy and self-discount to 0 Red, but P5 heavy setup tax \u2014 weak early, ramp fragile to disruption, wants a long game, and no defense beyond 10 DR \u2014 strong ceiling paid for by real ramp cost, top of B."
+ },
+ {
+  "path_name": "veldora",
+  "tier": "C",
+  "justification": "P5: the ramp is self-conflicting \u2014 every action including defending wipes ALL stacks \u2014 sharply capping realized output to one spike turn; pure Energy (fully DR/shield-blocked), mono-Red (P1), and weak base (30/20/5) make him functional but heavily gated."
+ },
+ {
+  "path_name": "venus",
+  "tier": "C",
+  "justification": "Reactive ramp that only accrues when attacked, all Normal damage (fully blockable), and tiny raw numbers (5/15/0) make her output entirely contingent on enemy cooperation per P5; uncapped DoT ceiling and taunt-feed give upside but the conditionality and thin defense cap her at C."
+ },
+ {
+  "path_name": "xanxus",
+  "tier": "B",
+  "justification": "P1 extreme splashability (7/9 Random) with Piercing/Affliction conversion and strong self-survival (uncond invuln + conditional heal/shield/cleanse), but P5 low floor (Martello 6 pips, defensive on 8 CD) and ramp mostly enemy-gated with zero team support \u2014 fair-strong on average, upper-B."
+ },
+ {
+  "path_name": "yamamoto",
+  "tier": "C",
+  "justification": "P5 setup tax dominates: low base damage (20/15/30) and the Scontro payoff is double-gated behind Asari ramp stacks AND debuffs already existing on the target (a fresh target = vanilla 30); a stack-poor transform lasts ~1 turn, so between windows he's a 20-damage chipper. Cheap mono-Green (P1) and invuln/shield-bypass tech are nice but ride modest numbers \u2014 functional, low-impact, heavily conditional."
+ },
+ {
+  "path_name": "yoh",
+  "tier": "A",
+  "justification": "The Absence of Ignorance is an uncounterable non-damage HP-equal removal bypassing shields/DR/caps/counters (P4/P8 \u2014 a near-execute, but its potency is capped by his current HP, gated behind two simultaneous stances, and the 1-turn telegraph is playable-around). Light Green (P1), 0-CD attacks (P3), and strong self-sustain feed the finisher; real ramp cost + zero AoE/team utility keep it top-of-fair rather than oppressive."
+ },
+ {
+  "path_name": "yubel",
+  "tier": "B",
+  "justification": "Permanent immunity to all harmful effects while an ally lives is a strong defensive primitive and the taunt suite is best-in-class, but P6 logic applies broadly: her wincon is purely reactive and opponent-gated \u2014 zero proactive damage, doubled reflect needs 6 stacks that only accrue if enemies attack her, and immunity collapses when last alive. A durable control body with a conditional, enemy-cooperation-dependent engine."
+ },
+ {
+  "path_name": "yugi",
+  "tier": "B",
+  "justification": "This is the canonical P5 case the rubric names: the unconditional instant-kill (true 9999-class, P4) is real but requires cycling all 5 skills, is one-time, telegraphs, and reverts to a mediocre 25-damage single-White controller afterward. Discounting the heavy setup tax against ~6 total skill uses lands him at solid-core, not high \u2014 the gate is exactly what the principles say to mark down."
+ },
+ {
+  "path_name": "yuji",
+  "tier": "B",
+  "justification": "Cheap (1 Blue, P1), CD0 spammable core (P3), and a large True-damage share bypasses DR/barriers/shields \u2014 deceptively potent vs tanky comps. But the snowball is front-loaded weak, RNG-gated early (10% Black Flash floor), and the marquee True loop demands self-endangerment below 50 HP; self-heal + invuln offset. A dependable scaling bruiser with genuine ramp/RNG/self-risk costs \u2014 core B."
+ },
+ {
+  "path_name": "yuno",
+  "tier": "A",
+  "justification": "All-Piercing kit (skips flat + % DR) plus a 65 invuln-bypassing, auto-recast-on-counter, 0-CD nuke (P3) with kill-extended transform is a stacked anti-defense/snowball package \u2014 among the strongest payoffs in the batch once online. Blue burden (P1/P2) is real but self-funded by +1 Blue/turn and cost refunds; the heavy base-form ramp gate (P5) and lack of team support cap it below S, but the spun-up engine is reliably oppressive."
+ },
+ {
+  "path_name": "zenitsu",
+  "tier": "C",
+  "justification": "A CD0 Piercing nuke at very low color (1 Blue, P1) with two invuln sources, but Piercing does NOT bypass barriers/shields, the ceiling is thin (~50 pre-ramp), there's a 2-turn buff tax for peak, the thorns counter resolves 0 damage (non-functional, P9-verified dead trigger), and there's zero AoE/CC/support. Functional spammable duelist with low impact and a wasted defensive line \u2014 modest/niche."
+ },
+ {
+  "path_name": "zoro",
+  "tier": "B",
+  "justification": "Notably NOT ramp-gated (functional turn 1: cheap 30 spam + execute + invuln + counter), two CD0 attacks (P3), and a free permanent stacking buff with a redundant counter-trigger path. Lion Strike's Piercing + invuln-bypass + sub-15 execute (P4 \u2014 a low threshold that his own ramp helps reach) is a clean finisher. Light Green (P1) and layered self-survivability make him a reliable, no-glaring-weakness bruiser; single-target-only and slow +5 ramp hold him at strong-core."
+ }
+]

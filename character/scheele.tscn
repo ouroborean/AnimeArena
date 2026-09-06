@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_exvao"]
+[ext_resource type="Texture2D" path="res://assets/images/Sheele/profile_mastery_sheele.png" id="2_nlysu"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_3y6rk"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_5o1hl"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_al8yy"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_vnp85"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_2sj5m"]
+
+[sub_resource type="GDScript" id="GDScript_5kwi0"]
+script/source = "extends Character
+class_name Sheele
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+
+func startup(nbattle):
+	battle = nbattle
+	battle.connect_character(self)
+	var context = QueryContext.from_game_state(self, battle)
+
+func initialize(_moveset = false):
+	character_name = \"Sheele\"
+	path_name = \"Sheele\"
+	description = \"Sheele, an assassin of Night Raid. A compassionate woman who, in a moment of life-threatening danger, discovered she had a talent for murder. She wields Extase, a pair of giant scissors that can cut through anything.\"
+	if _moveset:
+		moveset.set_base_abilities(Movesets.scheele_moveset(), self)
+	
+func is_unlocked(player):
+	return true
+	#return player.mission_complete(\"character_unlock_mission\")
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Scheele" type="Node"]
+script = SubResource("GDScript_5kwi0")
+portrait_texture = ExtResource("2_nlysu")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_exvao")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_3y6rk")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_5o1hl")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_al8yy")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_vnp85")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_2sj5m")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

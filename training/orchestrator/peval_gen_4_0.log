@@ -1,0 +1,94 @@
+Godot Engine v4.6.2.stable.official.71f334935 - https://godotengine.org
+
+[trainer] seed=4400 matches=50 opponent=policy:res://training/checkpoints/gen_4.json eval=true out=res://training/checkpoints/work.json checkpoint=res://training/checkpoints/gen_8.json
+[authored] loaded 1 authored character(s)
+[   1/50  ] WIN    16 turns   semiramis, inuyasha, naruto  vs  blackwargreymon, todoroki, hisoka
+Applying bleed effect! Checking special code
+[   2/50  ] WIN    18 turns   inosuke, uzui, tamaki  vs  nezuko, zoro, zenitsu
+[   3/50  ] WIN    26 turns   rob, shinra, todoroki  vs  alphamon, adam, yamamoto
+[   4/50  ] WIN    31 turns   rob, crona, nezuko  vs  akame, ganta, ryohei
+[   5/50  ] LOSS   33 turns   kid, ace, uranus  vs  veldora, uzui, levi
+[   6/50  ] WIN    19 turns   machinedramon, shinra, sheele  vs  soul, gunha, gasai
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   7/50  ] LOSS   17 turns   power, usopp, alphamon  vs  mami, ken, neferpitou
+[   8/50  ] WIN    34 turns   blackstar, itachi, maka  vs  goku, aang, uzui
+[   9/50  ] LOSS   34 turns   touka, naruto, ladydevimon  vs  tatsumaki, vegeta, shokuhou
+[  10/50  ] LOSS   22 turns   mavis, tamaki, bakugo  vs  astolfo, tanjiro, ganta
+[  11/50  ] WIN    23 turns   nagisa, koro, megumi  vs  squalo, tamaki, uzui
+[  12/50  ] LOSS   27 turns   hinata, ganta, orihime  vs  rimuru, tsunayoshi, cell
+[  13/50  ] LOSS   22 turns   uzui, rob, myotismon  vs  killua, hisoka, midoriya
+[  14/50  ] LOSS   17 turns   toudou, alphonse, jeanne  vs  neferpitou, sasuke, ban
+[  15/50  ] WIN    10 turns   sukuna, jupiter, rimuru  vs  megumin, ganta, sheele
+[  16/50  ] LOSS   19 turns   emiya, arthur, xanxus  vs  nagisa, broly, megumin
+[  17/50  ] LOSS   17 turns   ladydevimon, ichibe, broly  vs  nobara, saturn, shinoa
+[  18/50  ] WIN    23 turns   genos, tsubaki, uzui  vs  edward, byakuya, toga
+[  19/50  ] LOSS   22 turns   alphonse, semiramis, luffy  vs  gogeta, aiohto, saturn
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  20/50  ] WIN    17 turns   rakko, mercury, maka  vs  king, blackstar, shiro
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  21/50  ] WIN    20 turns   frankenstein, rakko, jack  vs  mavis, tsuyu, kurotsuchi
+Applying bleed effect! Checking special code
+[  22/50  ] LOSS   21 turns   halibel, diane, soul  vs  tanjiro, bakugo, gohan
+[  23/50  ] LOSS   18 turns   myotismon, zenitsu, killua  vs  gohan, mash, natsu
+[  24/50  ] WIN    25 turns   tokoyami, misaka, toudou  vs  hinata, mavis, inuyasha
+[  25/50  ] WIN    13 turns   shinra, luffy, sayaka  vs  pegasus, rob, vegeta
+[  26/50  ] WIN    32 turns   saber, alphonse, hibari  vs  squalo, meliodas, ichibe
+[  27/50  ] WIN    20 turns   shokuhou, saitama, ladydevimon  vs  mars, mash, tsuyu
+[  28/50  ] LOSS   30 turns   uranus, orihime, gray  vs  myotismon, broly, mavis
+[  29/50  ] LOSS   17 turns   gray, natsu, xanxus  vs  gatomon, todoroki, uranus
+[  30/50  ] LOSS   22 turns   naruto, akame, broly  vs  levi, arthur, toudou
+[  31/50  ] WIN    20 turns   emiyaarcher, ban, boruto  vs  shinra, ace, megumi
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  32/50  ] WIN    17 turns   inosuke, satsuki, marco  vs  tsunayoshi, horohoro, squalo
+[  33/50  ] LOSS   16 turns   asta, gogeta, mine  vs  cell, eren, nimaiya
+[  34/50  ] LOSS   32 turns   kurotsuchi, hawkmon, xanxus  vs  yugi, nel, uraraka
+[  35/50  ] WIN    19 turns   uranus, yoh, ichigo  vs  blackstar, emiya, gray
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  36/50  ] LOSS   20 turns   pegasus, ban, bakugo  vs  allmight, zoro, denji
+[  37/50  ] LOSS   14 turns   lyserg, zenitsu, jeanne  vs  tokoyami, toph, mavis
+[  38/50  ] WIN    24 turns   broly, mars, ban  vs  natsu, marco, yoh
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  39/50  ] LOSS   28 turns   marco, shinra, veldora  vs  denji, gojo, saitama
+Applying bleed effect! Checking special code
+[  40/50  ] WIN    29 turns   lizandpatty, blackwargreymon, akame  vs  misaka, kid, power
+[  41/50  ] WIN    13 turns   killua, itachi, halibel  vs  erza, orihime, tsubasa
+[  42/50  ] WIN    18 turns   lucy, megumi, toph  vs  jesse, misaka, tokoyami
+[  43/50  ] LOSS   17 turns   korra, tsubasa, toga  vs  yoh, todoroki, nimaiya
+[  44/50  ] WIN    26 turns   veldora, uraraka, kitara  vs  death, edward, tsubaki
+[  45/50  ] WIN    22 turns   satsuki, allmight, mami  vs  omnimon, megumi, byakuya
+[  46/50  ] WIN    18 turns   marco, hibari, nel  vs  todoroki, crona, toji
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  47/50  ] LOSS   17 turns   cell, byakuya, omnimon  vs  minene, usopp, rakko
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  48/50  ] LOSS   20 turns   minene, jupiter, inosuke  vs  sasuke, denji, rengoku
+Yubel's S1 Triggered!
+Yubel's S1 Triggered!
+[  49/50  ] WIN    13 turns   sheele, midoriya, impmon  vs  soul, ace, yubel
+[  50/50  ] LOSS   19 turns   nimaiya, edward, koro  vs  inuyasha, jupiter, zoro
+=== TRAINER RUN COMPLETE ===
+Matches: 50   W: 26   L: 24   D: 0   Win: 52.0%   (opponent: v3:gen_4.json  [EVAL])

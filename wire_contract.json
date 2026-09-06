@@ -1,0 +1,2129 @@
+{
+  "schema": "anime-arena-wire-contract/1",
+  "generated_from": {
+    "server": "components/server_connection.gd",
+    "client": "webclient/app/app.js",
+    "transport": "webclient/json_gateway.gd"
+  },
+  "transport": {
+    "protocol": "websocket-text-json",
+    "port": 5695,
+    "envelope": "{\"type\": \"<name>\", ...fields}",
+    "keepalive": {
+      "from": "client",
+      "type": "ping",
+      "interval_seconds": 25,
+      "reply": "pong"
+    },
+    "backpressure": "send_queued: per-peer FIFO, 60000-byte headroom; required for large/bursty frames"
+  },
+  "inbound": [
+    {
+      "name": "ping",
+      "category": "AUTH",
+      "scope": "NB",
+      "auth": "none",
+      "rate_limit": null,
+      "fields": {
+        "payload": "any?"
+      },
+      "replies": [
+        "pong"
+      ]
+    },
+    {
+      "name": "server_status",
+      "category": "AUTH",
+      "scope": "NB",
+      "auth": "none",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "server_status"
+      ],
+      "notes": "pre-auth on purpose: polled by an ejected client waiting for a new boot_id"
+    },
+    {
+      "name": "login",
+      "category": "AUTH",
+      "scope": "NB",
+      "auth": "none",
+      "rate_limit": null,
+      "fields": {
+        "username": "string",
+        "password": "string"
+      },
+      "replies": [
+        "maintenance_locked",
+        "receive_login_response",
+        "global_chat_state",
+        "creator_state",
+        "maintenance_cleared",
+        "maintenance_notice",
+        "receive_session_reconnect"
+      ],
+      "notes": "id 0=fail 1=fresh 2=session resume; plaintext password compare"
+    },
+    {
+      "name": "register",
+      "category": "AUTH",
+      "scope": "NB",
+      "auth": "none",
+      "rate_limit": null,
+      "fields": {
+        "username": "string",
+        "password": "string"
+      },
+      "replies": [
+        "maintenance_locked",
+        "receive_register_response"
+      ],
+      "notes": "25000 AP welcome bonus; rejects case-variants of admin names"
+    },
+    {
+      "name": "change_password",
+      "category": "AUTH",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "current": "string",
+        "new": "string"
+      },
+      "replies": [
+        "receive_change_password_response"
+      ]
+    },
+    {
+      "name": "queue_quick",
+      "category": "QUEUE",
+      "scope": "NB->B",
+      "auth": "session-silent",
+      "rate_limit": null,
+      "fields": {
+        "characters": "[string] >=3"
+      },
+      "replies": [
+        "receive_queue_rejected",
+        "error",
+        "receive_quick_match"
+      ]
+    },
+    {
+      "name": "queue_ranked",
+      "category": "QUEUE",
+      "scope": "NB->B",
+      "auth": "session-silent",
+      "rate_limit": null,
+      "fields": {
+        "characters": "[string] >=3"
+      },
+      "replies": [
+        "receive_queue_rejected",
+        "error",
+        "receive_ranked_match"
+      ],
+      "notes": "idempotent; rating-gated pairing; fixed 20s bot fallback"
+    },
+    {
+      "name": "queue_private",
+      "category": "QUEUE",
+      "scope": "NB->B",
+      "auth": "session-silent",
+      "rate_limit": null,
+      "fields": {
+        "characters": "[string] >=3",
+        "target_username": "string"
+      },
+      "replies": [
+        "receive_queue_rejected",
+        "error",
+        "receive_private_match"
+      ],
+      "notes": "pairs only on mutual (inviter->target) agreement"
+    },
+    {
+      "name": "queue_bot",
+      "category": "QUEUE",
+      "scope": "NB->B",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "characters": "[string] >=3"
+      },
+      "replies": [
+        "error",
+        "receive_queue_rejected",
+        "receive_quick_match"
+      ],
+      "notes": "practice match: flat 50/0 AP, no W/L"
+    },
+    {
+      "name": "cancel_queue",
+      "category": "QUEUE",
+      "scope": "NB",
+      "auth": "session-silent",
+      "rate_limit": null,
+      "fields": {},
+      "replies": []
+    },
+    {
+      "name": "campaign_start_battle",
+      "category": "CAMPAIGN",
+      "scope": "NB->B",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "encounter": "string"
+      },
+      "replies": [
+        "receive_campaign_match",
+        "error"
+      ],
+      "notes": "teams are derived server-side; client-supplied teams ignored"
+    },
+    {
+      "name": "campaign_enter",
+      "category": "CAMPAIGN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "campaign_state",
+        "error"
+      ],
+      "notes": "always clears `active`; never auto-plays a beat"
+    },
+    {
+      "name": "campaign_travel",
+      "category": "CAMPAIGN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "to": "string node id"
+      },
+      "replies": [
+        "campaign_state",
+        "campaign_error",
+        "error"
+      ]
+    },
+    {
+      "name": "campaign_activation_complete",
+      "category": "CAMPAIGN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "node": "string",
+        "activation": "string"
+      },
+      "replies": [
+        "campaign_state",
+        "campaign_error",
+        "error"
+      ],
+      "notes": "requires a banked pending_win per battle step, scoped to the activation"
+    },
+    {
+      "name": "campaign_choice",
+      "category": "CAMPAIGN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "scene": "string",
+        "line": "int",
+        "choice": "int"
+      },
+      "replies": [
+        "campaign_state",
+        "campaign_error",
+        "error"
+      ]
+    },
+    {
+      "name": "campaign_arrive",
+      "category": "CAMPAIGN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "node": "string"
+      },
+      "replies": [
+        "campaign_state",
+        "campaign_error",
+        "error"
+      ]
+    },
+    {
+      "name": "campaign_abandon",
+      "category": "CAMPAIGN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "node": "string",
+        "activation": "string"
+      },
+      "replies": [
+        "campaign_state",
+        "campaign_error",
+        "error"
+      ]
+    },
+    {
+      "name": "campaign_set_party",
+      "category": "CAMPAIGN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "party": "[3 distinct path_names, must include vessel]"
+      },
+      "replies": [
+        "campaign_state",
+        "campaign_error",
+        "error"
+      ]
+    },
+    {
+      "name": "campaign_set_vessel_skills",
+      "category": "CAMPAIGN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "skills": "[1-4 distinct ability keys]"
+      },
+      "replies": [
+        "campaign_state",
+        "campaign_error",
+        "error"
+      ]
+    },
+    {
+      "name": "submit_ban",
+      "category": "MATCH",
+      "scope": "B",
+      "auth": "session+match",
+      "rate_limit": null,
+      "fields": {
+        "character": "string",
+        "confirm": "bool?"
+      },
+      "replies": [
+        "error",
+        "draft_update"
+      ],
+      "notes": "DEAD PATH: no draft is ever started"
+    },
+    {
+      "name": "submit_pick",
+      "category": "MATCH",
+      "scope": "B",
+      "auth": "session+match",
+      "rate_limit": null,
+      "fields": {
+        "character": "string"
+      },
+      "replies": [
+        "error",
+        "draft_update"
+      ],
+      "notes": "DEAD PATH"
+    },
+    {
+      "name": "lock_bans",
+      "category": "MATCH",
+      "scope": "B",
+      "auth": "session+match",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "error",
+        "draft_update"
+      ],
+      "notes": "DEAD PATH"
+    },
+    {
+      "name": "draft_hover",
+      "category": "MATCH",
+      "scope": "B",
+      "auth": "session+match",
+      "rate_limit": null,
+      "fields": {
+        "character": "string"
+      },
+      "replies": [],
+      "notes": "DEAD PATH"
+    },
+    {
+      "name": "submit_turn_input",
+      "category": "MATCH",
+      "scope": "B",
+      "auth": "session+participant",
+      "rate_limit": null,
+      "fields": {
+        "match_id": "int (IGNORED)",
+        "input": "canonical turn package"
+      },
+      "replies": [
+        "apply_turn_result",
+        "error"
+      ]
+    },
+    {
+      "name": "surrender",
+      "category": "MATCH",
+      "scope": "B",
+      "auth": "session+participant",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "apply_turn_result",
+        "receive_surrender"
+      ],
+      "notes": "spectators explicitly refused"
+    },
+    {
+      "name": "save_cosmetics",
+      "category": "PLAYER",
+      "scope": "NB",
+      "auth": "session-silent",
+      "rate_limit": null,
+      "fields": {
+        "update": "object"
+      },
+      "replies": [],
+      "notes": "absorb_cosmetic_update + resave; accepts ap/unlocks/bounties from the client (authority hole)"
+    },
+    {
+      "name": "nexus_state",
+      "category": "NEXUS",
+      "scope": "NB",
+      "auth": "none-enforced",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "nexus_state"
+      ]
+    },
+    {
+      "name": "donate",
+      "category": "NEXUS",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "path_name": "string",
+        "amount": "int > 0"
+      },
+      "replies": [
+        "update_buckets",
+        "receive_player_update",
+        "error"
+      ],
+      "notes": "AP debited server-side"
+    },
+    {
+      "name": "ladder",
+      "category": "LADDER",
+      "scope": "NB",
+      "auth": "none-enforced",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "ladder"
+      ]
+    },
+    {
+      "name": "bounty_missions",
+      "category": "BOUNTY",
+      "scope": "NB",
+      "auth": "session-silent",
+      "rate_limit": null,
+      "fields": {
+        "path": "string",
+        "btype": "\"unlock\"|\"mastery\""
+      },
+      "replies": [
+        "bounty_missions"
+      ]
+    },
+    {
+      "name": "complete_bounty",
+      "category": "BOUNTY",
+      "scope": "NB",
+      "auth": "session-silent",
+      "rate_limit": null,
+      "fields": {
+        "bounty_path": "string (bounty key)"
+      },
+      "replies": [
+        "receive_player_update",
+        "error"
+      ],
+      "notes": "server re-validates the bingo before granting"
+    },
+    {
+      "name": "admin_announce",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {
+        "text": "string <=500"
+      },
+      "replies": [
+        "announcement",
+        "error"
+      ]
+    },
+    {
+      "name": "admin_close_nexus_round",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {
+        "count": "int"
+      },
+      "replies": [
+        "nexus_state",
+        "nexus_round_closed",
+        "error"
+      ]
+    },
+    {
+      "name": "admin_scale_nexus_ap",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {
+        "multiplier": "float > 0"
+      },
+      "replies": [
+        "nexus_state",
+        "nexus_scaled",
+        "error"
+      ]
+    },
+    {
+      "name": "admin_maintenance",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {
+        "action": "\"warn\"|\"eject\"|\"cancel\"",
+        "message": "string?",
+        "seconds": "int 0-7200?"
+      },
+      "replies": [
+        "maintenance_state",
+        "maintenance_notice",
+        "maintenance_eject",
+        "maintenance_cleared",
+        "error"
+      ]
+    },
+    {
+      "name": "admin_season_reset",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {
+        "dry_run": "bool (default true)",
+        "confirm": "string \"RESET SEASON\""
+      },
+      "replies": [
+        "admin_season_reset_result",
+        "error"
+      ],
+      "notes": "auto-backs-up ausers/ first; a failed backup aborts"
+    },
+    {
+      "name": "admin_list_players",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "admin_players",
+        "error"
+      ]
+    },
+    {
+      "name": "admin_training_status",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "admin_training_status",
+        "error"
+      ]
+    },
+    {
+      "name": "admin_get_bot_tuning",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "admin_bot_tuning",
+        "error"
+      ]
+    },
+    {
+      "name": "admin_set_bot_tuning",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {
+        "tuning": "object|json-string"
+      },
+      "replies": [
+        "admin_bot_tuning_saved",
+        "error"
+      ]
+    },
+    {
+      "name": "authored_list",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "auth": "session+creator-flag",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "authored_list",
+        "error"
+      ]
+    },
+    {
+      "name": "authored_get",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "auth": "session+creator-flag",
+      "rate_limit": null,
+      "fields": {
+        "id": "string"
+      },
+      "replies": [
+        "authored_spec",
+        "error"
+      ]
+    },
+    {
+      "name": "authored_save",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "auth": "session+creator-flag",
+      "rate_limit": null,
+      "fields": {
+        "spec": "object|json-string"
+      },
+      "replies": [
+        "authored_saved",
+        "authored_invalid",
+        "error"
+      ]
+    },
+    {
+      "name": "authored_submit",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "auth": "session+creator-flag+owner",
+      "rate_limit": null,
+      "fields": {
+        "id": "string"
+      },
+      "replies": [
+        "authored_saved",
+        "error"
+      ]
+    },
+    {
+      "name": "authored_unsubmit",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "auth": "session+creator-flag+owner",
+      "rate_limit": null,
+      "fields": {
+        "id": "string"
+      },
+      "replies": [
+        "authored_saved",
+        "error"
+      ]
+    },
+    {
+      "name": "authored_delete",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "auth": "session+creator-flag",
+      "rate_limit": null,
+      "fields": {
+        "id": "string"
+      },
+      "replies": [
+        "authored_deleted",
+        "error"
+      ]
+    },
+    {
+      "name": "authored_review",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "auth": "admin+creator-flag",
+      "rate_limit": null,
+      "fields": {
+        "id": "string",
+        "verdict": "\"approved\"|\"rejected\"",
+        "note": "string?"
+      },
+      "replies": [
+        "authored_reviewed",
+        "error"
+      ]
+    },
+    {
+      "name": "authored_validate",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "auth": "session+creator-flag",
+      "rate_limit": null,
+      "fields": {
+        "spec": "object|json-string"
+      },
+      "replies": [
+        "authored_validated",
+        "error"
+      ]
+    },
+    {
+      "name": "authored_asset_fetch",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "id": "string",
+        "slot": "string"
+      },
+      "replies": [
+        "authored_asset_data",
+        "error"
+      ],
+      "notes": "OUTSIDE the creator kill switch; three-armed gate (approved OR author OR fielded in the requester's live match)"
+    },
+    {
+      "name": "authored_upload_begin",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "auth": "session+creator-flag+owner",
+      "rate_limit": null,
+      "fields": {
+        "id": "string",
+        "slot": "string",
+        "bytes": "int",
+        "chunks": "int",
+        "ability_index": "int?",
+        "ability_name": "string?"
+      },
+      "replies": [
+        "authored_upload_ready",
+        "error"
+      ]
+    },
+    {
+      "name": "authored_upload_chunk",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "auth": "session+creator-flag",
+      "rate_limit": null,
+      "fields": {
+        "part": "int",
+        "data": "base64 string"
+      },
+      "replies": [
+        "authored_upload_ack",
+        "error"
+      ]
+    },
+    {
+      "name": "authored_upload_end",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "auth": "session+creator-flag",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "authored_upload_done",
+        "error"
+      ]
+    },
+    {
+      "name": "admin_fetch_training_replay",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {
+        "name": "string *.replay"
+      },
+      "replies": [
+        "replay_data",
+        "replay_result",
+        "error"
+      ]
+    },
+    {
+      "name": "admin_modify_player",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {
+        "target": "string",
+        "op": "grant_ap|reset_record|add_unlock|remove_unlock|mute|unmute",
+        "value": "int|string?"
+      },
+      "replies": [
+        "admin_modify_result",
+        "receive_player_update",
+        "error"
+      ]
+    },
+    {
+      "name": "admin_character_stats",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {
+        "from_ts": "int?",
+        "to_ts": "int?"
+      },
+      "replies": [
+        "admin_character_stats",
+        "error"
+      ]
+    },
+    {
+      "name": "clan_state",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "clan_state"
+      ]
+    },
+    {
+      "name": "create_clan",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "name": "string 3-24",
+        "banner_url": "string?"
+      },
+      "replies": [
+        "clan_result",
+        "receive_player_update",
+        "clan_state"
+      ]
+    },
+    {
+      "name": "clan_search",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session-silent",
+      "rate_limit": null,
+      "fields": {
+        "query": "string"
+      },
+      "replies": [
+        "clan_search_result"
+      ]
+    },
+    {
+      "name": "clan_apply",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "clan_name": "string"
+      },
+      "replies": [
+        "clan_result",
+        "clan_state"
+      ]
+    },
+    {
+      "name": "clan_cancel_application",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "clan_name": "string"
+      },
+      "replies": [
+        "clan_result",
+        "clan_state"
+      ]
+    },
+    {
+      "name": "clan_invite",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session+leader",
+      "rate_limit": null,
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "clan_result",
+        "clan_invite_notice",
+        "clan_state"
+      ]
+    },
+    {
+      "name": "clan_cancel_invite",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session+leader",
+      "rate_limit": null,
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "clan_result",
+        "clan_state"
+      ]
+    },
+    {
+      "name": "clan_accept_invite",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "clan_name": "string"
+      },
+      "replies": [
+        "clan_result",
+        "receive_player_update",
+        "clan_state"
+      ]
+    },
+    {
+      "name": "clan_decline_invite",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "clan_name": "string"
+      },
+      "replies": [
+        "clan_result",
+        "clan_state"
+      ]
+    },
+    {
+      "name": "clan_approve_application",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session+leader",
+      "rate_limit": null,
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "clan_result",
+        "clan_state",
+        "receive_player_update"
+      ]
+    },
+    {
+      "name": "clan_deny_application",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session+leader",
+      "rate_limit": null,
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "clan_result",
+        "clan_state"
+      ]
+    },
+    {
+      "name": "clan_kick",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session+leader",
+      "rate_limit": null,
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "clan_result",
+        "clan_state",
+        "receive_player_update"
+      ]
+    },
+    {
+      "name": "clan_leave",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "clan_result",
+        "receive_player_update",
+        "clan_state"
+      ],
+      "notes": "a leader must disband instead"
+    },
+    {
+      "name": "clan_disband",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session+leader",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "clan_result",
+        "receive_player_update",
+        "clan_state"
+      ]
+    },
+    {
+      "name": "clan_reset_record",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session+leader",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "clan_result",
+        "clan_state"
+      ]
+    },
+    {
+      "name": "clan_set_banner",
+      "category": "CLAN",
+      "scope": "NB",
+      "auth": "session+leader",
+      "rate_limit": null,
+      "fields": {
+        "banner_url": "string http(s), <=512"
+      },
+      "replies": [
+        "clan_result",
+        "clan_state",
+        "receive_player_update"
+      ],
+      "notes": "invalid non-empty URL is rejected and the current picture kept"
+    },
+    {
+      "name": "social_state",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "social_state",
+        "social_result"
+      ]
+    },
+    {
+      "name": "friend_request",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": "6/60s",
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "social_result",
+        "social_state",
+        "friend_request_notice"
+      ],
+      "notes": "oracle-free: identical actor-side result whether or not delivered"
+    },
+    {
+      "name": "friend_accept",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": "30/60s friend_mutate",
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "social_result",
+        "social_state"
+      ]
+    },
+    {
+      "name": "friend_decline",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": "30/60s friend_mutate",
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "social_result",
+        "social_state"
+      ]
+    },
+    {
+      "name": "friend_cancel",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": "30/60s friend_mutate",
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "social_result",
+        "social_state"
+      ]
+    },
+    {
+      "name": "friend_remove",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": "30/60s friend_mutate",
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "social_result",
+        "social_state"
+      ]
+    },
+    {
+      "name": "ignore_add",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": "20/60s ignore_mutate",
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "social_result",
+        "social_state"
+      ],
+      "notes": "severs friendship + pending requests both directions"
+    },
+    {
+      "name": "ignore_remove",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": "20/60s ignore_mutate",
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "social_result",
+        "social_state"
+      ]
+    },
+    {
+      "name": "chat_send",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": "5/10s chat",
+      "fields": {
+        "channel": "\"global\"|\"match\"|\"dm\"",
+        "text": "string<=300",
+        "to": "string? (dm)"
+      },
+      "replies": [
+        "chat_message",
+        "chat_result"
+      ],
+      "notes": "match channel derives the match from the session; spectators refused"
+    },
+    {
+      "name": "chat_history",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "channel": "\"global\"|\"match\"|\"dm\"",
+        "to": "string? (dm)"
+      },
+      "replies": [
+        "chat_history",
+        "chat_result"
+      ]
+    },
+    {
+      "name": "admin_toggle_global_chat",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {
+        "enabled": "bool"
+      },
+      "replies": [
+        "global_chat_state",
+        "error"
+      ],
+      "notes": "NOT persisted across restart"
+    },
+    {
+      "name": "admin_toggle_creator",
+      "category": "ADMIN",
+      "scope": "NB",
+      "auth": "admin",
+      "rate_limit": null,
+      "fields": {
+        "enabled": "bool"
+      },
+      "replies": [
+        "creator_state",
+        "error"
+      ],
+      "notes": "persisted to server_flags.json"
+    },
+    {
+      "name": "get_player_profile",
+      "category": "PLAYER",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "player_profile",
+        "error"
+      ]
+    },
+    {
+      "name": "reset_own_record",
+      "category": "PLAYER",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "record_reset",
+        "receive_player_update",
+        "error"
+      ],
+      "notes": "no target field: cannot be pointed at another account"
+    },
+    {
+      "name": "replay_fetch",
+      "category": "MATCH",
+      "scope": "B",
+      "auth": "session+participant",
+      "rate_limit": "10/60s replay",
+      "fields": {
+        "match_id": "string [0-9_]"
+      },
+      "replies": [
+        "replay_data",
+        "replay_result"
+      ],
+      "notes": "opaque denial; no existence oracle"
+    },
+    {
+      "name": "spectate",
+      "category": "MATCH",
+      "scope": "B",
+      "auth": "session",
+      "rate_limit": "5/60s spectate",
+      "fields": {
+        "username": "string"
+      },
+      "replies": [
+        "spectate_init",
+        "spectate_result"
+      ],
+      "notes": "one generic denial for everything about the target"
+    },
+    {
+      "name": "spectate_leave",
+      "category": "MATCH",
+      "scope": "B",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {},
+      "replies": [
+        "spectate_result"
+      ],
+      "notes": "idempotent"
+    },
+    {
+      "name": "social_setting",
+      "category": "PLAYER",
+      "scope": "NB",
+      "auth": "session",
+      "rate_limit": null,
+      "fields": {
+        "key": "\"allow_spectators\"|\"ranked_allow_bots\"",
+        "value": "string|bool"
+      },
+      "replies": [
+        "social_result",
+        "spectate_result"
+      ],
+      "notes": "tightening allow_spectators evicts current watchers"
+    }
+  ],
+  "outbound": [
+    {
+      "name": "admin_bot_tuning",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "admin_get_bot_tuning",
+      "fields": {
+        "tuning": "object"
+      }
+    },
+    {
+      "name": "admin_bot_tuning_saved",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "admin_set_bot_tuning",
+      "fields": {}
+    },
+    {
+      "name": "admin_character_stats",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "admin_character_stats",
+      "fields": {
+        "stats": "[{path,pvp,bot}]",
+        "from_ts": "int",
+        "to_ts": "int",
+        "data_from": "int",
+        "data_to": "int"
+      }
+    },
+    {
+      "name": "admin_modify_result",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "admin_modify_player",
+      "fields": {
+        "ok": "bool",
+        "target": "string",
+        "note": "string",
+        "player": "summary"
+      }
+    },
+    {
+      "name": "admin_players",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "admin_list_players",
+      "fields": {
+        "players": "[{username,status,ap,wins,losses,rating,unlocks}]",
+        "total_accounts": "int"
+      }
+    },
+    {
+      "name": "admin_season_reset_result",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "admin_season_reset",
+      "fields": {
+        "ok": "bool",
+        "dry_run": "bool?",
+        "accounts": "int",
+        "with_record": "int?",
+        "reset": "int?",
+        "failed": "[string]?",
+        "backup": "string?",
+        "note": "string"
+      }
+    },
+    {
+      "name": "admin_training_status",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "admin_training_status",
+      "fields": {
+        "status": "object",
+        "elo": "object",
+        "live_generation": "int",
+        "replays": "[string]"
+      },
+      "notes": "send_queued"
+    },
+    {
+      "name": "announcement",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "admin_announce (broadcast)",
+      "fields": {
+        "text": "string",
+        "from": "string"
+      }
+    },
+    {
+      "name": "apply_turn_result",
+      "category": "MATCH",
+      "scope": "B",
+      "trigger": "every turn / timeout / surrender / match end",
+      "fields": {
+        "events": "[event]",
+        "snapshot": "wire snapshot + turn_timer"
+      },
+      "notes": "spectators receive a hidden-info-stripped copy"
+    },
+    {
+      "name": "authored_asset_data",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "trigger": "authored_asset_fetch",
+      "fields": {
+        "id": "string",
+        "slot": "string",
+        "part": "int?",
+        "total": "int?",
+        "data": "string?",
+        "missing": "bool?"
+      },
+      "notes": "send_queued"
+    },
+    {
+      "name": "authored_deleted",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "trigger": "authored_delete",
+      "fields": {
+        "id": "string"
+      }
+    },
+    {
+      "name": "authored_invalid",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "trigger": "authored_save with validation errors",
+      "fields": {
+        "id": "string",
+        "errors": "[string]"
+      }
+    },
+    {
+      "name": "authored_list",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "trigger": "authored_list",
+      "fields": {
+        "mine": "[summary]",
+        "approved": "[summary]",
+        "review": "[summary]",
+        "palette": "object"
+      }
+    },
+    {
+      "name": "authored_reviewed",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "trigger": "authored_review",
+      "fields": {
+        "id": "string",
+        "status": "string"
+      }
+    },
+    {
+      "name": "authored_saved",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "trigger": "authored_save / submit / unsubmit",
+      "fields": {
+        "id": "string",
+        "status": "string"
+      }
+    },
+    {
+      "name": "authored_spec",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "trigger": "authored_get",
+      "fields": {
+        "spec": "object"
+      }
+    },
+    {
+      "name": "authored_upload_ack",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "trigger": "authored_upload_chunk",
+      "fields": {
+        "part": "int"
+      },
+      "notes": "DEAD: no client handler"
+    },
+    {
+      "name": "authored_upload_done",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "trigger": "authored_upload_end",
+      "fields": {
+        "id": "string",
+        "slot": "string",
+        "ability_index": "int"
+      }
+    },
+    {
+      "name": "authored_upload_ready",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "trigger": "authored_upload_begin",
+      "fields": {},
+      "notes": "DEAD: no client handler"
+    },
+    {
+      "name": "authored_validated",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "trigger": "authored_validate",
+      "fields": {
+        "errors": "[string]",
+        "abilities": "[preview]"
+      }
+    },
+    {
+      "name": "bounty_missions",
+      "category": "BOUNTY",
+      "scope": "NB",
+      "trigger": "bounty_missions",
+      "fields": {
+        "path": "string",
+        "btype": "string",
+        "key": "string",
+        "rerolls": "int",
+        "missions": "[mission]"
+      }
+    },
+    {
+      "name": "campaign_error",
+      "category": "CAMPAIGN",
+      "scope": "NB",
+      "trigger": "every rejected campaign intent",
+      "fields": {
+        "reason": "string",
+        "state": "campaign_state object",
+        "unlocks": "[string]"
+      },
+      "notes": "ships authoritative state so the client reverts optimism"
+    },
+    {
+      "name": "campaign_state",
+      "category": "CAMPAIGN",
+      "scope": "NB",
+      "trigger": "every accepted campaign intent",
+      "fields": {
+        "state": "campaign_state object",
+        "unlocks": "[string]",
+        "note": "string",
+        "arrive": "bool"
+      }
+    },
+    {
+      "name": "chat_history",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "trigger": "chat_history",
+      "fields": {
+        "channel": "string",
+        "to": "string?",
+        "messages": "[{from,text,ts}]"
+      }
+    },
+    {
+      "name": "chat_message",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "trigger": "chat_send fan-out",
+      "fields": {
+        "channel": "string",
+        "from": "string",
+        "text": "string",
+        "ts": "int",
+        "to": "string?"
+      }
+    },
+    {
+      "name": "chat_result",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "trigger": "refused chat_send / chat_history",
+      "fields": {
+        "ok": "false",
+        "note": "string"
+      }
+    },
+    {
+      "name": "clan_invite_notice",
+      "category": "CLAN",
+      "scope": "NB",
+      "trigger": "clan_invite, to an online target",
+      "fields": {
+        "clan_name": "string"
+      }
+    },
+    {
+      "name": "clan_result",
+      "category": "CLAN",
+      "scope": "NB",
+      "trigger": "every clan op",
+      "fields": {
+        "ok": "bool",
+        "note": "string"
+      }
+    },
+    {
+      "name": "clan_search_result",
+      "category": "CLAN",
+      "scope": "NB",
+      "trigger": "clan_search",
+      "fields": {
+        "clans": "[summary]"
+      }
+    },
+    {
+      "name": "clan_state",
+      "category": "CLAN",
+      "scope": "NB",
+      "trigger": "clan_state + every clan mutation",
+      "fields": {
+        "clan": "detail|null",
+        "invitations": "[summary]",
+        "applications": "[summary]"
+      }
+    },
+    {
+      "name": "creator_state",
+      "category": "CREATOR",
+      "scope": "SCRAPPED",
+      "trigger": "admin toggle + every login",
+      "fields": {
+        "enabled": "bool"
+      }
+    },
+    {
+      "name": "draft_start",
+      "category": "MATCH",
+      "scope": "B",
+      "trigger": "start_ranked_draft",
+      "fields": {
+        "opponent": "display_package",
+        "pool": "[string]",
+        "my_role": "0|1",
+        "first_picker_role": "0|1",
+        "max_bans": "3",
+        "phase": "\"BAN\"",
+        "phase_seconds": "60",
+        "deadline_unix": "float"
+      },
+      "notes": "DEAD PATH: start_ranked_draft has no callers"
+    },
+    {
+      "name": "draft_update",
+      "category": "MATCH",
+      "scope": "B",
+      "trigger": "draft state change",
+      "fields": {
+        "phase": "string",
+        "step": "int",
+        "acting_role": "int",
+        "picks": "object",
+        "bans_revealed": "bool",
+        "my_role": "int",
+        "my_bans": "[string]",
+        "my_bans_locked": "bool",
+        "deadline_unix": "float",
+        "seconds": "float",
+        "bans": "object?",
+        "opp_ban_count": "int?"
+      },
+      "notes": "DEAD PATH"
+    },
+    {
+      "name": "error",
+      "category": "MISC",
+      "scope": "both",
+      "trigger": "66 sites",
+      "fields": {
+        "reason": "string"
+      }
+    },
+    {
+      "name": "friend_presence",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "trigger": "login / disconnect / wipe, to each online friend",
+      "fields": {
+        "username": "string",
+        "status": "\"online\"|\"offline\"|\"disconnected\""
+      }
+    },
+    {
+      "name": "friend_request_notice",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "trigger": "delivered friend request",
+      "fields": {
+        "from": "string"
+      }
+    },
+    {
+      "name": "global_chat_state",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "trigger": "admin toggle + every login",
+      "fields": {
+        "enabled": "bool"
+      }
+    },
+    {
+      "name": "ladder",
+      "category": "LADDER",
+      "scope": "NB",
+      "trigger": "ladder",
+      "fields": {
+        "ladder": "{by_rating,by_wins,by_streak,clan_data}"
+      }
+    },
+    {
+      "name": "maintenance_cleared",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "cancel broadcast + login with no maintenance",
+      "fields": {
+        "boot_id": "string"
+      }
+    },
+    {
+      "name": "maintenance_eject",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "eject broadcast (admins excluded)",
+      "fields": {
+        "message": "string",
+        "boot_id": "string"
+      }
+    },
+    {
+      "name": "maintenance_locked",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "login/register during the lock",
+      "fields": {
+        "message": "string",
+        "boot_id": "string"
+      }
+    },
+    {
+      "name": "maintenance_notice",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "warn broadcast + login during a warning",
+      "fields": {
+        "message": "string",
+        "seconds": "int",
+        "boot_id": "string"
+      }
+    },
+    {
+      "name": "maintenance_state",
+      "category": "ADMIN",
+      "scope": "NB",
+      "trigger": "ack to the acting admin",
+      "fields": {
+        "phase": "\"warn\"|\"ejected\"|\"off\"",
+        "message": "string?",
+        "seconds": "int?",
+        "matches_cancelled": "int?",
+        "dequeued": "int?"
+      }
+    },
+    {
+      "name": "nexus_round_closed",
+      "category": "NEXUS",
+      "scope": "NB",
+      "trigger": "admin_close_nexus_round",
+      "fields": {
+        "removed": "[string]",
+        "remaining": "int",
+        "current_max": "int"
+      }
+    },
+    {
+      "name": "nexus_scaled",
+      "category": "NEXUS",
+      "scope": "NB",
+      "trigger": "admin_scale_nexus_ap",
+      "fields": {
+        "multiplier": "float",
+        "count": "int"
+      }
+    },
+    {
+      "name": "nexus_state",
+      "category": "NEXUS",
+      "scope": "NB",
+      "trigger": "nexus_state + both admin nexus ops (broadcast)",
+      "fields": {
+        "max": "int",
+        "sets": "[[path,ap,universe]]",
+        "poll_open": "bool"
+      }
+    },
+    {
+      "name": "player_profile",
+      "category": "PLAYER",
+      "scope": "NB",
+      "trigger": "get_player_profile",
+      "fields": {
+        "profile": "whitelisted profile body"
+      }
+    },
+    {
+      "name": "pong",
+      "category": "AUTH",
+      "scope": "NB",
+      "trigger": "ping",
+      "fields": {
+        "echo": "any"
+      },
+      "notes": "client has no handler by design"
+    },
+    {
+      "name": "ranked_result",
+      "category": "LADDER",
+      "scope": "NB",
+      "trigger": "ranked match end, one per human",
+      "fields": {
+        "won": "bool",
+        "rating_before": "int",
+        "rating_after": "int",
+        "delta": "int",
+        "rank_before": "int",
+        "tier_before": "int",
+        "rank_after": "int",
+        "tier_after": "int",
+        "promoted": "bool",
+        "demoted": "bool",
+        "rank_changed": "bool"
+      }
+    },
+    {
+      "name": "receive_campaign_match",
+      "category": "CAMPAIGN",
+      "scope": "NB->B",
+      "trigger": "campaign_start_battle",
+      "fields": {
+        "opponent": "display_package",
+        "opponent_team": "[string]",
+        "first_turn": "bool",
+        "seed": "int",
+        "canonical_role": "0",
+        "encounter": "string"
+      }
+    },
+    {
+      "name": "receive_change_password_response",
+      "category": "AUTH",
+      "scope": "NB",
+      "trigger": "change_password",
+      "fields": {
+        "ok": "bool",
+        "message": "string"
+      }
+    },
+    {
+      "name": "receive_login_response",
+      "category": "AUTH",
+      "scope": "NB",
+      "trigger": "login",
+      "fields": {
+        "json_string": "JSON string of {id,player,message,version,is_admin}"
+      },
+      "notes": "double-encoded; player currently includes pass_hash"
+    },
+    {
+      "name": "receive_opponent_disconnect_notification",
+      "category": "MATCH",
+      "scope": "B",
+      "trigger": "opponent dropped",
+      "fields": {}
+    },
+    {
+      "name": "receive_opponent_reconnect_notification",
+      "category": "MATCH",
+      "scope": "B",
+      "trigger": "opponent returned",
+      "fields": {}
+    },
+    {
+      "name": "receive_player_update",
+      "category": "PLAYER",
+      "scope": "NB",
+      "trigger": "any server-side account mutation",
+      "fields": {
+        "json_string": "JSON string of the account .dat"
+      },
+      "notes": "currently includes pass_hash"
+    },
+    {
+      "name": "receive_private_match",
+      "category": "MATCH",
+      "scope": "NB->B",
+      "trigger": "mutual private invite",
+      "fields": {
+        "opponent": "display_package",
+        "opponent_team": "[string]",
+        "first_turn": "bool",
+        "seed": "int",
+        "canonical_role": "0|1"
+      }
+    },
+    {
+      "name": "receive_queue_rejected",
+      "category": "QUEUE",
+      "scope": "NB",
+      "trigger": "7 rejection sites",
+      "fields": {
+        "reason": "string?"
+      },
+      "notes": "the ONLY frame that clears the client's optimistic queued flag"
+    },
+    {
+      "name": "receive_quick_match",
+      "category": "MATCH",
+      "scope": "NB->B",
+      "trigger": "quick pair / quick bot fallback / practice bot",
+      "fields": {
+        "opponent": "display_package",
+        "opponent_team": "[string]",
+        "first_turn": "bool",
+        "seed": "int",
+        "canonical_role": "0|1",
+        "practice": "bool?",
+        "vs_bot": "bool?"
+      }
+    },
+    {
+      "name": "receive_ranked_match",
+      "category": "MATCH",
+      "scope": "NB->B",
+      "trigger": "ranked pair / ranked bot fallback / drafted battle",
+      "fields": {
+        "opponent": "display_package",
+        "opponent_team": "[string]",
+        "first_turn": "bool",
+        "seed": "int",
+        "canonical_role": "0|1",
+        "vs_bot": "bool?"
+      }
+    },
+    {
+      "name": "receive_register_response",
+      "category": "AUTH",
+      "scope": "NB",
+      "trigger": "register",
+      "fields": {
+        "message": "string"
+      },
+      "notes": "client success test is a regex on this string"
+    },
+    {
+      "name": "receive_session_reconnect",
+      "category": "MATCH",
+      "scope": "B",
+      "trigger": "login case A with a live match",
+      "fields": {
+        "info": "JSON string of the reconnection package"
+      }
+    },
+    {
+      "name": "receive_surrender",
+      "category": "MATCH",
+      "scope": "B",
+      "trigger": "opponent surrendered",
+      "fields": {},
+      "notes": "DEAD: no client handler; redundant with the MATCH_ENDED event"
+    },
+    {
+      "name": "record_reset",
+      "category": "PLAYER",
+      "scope": "NB",
+      "trigger": "reset_own_record",
+      "fields": {
+        "ok": "bool",
+        "profile": "object"
+      }
+    },
+    {
+      "name": "replay_data",
+      "category": "MATCH",
+      "scope": "B",
+      "trigger": "replay_fetch / admin_fetch_training_replay",
+      "fields": {
+        "match_id": "string",
+        "part": "int",
+        "total": "int",
+        "data": "string <=24000"
+      },
+      "notes": "send_queued"
+    },
+    {
+      "name": "replay_result",
+      "category": "MATCH",
+      "scope": "B",
+      "trigger": "replay denial",
+      "fields": {
+        "ok": "false",
+        "note": "string"
+      }
+    },
+    {
+      "name": "server_status",
+      "category": "AUTH",
+      "scope": "NB",
+      "trigger": "server_status",
+      "fields": {
+        "boot_id": "string",
+        "maintenance": "bool",
+        "message": "string"
+      }
+    },
+    {
+      "name": "social_result",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "trigger": "every social op + social_setting",
+      "fields": {
+        "ok": "bool",
+        "note": "string"
+      }
+    },
+    {
+      "name": "social_state",
+      "category": "SOCIAL",
+      "scope": "NB",
+      "trigger": "social_state + every social mutation",
+      "fields": {
+        "friends": "[{username,status}]",
+        "requests_in": "[string]",
+        "requests_out": "[string]",
+        "ignored": "[string]"
+      }
+    },
+    {
+      "name": "spectate_init",
+      "category": "MATCH",
+      "scope": "B",
+      "trigger": "accepted spectate",
+      "fields": {
+        "info": "JSON string of the spectator init package"
+      }
+    },
+    {
+      "name": "spectate_result",
+      "category": "MATCH",
+      "scope": "B",
+      "trigger": "spectate / spectate_leave / eviction",
+      "fields": {
+        "ok": "bool",
+        "note": "string"
+      }
+    },
+    {
+      "name": "update_buckets",
+      "category": "NEXUS",
+      "scope": "NB",
+      "trigger": "donate",
+      "fields": {
+        "path_name": "string",
+        "amount": "int",
+        "current_max": "int"
+      }
+    }
+  ],
+  "reconciliation": {
+    "note": "The frontend Creator removal landed in app.js during this extraction run. The server (components/server_connection.gd) still carries the whole authored_* surface, so every Creator frame is now a server-only orphan. Both orphan lists are split accordingly.",
+    "inbound_types": 89,
+    "outbound_types": 71,
+    "client_handlers": 57,
+    "client_sends": 76,
+    "server_sends_client_ignores": [
+      "pong",
+      "receive_surrender"
+    ],
+    "server_sends_client_ignores_creator": [
+      "authored_asset_data",
+      "authored_deleted",
+      "authored_invalid",
+      "authored_list",
+      "authored_reviewed",
+      "authored_saved",
+      "authored_spec",
+      "authored_upload_ack",
+      "authored_upload_done",
+      "authored_upload_ready",
+      "authored_validated",
+      "creator_state"
+    ],
+    "client_handles_server_never_sends": [],
+    "client_sends_server_ignores": [],
+    "server_accepts_client_never_sends": [],
+    "server_accepts_client_never_sends_creator": [
+      "admin_toggle_creator",
+      "authored_asset_fetch",
+      "authored_delete",
+      "authored_get",
+      "authored_list",
+      "authored_review",
+      "authored_save",
+      "authored_submit",
+      "authored_unsubmit",
+      "authored_upload_begin",
+      "authored_upload_chunk",
+      "authored_upload_end",
+      "authored_validate"
+    ]
+  }
+}

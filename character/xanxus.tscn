@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/xanxus.gd" id="1_iqqw8"]
+[ext_resource type="Texture2D" path="res://assets/images/Xanxus/profile_mastery_xanxus.png" id="2_ljffd"]
+[ext_resource type="Texture2D" path="res://assets/images/Xanxus/xanxusprof.png" id="3_3dc43"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="4_dn2it"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="5_bt7ut"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="6_4lktq"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="7_rmpy6"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="8_5fn7c"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="9_7kgnf"]
+
+[node name="Xanxus" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_iqqw8")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_ljffd")
+mastery_name = "Scars of Wrath Xanxus"
+portrait_texture = ExtResource("3_3dc43")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("4_dn2it")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_bt7ut")]
+
+[node name="StatComponent" parent="." instance=ExtResource("6_4lktq")]
+
+[node name="NameComponent" parent="." instance=ExtResource("7_rmpy6")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("8_5fn7c")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("9_7kgnf")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

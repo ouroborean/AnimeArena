@@ -1,0 +1,282 @@
+{
+  "_source": "scripts/character_database.gd",
+  "_symbols": [
+    "by_universe"
+  ],
+  "_generated_by": "tools/reference_data.py",
+  "_note": "keys are Universe ordinals as strings; order within a list is char_name_list order, which bounty generation indexes into",
+  "by_universe_ordinal": {
+    "0": [
+      "naruto",
+      "sasuke",
+      "sakura",
+      "hinata",
+      "hashirama",
+      "boruto",
+      "itachi"
+    ],
+    "1": [
+      "ichigo",
+      "orihime",
+      "byakuya",
+      "nel",
+      "halibel",
+      "nimaiya",
+      "ichibe",
+      "kurotsuchi",
+      "yoruichi"
+    ],
+    "2": [
+      "luffy",
+      "zoro",
+      "usopp",
+      "ace",
+      "marco",
+      "rob"
+    ],
+    "3": [
+      "midoriya",
+      "uraraka",
+      "bakugo",
+      "todoroki",
+      "tokoyami",
+      "tsuyu",
+      "toga",
+      "allmight"
+    ],
+    "4": [
+      "asta",
+      "yuno",
+      "noelle"
+    ],
+    "5": [
+      "madoka",
+      "sayaka",
+      "mami"
+    ],
+    "6": [
+      "natsu",
+      "lucy",
+      "gray",
+      "erza",
+      "mavis"
+    ],
+    "7": [
+      "maka",
+      "soul",
+      "blackstar",
+      "tsubaki",
+      "kid",
+      "lizandpatty",
+      "crona",
+      "death"
+    ],
+    "8": [
+      "aang",
+      "kitara",
+      "toph",
+      "korra"
+    ],
+    "9": [
+      "tatsumi",
+      "akame",
+      "sheele",
+      "mine",
+      "esdeath"
+    ],
+    "10": [
+      "tanjiro",
+      "nezuko",
+      "zenitsu",
+      "inosuke",
+      "rengoku",
+      "muichiro",
+      "uzui"
+    ],
+    "11": [
+      "meliodas",
+      "diane",
+      "king",
+      "ban",
+      "escanor"
+    ],
+    "12": [
+      "tsunayoshi",
+      "yamamoto",
+      "ryohei",
+      "chrome",
+      "squalo",
+      "xanxus",
+      "hibari"
+    ],
+    "13": [
+      "eren",
+      "mikasa",
+      "levi"
+    ],
+    "14": [
+      "saitama",
+      "genos",
+      "tatsumaki"
+    ],
+    "15": [
+      "shinra",
+      "tamaki",
+      "arthur"
+    ],
+    "16": [
+      "gon",
+      "killua",
+      "kurapika",
+      "hisoka",
+      "neferpitou"
+    ],
+    "17": [
+      "misaka",
+      "kuroko",
+      "gunha",
+      "shokuhou",
+      "rakko"
+    ],
+    "18": [
+      "emiya",
+      "saber",
+      "gilgamesh",
+      "emiyaarcher",
+      "jack",
+      "semiramis",
+      "frankenstein",
+      "mash",
+      "astolfo"
+    ],
+    "19": [
+      "ryuko",
+      "satsuki",
+      "nonon"
+    ],
+    "20": [
+      "ganta",
+      "shiro"
+    ],
+    "21": [
+      "ken",
+      "touka"
+    ],
+    "22": [
+      "rimuru",
+      "veldora"
+    ],
+    "23": [
+      "yuji",
+      "nobara",
+      "megumi",
+      "sukuna",
+      "gojo",
+      "toji"
+    ],
+    "24": [
+      "gatomon",
+      "hawkmon",
+      "impmon",
+      "renamon",
+      "myotismon",
+      "ladydevimon",
+      "machinedramon",
+      "gallantmon",
+      "omnimon",
+      "alphamon",
+      "blackwargreymon"
+    ],
+    "25": [
+      "mercury",
+      "venus",
+      "mars",
+      "jupiter",
+      "saturn",
+      "uranus"
+    ],
+    "26": [],
+    "27": [
+      "goku",
+      "vegeta",
+      "gohan",
+      "gogeta",
+      "cooler",
+      "cell",
+      "seventeen",
+      "broly",
+      "frieza"
+    ],
+    "28": [],
+    "29": [],
+    "30": [
+      "frieren",
+      "fern",
+      "stark"
+    ],
+    "31": [
+      "jinwoo"
+    ],
+    "32": [
+      "denji",
+      "power"
+    ],
+    "33": [],
+    "34": [
+      "yugi",
+      "kaiba",
+      "pegasus",
+      "jaden",
+      "jesse",
+      "yubel"
+    ],
+    "35": [
+      "inuyasha"
+    ],
+    "36": [
+      "edward",
+      "alphonse"
+    ],
+    "37": [
+      "nagisa",
+      "koro"
+    ],
+    "38": [
+      "megumin"
+    ],
+    "39": [
+      "shinoa"
+    ],
+    "40": [
+      "toudou"
+    ],
+    "41": [],
+    "42": [
+      "yoh",
+      "horohoro",
+      "lyserg",
+      "jeanne"
+    ],
+    "43": [
+      "adam"
+    ],
+    "44": [],
+    "45": [],
+    "46": [],
+    "47": [
+      "minene",
+      "gasai"
+    ],
+    "48": [],
+    "49": [],
+    "50": [
+      "tsubasa",
+      "hibiki"
+    ],
+    "51": [
+      "aiohto"
+    ],
+    "52": [],
+    "53": []
+  }
+}

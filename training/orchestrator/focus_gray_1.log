@@ -1,0 +1,36 @@
+Godot Engine v4.6.2.stable.official.71f334935 - https://godotengine.org
+
+[trainer] seed=61001 matches=25 opponent=self eval=false out=res://training/checkpoints/focus_gray/w1.json checkpoint=res://training/checkpoints/focused_current.json
+[authored] loaded 1 authored character(s)
+[   1/25  ] WIN    17 turns   gray, ace, tatsumaki  vs  nel, sayaka, hinata
+[   2/25  ] WIN    15 turns   gray, gohan, gon  vs  muichiro, ladydevimon, jaden
+[   3/25  ] LOSS   31 turns   gray, saitama, orihime  vs  megumin, zenitsu, myotismon
+[   4/25  ] WIN    32 turns   gray, ladydevimon, renamon  vs  tsubaki, gasai, edward
+[   5/25  ] LOSS   23 turns   gray, shinra, sheele  vs  chrome, gallantmon, jupiter
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   6/25  ] WIN    23 turns   gray, rimuru, tsubasa  vs  power, korra, seventeen
+[   7/25  ] WIN    20 turns   gray, marco, jack  vs  tokoyami, ryuko, semiramis
+[   8/25  ] LOSS   18 turns   gray, omnimon, asta  vs  tatsumaki, todoroki, gatomon
+[   9/25  ] WIN    27 turns   gray, shinoa, chrome  vs  levi, emiya, yamamoto
+[  10/25  ] WIN    23 turns   gray, gasai, blackstar  vs  tsubaki, zoro, rimuru
+[  11/25  ] WIN    20 turns   gray, yugi, koro  vs  sakura, gogeta, allmight
+[  12/25  ] WIN    21 turns   gray, kaiba, tsubasa  vs  misaka, broly, aiohto
+[  13/25  ] WIN    72 turns   gray, jesse, natsu  vs  impmon, orihime, saturn
+Applying bleed effect! Checking special code
+[  14/25  ] LOSS   18 turns   gray, kaiba, renamon  vs  inosuke, tokoyami, ichigo
+[  15/25  ] WIN    20 turns   gray, sheele, tsuyu  vs  renamon, ace, tokoyami
+[  16/25  ] LOSS   21 turns   gray, goku, omnimon  vs  satsuki, gojo, tatsumi
+[  17/25  ] WIN    12 turns   gray, astolfo, horohoro  vs  gilgamesh, koro, tsuyu
+[  18/25  ] WIN    13 turns   gray, alphamon, ryohei  vs  renamon, hawkmon, halibel
+[  19/25  ] WIN    19 turns   gray, minene, inosuke  vs  toga, sayaka, tamaki
+[  20/25  ] WIN    15 turns   gray, frieren, yoh  vs  lyserg, lizandpatty, nobara
+[  21/25  ] WIN    19 turns   gray, muichiro, satsuki  vs  shinoa, mars, gatomon
+[  22/25  ] LOSS   24 turns   gray, megumin, omnimon  vs  hisoka, eren, bakugo
+[  23/25  ] LOSS   23 turns   gray, sheele, arthur  vs  eren, luffy, tsubasa
+[  24/25  ] WIN    24 turns   gray, hinata, esdeath  vs  tanjiro, tsubaki, squalo
+[  25/25  ] WIN    16 turns   gray, asta, astolfo  vs  tsubasa, frankenstein, koro
+=== TRAINER RUN COMPLETE ===
+Matches: 25   W: 18   L: 7   D: 0   Win: 72.0%   (opponent: self)
+Policy saved to res://training/checkpoints/focus_gray/w1.json  (generation 5, trained_matches 10025)

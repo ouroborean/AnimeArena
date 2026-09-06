@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/natsu.gd" id="1_62rtg"]
+[ext_resource type="Texture2D" path="res://assets/images/Natsu Dragneel/natsuprof.png" id="2_d0f1d"]
+[ext_resource type="Texture2D" path="res://assets/images/Natsu Dragneel/profile_mastery_natsu.png" id="2_t8och"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="3_6qh2v"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="4_g7p77"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="5_51mii"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="6_ve4n7"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="7_xiapo"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="8_sbcf5"]
+
+[node name="Natsu" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_62rtg")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_t8och")
+mastery_name = "Dragon Force Natsu"
+portrait_texture = ExtResource("2_d0f1d")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("3_6qh2v")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_g7p77")]
+
+[node name="StatComponent" parent="." instance=ExtResource("5_51mii")]
+
+[node name="NameComponent" parent="." instance=ExtResource("6_ve4n7")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("7_xiapo")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("8_sbcf5")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

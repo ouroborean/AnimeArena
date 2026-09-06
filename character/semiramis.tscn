@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/semiramis.gd" id="1_0tsvb"]
+[ext_resource type="Texture2D" path="res://assets/images/Semiramis/alt_prof_semiramis.png" id="2_hqmgc"]
+[ext_resource type="Texture2D" path="res://assets/images/Semiramis/semiramisprof.png" id="2_sk6kn"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="4_6ptvo"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="5_4jmfs"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="6_pi5au"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="7_jsbhd"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="8_y6jfk"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="9_hv8ym"]
+
+[node name="Semiramis" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_0tsvb")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_hqmgc")
+mastery_name = "Queen Semiramis"
+portrait_texture = ExtResource("2_sk6kn")
+alt_portraits = Array[Texture2D]([null])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("4_6ptvo")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_4jmfs")]
+
+[node name="StatComponent" parent="." instance=ExtResource("6_pi5au")]
+
+[node name="NameComponent" parent="." instance=ExtResource("7_jsbhd")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("8_y6jfk")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("9_hv8ym")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

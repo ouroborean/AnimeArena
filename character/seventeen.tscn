@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://character/seventeen.gd" id="1_svntn"]
+[ext_resource type="Texture2D" path="res://assets/images/Android 17/seventeenprof.png" id="2_svntn"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="3_svntn"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="4_svntn"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="5_svntn"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="6_svntn"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="7_svntn"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="8_svntn"]
+
+[node name="Seventeen" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_svntn")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+portrait_texture = ExtResource("2_svntn")
+alt_portraits = Array[Texture2D]([null])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("3_svntn")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_svntn")]
+
+[node name="StatComponent" parent="." instance=ExtResource("5_svntn")]
+
+[node name="NameComponent" parent="." instance=ExtResource("6_svntn")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("7_svntn")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("8_svntn")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

@@ -1,0 +1,49 @@
+{
+  "_source": "components/rank_component.gd",
+  "_symbols": [
+    "Type",
+    "rp_thresholds",
+    "ranked_streak_thresholds",
+    "TIER_SPAN",
+    "DIVISION_SPAN",
+    "DIVISIONS"
+  ],
+  "_generated_by": "tools/reference_data.py",
+  "tier_ordinals": {
+    "IRON": 0,
+    "BRONZE": 1,
+    "SILVER": 2,
+    "GOLD": 3,
+    "PLATINUM": 4,
+    "DIAMOND": 5,
+    "MASTER": 6,
+    "GRANDMASTER": 7,
+    "CHALLENGER": 8
+  },
+  "tier_span": 1000,
+  "division_span": 250,
+  "divisions": 4,
+  "rp_thresholds": {
+    "IRON": 3,
+    "BRONZE": 5,
+    "SILVER": 7,
+    "GOLD": 10,
+    "PLATINUM": 15,
+    "DIAMOND": 20,
+    "MASTER": 25,
+    "GRANDMASTER": 50,
+    "CHALLENGER": 50
+  },
+  "ranked_streak_thresholds": {
+    "IRON": 2,
+    "BRONZE": 3,
+    "SILVER": 5,
+    "GOLD": 7,
+    "PLATINUM": 9,
+    "DIAMOND": 12,
+    "MASTER": 15,
+    "GRANDMASTER": 20,
+    "CHALLENGER": 20
+  },
+  "_status_note": "rp_thresholds / ranked_streak_thresholds are DORMANT: the promo-series design that read them was removed and tiers are now a pure function of rating (tier_for_rating). Extracted because they are the spec for that layer if it is ever rebuilt — a port must not treat them as live."
+}

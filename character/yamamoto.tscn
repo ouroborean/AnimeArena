@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/yamamoto.gd" id="1_5vs4s"]
+[ext_resource type="Texture2D" path="res://assets/images/Yamamoto Takeshi/profile_mastery_yamamoto.png" id="2_1x0pk"]
+[ext_resource type="Texture2D" path="res://assets/images/Yamamoto Takeshi/yamamotoprof.png" id="2_xae5d"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="3_mtoxe"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="4_xibs4"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="5_2vg35"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="6_thob8"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="7_3doqx"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="8_tpsma"]
+
+[node name="Yamamoto" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_5vs4s")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_1x0pk")
+mastery_name = "Vongola Rain Guardian - Primo"
+portrait_texture = ExtResource("2_xae5d")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("3_mtoxe")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_xibs4")]
+
+[node name="StatComponent" parent="." instance=ExtResource("5_2vg35")]
+
+[node name="NameComponent" parent="." instance=ExtResource("6_thob8")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("7_3doqx")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("8_tpsma")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

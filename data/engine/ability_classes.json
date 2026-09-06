@@ -1,0 +1,31 @@
+{
+  "_source": "abilities/scripts/ability_component.gd",
+  "_symbols": [
+    "CLASS_NAMES",
+    "FREE_SKILLS_MARK"
+  ],
+  "_generated_by": "tools/reference_data.py",
+  "class_names": [
+    "Physical",
+    "Energy",
+    "Mental",
+    "Affliction",
+    "Strategic",
+    "Harmful",
+    "Helpful",
+    "Instant",
+    "Action",
+    "Control",
+    "Channeled",
+    "Uncounterable",
+    "Bypassing",
+    "Stealthed",
+    "Passive",
+    "Preserves Channel",
+    "Invisible",
+    "Unstunnable",
+    "Damaging"
+  ],
+  "free_skills_mark": "Fairy Star Blessing",
+  "_free_skills_mark_note": "mark name that zeroes every one of the holder's skill costs (Ability.cost tail) — an engine string, not a class"
+}

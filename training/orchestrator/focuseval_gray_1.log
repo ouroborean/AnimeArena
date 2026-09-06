@@ -1,0 +1,47 @@
+Godot Engine v4.6.2.stable.official.71f334935 - https://godotengine.org
+
+[trainer] seed=77097 matches=30 opponent=policy:res://training/checkpoints/focused_current.json eval=true out=res://training/checkpoints/work.json checkpoint=res://training/checkpoints/focus_gray/merged.json
+[authored] loaded 1 authored character(s)
+[   1/30  ] WIN    16 turns   gray, satsuki, tamaki  vs  venus, mercury, luffy
+[   2/30  ] WIN    17 turns   gray, xanxus, boruto  vs  lizandpatty, zenitsu, jinwoo
+[   3/30  ] LOSS   18 turns   gray, gatomon, jaden  vs  aiohto, blackstar, hashirama
+[   4/30  ] WIN    25 turns   gray, lyserg, toji  vs  sukuna, toph, horohoro
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   5/30  ] WIN    14 turns   gray, byakuya, gallantmon  vs  rakko, tatsumaki, saitama
+[   6/30  ] WIN    28 turns   gray, zoro, yoh  vs  kurapika, kid, bakugo
+[   7/30  ] LOSS   20 turns   gray, madoka, aang  vs  zoro, naruto, pegasus
+[   8/30  ] WIN    19 turns   gray, koro, death  vs  ace, adam, squalo
+[   9/30  ] WIN    18 turns   gray, ichigo, boruto  vs  astolfo, uraraka, shinoa
+[  10/30  ] LOSS   22 turns   gray, kid, tsubasa  vs  mars, adam, ladydevimon
+[  11/30  ] LOSS   19 turns   gray, kitara, jeanne  vs  zoro, kurotsuchi, rimuru
+[  12/30  ] WIN    16 turns   gray, tokoyami, renamon  vs  kitara, sayaka, korra
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  13/30  ] LOSS   20 turns   gray, inosuke, killua  vs  edward, gogeta, venus
+[  14/30  ] WIN    19 turns   gray, shinoa, shiro  vs  astolfo, tatsumi, sakura
+[  15/30  ] LOSS   21 turns   gray, jesse, midoriya  vs  ladydevimon, mine, gon
+[  16/30  ] WIN    20 turns   gray, jupiter, renamon  vs  kid, jinwoo, emiya
+[  17/30  ] LOSS   22 turns   gray, maka, noelle  vs  sasuke, jaden, gasai
+[  18/30  ] WIN    18 turns   gray, chrome, soul  vs  erza, shinoa, tsuyu
+[  19/30  ] LOSS   16 turns   gray, toji, semiramis  vs  jesse, madoka, jack
+[  20/30  ] LOSS   19 turns   gray, rob, kurotsuchi  vs  byakuya, shinoa, megumi
+[  21/30  ] LOSS   15 turns   gray, shinra, naruto  vs  meliodas, usopp, frankenstein
+[  22/30  ] WIN    15 turns   gray, ganta, nonon  vs  yuji, megumi, misaka
+[  23/30  ] LOSS   28 turns   gray, jinwoo, uraraka  vs  tokoyami, veldora, kuroko
+[  24/30  ] WIN    16 turns   gray, gon, ladydevimon  vs  sayaka, death, ban
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  25/30  ] WIN    16 turns   gray, frieren, adam  vs  rakko, ganta, nezuko
+[  26/30  ] WIN    16 turns   gray, madoka, blackwargreymon  vs  myotismon, impmon, jaden
+[  27/30  ] WIN    18 turns   gray, kitara, allmight  vs  toji, toga, shinra
+[  28/30  ] LOSS   25 turns   gray, rob, ace  vs  kitara, gatomon, horohoro
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  29/30  ] WIN    23 turns   gray, denji, erza  vs  impmon, seventeen, natsu
+Applying bleed effect! Checking special code
+[  30/30  ] WIN    23 turns   gray, ryuko, emiya  vs  tsuyu, diane, soul
+=== TRAINER RUN COMPLETE ===
+Matches: 30   W: 18   L: 12   D: 0   Win: 60.0%   (opponent: v3:focused_current.json  [EVAL])

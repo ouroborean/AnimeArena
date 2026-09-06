@@ -1,0 +1,36 @@
+[gd_scene load_steps=10 format=3 uid="uid://cqljuo4ujnm4w"]
+
+[ext_resource type="Script" uid="uid://cmo1e06kqbtmd" path="res://character/chrome.gd" id="1_chr01"]
+[ext_resource type="Texture2D" uid="uid://p23c0b52sebe" path="res://assets/images/Chrome Dokuro/chromeprof.png" id="2_chr02"]
+[ext_resource type="Texture2D" uid="uid://ctpem1eub5lfh" path="res://assets/images/Chrome Dokuro/rokudoprof.png" id="3_chr03"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="4_chr04"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="5_chr05"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="6_chr06"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="7_chr07"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="8_chr08"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="9_chr09"]
+
+[node name="Chrome" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_chr01")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+portrait_texture = ExtResource("2_chr02")
+alt_portraits = Array[Texture2D]([ExtResource("3_chr03")])
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("4_chr04")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_chr05")]
+
+[node name="StatComponent" parent="." instance=ExtResource("6_chr06")]
+
+[node name="NameComponent" parent="." instance=ExtResource("7_chr07")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("8_chr08")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("9_chr09")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

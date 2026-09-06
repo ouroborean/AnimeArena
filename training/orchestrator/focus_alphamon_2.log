@@ -1,0 +1,209 @@
+Godot Engine v4.6.2.stable.official.71f334935 - https://godotengine.org
+
+[trainer] seed=61002 matches=700 opponent=self eval=false out=res://training/checkpoints/focus_alphamon/w2.json checkpoint=res://training/checkpoints/focused_current.json
+[authored] loaded 1 authored character(s)
+[   1/700 ] LOSS   22 turns   alphamon, emiya, usopp  vs  death, korra, seventeen
+[   2/700 ] WIN    16 turns   alphamon, seventeen, frankenstein  vs  zoro, hisoka, renamon
+[   3/700 ] WIN    15 turns   alphamon, omnimon, cell  vs  bakugo, myotismon, mikasa
+[   4/700 ] LOSS   23 turns   alphamon, toudou, yuji  vs  mavis, gatomon, itachi
+[   5/700 ] WIN    12 turns   alphamon, nezuko, luffy  vs  frieren, jesse, naruto
+[   6/700 ] WIN    15 turns   alphamon, emiya, machinedramon  vs  semiramis, lyserg, nobara
+[   7/700 ] WIN    18 turns   alphamon, mavis, yoh  vs  asta, chrome, gon
+[   8/700 ] WIN    16 turns   alphamon, machinedramon, sayaka  vs  usopp, korra, jinwoo
+[   9/700 ] WIN    16 turns   alphamon, genos, uraraka  vs  sukuna, rimuru, ryohei
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  10/700 ] WIN    19 turns   alphamon, ladydevimon, nonon  vs  koro, rengoku, tsubaki
+[  11/700 ] WIN    19 turns   alphamon, akame, nezuko  vs  jesse, cell, kaiba
+[  12/700 ] LOSS    9 turns   alphamon, horohoro, gatomon  vs  gray, orihime, touka
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  13/700 ] WIN    12 turns   alphamon, blackwargreymon, jaden  vs  ban, rakko, rengoku
+[  14/700 ] WIN    16 turns   alphamon, diane, bakugo  vs  megumi, jinwoo, zoro
+[  15/700 ] WIN    15 turns   alphamon, gojo, gasai  vs  blackwargreymon, gogeta, gunha
+[  16/700 ] LOSS   27 turns   alphamon, rimuru, pegasus  vs  maka, uraraka, ryohei
+[  17/700 ] WIN    17 turns   alphamon, sasuke, nagisa  vs  bakugo, yoh, boruto
+[  18/700 ] WIN    16 turns   alphamon, impmon, edward  vs  ichigo, luffy, gatomon
+[  19/700 ] WIN    21 turns   alphamon, tanjiro, vegeta  vs  kitara, hibari, neferpitou
+Yubel's S1 Triggered!
+Applying bleed effect! Checking special code
+[  20/700 ] WIN    17 turns   alphamon, cell, yubel  vs  alphonse, denji, nezuko
+[  21/700 ] WIN    20 turns   alphamon, rob, naruto  vs  yugi, jaden, ryohei
+[  22/700 ] WIN    19 turns   alphamon, broly, squalo  vs  venus, megumin, arthur
+[  23/700 ] WIN    18 turns   alphamon, arthur, hawkmon  vs  uraraka, ladydevimon, power
+[  24/700 ] WIN    37 turns   alphamon, muichiro, yuji  vs  tsubasa, gon, nel
+[  25/700 ] WIN    13 turns   alphamon, gon, shinra  vs  jack, levi, gohan
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  26/700 ] LOSS   16 turns   alphamon, boruto, yuji  vs  rengoku, jupiter, sukuna
+[  27/700 ] WIN    14 turns   alphamon, astolfo, semiramis  vs  aang, levi, gohan
+[  28/700 ] WIN    20 turns   alphamon, tatsumi, tsunayoshi  vs  blackwargreymon, tanjiro, saitama
+[  29/700 ] WIN    17 turns   alphamon, uranus, sakura  vs  megumi, emiya, edward
+[  30/700 ] WIN    24 turns   alphamon, lyserg, saturn  vs  usopp, uzui, tanjiro
+[  31/700 ] WIN    15 turns   alphamon, impmon, megumi  vs  misaka, veldora, shokuhou
+[  32/700 ] WIN    18 turns   alphamon, diane, aiohto  vs  saturn, rob, venus
+[  33/700 ] LOSS   24 turns   alphamon, denji, frieren  vs  lizandpatty, blackwargreymon, gilgamesh
+[  34/700 ] WIN    12 turns   alphamon, seventeen, sheele  vs  aang, sasuke, bakugo
+[  35/700 ] WIN    14 turns   alphamon, satsuki, veldora  vs  saber, tokoyami, kaiba
+[  36/700 ] WIN    15 turns   alphamon, byakuya, ichibe  vs  rimuru, ace, goku
+[  37/700 ] LOSS   22 turns   alphamon, edward, nobara  vs  broly, crona, impmon
+[  38/700 ] LOSS   32 turns   alphamon, semiramis, misaka  vs  hawkmon, mercury, usopp
+[  39/700 ] WIN    13 turns   alphamon, aang, tsubasa  vs  minene, megumi, bakugo
+[  40/700 ] WIN    16 turns   alphamon, hibari, mine  vs  gon, jaden, natsu
+[  41/700 ] WIN    17 turns   alphamon, muichiro, genos  vs  yamamoto, killua, tanjiro
+[  42/700 ] LOSS   24 turns   alphamon, emiyaarcher, aang  vs  mars, jupiter, lyserg
+[  43/700 ] LOSS   20 turns   alphamon, misaka, hisoka  vs  usopp, uraraka, jack
+[  44/700 ] WIN    15 turns   alphamon, gojo, neferpitou  vs  sakura, jupiter, tatsumaki
+[  45/700 ] LOSS    8 turns   alphamon, genos, veldora  vs  jupiter, toudou, esdeath
+[  46/700 ] WIN    45 turns   alphamon, impmon, goku  vs  byakuya, megumi, natsu
+[  47/700 ] WIN    27 turns   alphamon, uraraka, levi  vs  lucy, gray, noelle
+[  48/700 ] WIN    21 turns   alphamon, asta, tatsumi  vs  xanxus, chrome, hinata
+[  49/700 ] LOSS   28 turns   alphamon, killua, tokoyami  vs  crona, touka, marco
+[  50/700 ] LOSS   15 turns   alphamon, blackstar, eren  vs  meliodas, asta, semiramis
+[  51/700 ] WIN    17 turns   alphamon, rimuru, emiya  vs  tatsumi, sasuke, jack
+[  52/700 ] LOSS   30 turns   alphamon, bakugo, ladydevimon  vs  natsu, shiro, arthur
+Applying bleed effect! Checking special code
+[  53/700 ] WIN    19 turns   alphamon, ban, satsuki  vs  uzui, power, gunha
+[  54/700 ] WIN    17 turns   alphamon, kurotsuchi, yoh  vs  edward, lucy, tsuyu
+[  55/700 ] LOSS   15 turns   alphamon, minene, kurotsuchi  vs  inuyasha, madoka, gogeta
+[  56/700 ] WIN    19 turns   alphamon, jeanne, itachi  vs  sakura, vegeta, maka
+[  57/700 ] WIN    20 turns   alphamon, ace, yugi  vs  mikasa, nagisa, korra
+[  58/700 ] LOSS   24 turns   alphamon, yamamoto, chrome  vs  hinata, touka, aiohto
+[  59/700 ] WIN    16 turns   alphamon, frankenstein, hisoka  vs  renamon, shinoa, mash
+[  60/700 ] WIN    16 turns   alphamon, yoh, gatomon  vs  erza, goku, kid
+[  61/700 ] LOSS   23 turns   alphamon, hashirama, yuji  vs  mami, alphonse, jupiter
+[  62/700 ] WIN    29 turns   alphamon, yoh, kurapika  vs  todoroki, gohan, natsu
+[  63/700 ] WIN    20 turns   alphamon, allmight, horohoro  vs  marco, nobara, rob
+[  64/700 ] WIN    17 turns   alphamon, ryohei, astolfo  vs  hashirama, bakugo, tokoyami
+[  65/700 ] WIN    13 turns   alphamon, kaiba, hashirama  vs  zenitsu, venus, mash
+[  66/700 ] WIN    17 turns   alphamon, death, alphonse  vs  misaka, chrome, nobara
+[  67/700 ] WIN    12 turns   alphamon, semiramis, hashirama  vs  ganta, gilgamesh, goku
+[  68/700 ] LOSS   22 turns   alphamon, tanjiro, sasuke  vs  goku, luffy, jaden
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  69/700 ] WIN    16 turns   alphamon, naruto, denji  vs  usopp, boruto, ken
+[  70/700 ] WIN    11 turns   alphamon, ganta, inuyasha  vs  toph, toji, frieren
+[  71/700 ] WIN    24 turns   alphamon, frankenstein, tsuyu  vs  soul, tsubasa, yoh
+[  72/700 ] WIN    14 turns   alphamon, satsuki, astolfo  vs  uranus, gohan, gojo
+[  73/700 ] WIN    21 turns   alphamon, korra, erza  vs  xanxus, kaiba, tatsumaki
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  74/700 ] WIN    16 turns   alphamon, hawkmon, king  vs  yugi, denji, byakuya
+[  75/700 ] LOSS   18 turns   alphamon, uranus, emiyaarcher  vs  jack, mikasa, kurotsuchi
+[  76/700 ] WIN    37 turns   alphamon, marco, yoh  vs  horohoro, natsu, venus
+[  77/700 ] WIN    36 turns   alphamon, toph, kitara  vs  mars, gunha, gilgamesh
+[  78/700 ] WIN    18 turns   alphamon, chrome, machinedramon  vs  jinwoo, impmon, tokoyami
+[  79/700 ] LOSS   20 turns   alphamon, shokuhou, semiramis  vs  megumin, saber, jupiter
+[  80/700 ] LOSS   13 turns   alphamon, nonon, ryohei  vs  gunha, frankenstein, nimaiya
+[  81/700 ] WIN    21 turns   alphamon, esdeath, goku  vs  noelle, natsu, tsubasa
+[  82/700 ] WIN    14 turns   alphamon, genos, gohan  vs  gallantmon, gasai, sukuna
+[  83/700 ] WIN    30 turns   alphamon, rimuru, yuji  vs  ladydevimon, semiramis, itachi
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  84/700 ] LOSS   20 turns   alphamon, ken, edward  vs  madoka, saitama, usopp
+[  85/700 ] WIN    19 turns   alphamon, saber, frankenstein  vs  ryuko, luffy, nel
+[  86/700 ] WIN    64 turns   alphamon, halibel, yoh  vs  nonon, allmight, kaiba
+[  87/700 ] LOSS   26 turns   alphamon, blackwargreymon, tsunayoshi  vs  marco, edward, venus
+Applying bleed effect! Checking special code
+[  88/700 ] WIN    18 turns   alphamon, death, rengoku  vs  maka, ganta, zoro
+[  89/700 ] WIN    14 turns   alphamon, genos, broly  vs  cooler, yoh, jeanne
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  90/700 ] WIN    20 turns   alphamon, nonon, kaiba  vs  diane, saitama, frankenstein
+[  91/700 ] LOSS   24 turns   alphamon, megumi, jupiter  vs  gilgamesh, nagisa, yuji
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  92/700 ] WIN    13 turns   alphamon, chrome, power  vs  kurapika, blackwargreymon, marco
+[  93/700 ] WIN    16 turns   alphamon, uraraka, luffy  vs  gogeta, sakura, hisoka
+[  94/700 ] LOSS   27 turns   alphamon, ichibe, death  vs  soul, nagisa, hashirama
+[  95/700 ] WIN    33 turns   alphamon, jupiter, mash  vs  uraraka, jeanne, yuji
+[  96/700 ] WIN    16 turns   alphamon, blackstar, saturn  vs  madoka, emiyaarcher, xanxus
+[  97/700 ] WIN    12 turns   alphamon, mine, gon  vs  xanxus, touka, nobara
+[  98/700 ] WIN    14 turns   alphamon, gilgamesh, kuroko  vs  yuno, tokoyami, gasai
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  99/700 ] WIN    16 turns   alphamon, ichibe, semiramis  vs  asta, rengoku, koro
+[ 100/700 ] WIN    17 turns   alphamon, jupiter, gunha  vs  adam, toji, asta
+[ 101/700 ] WIN    18 turns   alphamon, kaiba, blackwargreymon  vs  killua, chrome, asta
+[ 102/700 ] LOSS   27 turns   alphamon, blackstar, rakko  vs  aang, hashirama, uraraka
+[ 103/700 ] WIN    15 turns   alphamon, venus, kuroko  vs  toph, lizandpatty, yubel
+[ 104/700 ] WIN    15 turns   alphamon, gilgamesh, saturn  vs  shinra, tamaki, machinedramon
+[ 105/700 ] WIN    18 turns   alphamon, naruto, ryuko  vs  sukuna, midoriya, byakuya
+[ 106/700 ] WIN    15 turns   alphamon, koro, emiya  vs  kuroko, zenitsu, nobara
+[ 107/700 ] WIN    19 turns   alphamon, nonon, tanjiro  vs  blackstar, toga, cell
+[ 108/700 ] WIN    19 turns   alphamon, adam, sheele  vs  zoro, megumi, gunha
+Yubel's S1 Triggered!
+[ 109/700 ] WIN    18 turns   alphamon, mercury, rimuru  vs  yugi, arthur, yubel
+[ 110/700 ] WIN    17 turns   alphamon, nimaiya, ladydevimon  vs  jaden, jesse, tatsumi
+[ 111/700 ] WIN    17 turns   alphamon, blackwargreymon, kid  vs  sukuna, ban, ladydevimon
+[ 112/700 ] LOSS   32 turns   alphamon, goku, kurotsuchi  vs  kitara, saturn, yoh
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 113/700 ] LOSS   33 turns   alphamon, emiya, gojo  vs  levi, gallantmon, rengoku
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 114/700 ] LOSS   12 turns   alphamon, rengoku, inuyasha  vs  satsuki, nel, yugi
+[ 115/700 ] WIN    23 turns   alphamon, gilgamesh, cell  vs  sheele, crona, ichigo
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 116/700 ] WIN    17 turns   alphamon, gatomon, king  vs  seventeen, veldora, eren
+[ 117/700 ] LOSS   22 turns   alphamon, mars, veldora  vs  gunha, genos, asta
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 118/700 ] WIN    16 turns   alphamon, goku, jesse  vs  venus, sasuke, king
+Applying bleed effect! Checking special code
+[ 119/700 ] WIN    10 turns   alphamon, meliodas, power  vs  hisoka, maka, saitama
+[ 120/700 ] WIN    15 turns   alphamon, gon, hashirama  vs  killua, noelle, venus
+[ 121/700 ] WIN    16 turns   alphamon, jaden, tsubaki  vs  yoh, luffy, kaiba
+[ 122/700 ] LOSS   12 turns   alphamon, shinoa, nobara  vs  toph, saitama, touka
+[ 123/700 ] WIN    13 turns   alphamon, uzui, diane  vs  blackstar, ichibe, goku
+[ 124/700 ] WIN    27 turns   alphamon, hawkmon, lucy  vs  emiyaarcher, aiohto, toudou
+[ 125/700 ] LOSS   20 turns   alphamon, yamamoto, minene  vs  blackwargreymon, muichiro, jack
+[ 126/700 ] WIN    13 turns   alphamon, halibel, saitama  vs  horohoro, ryuko, shinra
+[ 127/700 ] LOSS   12 turns   alphamon, satsuki, yoh  vs  meliodas, frankenstein, mine
+[ 128/700 ] WIN    21 turns   alphamon, misaka, megumi  vs  saber, natsu, uzui
+[ 129/700 ] WIN    14 turns   alphamon, ace, jack  vs  saitama, zoro, nimaiya
+[ 130/700 ] WIN    21 turns   alphamon, squalo, yamamoto  vs  nobara, uranus, jesse
+[ 131/700 ] WIN    21 turns   alphamon, touka, pegasus  vs  muichiro, kaiba, toph
+[ 132/700 ] WIN    15 turns   alphamon, lucy, killua  vs  nel, allmight, gilgamesh
+[ 133/700 ] WIN    12 turns   alphamon, gunha, tsubasa  vs  ace, misaka, shiro
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[ 134/700 ] WIN    15 turns   alphamon, nonon, neferpitou  vs  denji, gasai, ken
+[ 135/700 ] WIN    12 turns   alphamon, sukuna, minene  vs  byakuya, soul, ichibe
+[ 136/700 ] LOSS   14 turns   alphamon, tamaki, pegasus  vs  nonon, misaka, tsubaki
+[ 137/700 ] WIN    17 turns   alphamon, shinoa, gon  vs  nel, chrome, tsunayoshi
+[ 138/700 ] WIN    24 turns   alphamon, zenitsu, yuji  vs  kurotsuchi, eren, venus
+[ 139/700 ] WIN    14 turns   alphamon, neferpitou, marco  vs  ichibe, sheele, crona
+[ 140/700 ] WIN    15 turns   alphamon, sukuna, lyserg  vs  ban, tatsumaki, ace
+[ 141/700 ] WIN    17 turns   alphamon, emiya, cell  vs  kurotsuchi, sayaka, chrome
+[ 142/700 ] WIN    13 turns   alphamon, mikasa, allmight  vs  crona, tokoyami, adam
+[ 143/700 ] WIN    14 turns   alphamon, omnimon, cooler  vs  machinedramon, mine, levi
+[ 144/700 ] WIN    16 turns   alphamon, adam, saturn  vs  crona, koro, nagisa
+[ 145/700 ] LOSS   35 turns   alphamon, nobara, genos  vs  bakugo, nagisa, chrome
+[ 146/700 ] LOSS   20 turns   alphamon, rakko, vegeta  vs  yamamoto, gojo, gasai
+[ 147/700 ] WIN    12 turns   alphamon, todoroki, nel  vs  korra, ace, toga
+[ 148/700 ] WIN    17 turns   alphamon, misaka, cooler  vs  crona, death, gogeta
+[ 149/700 ] WIN    21 turns   alphamon, megumin, machinedramon  vs  boruto, frieren, rob
+[ 150/700 ] WIN    18 turns   alphamon, jack, sheele  vs  sasuke, chrome, gilgamesh
+[ 151/700 ] WIN    17 turns   alphamon, lucy, todoroki  vs  jupiter, machinedramon, byakuya
+Applying bleed effect! Checking special code
+[ 152/700 ] LOSS   26 turns   alphamon, tsuyu, inosuke  vs  nel, astolfo, uranus
+[ 153/700 ] WIN    17 turns   alphamon, erza, satsuki  vs  uzui, boruto, semiramis
+[ 154/700 ] WIN    22 turns   alphamon, esdeath, toph  vs  uzui, toudou, mars
+[ 155/700 ] WIN    21 turns   alphamon, inosuke, boruto  vs  eren, yugi, uraraka
+[ 156/700 ] WIN    20 turns   alphamon, sakura, todoroki  vs  tsubasa, inuyasha, nagisa
+[ 157/700 ] WIN    16 turns   alphamon, renamon, squalo  vs  minene, gogeta, mine
+[ 158/700 ] LOSS   19 turns   alphamon, gray, ladydevimon  vs  tsubasa, mash, inuyasha

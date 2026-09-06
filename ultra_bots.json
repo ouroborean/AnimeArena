@@ -1,0 +1,546 @@
+{
+  "_note": "Ultra Bots roster - persistent, player-like bot accounts (see Anime Arena/Proposals/Ultra Bots). Each entry is seeded into a real ausers/<username>.dat account at boot by _seed_ultra_bots(). online_windows are [[startHour, endHour), ...] in server LOCAL time (end-exclusive), used by the Phase 5 rotation scheduler; a bot may list several and they may overlap other bots'.",
+  "_note_avatar_url": "avatar_url: paste a full image URL to give the bot a custom profile avatar. Leave it \"\" to keep an auto-assigned cosmetic avatar. A non-empty URL is applied to the bot's account on the next server restart even if the account already exists, so all you have to do is fill these in and restart.",
+  "_note_preferred_team": "preferred_team = FAVORED characters (1-3), which the bot ALWAYS fields. Fewer than 3 => the remaining seats are filled with a random color-matched draft that the bot occasionally reshuffles between games. Names are validated against the live roster; unknown/excluded ones are dropped.",
+  "bots": [
+    {
+      "username": "MBLD",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "luffy",
+        "tanjiro",
+        "uraraka"
+      ],
+      "title": "Water Scent",
+      "online_windows": [
+        [
+          6,
+          8
+        ]
+      ]
+    },
+    {
+      "username": "Kosac",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "jack",
+        "goku",
+        "inuyasha"
+      ],
+      "title": "The Ripper",
+      "online_windows": [
+        [
+          7,
+          9
+        ]
+      ]
+    },
+    {
+      "username": "ShadowClone7",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "alphonse"
+      ],
+      "title": "Armor of the Arena",
+      "online_windows": [
+        [
+          8,
+          13
+        ]
+      ]
+    },
+    {
+      "username": "RasenganRyu",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "nagisa",
+        "toudou",
+        "hibari"
+      ],
+      "title": "President Student",
+      "online_windows": [
+        [
+          1,
+          5
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "username": "BankaiBrandon",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "alphamon",
+        "esdeath"
+      ],
+      "title": "The Sadistic Royal",
+      "online_windows": [
+        [
+          1,
+          8
+        ]
+      ]
+    },
+    {
+      "username": "GomuGabe",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "shinra"
+      ],
+      "title": "Hysterical Burning",
+      "online_windows": [
+        [
+          16,
+          20
+        ]
+      ]
+    },
+    {
+      "username": "ZaWarudoZane",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "uraraka",
+        "yuno"
+      ],
+      "title": "Gravity and Sylph",
+      "online_windows": [
+        [
+          16,
+          21
+        ],
+        [
+          7,
+          10
+        ]
+      ]
+    },
+    {
+      "username": "NichirinNova",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "gojo",
+        "gallantmon",
+        "ichibe"
+      ],
+      "title": "The Chivalrous Calligrapher",
+      "online_windows": [
+        [
+          7,
+          14
+        ],
+        [
+          17,
+          20
+        ]
+      ]
+    },
+    {
+      "username": "HollowHankz",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "jupiter",
+        "broly",
+        "nimaiya"
+      ],
+      "title": "The Emerald of Thunder",
+      "online_windows": [
+        [
+          20,
+          24
+        ],
+        [
+          2,
+          6
+        ]
+      ]
+    },
+    {
+      "username": "SharinganSol",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "aiohto",
+        "zenitsu",
+        "ban"
+      ],
+      "title": "Thunder Greed",
+      "online_windows": [
+        [
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "username": "GrandLineGus",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "pegasus",
+        "mavis"
+      ],
+      "title": "The Wine",
+      "online_windows": [
+        [
+          18,
+          22
+        ]
+      ]
+    },
+    {
+      "username": "TitanTessa",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "tatsumi"
+      ],
+      "title": "The Invisible of Ruthless",
+      "online_windows": [
+        [
+          16,
+          20
+        ]
+      ]
+    },
+    {
+      "username": "FlameHashira",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "ladydevimon",
+        "zoro",
+        "rakko"
+      ],
+      "title": "The Slash of Sword",
+      "online_windows": [
+        [
+          17,
+          24
+        ]
+      ]
+    },
+    {
+      "username": "CursedFinger",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "naruto",
+        "mikasa",
+        "usopp"
+      ],
+      "title": "Outcast Orange",
+      "online_windows": [
+        [
+          11,
+          17
+        ]
+      ]
+    },
+    {
+      "username": "DevilFruitDee",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "kid",
+        "ken",
+        "frieza"
+      ],
+      "title": "The Broken",
+      "online_windows": [
+        [
+          8,
+          15
+        ]
+      ]
+    },
+    {
+      "username": "HunterExamHQ",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "tokoyami"
+      ],
+      "title": "The Shadow of Bird",
+      "online_windows": [
+        [
+          4,
+          10
+        ],
+        [
+          21,
+          24
+        ]
+      ]
+    },
+    {
+      "username": "SoulReaperSy",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "tatsumaki"
+      ],
+      "title": "Tornado and Psychic",
+      "online_windows": [
+        [
+          18,
+          23
+        ]
+      ]
+    },
+    {
+      "username": "AlchemyAria",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "gatomon",
+        "chrome"
+      ],
+      "title": "The Cat of Trident",
+      "online_windows": [
+        [
+          2,
+          5
+        ]
+      ]
+    },
+    {
+      "username": "QuirkQueen",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "frieren"
+      ],
+      "title": "The Mage of Mana",
+      "online_windows": [
+        [
+          5,
+          12
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "username": "SageModeSam",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "ryohei"
+      ],
+      "title": "The Sun of Fist",
+      "online_windows": [
+        [
+          5,
+          8
+        ]
+      ]
+    },
+    {
+      "username": "CloverKnight",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "yugi",
+        "astolfo",
+        "halibel"
+      ],
+      "title": "Pink Coastal",
+      "online_windows": [
+        [
+          20,
+          24
+        ],
+        [
+          8,
+          12
+        ]
+      ]
+    },
+    {
+      "username": "SlayerDio",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "nagisa",
+        "emiya"
+      ],
+      "title": "The Classroom",
+      "online_windows": [
+        [
+          9,
+          12
+        ]
+      ]
+    },
+    {
+      "username": "EdoTenseiEd",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "saber"
+      ],
+      "title": "Knight of the Arena",
+      "online_windows": [
+        [
+          4,
+          9
+        ],
+        [
+          17,
+          22
+        ]
+      ]
+    },
+    {
+      "username": "StardustCrsdr",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "asta",
+        "mavis",
+        "minene"
+      ],
+      "title": "The Terrorist Bull",
+      "online_windows": [
+        [
+          17,
+          24
+        ],
+        [
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "username": "GearFifthGio",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "levi",
+        "ace",
+        "saturn"
+      ],
+      "title": "The Blaze Captain",
+      "online_windows": [
+        [
+          7,
+          14
+        ]
+      ]
+    },
+    {
+      "username": "DomainVega",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "luffy",
+        "gohan"
+      ],
+      "title": "The Potential",
+      "online_windows": [
+        [
+          17,
+          22
+        ],
+        [
+          19,
+          23
+        ]
+      ]
+    },
+    {
+      "username": "LimitlessLio",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "eren",
+        "sukuna"
+      ],
+      "title": "The Malevolent",
+      "online_windows": [
+        [
+          7,
+          13
+        ],
+        [
+          11,
+          16
+        ]
+      ]
+    },
+    {
+      "username": "PhantomTroupePi",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "shokuhou",
+        "neferpitou"
+      ],
+      "title": "The Mental of Firstborn",
+      "online_windows": [
+        [
+          22,
+          24
+        ],
+        [
+          10,
+          13
+        ]
+      ]
+    },
+    {
+      "username": "WanoWanderer",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "tsuyu",
+        "nezuko"
+      ],
+      "title": "Frog and Sister",
+      "online_windows": [
+        [
+          6,
+          11
+        ],
+        [
+          12,
+          18
+        ]
+      ]
+    },
+    {
+      "username": "PillarPunch",
+      "avatar_url": "",
+      "rating": 0,
+      "preferred_team": [
+        "ganta"
+      ],
+      "title": "The Woodpecker of Blood",
+      "online_windows": [
+        [
+          10,
+          13
+        ]
+      ]
+    }
+  ]
+}

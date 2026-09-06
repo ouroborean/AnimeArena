@@ -1,0 +1,40 @@
+Godot Engine v4.6.2.stable.official.71f334935 - https://godotengine.org
+
+[trainer] seed=61001 matches=25 opponent=self eval=false out=res://training/checkpoints/focus_asta/w1.json checkpoint=res://training/checkpoints/focused_current.json
+[authored] loaded 1 authored character(s)
+[   1/25  ] LOSS   14 turns   asta, ace, tatsumaki  vs  nel, madoka, hinata
+[   2/25  ] LOSS   33 turns   asta, gohan, gon  vs  muichiro, ladydevimon, jaden
+[   3/25  ] LOSS   19 turns   asta, saitama, orihime  vs  megumin, zenitsu, myotismon
+[   4/25  ] WIN    18 turns   asta, ladydevimon, renamon  vs  tsubaki, gasai, edward
+[   5/25  ] WIN    23 turns   asta, shinra, sheele  vs  chrome, gallantmon, jupiter
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[   6/25  ] WIN    13 turns   asta, rimuru, tsubasa  vs  power, korra, seventeen
+[   7/25  ] WIN    16 turns   asta, marco, jack  vs  tokoyami, ryuko, semiramis
+[   8/25  ] LOSS   20 turns   asta, omnimon, mami  vs  tatsumaki, todoroki, gatomon
+[   9/25  ] WIN    17 turns   asta, shinoa, chrome  vs  levi, emiya, yamamoto
+[  10/25  ] WIN    19 turns   asta, gasai, blackstar  vs  tsubaki, zoro, rimuru
+[  11/25  ] WIN    14 turns   asta, yugi, koro  vs  sakura, gogeta, allmight
+[  12/25  ] WIN    29 turns   asta, kaiba, tsubasa  vs  misaka, broly, aiohto
+[  13/25  ] WIN    28 turns   asta, jesse, natsu  vs  impmon, orihime, saturn
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+Applying bleed effect! Checking special code
+[  14/25  ] WIN    15 turns   asta, kaiba, renamon  vs  inosuke, tokoyami, ichigo
+[  15/25  ] WIN    24 turns   asta, sheele, tsuyu  vs  renamon, ace, tokoyami
+[  16/25  ] LOSS   17 turns   asta, goku, omnimon  vs  satsuki, gojo, tatsumi
+[  17/25  ] WIN    14 turns   asta, astolfo, horohoro  vs  gilgamesh, koro, tsuyu
+[  18/25  ] WIN    17 turns   asta, alphamon, ryohei  vs  renamon, hawkmon, halibel
+Applying bleed effect! Checking special code
+[  19/25  ] LOSS   14 turns   asta, minene, inosuke  vs  toga, madoka, tamaki
+[  20/25  ] WIN    25 turns   asta, frieren, yoh  vs  lyserg, lizandpatty, nobara
+[  21/25  ] WIN    20 turns   asta, muichiro, satsuki  vs  shinoa, mars, gatomon
+[  22/25  ] WIN    23 turns   asta, megumin, omnimon  vs  hisoka, eren, bakugo
+[  23/25  ] LOSS   22 turns   asta, sheele, arthur  vs  eren, luffy, tsubasa
+[  24/25  ] WIN    14 turns   asta, hinata, esdeath  vs  tanjiro, tsubaki, squalo
+[  25/25  ] LOSS   21 turns   asta, mami, astolfo  vs  tsubasa, frankenstein, koro
+=== TRAINER RUN COMPLETE ===
+Matches: 25   W: 17   L: 8   D: 0   Win: 68.0%   (opponent: self)
+Policy saved to res://training/checkpoints/focus_asta/w1.json  (generation 5, trained_matches 10025)

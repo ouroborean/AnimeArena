@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://character/uraraka.gd" id="1_dcpjt"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_2e3y8"]
+[ext_resource type="Texture2D" path="res://assets/images/Ochaco Uraraka/urarakaprof.png" id="2_344x2"]
+[ext_resource type="Texture2D" path="res://assets/images/Ochaco Uraraka/alt_prof_uraraka.png" id="2_m5jxl"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_x3cqo"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_s62bn"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_803d5"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_tx528"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_pcid7"]
+
+[node name="Uraraka" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_dcpjt")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_m5jxl")
+mastery_name = "Wistful Uraraka"
+portrait_texture = ExtResource("2_344x2")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_2e3y8")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_x3cqo")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_s62bn")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_803d5")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_tx528")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_pcid7")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

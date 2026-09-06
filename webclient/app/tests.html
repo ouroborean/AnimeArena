@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Anime Arena — non-battle test suite</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* #app renders off-screen at a real width so geometry-based assertions still work;
+       #results overlays the viewport with the pass/fail report. */
+    #app { position:absolute; left:-10000px; top:0; width:1280px; height:880px; }
+    #results { position:fixed; inset:0; overflow:auto; background:#0b0e14; z-index:99999; }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="results">Running…</div>
+  <script>
+    // Dev harness: cache-bust so edits to app.js / the suite always re-run. document.write keeps
+    // the load order (net -> app -> harness -> suite) synchronous during parse.
+    var _cb = Date.now();
+    ["net.js", "app.js", "aa-test-harness.js", "aa-tests.js"].forEach(function (src) {
+      document.write('<script src="' + src + "?cb=" + _cb + '"><\/script>');
+    });
+  </script>
+</body>
+</html>

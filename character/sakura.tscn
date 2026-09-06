@@ -1,0 +1,37 @@
+[gd_scene load_steps=10 format=3 uid="uid://cpyc3cux5ydkp"]
+
+[ext_resource type="Script" uid="uid://dkxup0e80k3cl" path="res://character/sakura.gd" id="1_ovryh"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_72f1p"]
+[ext_resource type="Texture2D" uid="uid://bj3dckey1sbel" path="res://assets/images/Haruno Sakura/sakuraprof.png" id="2_fttrm"]
+[ext_resource type="Texture2D" uid="uid://dt5qotac3nob4" path="res://assets/images/Haruno Sakura/profile_mastery_sakura.png" id="2_r3au3"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_qie40"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_p283k"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_6y0x5"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_h5sop"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_agveu"]
+
+[node name="CharacterTemplate" type="Node" node_paths=PackedStringArray("effects", "health", "stats", "_name", "moveset", "targeter")]
+script = ExtResource("1_ovryh")
+effects = NodePath("EffectStorageComponent")
+health = NodePath("HealthComponent")
+stats = NodePath("StatComponent")
+_name = NodePath("NameComponent")
+moveset = NodePath("MovesetComponent")
+targeter = NodePath("TargeterComponent")
+mastery_portrait = ExtResource("2_r3au3")
+mastery_name = "Inner Sakura"
+portrait_texture = ExtResource("2_fttrm")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_72f1p")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_qie40")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_p283k")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_6y0x5")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_h5sop")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_agveu")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://character/pikachu.gd" id="1_bcjkj"]
+[ext_resource type="Texture2D" path="res://assets/images/Pikachu/pikachuprof.png" id="2_mv6pq"]
+[ext_resource type="PackedScene" path="res://components/effect_storage_component.tscn" id="2_ymiv2"]
+[ext_resource type="PackedScene" path="res://components/health_component.tscn" id="3_bolqo"]
+[ext_resource type="PackedScene" path="res://components/stat_component.tscn" id="4_m15mg"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="5_5s0ga"]
+[ext_resource type="PackedScene" path="res://components/moveset_component.tscn" id="6_qslre"]
+[ext_resource type="PackedScene" path="res://components/targeter_component.tscn" id="7_4xw6d"]
+
+[node name="CharacterTemplate" type="Node"]
+script = ExtResource("1_bcjkj")
+portrait_texture = ExtResource("2_mv6pq")
+
+[node name="EffectStorageComponent" parent="." instance=ExtResource("2_ymiv2")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_bolqo")]
+
+[node name="StatComponent" parent="." instance=ExtResource("4_m15mg")]
+
+[node name="NameComponent" parent="." instance=ExtResource("5_5s0ga")]
+
+[node name="MovesetComponent" parent="." instance=ExtResource("6_qslre")]
+
+[node name="TargeterComponent" parent="." instance=ExtResource("7_4xw6d")]
+
+[connection signal="died" from="HealthComponent" to="." method="die"]

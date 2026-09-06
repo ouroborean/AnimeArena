@@ -1,0 +1,21 @@
+{
+  "_source": "scripts/player_component.gd",
+  "_symbols": [
+    "title_data"
+  ],
+  "_generated_by": "tools/reference_data.py",
+  "title_data": [
+    "Beta",
+    "Tester",
+    "The",
+    "of",
+    "the",
+    "Test",
+    "and",
+    "Anime",
+    "Arena",
+    "for",
+    "to"
+  ],
+  "_status_note": "Declared on Player but read by NOTHING in the Godot source (grep: the declaration is the only hit). The live title system is the client's webclient/app/titles.json lesser/greater word lists. Extracted for completeness; a port should not wire it up without asking."
+}

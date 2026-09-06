@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://abilities/scripts/ability_component.gd" id="1_cnveu"]
+[ext_resource type="PackedScene" path="res://components/name_component.tscn" id="2_v5pca"]
+[ext_resource type="Texture2D" path="res://assets/images/natsufist.PNG" id="2_va0jl"]
+
+[node name="AbilityComponent" type="Node"]
+editor_description = "1 - Fire
+2 - Ice
+3 - Water
+4 - Lightning
+5 - Wind
+6 - Poison
+7 - Earth
+8 - Holy
+9 - Unholy
+10 - Shadow
+11 - Generic"
+script = ExtResource("1_cnveu")
+cooldown = 1
+ability_name = "Buff"
+image = ExtResource("2_va0jl")
+
+[node name="NameComponent" parent="." instance=ExtResource("2_v5pca")]
+_name = "Sample Ability"

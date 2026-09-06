@@ -1,0 +1,9 @@
+﻿{
+    "created":  "2026-07-27T12:57:20",
+    "workers":  6,
+    "baseline_sha256":  "55487F32939FFF17DC9D6FA4E1A02A84278A2E53377FFFD7EE9E8794E5952E19",
+    "sigma":  0.25,
+    "character":  "aang",
+    "matches_per_worker":  700,
+    "baseline_path":  "res://training/checkpoints/focused_current.json"
+}

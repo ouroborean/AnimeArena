@@ -1,0 +1,8191 @@
+{
+ "version": 1,
+ "generated_note": "player-facing glossary for ability-description hover popups; see synthesize_glossary.py",
+ "categories": {
+  "class": {
+   "label": "Ability Class",
+   "color": "#c792ea"
+  },
+  "damage_type": {
+   "label": "Damage Type",
+   "color": "#ff5370"
+  },
+  "energy": {
+   "label": "Energy",
+   "color": "#f78c6c"
+  },
+  "status": {
+   "label": "Status",
+   "color": "#ffcb6b"
+  },
+  "mechanic": {
+   "label": "Mechanic",
+   "color": "#82aaff"
+  },
+  "term": {
+   "label": "Game Term",
+   "color": "#89ddff"
+  },
+  "skill": {
+   "label": "Skill",
+   "color": "#c3e88d"
+  }
+ },
+ "terms": {
+  "physical": {
+   "term": "Physical",
+   "display": "Physical",
+   "category": "class",
+   "definition": "A skill category and also a damage type. As a category it matters because some stuns, counters and reflects target only Physical skills (e.g. 'stuns the target's Physical skills'). As a damage type, Physical damage is stopped normally by shields, damage reduction and invulnerability.",
+   "aliases": [
+    "Physical damage",
+    "Physical skills",
+    "Physical skill",
+    "Physical"
+   ],
+   "see_also": [
+    "Energy",
+    "Mental",
+    "Affliction",
+    "Strategic"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "classes[\"Physical\"] in ability_component.gd. Read by stun/invuln/counter class filters (character_component is_stunned, is_invuln, Condition.action_countered) and by Toph's sense-invisible-Physical-skills path (effect_storage_component.gd:314, display_effect is_physical). A skill's class tag is independent of the damage type of each individual hit; PHYSICAL is also DamageType.Type.PHYSICAL."
+  },
+  "energy": {
+   "term": "Energy",
+   "display": "Energy",
+   "category": "class",
+   "definition": "The word 'Energy' covers three things: the resource you spend to use skills (shown as coloured energy — Green, Blue, White, Red, or Random); the Energy skill category that some stuns and counters target; and Energy damage, which is stopped normally by shields, damage reduction and invulnerability.",
+   "aliases": [
+    "Energy damage",
+    "Energy skills",
+    "Energy skill",
+    "Energy"
+   ],
+   "see_also": [
+    "Green",
+    "Blue",
+    "White",
+    "Red",
+    "Random",
+    "Cost",
+    "Energy Drain",
+    "Energy gain"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "classes[\"Energy\"]. Same class-filter role as Physical/Mental/Affliction. Note the word 'energy' overwhelmingly refers to the energy RESOURCE in descriptions; the class sense is the type-tag / ENERGY damage type. A skill's class tag does not by itself set the damage type of its hits."
+  },
+  "mental": {
+   "term": "Mental",
+   "display": "Mental",
+   "category": "class",
+   "definition": "One of the type-tags a skill can carry. It matters because some stuns, counters and reflects affect only skills of a chosen type (for example 'counters the first Mental skill used'). Unlike Physical, Energy and Affliction, Mental is only a category — there is no 'Mental damage'.",
+   "aliases": [
+    "Mental skills",
+    "Mental skill",
+    "Mental"
+   ],
+   "see_also": [
+    "Physical",
+    "Energy",
+    "Affliction",
+    "Strategic"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "classes[\"Mental\"], read only by the class filters on stun/counter/reflect/invuln. There is no MENTAL entry in DamageType.Type, so it is class-only (no matching damage type)."
+  },
+  "affliction": {
+   "term": "Affliction",
+   "display": "Affliction",
+   "category": "class",
+   "definition": "A skill category and a damage type. As a category, some stuns, counters and reflects target only Affliction skills. Affliction damage ignores shields, Nullify and damage reduction, and its damage-over-time keeps ticking even through invulnerability — but a single Affliction hit still can't strike an invulnerable target unless the skill Bypasses.",
+   "aliases": [
+    "Affliction damage",
+    "Affliction skills",
+    "Affliction skill",
+    "Affliction"
+   ],
+   "see_also": [
+    "Physical",
+    "Energy",
+    "Mental",
+    "Bleed",
+    "Damage over time (DoT)"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "classes[\"Affliction\"] for the class filters; AFFLICTION damage type bypasses Nullify/Shield/flat+% DR and pierces invuln on the ticking path (Damage Pipeline). A skill's class tag and the damage type of each hit are set independently; cleanse_hostile_afflictions keys off the source ability having the Affliction class."
+  },
+  "strategic": {
+   "term": "Strategic",
+   "display": "Strategic",
+   "category": "class",
+   "definition": "A skill category for tactical/utility moves (setups, buffs, debuffs and board control rather than raw attacks). It matters because some stuns, counters and effect-removals target only Strategic skills, e.g. 'stuns the target's Strategic skills'.",
+   "aliases": [
+    "strategic skills",
+    "Strategic skills",
+    "Strategic skill",
+    "Strategic"
+   ],
+   "see_also": [
+    "Harmful",
+    "Helpful"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "classes[\"Strategic\"]. Read only by the by-class filters (stun exclusion/ability_targets, action_countered class_targets). Verified against client corpus: of 371 Strategic skills, 254 carry neither Harmful nor Helpful, 52 also Harmful, 64 also Helpful, and only 15 are Damaging — i.e. it is a mostly-non-damaging utility tag that can overlay Harmful or Helpful."
+  },
+  "harmful": {
+   "term": "Harmful",
+   "display": "Harmful",
+   "category": "class",
+   "definition": "Marks a skill as an attack aimed at enemies. Many effects key off it: 'reacts to the next Harmful skill used on this character', taunts force a re-aim only on Harmful skills, and some defenses only trigger against Harmful skills.",
+   "aliases": [
+    "harmful effects",
+    "Harmful skills",
+    "harmful skill",
+    "Harmful skill",
+    "Harmful"
+   ],
+   "see_also": [
+    "Helpful",
+    "Strategic"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "classes[\"Harmful\"]. Fires HARMFUL_USE_TRIGGER / HARMFUL_RECEIVE_TRIGGER; gates taunt resolve (battle_manager:1202), Plasmantle conversion (character_component:617), and Casseur/IGNORE_SKILL (is_ignoring_skill only negates Harmful). Contrast Helpful; a skill can carry both, neither, or overlay Strategic."
+  },
+  "helpful": {
+   "term": "Helpful",
+   "display": "Helpful",
+   "category": "class",
+   "definition": "Marks a skill as aid aimed at allies or yourself. Helpful skills cannot reach an isolated ally, and some effects specifically react to or strip Helpful skills and buffs.",
+   "aliases": [
+    "helpful effects",
+    "Helpful skills",
+    "helpful skills",
+    "Helpful skill",
+    "Helpful"
+   ],
+   "see_also": [
+    "Harmful",
+    "Strategic"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "classes[\"Helpful\"]. Fires HELPFUL_USE_TRIGGER / HELPFUL_RECEIVE_TRIGGER; can_apply_allied_effect adds the is_helpable (isolation) gate ONLY when the source is Helpful (condition.gd:114), so a non-Helpful allied skill reaches an isolated ally but a Helpful one does not."
+  },
+  "instant": {
+   "term": "Instant",
+   "display": "Instant",
+   "category": "class",
+   "definition": "The skill resolves the moment it is used and leaves no ongoing action to maintain. It is the default action type, as opposed to Action, Control or Channeled skills that keep running over later turns.",
+   "aliases": [
+    "Instant"
+   ],
+   "see_also": [
+    "Action",
+    "Control",
+    "Channeled"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "classes[\"Instant\"] is a pure display label — no engine code branches on it (it is the implicit default; the ongoing behaviours live on Action/Control/Channeled and their CONTROL_CANCEL/CHANNEL_CANCEL effects). Most common tag (~892 client skills)."
+  },
+  "action": {
+   "term": "Action",
+   "display": "Action",
+   "category": "class",
+   "definition": "The skill sets up an ongoing, repeating effect. On any turn its user is stunned, that repeating effect pauses (it does not tick) and resumes once the stun is gone.",
+   "aliases": [
+    "Action"
+   ],
+   "see_also": [
+    "Instant",
+    "Control",
+    "Channeled"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "The only ongoing-behaviour class the engine reads directly: execute_ticking_effect skips a tick when effect.source.classes[\"Action\"] and the effect's user is stunned (battle_manager.gd:1231). Carried by ~20 shipped hand-written skills; retired as an authoring chip in the Creator in favour of a per-effect stops_when_stunned flag (block_validator RETIRED_CLASSES). Shown as a tag on the card but essentially never described in prose."
+  },
+  "control": {
+   "term": "Control",
+   "display": "Control",
+   "category": "class",
+   "definition": "The skill maintains an ongoing effect that the user keeps in place across turns. It is broken if the user is stunned, killed, banished or has that skill sealed — but the user can keep using other skills without breaking it.",
+   "aliases": [
+    "Control"
+   ],
+   "see_also": [
+    "Channeled",
+    "Preserves Channel",
+    "Action"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "The 'Control' string is a display LABEL; the behaviour is the CONTROL_CANCEL effect the skill plants, ended only by check_cancels (stun of the source skill, death, banish, or skill-seal). Unlike a channel it is NOT ended by cancel_channels when the user takes another action. Nothing branches on classes[\"Control\"] itself (authored_character.gd, block_schema.gd:1115-1126). In prose 'Control' usually appears inside ability NAMES (Mana/Water/Fire Control), not as the class."
+  },
+  "channeled": {
+   "term": "Channeled",
+   "display": "Channeled",
+   "category": "class",
+   "definition": "The skill is a channel the user keeps up over several turns. It ends if the user is stunned, killed, banished or has the skill sealed, and it also ends the moment the user uses another skill — unless that skill is one that Preserves Channel.",
+   "aliases": [
+    "Channeling",
+    "Channeled",
+    "channels",
+    "Channel"
+   ],
+   "see_also": [
+    "Control",
+    "Preserves Channel",
+    "Action"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Display LABEL for a CHANNEL_CANCEL effect. Ended by check_cancels (stun/death/banish/seal of the source) AND by cancel_channels, which fires on any of the user's later actions whose skill is not Preserves Channel (battle_manager.gd:1208-1209). Nothing reads classes[\"Channeled\"] directly."
+  },
+  "uncounterable": {
+   "term": "Uncounterable",
+   "display": "Uncounterable",
+   "category": "class",
+   "definition": "This skill cannot be countered or reflected — no Counter or Reflect effect can stop it or send it back at the caster.",
+   "aliases": [
+    "Uncounterable"
+   ],
+   "see_also": [
+    "Counter",
+    "Reflect"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "classes[\"Uncounterable\"] causes both countered() and reflect_check() to return false early (character_component.gd:408, :441). Often granted temporarily in prose ('skills become Uncounterable'); the equivalent player wording is 'Cannot be countered or reflected'."
+  },
+  "bypassing": {
+   "term": "Bypassing",
+   "display": "Bypassing",
+   "category": "class",
+   "definition": "The skill ignores enemy invulnerability — it can target and hit an enemy who is currently invulnerable. (This is different from Piercing damage, which ignores damage reduction rather than invulnerability.)",
+   "aliases": [
+    "(Bypassing)",
+    "(Bypasses)",
+    "Bypassing",
+    "bypassing",
+    "Bypasses",
+    "Bypass"
+   ],
+   "see_also": [
+    "Uncounterable"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "As a class it lets targeting pick invuln enemies and lets DoTs keep ticking through invuln (execute_ticking_effect). For HAND-WRITTEN kits the class is NOT the authoritative test — 19 shipped skills bypass invuln via a target() argument with no class (see Targeting note); the real check is re-running target(). For AUTHORED skills the class IS the flag (ScriptedAbility.target). Not the same as DamageType.PIERCING."
+  },
+  "passive": {
+   "term": "Passive",
+   "display": "Passive",
+   "category": "class",
+   "definition": "An always-on ability rather than one you actively use. It applies its effect automatically at the start of the battle and works in the background; it has no cost or cooldown and does not take up an action.",
+   "aliases": [
+    "Passive",
+    "passive"
+   ],
+   "see_also": [],
+   "appears_in_descriptions": true,
+   "engine_note": "classes[\"Passive\"] — startup_passives() executes every Passive-tagged ability at battle start (character_component.gd:343); passives are found by class, not slot, and are emitted last so the four active slots render normally (AuthoredCharacter._build_moveset). Authored passives must have cooldown 0, no cost, empty requires."
+  },
+  "preserves_channel": {
+   "term": "Preserves Channel",
+   "display": "Preserves Channel",
+   "category": "class",
+   "definition": "Using this skill does not interrupt your own ongoing channeled skills. Normally taking another action ends whatever you are channeling; a Preserves Channel skill lets you act while keeping the channel going.",
+   "aliases": [
+    "Preserves Channel"
+   ],
+   "see_also": [
+    "Channeled",
+    "Control"
+   ],
+   "appears_in_descriptions": false,
+   "engine_note": "Read at battle_manager.gd:1208 — cancel_channels() runs on every action UNLESS the acting skill has classes[\"Preserves Channel\"]. On the CLASS_NAMES list but appears 0 times in the client ability_info.json corpus (no client-visible shipped skill tags it, and it is never written in prose), so appears_in_descriptions=false. Only affects CHANNEL_CANCEL channels, not CONTROL_CANCEL controls."
+  },
+  "invisible": {
+   "term": "Invisible",
+   "display": "Invisible",
+   "category": "class",
+   "definition": "The skill, or the effect it leaves behind, is hidden from the opponent — only your side can see it. It is commonly used for traps and counters that stay concealed until they trigger.",
+   "aliases": [
+    "Invisible until triggered",
+    "is invisible",
+    "invisible",
+    "Invisible"
+   ],
+   "see_also": [
+    "Stealthed"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Display label for the ability/effect `invisible` flag: serialized to the wire but shown only to the caster's side (plus Toph/Kurotsuchi sensing). Distinct from `system` (hidden from BOTH players / stripped from the wire). See Effects and Durations visibility table."
+  },
+  "unstunnable": {
+   "term": "Unstunnable",
+   "display": "Unstunnable",
+   "category": "class",
+   "definition": "The skill can still be used even while its user is stunned — stun does not disable it.",
+   "aliases": [
+    "cannot be stunned",
+    "Unstunnable"
+   ],
+   "see_also": [
+    "Damaging",
+    "Uncounterable"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Display label for the per-ability `stunnable` flag: usable() greys a skill only when is_stunned(self) AND stunnable, so an Unstunnable skill (stunnable=false) ignores stuns for usability. Note Silence deliberately ignores this escape hatch (is_silenced_out bypasses is_stunned)."
+  },
+  "damaging": {
+   "term": "Damaging",
+   "display": "Damaging",
+   "category": "class",
+   "definition": "A skill that deals damage at the moment it is used. This matters for Silence: a silenced character can still use their Damaging skills, but none of their non-damaging ones.",
+   "aliases": [
+    "damaging skills",
+    "damaging skill",
+    "Damaging"
+   ],
+   "see_also": [
+    "Unstunnable"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "classes[\"Damaging\"] — set on any skill with a damage sink reachable from execute() at use time (immediate hit, even hit-plus-DoT counts); damage that only lands later (pure DoTs, counters, ticks, reactive/on-death payloads) does NOT qualify. is_silenced_out() = is_silenced() and not Damaging. Player-visible in the Classes line; sync invariant is plain equality of client/server class arrays."
+  },
+  "normal": {
+   "term": "Normal",
+   "display": "Normal damage",
+   "category": "damage_type",
+   "definition": "Ordinary damage with no special properties. It is soaked by the target's Nullify and shields, softened by damage reduction, and blocked while the target is invulnerable. Most skills that just say \"damage\" without naming a type deal Normal damage.",
+   "aliases": [
+    "Normal damage",
+    "normal damage",
+    "Normal"
+   ],
+   "see_also": [
+    "Physical",
+    "Energy"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "DamageType.Type.NORMAL (scripts/types/damage_type.gd, enum value 0). In the mitigation ladder it is identical to ENERGY and PHYSICAL (Nullify/Shield/flat DR/percent DR all apply; blocked by the invuln targeting gate and paused as a DoT under invuln). The type only diverges from ENERGY/PHYSICAL through type-tagged DAMAGE_MOD / VULNERABILITY filtering. Do NOT confuse with any skill CLASS."
+  },
+  "piercing": {
+   "term": "Piercing",
+   "display": "Piercing",
+   "category": "damage_type",
+   "definition": "Damage that ignores the target's damage reduction — both flat reduction and percentage reduction do nothing against it. It is still absorbed by shields and Nullify, and it cannot hit a target who is invulnerable.",
+   "aliases": [
+    "piercing damage",
+    "Piercing damage",
+    "Piercing",
+    "piercing"
+   ],
+   "see_also": [
+    "True",
+    "Affliction"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "DamageType.Type.PIERCING. In the ladder it skips the flat DAMAGE_REDUCTION and PERCENT_DR steps (Damage Pipeline.md), and DEF_NEGATE/\"Shattered\" is moot for it; Nullify (BARRIER) and SHIELD still apply. Blocked by invuln via the targeting gate (direct) and the ticking-invuln check (DoT). Differs from TRUE only in that Piercing's amount CAN be lowered by negative DAMAGE_MODs on the attacker, whereas TRUE's cannot. Not the same as the \"Bypassing\" class (targets through invuln) nor an effect's own bypassing (ticks through invuln)."
+  },
+  "bleed": {
+   "term": "Bleed",
+   "display": "Bleed",
+   "category": "damage_type",
+   "definition": "Damage that, like Affliction, ignores shields, Nullify, and all damage reduction, and whose damage-over-time keeps ticking even through invulnerability. Crucially, any healing the target receives instantly clears all Bleed on them.",
+   "aliases": [
+    "Bleed damage",
+    "Bleed effect",
+    "bleeding",
+    "Bleeding",
+    "Bleeds",
+    "Bleed",
+    "bleed"
+   ],
+   "see_also": [
+    "Affliction"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "DamageType.Type.BLEED. Same mitigation-bypass and DoT invuln-piercing as AFFLICTION. Bleed DoTs are Effect.damage_effect(mag, BLEED, dur); receive_healing calls staunch_bleeding() on healing>0, erasing every BLEED-typed DAMAGE effect on the healed character (Damage Pipeline.md). Blood-Spear-style marks are separate MARK effects, not the Bleed payload itself."
+  },
+  "true": {
+   "term": "True",
+   "display": "True damage",
+   "category": "damage_type",
+   "definition": "Damage that ignores the target's damage reduction and cannot be weakened by effects that lower the attacker's damage, so it deals essentially its full listed amount. It is not truly unblockable, though — shields and Nullify still absorb it, and it cannot hit an invulnerable target.",
+   "aliases": [
+    "True damage",
+    "true damage",
+    "True"
+   ],
+   "see_also": [
+    "Piercing"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "DamageType.Type.TRUE. Skips flat DAMAGE_REDUCTION and PERCENT_DR like PIERCING; additionally any negative DAMAGE_MOD on the damager is forced to 0 against TRUE (get_true_damage, Damage Pipeline.md) — that clamp is the only mechanical difference from PIERCING. BARRIER (Nullify) and SHIELD still apply; blocked by invuln. Not \"ignores everything\": do not describe as unblockable."
+  },
+  "green": {
+   "term": "Green",
+   "display": "Green energy",
+   "category": "energy",
+   "definition": "One of the four energy colors used to pay for skills. A skill's cost may demand a specific number of Green energy, drawn from the pool your team builds up over the match. Energy of one color cannot substitute for a different color's cost.",
+   "aliases": [
+    "green energy",
+    "Green energy",
+    "Green costs",
+    "Green cost",
+    "Green"
+   ],
+   "see_also": [
+    "Blue",
+    "White",
+    "Red",
+    "Random"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Energy.Type.GREEN=0 (scripts/types/energy.gd); a storable pool bucket in components/energypool.gd. The four colors are mechanically symmetric storable resources; costs are {colorIndex: amount}. Generation: one shared pip on turn 1, then one randomly-colored pip per living, non-banished, non-sleepy character each turn (Cooldowns and Energy.md)."
+  },
+  "blue": {
+   "term": "Blue",
+   "display": "Blue energy",
+   "category": "energy",
+   "definition": "One of the four energy colors used to pay for skills. A skill's cost may demand a specific number of Blue energy from your team's pool, and other colors cannot be spent in its place.",
+   "aliases": [
+    "Blue energy",
+    "blue energy",
+    "Blue costs",
+    "Blue cost",
+    "Blue"
+   ],
+   "see_also": [
+    "Green",
+    "White",
+    "Red",
+    "Random"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Energy.Type.BLUE=1; storable pool bucket. Symmetric with the other three colors. See Green's note for generation."
+  },
+  "white": {
+   "term": "White",
+   "display": "White energy",
+   "category": "energy",
+   "definition": "One of the four energy colors used to pay for skills. A skill's cost may demand a specific number of White energy from your team's pool, and no other color can cover a White requirement.",
+   "aliases": [
+    "white energy",
+    "White energy",
+    "White costs",
+    "White cost",
+    "White"
+   ],
+   "see_also": [
+    "Green",
+    "Blue",
+    "Red",
+    "Random"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Energy.Type.WHITE=2; storable pool bucket. Symmetric with the other three colors. Note the corpus has flavor phrases like \"White Walls\"/\"White Dragon\" that are ability names, not energy references. See Green's note for generation."
+  },
+  "red": {
+   "term": "Red",
+   "display": "Red energy",
+   "category": "energy",
+   "definition": "One of the four energy colors used to pay for skills. A skill's cost may demand a specific number of Red energy from your team's pool, and it can only be paid with Red.",
+   "aliases": [
+    "Red energy",
+    "red energy",
+    "Red costs",
+    "Red cost",
+    "Red"
+   ],
+   "see_also": [
+    "Green",
+    "Blue",
+    "White",
+    "Random"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Energy.Type.RED=3; storable pool bucket. Symmetric with the other three colors. See Green's note for generation."
+  },
+  "random": {
+   "term": "Random",
+   "display": "Random energy",
+   "category": "energy",
+   "definition": "A wildcard energy requirement rather than a stored color. A Random cost can be paid with a single energy of any color — Green, Blue, White, or Red — whichever you choose to spend. Random is only ever a cost; you never hold \"Random\" energy in your pool.",
+   "aliases": [
+    "random energy",
+    "Random energy",
+    "Random"
+   ],
+   "see_also": [
+    "Green",
+    "Blue",
+    "White",
+    "Red",
+    "Random energy"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Energy.Type.RANDOM=4; a cost-only token with NO pool bucket (components/energypool.gd pool has keys 0..3 only). Affordability: a RANDOM cost only needs to fit in whatever total energy remains after specific colors are debited (_can_afford_from). Spent via generic allocation offers where the client resolves each Random pip to a concrete color. Cost sum (specific + Random) is capped at 5."
+  },
+  "invulnerable": {
+   "term": "Invulnerable",
+   "display": "Invulnerable / Invulnerability",
+   "category": "status",
+   "definition": "An invulnerable character cannot be targeted or damaged by normal enemy skills. Skills tagged Bypassing can still hit it, Affliction and Bleed damage-over-time still tick through it, a stun can be limited to only certain skill types, and being Shattered removes invulnerability.",
+   "aliases": [
+    "Invulnerability",
+    "Invulnerable"
+   ],
+   "see_also": [
+    "Bypass",
+    "Shatter",
+    "Affliction",
+    "Bleed",
+    "Untargetable"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "INVULN effect. is_invuln() is a TARGETING gate (Condition.can_hostile_target) — illegal targets are dropped before execute() and re-checked at execution by _drop_invuln_targets; the damage functions never consult it. Removed by DEF_NEGATE ('Shattered') and by Tsubaki's Kusarigama mark; class_targets/exclusion_targets restrict it by ability class; Toji's cost_color_required gates it by resolved cost. For damage-over-time ticks (execute_ticking_effect) invuln blocks NORMAL/ENERGY/PHYSICAL/PIERCING/TRUE but AFFLICTION and BLEED pierce it. 'Bypassing' is a per-call parameter, not merely the Bypassing class."
+  },
+  "shield": {
+   "term": "Shield",
+   "display": "Shield (Destructible Defense)",
+   "category": "status",
+   "definition": "A pool of points that absorbs incoming damage to the shielded character — each hit is soaked until the pool runs out. Also called Destructible Defense. It can be destroyed early by 'remove/destroy Shield' effects, and Affliction and Bleed damage ignore it entirely.",
+   "aliases": [
+    "destructible defense",
+    "Destructible Defense",
+    "Shields",
+    "Shield"
+   ],
+   "see_also": [
+    "Barrier",
+    "Nullify",
+    "Destroy Shield",
+    "Shatter"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "SHIELD effect, read off the target in check_damage_against_shielding. Absorbs NORMAL/ENERGY/PHYSICAL/PIERCING/TRUE; skipped for AFFLICTION/BLEED. Depletion runs check_effect_breaking (break hooks: break_vow, gain_shield_break, break_hero, Metal Armor, Soul Gem corruption) — never raw-erase, use shatter_shields. 'Destructible Defense' is the older player-facing name for the same effect."
+  },
+  "barrier": {
+   "term": "Barrier",
+   "display": "Barrier",
+   "category": "status",
+   "definition": "An older name for Nullify. The mechanic is shown to players as 'Nullify'; the word 'Barrier' now appears mostly as flavour inside skill names (Ice Barrier, Death Barrier) and does not by itself grant Nullify.",
+   "aliases": [
+    "Barrier"
+   ],
+   "see_also": [
+    "Nullify",
+    "Shield"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "BARRIER effect type (Effect.barrier_effect renders 'N points of Nullify'). check_damage_against_barriers runs on the DEALER (its parameter is literally named 'attacker'); applied to enemies via add_hostile_effect (frieren2, chrome1). Uses the same absorb/break machinery as Shield (shatter_barrier). Distinct from DAMAGE_NULLIFICATION and CHAIN_NULLIFY despite the shared 'nullify' wording. Most 'Barrier' text in the corpus is ability names (City-Wide Barrier, Death Barrier, Ice Barrier, Infinity Barrier, etc.), not this effect."
+  },
+  "nullify": {
+   "term": "Nullify",
+   "display": "Nullify",
+   "category": "status",
+   "definition": "A pool of points placed on a character — usually an enemy — that absorbs the damage that character deals, up to the pool's size, then breaks. Giving an enemy Nullify weakens their attacks; it does not stop Affliction or Bleed damage.",
+   "aliases": [
+    "points of Nullify",
+    "gains N Nullify",
+    "N Nullify",
+    "Nullify"
+   ],
+   "see_also": [
+    "Barrier",
+    "Shield",
+    "Damage Nullification",
+    "Chain Nullify"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "This is the BARRIER effect (see Barrier). Absorbs the holder's OUTGOING damage in check_damage_against_barriers; skipped entirely for AFFLICTION/BLEED. Do not confuse with Damage Nullification (percentage 'deals N% less damage') or Chain Nullify (full damage+healing negation), which are separate effect types."
+  },
+  "damage_reduction": {
+   "term": "Damage Reduction",
+   "display": "Damage Reduction (flat)",
+   "category": "status",
+   "definition": "Lowers every incoming hit by a flat amount (for example, 10 Damage Reduction removes 10 from each hit). It keeps applying to every hit for its whole duration rather than being used up. It has no effect against Piercing or True damage, against Affliction or Bleed, or while the character is Shattered.",
+   "aliases": [
+    "permanent damage reduction",
+    "points of damage reduction",
+    "N Damage Reduction",
+    "Damage Reduction",
+    "damage reduction"
+   ],
+   "see_also": [
+    "Percent Damage Reduction",
+    "Shield",
+    "Vulnerability"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "DAMAGE_REDUCTION effect ('N damage reduction'). check_damage_against_damage_reduction subtracts mag per hit and persists (not consumed like a Shield). Skipped for PIERCING/TRUE, for def_broken() ('Shattered') targets, and — with the whole Nullify/Shield/DR block — for AFFLICTION/BLEED."
+  },
+  "percent_damage_reduction": {
+   "term": "Percent Damage Reduction",
+   "display": "Percent Damage Reduction",
+   "category": "status",
+   "definition": "Reduces incoming damage by a percentage (for example, 25% Damage Reduction means each hit deals a quarter less). Like flat Damage Reduction, it does nothing against Piercing or True damage, against Affliction or Bleed, or while the character is Shattered.",
+   "aliases": [
+    "Percent Damage Reduction",
+    "25% Damage Reduction",
+    "N% Damage Reduction",
+    "% Damage Reduction"
+   ],
+   "see_also": [
+    "Damage Reduction",
+    "Damage Nullification",
+    "Shield"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "PERCENT_DR effect ('N% Damage Reduction'). check_damage_against_percent_damage_reduction multiplies damage by (100.0 - mag)/100.0 then int(). Same PIERCING/TRUE, def_broken, and AFFLICTION/BLEED exclusions as flat DR. Distinguished from flat DR in text purely by the '%'."
+  },
+  "vulnerability": {
+   "term": "Vulnerability",
+   "display": "Vulnerability",
+   "category": "status",
+   "definition": "A debuff that makes a character take extra damage from incoming hits (for example, +5 damage per hit). It can apply to all damage or be limited to specific skills or damage types.",
+   "aliases": [
+    "will receive N more damage",
+    "receives N more damage",
+    "takes N more damage",
+    "N more damage from",
+    "Vulnerability"
+   ],
+   "see_also": [
+    "Damage Reduction",
+    "Shield",
+    "Invulnerable"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "VULNERABILITY effect on the target, added in get_true_damage after the DAMAGE_MOD pass with the same class_targets/ability_targets/per_stack filtering. Renders as 'will receive N more damage' (optionally from named abilities or damage types). The word 'Vulnerability' is not shown to players; they see the 'more damage' wording."
+  },
+  "immortality": {
+   "term": "Immortality",
+   "display": "Immortal / Immortality",
+   "category": "status",
+   "definition": "An immortal character cannot be killed for the duration — damage that would drop it to 0 leaves it at 1 HP instead. A few skills can Ignore Immortality and kill it anyway.",
+   "aliases": [
+    "permanently Immortal",
+    "Ignores Immortality",
+    "becomes Immortal",
+    "Immortality",
+    "Immortal"
+   ],
+   "see_also": [
+    "Invulnerable",
+    "Health Cap",
+    "Healing"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "IMMORTALITY effect ('This character cannot be killed'). die() sets health to 1 instead of resolving death while is_immortal(); some skills bypass it ('Ignores Immortality'). Different from Invulnerable — an immortal character can still be targeted and hit, just not reduced below 1 HP."
+  },
+  "stealth": {
+   "term": "Stealth",
+   "display": "Stealth / Stealthed",
+   "category": "mechanic",
+   "definition": "While Stealthed, this character's skills don't set off the enemy's reactive effects — counters, reflects and 'when a skill is used on me' triggers won't fire in response. It's often paired with making those skills Invisible to the other player.",
+   "aliases": [
+    "Stealthed",
+    "stealthed",
+    "Stealth"
+   ],
+   "see_also": [
+    "Counter",
+    "Reflect",
+    "Invisible",
+    "Trigger"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "STEALTH effect ('This character's skills will not trigger enemy effects'). stealth_check() suppresses stealthable enemy trigger/counter effects when the acting character is stealthed and hostile to the effect's owner. It does not by itself grant untargetability or invisibility — Touka pairs it with Invisible skills."
+  },
+  "isolate": {
+   "term": "Isolate",
+   "display": "Isolated",
+   "category": "status",
+   "definition": "An isolated character cannot be healed by anyone (including itself and heal-over-time) and cannot be reached by allies' Helpful skills or effects. They can still act and can still be attacked.",
+   "aliases": [
+    "Isolation",
+    "Isolated",
+    "Isolate"
+   ],
+   "see_also": [
+    "Helpful",
+    "Healing",
+    "Taunt"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "ISOLATE effect. Condition.is_healable/is_helpable both return not is_isolated(); resolve_healing and resolve_effect_healing skip an isolated target (so ALL healing is blocked, self included); HEALING ticks early-out on is_isolated(). Self-inflicted isolate (BlackWarGreymon, Yubel) always counts even under ignore-all-non-damage. Does not block enemy hostile targeting. Some kits also reduce healing on isolated enemies ('receives 10 less healing') as a separate effect."
+  },
+  "damage_cap": {
+   "term": "Damage Cap",
+   "display": "Damage Cap",
+   "category": "status",
+   "definition": "Limits how much damage a character can deal in a single hit — any hit above the cap is reduced down to it. (A separate version instead caps how much damage a character can receive per hit.)",
+   "aliases": [
+    "cannot deal more than N damage in a single hit",
+    "damage capped at N",
+    "damage capped to N",
+    "Damage Cap"
+   ],
+   "see_also": [
+    "Health Cap",
+    "Damage Reduction"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "DAMAGE_CAP effect ('cannot deal more than N damage in a single hit'), checked on the DEALER in the mitigation ladder. The baseline single-hit cap is 100 (get_damage_cap default), which this status lowers below. DAMAGE_CAP_RECEIVE is the receive-side variant ('cannot receive more than N'). Crush Card Virus banks the clamped excess. Shrug-off via ignore-all-non-damage."
+  },
+  "health_cap": {
+   "term": "Health Cap",
+   "display": "Health Cap",
+   "category": "status",
+   "definition": "Lowers a character's maximum HP (often down to their current HP), so they can't be healed above that limit for as long as it lasts.",
+   "aliases": [
+    "max HP set to their current HP",
+    "caps the target's max HP",
+    "maximum health is capped",
+    "Health Cap"
+   ],
+   "see_also": [
+    "Damage Cap",
+    "Immortality",
+    "Isolate",
+    "Healing"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "HEALTH_CAP effect ('This character's maximum health is capped at N'). get_modified_max_hp() returns the smallest active cap; receive_healing clamps to it, and set_health_capped clamps fixed-value revives. Character.cap_health snapshots current HP as the cap value. Cleansed off a corpse on death so a revive isn't stuck under it. The literal phrase 'Health Cap' is not used in skill text."
+  },
+  "stun_immunity": {
+   "term": "Stun Immunity",
+   "display": "Stun Immunity",
+   "category": "status",
+   "definition": "A character with stun immunity ignores Stuns — a Stun placed on it does nothing and it keeps acting normally. Separately, individual skills can be marked so that they personally can't be stunned.",
+   "aliases": [
+    "cannot be stunned",
+    "immune to Stun",
+    "ignores Stuns",
+    "Stun Immunity",
+    "Stun immunity"
+   ],
+   "see_also": [
+    "Invulnerable"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Shipped through IGNORE_EFFECT keyed to STUN (Effect.ignore_effect_effect(dur, STUN) -> shrug_off_type(STUN)), e.g. Cooler's Final Form, Astolfo's Hippogriff. The dedicated STUN_IMMUNITY enum is essentially vestigial (collected in has_stuns() but gates nothing). Per-skill 'cannot be stunned' is the Unstunnable class (ability.stunnable=false), and Erza's Clear Heart Clothing is a bespoke armor-based immunity."
+  },
+  "healing": {
+   "term": "Healing",
+   "display": "Healing / Regeneration",
+   "category": "status",
+   "definition": "Restores a character's HP. Some healing is instant; a heal-over-time (regeneration) effect restores a set amount each turn for its duration. Healing can't take a character above its maximum HP, and an isolated character can't be healed at all.",
+   "aliases": [
+    "heals N HP each turn",
+    "heals N HP per turn",
+    "heals N health",
+    "Regeneration",
+    "heals N HP",
+    "Healing",
+    "healing",
+    "heals",
+    "heal"
+   ],
+   "see_also": [
+    "Isolate",
+    "Health Cap",
+    "Immortality"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "HEALING effect ticks each turn in execute_ticking_effect ('This character will heal N health'), skipped when the target is_isolated(). Instant healing runs resolve_healing/receive_healing: HEALING_RECEIVED_MOD flat mods, then a multiplicative mark, clamped to get_modified_max_hp(); any healing>0 staunches Bleed. Reduction/negation lives in separate effects (HEAL_CUT, IGNORE_HEALING, and 'receives N less healing'). 'Regeneration' appears only as an ability name (e.g. Cellular Regeneration)."
+  },
+  "stun": {
+   "term": "Stun",
+   "display": "Stun / Stunned",
+   "category": "status",
+   "definition": "A Stunned skill cannot be used. A stun can lock all of a character's skills, or only a specific class of them (for example \"stuns their Physical skills\" or \"non-Mental skills\"), leaving the rest usable.",
+   "aliases": [
+    "stuns the target's",
+    "fully stuns",
+    "stuns their",
+    "fully stun",
+    "Stunning",
+    "Stunned",
+    "Stuns",
+    "Stun"
+   ],
+   "see_also": [
+    "Silence",
+    "Cost Stun",
+    "False Stun",
+    "Paralyze"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "EffectType.STUN; is_stunned(ability) honours ability.stunnable (Unstunnable), shrug_off_type(STUN), Erza's Clear Heart Clothing, and per-effect class filters via exclusion_targets/ability_targets. \"Fully\"/no filter = every class. has_stuns() drives the on-portrait stun indicator; is_stunned() gates usability."
+  },
+  "cost_stun": {
+   "term": "Cost Stun",
+   "display": "Cost Stun",
+   "category": "status",
+   "definition": "Locks a character's skills based on the energy they cost rather than their class: every one of their skills whose cost includes the named energy color cannot be used for the duration.",
+   "aliases": [
+    "stuns their skills that cost",
+    "Split Soul Katana",
+    "cost-gated stun",
+    "Cost Stun"
+   ],
+   "see_also": [
+    "Stun",
+    "Cost increase"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "EffectType.COST_STUN; cost_change_element names the Energy.Type. is_stunned treats a skill as stunned when ability.cost()[color] > 0, so it reads the RESOLVED cost — an enemy's +1 Green COST_MOD feeds straight in. Fushiguro Toji's Split Soul Katana; appended at the end of the enum."
+  },
+  "false_stun": {
+   "term": "False Stun",
+   "display": "False Stun",
+   "category": "status",
+   "definition": "The character is not actually stunned and can still use their own skills, but other skills and effects treat them as if they were Stunned, so anything that keys off \"is this enemy Stunned\" applies to them.",
+   "aliases": [
+    "effects and skills will consider this character to be stunned",
+    "skills and effects consider them stunned",
+    "consider the marked enemy to be stunned",
+    "considered stunned",
+    "False Stun"
+   ],
+   "see_also": [
+    "Stun"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "EffectType.FALSE_STUN; has_stuns() returns true for it (shows the stun indicator and satisfies stun-checks) while is_stunned() ignores it entirely (skills stay usable). Tatsumi's Incursio / Death Chaser combo."
+  },
+  "paralyze": {
+   "term": "Paralyze",
+   "display": "Paralyze / Paralyzed",
+   "category": "status",
+   "definition": "While Paralyzed, a character's skill cooldowns stop counting down, so skills already on cooldown stay unavailable longer. It does not stop the character from acting or from using skills that are already ready.",
+   "aliases": [
+    "their cooldowns stop ticking",
+    "paralyzes their cooldowns",
+    "cooldowns are Paralyzed",
+    "Paralyzed",
+    "Paralyzes",
+    "Paralyze"
+   ],
+   "see_also": [
+    "Cooldown increase",
+    "Stun"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "EffectType.PARALYZE; paralyzed() gates ONLY the decrement in MovesetComponent.advance_cooldowns — not usability, energy, or targeting. Honours shrug_off_type(PARALYZE). The freshly-used-skill +1 bookkeeping is exempt via cooldown_started_turn stamp (see Cooldowns and Energy)."
+  },
+  "silence": {
+   "term": "Silence",
+   "display": "Silence / Silenced",
+   "category": "status",
+   "definition": "A Silenced character can only use skills that deal damage; all of their non-damaging skills are unusable for the duration.",
+   "aliases": [
+    "fully silences their skills",
+    "Silenced (Invisible)",
+    "Silencing",
+    "Silenced",
+    "Silences",
+    "Silence"
+   ],
+   "see_also": [
+    "Stun",
+    "Isolate"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Silence v2 is a pure usability gate: is_silenced_out = is_silenced() and not classes[\"Damaging\"]. It no longer blocks effect application. Honours shrug_off_type(SILENCE) but deliberately ignores every stun escape hatch (stunnable, STUN shrug, class filters, Erza). Gates usable()/authoritative_usable(). Authoritative on the Cleanse/Silence doc."
+  },
+  "blind": {
+   "term": "Blind",
+   "display": "Blind / Blinded",
+   "category": "status",
+   "definition": "When a Blinded character uses a skill that targets a single enemy, it strikes a random enemy instead of the one chosen. A blind can be limited to one class of skills (e.g. \"Blinds their Harmful skills\"); team-wide and self skills are unaffected.",
+   "aliases": [
+    "Blinds their Harmful skills",
+    "Blinds Strategic skills",
+    "ignores Blind effects",
+    "Blinding",
+    "Blinded",
+    "Blinds",
+    "Blind"
+   ],
+   "see_also": [
+    "Miss chance",
+    "Dodge chance"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "blind_check() with exclusion_targets/ability_targets class filters; when ability_blinded is set, execute_ability re-runs target() and rolls a random valid character via get_valid_random_targets, reassigning targets and main_target. Skipped for ALL / ALL_FACTION / SELF. Honours shrug_off_type(BLIND). NOT a to-hit roll — distinct from Miss chance and Dodge chance."
+  },
+  "taunt": {
+   "term": "Taunt",
+   "display": "Taunt / Taunted",
+   "category": "status",
+   "definition": "A Taunted character can only use their harmful skills on the character that Taunted them; they cannot aim a harmful skill at any other enemy until it ends. Helpful skills on allies are unaffected.",
+   "aliases": [
+    "Taunted by",
+    "Taunting",
+    "Taunted",
+    "Taunts",
+    "Taunt"
+   ],
+   "see_also": [
+    "Stun",
+    "Blind"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "resolve_taunt() removes every hostile target and re-adds the taunt source (relevant_taunt.user) as target/main_target; ally targets remain. is_taunted()/has_taunts() honour shrug_off_type(TAUNT). The taunter's identity matters (\"Taunted by him\")."
+  },
+  "banish": {
+   "term": "Banish",
+   "display": "Banish / Banished",
+   "category": "status",
+   "definition": "A Banished character is removed from the battle for the duration: they cannot act, cannot be targeted, and do not gain energy, then return when it ends (sometimes at a set amount of health).",
+   "aliases": [
+    "begins the game banished",
+    "banished for",
+    "Banishing",
+    "Banished",
+    "Banishes",
+    "Banish"
+   ],
+   "see_also": [
+    "Stun"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "EffectType.BANISH; is_banished() honours shrug_off_type(BANISH). While banished, only BANISH effects (plus anything flagged tick_during_banish) tick, and the character is excluded from energy generation and most target/effect resolution. Distinct from dead (a banished holder is still alive; \"is my debuff still out\" polls should skip dead but count banished)."
+  },
+  "delay": {
+   "term": "Delay",
+   "display": "Delay / Delayed skill",
+   "category": "status",
+   "definition": "A Delayed skill is still used and paid for, but its effects do not happen right away — they are postponed by a set number of turns and then resolve automatically later.",
+   "aliases": [
+    "Always delayed by 1 turn",
+    "skills are Delayed",
+    "delayed by 1 turn",
+    "Delayed",
+    "Delays",
+    "delays",
+    "Delay"
+   ],
+   "see_also": [
+    "Paralyze",
+    "Cooldown increase"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "A DELAY effect on a character makes their affected/next skill(s) become a stored DELAYED_SKILL; battle_manager returns before execute() when a skill is delayed, and the stored skill fires on the ticking pass. is_skill_currently_delayed / get_delayed_skills. Also used self-referentially (Hashirama shields per delayed skill)."
+  },
+  "miss_chance": {
+   "term": "Miss chance",
+   "display": "Miss",
+   "category": "status",
+   "definition": "A chance that a skill fails to land, doing no damage or effect. Most often caused by Blind. Some skills state they can never miss.",
+   "aliases": [
+    "Miss chance",
+    "misses",
+    "Miss",
+    "miss"
+   ],
+   "see_also": [
+    "Blind",
+    "Dodge chance"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "EffectType.MISS_CHANCE, mag = percent; miss_check() rolls battle.roll(1,100) on the ACTING character and clears its targets on a hit. Negated by a SHARPSHOOTER effect on the actor and by shrug_off_type(MISS_CHANCE). The miss_effect factory is not applied by any shipped ability today (mechanic present, rarely granted); distinct from Blind's random-retarget and from Dodge."
+  },
+  "dodge_chance": {
+   "term": "Dodge chance",
+   "display": "Dodge",
+   "category": "status",
+   "definition": "A chance to completely avoid an incoming skill so it deals nothing. Some attacks state they are unavoidable / cannot be dodged.",
+   "aliases": [
+    "Dodge chance",
+    "dodges",
+    "Dodge",
+    "dodge"
+   ],
+   "see_also": [
+    "Miss chance",
+    "Blind"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "EffectType.DODGE_CHANCE, mag = percent, held by the potential target; dodge_check() runs inside accuracy_check for hostile targets and rolls battle.roll(1,100). Negated by a SHARPSHOOTER effect on the ATTACKER. Muichiro's Seventh Form: Obscuring Clouds; ability.accurate skips accuracy/dodge entirely."
+  },
+  "cooldown_increase": {
+   "term": "Cooldown increase",
+   "display": "Cooldown Increase (Cooldown mod)",
+   "category": "status",
+   "definition": "Increases the cooldowns of the affected character's skills so they take longer to become usable again. The same kind of effect can also lower cooldowns to bring skills back sooner.",
+   "aliases": [
+    "cooldowns permanently reduced",
+    "cooldowns are increased by 1",
+    "cooldown increased by 1",
+    "cooldown increases by 1",
+    "cooldown reduced by",
+    "cooldowns increased",
+    "Cooldown increase"
+   ],
+   "see_also": [
+    "Paralyze",
+    "Cost increase"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "EffectType.COOLDOWN_MOD summed into cooldown_remaining = cooldown + 1 + cooldown_mod at start_cooldown; per_stack and ability_targets filters, hostile mods honour shrug_off_type(COOLDOWN_MOD). Sign can be negative (reduction). Differs from Paralyze, which freezes the countdown rather than changing the number."
+  },
+  "cost_increase": {
+   "term": "Cost increase",
+   "display": "Cost Increase (Cost mod)",
+   "category": "status",
+   "definition": "Increases the energy cost of the affected character's skills, making them harder to afford. The same kind of effect can also lower costs.",
+   "aliases": [
+    "skill costs increased by 1 Random energy",
+    "permanently cost 1 less Random energy",
+    "skills cost 1 more Random energy",
+    "cost 1 more Random",
+    "costs increased",
+    "Cost increase"
+   ],
+   "see_also": [
+    "Cost Stun",
+    "Cooldown increase",
+    "Energy Drain"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "EffectType.COST_MOD adds/subtracts per color in Ability.cost(), clamped at 0, per_stack-aware, honouring shrug_off_type(COST_MOD) for hostile sources. A +Random COST_MOD is what enables the \"if this skill costs at least 1 Random\" conditionals. Related but distinct: COST_CHANGE (replaces the whole cost) and COLOR_CHANGE (rewrites colors)."
+  },
+  "heal_cut": {
+   "term": "Heal Cut",
+   "display": "Heal Cut / Reduced Healing",
+   "category": "status",
+   "definition": "Reduces the amount of healing the affected character receives from all sources by a percentage; a large enough cut can leave them with no effective healing.",
+   "aliases": [
+    "less healing from all sources",
+    "receive 50% reduced healing",
+    "receives 10 less healing",
+    "50% reduced healing",
+    "reduced healing",
+    "Heal Cut"
+   ],
+   "see_also": [
+    "Isolate"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "EffectType.HEAL_CUT, mag = percent of healing KEPT; multiplies incoming healing in receive_ability_healing/receive_effect_healing. Honours shrug_off_type(HEAL_CUT). Distinct from IGNORE_HEALING (blocks healing outright) and Isolate (blocks ally healing/help entirely). Some skills also apply flat \"-N healing\" via HEALING_RECEIVED_MOD."
+  },
+  "energy_drain": {
+   "term": "Energy Drain",
+   "display": "Energy Drain / Energy Removal",
+   "category": "status",
+   "definition": "Removes energy from an enemy, taking it out of the pool they use to pay for skills. In descriptions this is written as \"removes N energy\" (usually random energy).",
+   "aliases": [
+    "removes one random energy from them",
+    "removes 1 energy from target enemy",
+    "removes 2 random energies",
+    "removes 1 random energy",
+    "removes 1 energy",
+    "Energy Drain"
+   ],
+   "see_also": [
+    "Cost increase"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Energy removal via the pool (lose_energy/change_energy); shipped skills phrase it \"removes N [random] energy\" — the word \"Drain\" is engine/mission wording (MISSION_TRIGGER_ON_DRAIN_ENERGY), not player text. No shipped skill STEALS energy to the caster (removal only). RANDOM is a cost-only token, never stored."
+  },
+  "disguise": {
+   "term": "Disguise",
+   "display": "Disguise / Disguised",
+   "category": "status",
+   "definition": "A disguised character appears to the enemy as a different character, showing that character's portrait, until the disguise ends (for example when they take damage or use another skill).",
+   "aliases": [
+    "disguised as another character",
+    "starts the game disguised",
+    "Master of Disguise",
+    "disguised",
+    "Disguise"
+   ],
+   "see_also": [],
+   "appears_in_descriptions": true,
+   "engine_note": "EffectType.DISGUISE; mag holds the character path, active_portrait() swaps the shown portrait to Character.from_character_name(path). cleansable = false (identity/transform state). Toga; end conditions are the applying skill's own logic, not a Disguise-wide rule."
+  },
+  "counter": {
+   "term": "Counter",
+   "display": "Counter / Countered",
+   "category": "mechanic",
+   "definition": "A Counter waits for a skill used at (or by) the character holding it and stops that skill from happening, wasting the attacker's action and often adding a punishing effect. A skill that is 'Countered' does nothing that turn.",
+   "aliases": [
+    "Countering",
+    "Countered",
+    "countered",
+    "Counters",
+    "counters",
+    "counter",
+    "Counter"
+   ],
+   "see_also": [
+    "Reflect",
+    "Uncounterable",
+    "Ignore"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "COUNTER_USE / COUNTER_RECEIVE trigger effect types (scripts/types/effect_type.gd). In execute_ability the countered skill sets was_countered=true and skips execute() entirely (new multiplayer/battle_manager.gd:1210,1223), mirroring the invuln-fizzle branch. Shared helpers Ability.default_counter_trigger (notify+consume) / default_persistent_counter_trigger; Effect.counter_notification_effect renders 'was countered by X' on the attacker. Distinct from Reflect, which still resolves the skill but on a new target."
+  },
+  "reflect": {
+   "term": "Reflect",
+   "display": "Reflect / Reflected",
+   "category": "mechanic",
+   "definition": "A Reflect sends a Harmful skill used on the protected character back at whoever cast it (or redirects it to another character), so the caster's own skill lands on the wrong target. Unlike a Counter, the reflected skill still resolves — just against a different character.",
+   "aliases": [
+    "reflecting",
+    "Reflecting",
+    "Reflection",
+    "reflected",
+    "Reflected",
+    "reflects",
+    "Reflects",
+    "Reflect",
+    "reflect"
+   ],
+   "see_also": [
+    "Counter",
+    "Damage Redirect / Guardian"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "REFLECT_RECEIVE trigger. Character.reflect_check fires the matching reflect and MUTATES the caster's targeter (attacker.targeter.targets / main_target); execute_ability ignores the return and runs execute() on the new target. effect.mag == -1 bounces to the attacker; a Character in mag is a guardian-style redirect. AoE re-aim rules in Targeting and Main Target. Ignore-Counter effects (IGNORE_COUNTER) also skip reflects."
+  },
+  "mark": {
+   "term": "Mark",
+   "display": "Mark / Marked",
+   "category": "mechanic",
+   "definition": "A Mark is a brand placed on a character (sometimes Invisible) that other skills look for — to target only marked characters, deal bonus damage to them, or be consumed for an extra effect. A 'marked' character is currently carrying such a brand.",
+   "aliases": [
+    "Marking",
+    "marking",
+    "marked",
+    "Marked",
+    "marks",
+    "Marks",
+    "mark",
+    "Mark"
+   ],
+   "see_also": [
+    "Stack",
+    "new damage"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "MARK effect type; located via has_effect(name, MARK, user) and used as mark_req in targeting helpers. Effect.mark (scripts/effect_component.gd:1196) does not touch cleansable so a mark defaults cleansable=true. Some marks are consumed to power a payload (e.g. Ace's Firefly reads DAMAGE_RECEIVE_TRIGGER and consumes marks). Not the same as Stacks, though a mark may itself be stackable."
+  },
+  "stack": {
+   "term": "Stack",
+   "display": "Stack / Stacks (per stack)",
+   "category": "mechanic",
+   "definition": "Some effects build up in Stacks; each stack adds to the effect, and 'per stack' means the value scales with how many stacks are currently present. Skills often consume stacks to power a stronger one-time effect.",
+   "aliases": [
+    "per stack of",
+    "per stack",
+    "Stackable",
+    "stacking",
+    "stacks",
+    "Stacks",
+    "Stack",
+    "stack"
+   ],
+   "see_also": [
+    "Mark",
+    "Damage over time (DoT)"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "stackable effects merge on the (effect_name, effect_type, user) key in add_effect (mag += or stacks += stack_count()). per_stack multiplies a payload/damage by stack_count() at resolution (e.g. ticking payload runs stack_count() times; VULNERABILITY/DAMAGE_MOD scale). Consumed via consume_effect or stack exhaustion; MISSION_TRIGGER_ON_CONSUME_STACKS tracks it."
+  },
+  "damage_over_time_dot": {
+   "term": "Damage over time (DoT)",
+   "display": "Damage over time (DoT)",
+   "category": "mechanic",
+   "definition": "A damage-over-time effect deals a set amount of damage each turn for a number of turns instead of all at once. Bleed and Affliction damage are common damage-over-time types, and a DoT does not deal its first hit until the turn after it is applied unless the skill deals that first hit on cast.",
+   "aliases": [
+    "Damage over time (DoT)",
+    "damage each turn",
+    "damage over time",
+    "damage per turn",
+    "DoT"
+   ],
+   "see_also": [
+    "Stack",
+    "new damage",
+    "Absorb"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "A DAMAGE effect that ticks each of the effect-user's turns. A ticking effect cannot fire on the turn it is planted, so the shipped recipe deals instance 1 immediately (resolve_damage) then Effect.damage_effect(dmg, type, 2K-1) for the remaining ticks. Bleed-typed DoTs are staunched entirely by any healing; AFFLICTION/BLEED bypass DR and pierce invuln on the ticking path."
+  },
+  "bypass": {
+   "term": "Bypass",
+   "display": "Bypass / Bypasses",
+   "category": "mechanic",
+   "definition": "A skill that Bypasses can hit a target even while they are Invulnerable or otherwise untargetable — it ignores invulnerability for that hit. It does not by itself remove Shields or pierce damage reduction.",
+   "aliases": [
+    "bypasses Invulnerability",
+    "(Bypasses)",
+    "Bypassing",
+    "bypassing",
+    "Bypasses",
+    "bypasses",
+    "Bypass"
+   ],
+   "see_also": [
+    "Ignore",
+    "Shatter / Shattered"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "For hand-written kits, bypass is a targeting PARAMETER passed into default_hostile_target_function / check_hostile_target, NOT the 'Bypassing' class (19 skills pass bypass with no class). can_hostile_target drops the not_invuln condition when bypassing. For AUTHORED abilities the 'Bypassing' class IS the flag. Piercing/True damage ignoring DR is a damage-type property, not 'Bypass'."
+  },
+  "trigger": {
+   "term": "Trigger",
+   "display": "Trigger",
+   "category": "mechanic",
+   "definition": "A Trigger is a reactive effect that watches for a specific event (“when this happens…”) and then fires its consequence. Wording like “if it triggers” means that watched condition was met and the effect went off.",
+   "aliases": [
+    "if it triggers",
+    "Triggering",
+    "triggering",
+    "triggered",
+    "triggers",
+    "Triggers",
+    "trigger",
+    "Trigger"
+   ],
+   "see_also": [
+    "Counter",
+    "Reflect",
+    "Damage over time (DoT)"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "The *_TRIGGER effect types wrap a Trigger (condition + payload) checked by the various check_*_triggers on Character (use/receive, damage dealt/received, on-death, start/end of turn, ticking, stun/invuln received, absorb). 'waiting' suppresses the installing skill from tripping its own watcher for one turn; once-per-turn latch is the 'triggered' flag."
+  },
+  "ignore": {
+   "term": "Ignore",
+   "display": "Ignore (damage / effect / Counter / Cleanse)",
+   "category": "mechanic",
+   "definition": "When a character is set to ignore something, they are unaffected by it for the duration: ignoring damage means taking none, ignoring an effect type means being immune to it, and ignoring Counter/Reflect lets their skills go through un-countered. 'Ignore Cleanse' means their effects cannot be cleansed off.",
+   "aliases": [
+    "ignore all incoming damage",
+    "ignore Counter and Reflect",
+    "ignoring",
+    "ignored",
+    "ignores",
+    "Ignores",
+    "ignore",
+    "Ignore"
+   ],
+   "see_also": [
+    "Counter",
+    "Reflect",
+    "Bypass"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Family of IGNORE_* effect types: IGNORE_DAMAGE (is_ignoring_damage(true) is skill damage, (false) is DoT/effect damage — an ability_only charge only engages/consumes on true), IGNORE_EFFECT (immune to one effect_type), IGNORE_NON_DAMAGE (negative non-damage effects), IGNORE_COUNTER (skills can't be countered/reflected), IGNORE_HEALING, IGNORE_CLEANSE (holder's effects survive cleanse), IGNORE_SKILL (Casseur, one skill nullified). Also the isolate-style true_ignoring()."
+  },
+  "absorb": {
+   "term": "Absorb",
+   "display": "Absorb / Absorbed",
+   "category": "mechanic",
+   "definition": "Damage is Absorbed when a Shield or Nullify soaks it up so it never reduces HP. Some skills react to absorbing a hit, or only work on damage that was not absorbed, avoided, or prevented.",
+   "aliases": [
+    "fully absorbed",
+    "absorbing",
+    "absorbed",
+    "absorbs",
+    "Absorb",
+    "absorb"
+   ],
+   "see_also": [
+    "Shatter / Shattered",
+    "new damage",
+    "Damage Redirect / Guardian"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "ABSORB_TRIGGER fires from check_damage_absorb_triggers when a SHIELD (read off the target) or BARRIER/Nullify (read off the dealer) soaks a hit inside the mitigation ladder. 'This will not occur if the initial damage is absorbed or prevented' is exactly this check versus a hit that lands (see new damage)."
+  },
+  "damage_redirect_guardian": {
+   "term": "Damage Redirect / Guardian",
+   "display": "Damage Redirect / Guardian",
+   "category": "mechanic",
+   "definition": "A Redirect reroutes some or all of the damage one character would take onto a chosen protector, who takes that share instead. This is how a 'guardian' soaks hits aimed at their allies (or an enemy is made to take damage meant for someone else).",
+   "aliases": [
+    "Damage Redirect / Guardian",
+    "redirected to",
+    "redirected",
+    "redirects",
+    "Guardian",
+    "redirect"
+   ],
+   "see_also": [
+    "Absorb",
+    "Reflect"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "DAMAGE_REDIRECT effect: default moves fraction redirect.mag of each hit to redirect.character_target (check_damage_redirect); an ability may instead expose take_redirect_budget() for one shared 'up to N per turn' pool across several protected allies (Stark's Superhuman Resilience / Cowardice). Re-dealt damage passes redirected=true so it can't recurse. 'Guardian' appears in the corpus only as an ability name (Chastifold: Guardian), not as a standalone status keyword."
+  },
+  "shatter": {
+   "term": "Shatter",
+   "display": "Shatter / Shattered",
+   "category": "mechanic",
+   "definition": "A Shattered target's damage reduction stops working — both flat and percentage reduction are ignored — and the target also loses any invulnerability. It does not remove Shields or Nullify (those are destroyed separately).",
+   "aliases": [
+    "Shattered",
+    "Shatter"
+   ],
+   "see_also": [
+    "Destroy Shield",
+    "Damage Reduction",
+    "Percent Damage Reduction",
+    "Invulnerable"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Player 'Shattered' = DEF_NEGATE (Effect.def_negate description 'This character is Shattered'). def_broken() makes deal_ability_damage / deal_effect_damage skip flat DAMAGE_REDUCTION and PERCENT_DR (PIERCING/TRUE already skip them); Shields/Nullify are unaffected. This is DISTINCT from the internal shatter_shields/shatter_barrier functions that destroy SHIELD/BARRIER — those are shown to players as 'Destroys/Removes Shield/Nullify' (separate MISSION_TRIGGER_ON_DESTROY_SHIELD vs MISSION_TRIGGER_ON_SHATTER). The assigned parenthetical '(destroy a shield)' refers to the function name, not the status word."
+  },
+  "destroy_shield": {
+   "term": "Destroy Shield",
+   "display": "Destroy / Remove Shield (or Nullify)",
+   "category": "mechanic",
+   "definition": "Some skills destroy or remove a target's existing Shield (or Nullify), stripping that protection so later damage lands normally. This is different from Shattering, which leaves the shield intact but stops the target's damage reduction.",
+   "aliases": [
+    "Destroys all enemy Shield",
+    "remove all Shield effects",
+    "Removes all Nullify",
+    "Removes all Shield",
+    "Destroys Shield",
+    "Destroy Shield"
+   ],
+   "see_also": [
+    "Shatter / Shattered",
+    "Absorb"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Implemented by Character.shatter_shields(breaker) / shatter_barrier(breaker), which set eff.breaker, run check_effect_breaking (break hooks like break_vow, gain_shield_break), zero the mag, consume the effect, and return the total magnitude broken. Never raw-erase a SHIELD/BARRIER or the companion break hooks leak. Player wording is consistently 'Destroys'/'Removes Shield', never 'Shatter'."
+  },
+  "new_damage": {
+   "term": "new damage",
+   "display": "New damage",
+   "category": "mechanic",
+   "definition": "Damage dealt by actively using a skill, as opposed to damage from a ticking effect (damage-over-time) or a trigger. Effects that key off 'new damage' respond only when a skill deals damage — not to DoT ticks or reactive/triggered damage.",
+   "aliases": [
+    "new instance of damage",
+    "receives new damage",
+    "deals new damage",
+    "takes new damage",
+    "new damage"
+   ],
+   "see_also": [
+    "Damaging",
+    "Damage over time (DoT)",
+    "Trigger"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Backed by DAMAGE_DEALT_TRIGGER / DAMAGE_RECEIVE_TRIGGER, which fire only when the resolved amount is > 0 (from a skill or a DoT/effect tick). 'New' contrasts with a hit that was absorbed by Shield/Nullify, dodged, or reduced to 0 — those don't fire the trigger, which is why skills say 'this will not occur if the damage is absorbed or prevented'."
+  },
+  "turn": {
+   "term": "Turn",
+   "display": "Turn",
+   "category": "term",
+   "definition": "One side's action phase; the two teams alternate taking turns. Durations, cooldowns, and timing words in skill text are all counted in these turns — e.g. an effect \"for 1 turn\" lasts through the opponent's next turn and wears off before your following turn.",
+   "aliases": [
+    "for 2 turns",
+    "for N turns",
+    "for 1 turn",
+    "their turn",
+    "your turn",
+    "turns",
+    "turn",
+    "Turn"
+   ],
+   "see_also": [
+    "Cooldown",
+    "Permanent",
+    "per turn"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Internal Effect.duration ticks at the end of EVERY player's turn (both sides), so player-facing \"1 turn\" = duration 2 and \"N turns\" = 2N; a self-replaced skill uses 2N+1. Permanent = -1. See Effects and Durations.md.",
+   "match": false
+  },
+  "cooldown": {
+   "term": "Cooldown",
+   "display": "Cooldown",
+   "category": "term",
+   "definition": "The number of your own turns you must wait after using a skill before it can be used again. A skill with cooldown 0 can be used every turn; while a skill is on cooldown it is greyed out and unusable.",
+   "aliases": [
+    "on cooldown",
+    "cooldowns",
+    "Cooldowns",
+    "cooldown",
+    "Cooldown"
+   ],
+   "see_also": [
+    "Turn"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "start_cooldown writes cooldown+1 and advance_cooldowns takes the +1 back at end of the same turn, so it settles on the printed value. Paralyze freezes only the countdown (not usability/energy). Server-authoritative; mirrored on the client. See Cooldowns and Energy.md."
+  },
+  "cost": {
+   "term": "Cost",
+   "display": "Cost",
+   "category": "term",
+   "definition": "The energy a skill requires to be used. You must have that energy available to select the skill, and using it spends that energy. Some effects raise or lower a skill's cost.",
+   "aliases": [
+    "increases the cost",
+    "reduces the cost",
+    "costs no energy",
+    "costs 1 less",
+    "costs",
+    "Costs",
+    "cost",
+    "Cost"
+   ],
+   "see_also": [
+    "Energy"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Ability.cost() resolves base _cost through COST_CHANGE, then COST_MOD (clamped at 0), then COLOR_CHANGE. A cost entry keyed RANDOM is a wildcard slot payable by any single colour, not a stored colour. See Cooldowns and Energy.md."
+  },
+  "cleanse": {
+   "term": "Cleanse",
+   "display": "Cleanse",
+   "category": "term",
+   "definition": "Removing status effects from a character. A self-cleanse strips the harmful effects an enemy placed on you, while some skills instead strip an enemy's beneficial effects. Certain effects resist cleansing and cannot be removed this way.",
+   "aliases": [
+    "Removes all cleansable enemy effects",
+    "removes all beneficial effects",
+    "removes all harmful effects",
+    "Removes all allied effects",
+    "Removes all enemy effects",
+    "Cleansed",
+    "cleansed",
+    "cleanses",
+    "Cleanses",
+    "Cleanse",
+    "cleanse"
+   ],
+   "see_also": [
+    "Permanent"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Gated per-effect by the `cleansable` flag (defaults true; false for transformations, install/anchor markers, and permanent trigger machinery). Confusingly-named helpers: cleanse_all_enemy_effects removes hostile effects ON the holder, cleanse_all_ally_effects is an enemy buff-strip. IGNORE_CLEANSE blocks all three. Now runs full teardown via dispel_with_teardown. See Cleanse Silence and Effect Removal.md."
+  },
+  "main_target": {
+   "term": "Main target",
+   "display": "Primary target",
+   "category": "term",
+   "definition": "On a skill that hits several characters at once, the primary target is the main one — the character you select first. Many area skills deal their larger hit to the primary target and a smaller hit to the others.",
+   "aliases": [
+    "primary target",
+    "Main target",
+    "main target"
+   ],
+   "see_also": [
+    "all enemies / enemy team"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Shipped skill text uses the wording \"primary target\"; \"main target\" is the engine name (TargeterComponent.main_target). Order is the protocol: the FIRST index in target_idxs becomes main_target, so the client must lead an AoE list with the clicked character. See Targeting and Main Target.md."
+  },
+  "all_enemies_enemy_team": {
+   "term": "all enemies / enemy team",
+   "display": "All enemies / enemy team (area effect)",
+   "category": "term",
+   "definition": "An area skill: \"all enemies\" or \"the enemy team\" strikes every living character on the opposing side at once, and \"all allies\" affects your whole team. \"All characters\" hits both teams.",
+   "aliases": [
+    "all enemies / enemy team",
+    "all characters",
+    "the enemy team",
+    "All enemies",
+    "all enemies",
+    "all allies",
+    "enemy team"
+   ],
+   "see_also": [
+    "Main target"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "TargetType: 1 ALL_FACTION (one side), 2 ALL (both sides), 0 SINGLE, 3 COUNT, 4 SELF. The primary/main target within an AoE is still the first-selected one. See Targeting and Main Target.md."
+  },
+  "permanent": {
+   "term": "Permanent",
+   "display": "Permanent",
+   "category": "term",
+   "definition": "A permanent effect has no time limit and lasts for the rest of the battle instead of expiring after a set number of turns. Some permanent effects can still be removed by cleansing or other effects; others are protected and cannot.",
+   "aliases": [
+    "permanently",
+    "Permanently",
+    "Permanent",
+    "permanent"
+   ],
+   "see_also": [
+    "Turn",
+    "Cleanse"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Duration = -1; tick_effect returns early and never expires. Removability is independent: permanent triggers default cleansable=false (machinery), but a permanent Shield inherits cleansable=true. Surviving the caster's death additionally needs system=true + remove_on_death=false. See Effects and Durations.md."
+  },
+  "per_turn": {
+   "term": "per turn",
+   "display": "per turn",
+   "category": "term",
+   "definition": "Describes an effect that repeats once every turn it is active — for example, \"deals 10 damage per turn\" applies that amount each turn until the effect ends.",
+   "aliases": [
+    "Every turn",
+    "every turn",
+    "Each turn",
+    "each turn",
+    "per turn"
+   ],
+   "see_also": [
+    "Turn"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "A recurring effect cannot fire on the turn it is planted, so a skill promising per-turn effect deals instance 1 by hand and plants a duration 2K-1 ticking effect for the rest. See Trigger Types.md.",
+   "match": false
+  },
+  "last_turn": {
+   "term": "last turn",
+   "display": "last turn",
+   "category": "term",
+   "definition": "Refers to your immediately previous turn. A combo clause like \"if Water Whip was used last turn\" (also written \"if used the turn after Water Whip\") gives a bonus when you used the named skill on your prior turn.",
+   "aliases": [
+    "the turn after",
+    "used last turn",
+    "last turn"
+   ],
+   "see_also": [
+    "next turn",
+    "this turn"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "\"the turn after X\" in descriptions is the prose form of the retrospective \"if X used last turn\" combo check (Aang/Korra kits), not a prospective delay.",
+   "match": false
+  },
+  "next_turn": {
+   "term": "next turn",
+   "display": "next turn / following turn",
+   "category": "term",
+   "definition": "Refers to the upcoming turn. \"Costs no energy the following turn\" or \"the target's next skill\" points to the next time that side (or character) acts.",
+   "aliases": [
+    "the following turn",
+    "following turn",
+    "next turn",
+    "Next turn"
+   ],
+   "see_also": [
+    "last turn",
+    "this turn"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Prospective timing. Whose next turn depends on the clause — the caster's own unless the text names the target. Distinct from the retrospective \"the turn after X\" combo phrasing.",
+   "match": false
+  },
+  "this_turn": {
+   "term": "this turn",
+   "display": "this turn",
+   "category": "term",
+   "definition": "Refers to the current turn in progress — the effect applies only during the turn the skill is used and does not carry over.",
+   "aliases": [
+    "this turn only",
+    "that turn",
+    "this turn"
+   ],
+   "see_also": [
+    "last turn",
+    "next turn"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Player-facing \"this turn only\" is a within-turn effect; contrast with durations measured across turns.",
+   "match": false
+  },
+  "damage_boost_increase_reduce": {
+   "term": "Damage boost / increase / reduce",
+   "display": "Damage boost / increase / reduction",
+   "category": "term",
+   "definition": "Effects that change how much damage a character deals. A boost or increase adds to their outgoing damage (\"+5 damage\", \"deal 10 more damage\"); a reduction subtracts from it (\"targets deal -10 damage\"). This is separate from defenses like Shields that reduce damage received.",
+   "aliases": [
+    "Damage boost / increase / reduce",
+    "deal 10 additional damage",
+    "increases their damage",
+    "reduces their damage",
+    "additional damage",
+    "deal -10 damage",
+    "deal +5 damage",
+    "less damage",
+    "more damage",
+    "boosts",
+    "boost"
+   ],
+   "see_also": [
+    "Destructible Defense"
+   ],
+   "appears_in_descriptions": true,
+   "engine_note": "Positive/negative DAMAGE_MOD on the damager (applied pre-mitigation in get_true_damage); target-side VULNERABILITY adds to damage taken. Positive boosts are suppressed while a NO_BOOST effect is present; negative mods still apply. Damage reduction on the DEFENDER (flat DAMAGE_REDUCTION / PERCENT_DR) is a separate mitigation step skipped by Piercing/True/Affliction/Bleed. See Damage Pipeline.md."
+  },
+  "untargetable": {
+   "term": "Untargetable",
+   "display": "Untargetable",
+   "category": "status",
+   "definition": "This character cannot be targeted by anyone — allies or enemies — and, unlike Invulnerable, even skills that Bypass invulnerability cannot reach them. It only blocks targeting, so a damage-over-time or trigger effect already ticking on them still lands (Invulnerability would stop those).",
+   "aliases": [
+    "cannot be targeted by any character",
+    "cannot be targeted by anyone",
+    "untargetable",
+    "Untargetable"
+   ],
+   "see_also": [
+    "Invulnerable",
+    "Isolated",
+    "Bypass"
+   ],
+   "appears_in_descriptions": true
+  },
+  "sealed": {
+   "term": "Sealed",
+   "display": "Sealed / Skill Seal",
+   "category": "status",
+   "definition": "A sealed skill cannot be used for the duration — a lockout aimed at one specific skill. Unlike a Stun it ignores stun immunity and 'Unstunnable', and unlike Silence it can lock a Damaging skill too.",
+   "aliases": [
+    "Skill Seal",
+    "Sealed",
+    "sealed",
+    "seals"
+   ],
+   "see_also": [
+    "Stun",
+    "Silence"
+   ],
+   "appears_in_descriptions": true
+  },
+  "swap": {
+   "term": "Swap",
+   "display": "Swap / Replace",
+   "category": "mechanic",
+   "definition": "One skill is replaced by a different skill — written as 'Swaps to X' or 'X is replaced by Y'. The new skill takes over that slot (permanently or for a set time), which is how stances and transformations work. It swaps back when the skill or its condition says so.",
+   "aliases": [
+    "replaced",
+    "replaces",
+    "swaps to",
+    "Swaps to",
+    "replace",
+    "swap to",
+    "Swaps",
+    "Swap"
+   ],
+   "see_also": [
+    "Cooldown"
+   ],
+   "appears_in_descriptions": true
+  },
+  "damage_reverse": {
+   "term": "Damage Reverse",
+   "display": "Damage Reversal",
+   "category": "mechanic",
+   "definition": "While active, damage dealt to this character is turned into healing for them instead of reducing their HP.",
+   "aliases": [
+    "damage is reversed",
+    "Damage Reverse",
+    "heals instead",
+    "reversed"
+   ],
+   "see_also": [
+    "Damage Redirect / Guardian",
+    "Healing"
+   ],
+   "appears_in_descriptions": false
+  },
+  "lifesteal": {
+   "term": "Lifesteal",
+   "display": "Lifesteal (“steals health”)",
+   "category": "mechanic",
+   "definition": "The user heals for part or all of the damage this skill deals.",
+   "aliases": [
+    "heals from the damage",
+    "steals health",
+    "steal health",
+    "Lifesteal",
+    "steals HP"
+   ],
+   "see_also": [
+    "Healing",
+    "Energy Drain"
+   ],
+   "appears_in_descriptions": true
+  },
+  "energy_gain": {
+   "term": "Energy gain",
+   "display": "Gain energy",
+   "category": "term",
+   "definition": "Some skills give you energy (e.g. 'gains 1 random energy'). That energy is added to your pool to spend on skills. The opposite of Energy Drain.",
+   "aliases": [
+    "gains 1 random energy",
+    "gains random energy",
+    "gains energy",
+    "Energy gain",
+    "gain energy"
+   ],
+   "see_also": [
+    "Cost",
+    "Energy",
+    "Energy Drain",
+    "Random"
+   ],
+   "appears_in_descriptions": true
+  },
+  "on_death": {
+   "term": "On death",
+   "display": "On death (“when this character dies”)",
+   "category": "mechanic",
+   "definition": "Some effects fire the moment a character dies. Note that most of a character's own effects are removed from the battlefield when they die.",
+   "aliases": [
+    "when this character dies",
+    "when a character dies",
+    "if an enemy dies",
+    "on death",
+    "On death"
+   ],
+   "see_also": [
+    "Trigger",
+    "Immortality"
+   ],
+   "appears_in_descriptions": true
+  }
+ },
+ "skills": {
+  "Air Sphere": [
+   {
+    "key": "aang1",
+    "char": "aang"
+   }
+  ],
+  "Water Whip": [
+   {
+    "key": "aang2",
+    "char": "aang"
+   }
+  ],
+  "Earth Pillars": [
+   {
+    "key": "aang3",
+    "char": "aang"
+   }
+  ],
+  "Fire Kick": [
+   {
+    "key": "aang4",
+    "char": "aang"
+   }
+  ],
+  "Avatar Cycle": [
+   {
+    "key": "aang5",
+    "char": "aang"
+   }
+  ],
+  "Absolute Zero": [
+   {
+    "key": "absolute_zero",
+    "char": "absolute_zero"
+   }
+  ],
+  "Fire Fist": [
+   {
+    "key": "ace1",
+    "char": "ace"
+   },
+   {
+    "key": "korra5",
+    "char": "korra"
+   }
+  ],
+  "Firefly": [
+   {
+    "key": "ace2",
+    "char": "ace"
+   }
+  ],
+  "Flame Emperor": [
+   {
+    "key": "ace3",
+    "char": "ace"
+   }
+  ],
+  "Flame Pillar": [
+   {
+    "key": "ace4",
+    "char": "ace"
+   }
+  ],
+  "Flame Commandment": [
+   {
+    "key": "ace5",
+    "char": "ace"
+   }
+  ],
+  "Divine Power Replication": [
+   {
+    "key": "adam1",
+    "char": "adam"
+   }
+  ],
+  "Divine Counter": [
+   {
+    "key": "adam2",
+    "char": "adam"
+   }
+  ],
+  "Endure, Humanity!": [
+   {
+    "key": "adam3",
+    "char": "adam"
+   }
+  ],
+  "Eyes of the Lord": [
+   {
+    "key": "adam4",
+    "char": "adam"
+   }
+  ],
+  "Eye Strain": [
+   {
+    "key": "adam5",
+    "char": "adam"
+   }
+  ],
+  "Weapon: Pen-Lights": [
+   {
+    "key": "aiohto1",
+    "char": "aiohto"
+   }
+  ],
+  "Now I'm Mad!": [
+   {
+    "key": "aiohto2",
+    "char": "aiohto"
+   }
+  ],
+  "Weapon: Gymnastics Ribbon": [
+   {
+    "key": "aiohto3",
+    "char": "aiohto"
+   }
+  ],
+  "I KICK IT HOW I WANNA KICK IT": [
+   {
+    "key": "aiohto4",
+    "char": "aiohto"
+   }
+  ],
+  "Pen-Light Charges": [
+   {
+    "key": "aiohto5",
+    "char": "aiohto"
+   }
+  ],
+  "Achievement: Ai Reset": [
+   {
+    "key": "aiohto6",
+    "char": "aiohto"
+   }
+  ],
+  "Red-Eyed Killer": [
+   {
+    "key": "akame1",
+    "char": "akame"
+   }
+  ],
+  "One Cut Killing": [
+   {
+    "key": "akame2",
+    "char": "akame"
+   }
+  ],
+  "Little War Horn": [
+   {
+    "key": "akame3",
+    "char": "akame"
+   }
+  ],
+  "Rapid Deflection": [
+   {
+    "key": "akame4",
+    "char": "akame"
+   }
+  ],
+  "Texas Smash": [
+   {
+    "key": "allmight1",
+    "char": "allmight"
+   }
+  ],
+  "United Resolve": [
+   {
+    "key": "allmight2",
+    "char": "allmight"
+   }
+  ],
+  "United States of Smash": [
+   {
+    "key": "allmight3",
+    "char": "allmight"
+   }
+  ],
+  "Declare Successor": [
+   {
+    "key": "allmight4",
+    "char": "allmight"
+   }
+  ],
+  "One For All": [
+   {
+    "key": "allmight5",
+    "char": "allmight"
+   },
+   {
+    "key": "midoriya4",
+    "char": "midoriya"
+   }
+  ],
+  "AlphaBlast": [
+   {
+    "key": "alphamon1",
+    "char": "alphamon"
+   }
+  ],
+  "Blade of the Dragon King": [
+   {
+    "key": "alphamon2",
+    "char": "alphamon"
+   }
+  ],
+  "Digitalize of Soul": [
+   {
+    "key": "alphamon3",
+    "char": "alphamon"
+   }
+  ],
+  "inForce Avoidance": [
+   {
+    "key": "alphamon4",
+    "char": "alphamon"
+   }
+  ],
+  "Alpha inForce": [
+   {
+    "key": "alphamon5",
+    "char": "alphamon"
+   }
+  ],
+  "Transmutation Circle": [
+   {
+    "key": "alphonse1",
+    "char": "alphonse"
+   }
+  ],
+  "Weapon Alchemy": [
+   {
+    "key": "alphonse2",
+    "char": "alphonse"
+   }
+  ],
+  "Destruction Alchemy Strike": [
+   {
+    "key": "alphonse3",
+    "char": "alphonse"
+   }
+  ],
+  "Golem Armor": [
+   {
+    "key": "alphonse4",
+    "char": "alphonse"
+   }
+  ],
+  "Ground Pillars": [
+   {
+    "key": "alphonse5",
+    "char": "alphonse"
+   }
+  ],
+  "Alter Fate": [
+   {
+    "key": "alter_fate",
+    "char": "alter_fate"
+   }
+  ],
+  "Violet Flash": [
+   {
+    "key": "arthur1",
+    "char": "arthur"
+   }
+  ],
+  "Plasmantle": [
+   {
+    "key": "arthur2",
+    "char": "arthur"
+   }
+  ],
+  "Nirvana": [
+   {
+    "key": "arthur3",
+    "char": "arthur"
+   }
+  ],
+  "Star Ring": [
+   {
+    "key": "arthur4",
+    "char": "arthur"
+   }
+  ],
+  "Moon Splitting Violet Flash": [
+   {
+    "key": "arthur5",
+    "char": "arthur"
+   }
+  ],
+  "Bulbasaur": [
+   {
+    "key": "ash1",
+    "char": "ash"
+   }
+  ],
+  "Water Gun": [
+   {
+    "key": "ash10",
+    "char": "ash"
+   },
+   {
+    "key": "squirtle2",
+    "char": "squirtle"
+   }
+  ],
+  "Thunderbolt": [
+   {
+    "key": "ash11",
+    "char": "ash"
+   }
+  ],
+  "Volt Tackle": [
+   {
+    "key": "ash12",
+    "char": "ash"
+   },
+   {
+    "key": "pikachu2",
+    "char": "pikachu"
+   }
+  ],
+  "Pokedex Scan": [
+   {
+    "key": "ash13",
+    "char": "ash"
+   }
+  ],
+  "Return!": [
+   {
+    "key": "ash14",
+    "char": "ash"
+   }
+  ],
+  "Charmander": [
+   {
+    "key": "ash2",
+    "char": "ash"
+   }
+  ],
+  "Squirtle": [
+   {
+    "key": "ash3",
+    "char": "ash"
+   }
+  ],
+  "Pikachu": [
+   {
+    "key": "ash4",
+    "char": "ash"
+   }
+  ],
+  "Leech Seed": [
+   {
+    "key": "ash5",
+    "char": "ash"
+   }
+  ],
+  "Vine Whip": [
+   {
+    "key": "ash6",
+    "char": "ash"
+   }
+  ],
+  "Flamethrower": [
+   {
+    "key": "ash7",
+    "char": "ash"
+   }
+  ],
+  "Fire Spin": [
+   {
+    "key": "ash8",
+    "char": "ash"
+   }
+  ],
+  "Bubble": [
+   {
+    "key": "ash9",
+    "char": "ash"
+   }
+  ],
+  "Demon-Slayer Sword": [
+   {
+    "key": "asta1",
+    "char": "asta"
+   }
+  ],
+  "Demon-Dweller Sword": [
+   {
+    "key": "asta2",
+    "char": "asta"
+   }
+  ],
+  "Demon-Destroyer Sword": [
+   {
+    "key": "asta3",
+    "char": "asta"
+   }
+  ],
+  "Liebe Unite": [
+   {
+    "key": "asta4",
+    "char": "asta"
+   }
+  ],
+  "Trap of Argalia": [
+   {
+    "key": "astolfo1",
+    "char": "astolfo"
+   }
+  ],
+  "La Black Luna": [
+   {
+    "key": "astolfo2",
+    "char": "astolfo"
+   }
+  ],
+  "Casseur de Logistille": [
+   {
+    "key": "astolfo3",
+    "char": "astolfo"
+   }
+  ],
+  "Akhilleus Kosmos": [
+   {
+    "key": "astolfo4",
+    "char": "astolfo"
+   }
+  ],
+  "Hippogriff": [
+   {
+    "key": "astolfo5",
+    "char": "astolfo"
+   }
+  ],
+  "Molecule Punch": [
+   {
+    "key": "atomeve1",
+    "char": "atomeve"
+   }
+  ],
+  "Subatomic Explosion": [
+   {
+    "key": "atomeve2",
+    "char": "atomeve"
+   }
+  ],
+  "Molecule Armor": [
+   {
+    "key": "atomeve3",
+    "char": "atomeve"
+   }
+  ],
+  "Molecule Shield": [
+   {
+    "key": "atomeve4",
+    "char": "atomeve"
+   }
+  ],
+  "Molecule Helmet": [
+   {
+    "key": "atomeve5",
+    "char": "atomeve"
+   }
+  ],
+  "Augury Storm": [
+   {
+    "key": "augury_storm",
+    "char": "augury_storm"
+   }
+  ],
+  "Detonating Touch": [
+   {
+    "key": "bakugo1",
+    "char": "bakugo"
+   }
+  ],
+  "AP Shot": [
+   {
+    "key": "bakugo2",
+    "char": "bakugo"
+   }
+  ],
+  "Stun Grenade": [
+   {
+    "key": "bakugo3",
+    "char": "bakugo"
+   }
+  ],
+  "Explosive Dash": [
+   {
+    "key": "bakugo4",
+    "char": "bakugo"
+   }
+  ],
+  "Hauser Impact": [
+   {
+    "key": "bakugo5",
+    "char": "bakugo"
+   }
+  ],
+  "Nitroglycerin Storage": [
+   {
+    "key": "bakugo6",
+    "char": "bakugo"
+   }
+  ],
+  "Physical Hunt": [
+   {
+    "key": "ban1",
+    "char": "ban"
+   }
+  ],
+  "Banishing Kill": [
+   {
+    "key": "ban2",
+    "char": "ban"
+   }
+  ],
+  "Courechouse Assault": [
+   {
+    "key": "ban3",
+    "char": "ban"
+   }
+  ],
+  "Zero Sign": [
+   {
+    "key": "ban4",
+    "char": "ban"
+   }
+  ],
+  "Hunter Festival": [
+   {
+    "key": "ban5",
+    "char": "ban"
+   }
+  ],
+  "Undead Ban": [
+   {
+    "key": "ban6",
+    "char": "ban"
+   }
+  ],
+  "Speed Star": [
+   {
+    "key": "blackstar1",
+    "char": "blackstar"
+   }
+  ],
+  "Black Star Big Wave": [
+   {
+    "key": "blackstar2",
+    "char": "blackstar"
+   }
+  ],
+  "Tsubaki: Enchanted Sword Mode": [
+   {
+    "key": "blackstar3",
+    "char": "blackstar"
+   }
+  ],
+  "Tsubaki: Smoke Bomb": [
+   {
+    "key": "blackstar4",
+    "char": "blackstar"
+   }
+  ],
+  "The Unexplored Path": [
+   {
+    "key": "blackstar5",
+    "char": "blackstar"
+   }
+  ],
+  "Shadow Star": [
+   {
+    "key": "blackstar6",
+    "char": "blackstar"
+   }
+  ],
+  "Dragon Crusher": [
+   {
+    "key": "blackwargreymon1",
+    "char": "blackwargreymon"
+   }
+  ],
+  "Black Tornado": [
+   {
+    "key": "blackwargreymon2",
+    "char": "blackwargreymon"
+   }
+  ],
+  "Terra Destroyer": [
+   {
+    "key": "blackwargreymon3",
+    "char": "blackwargreymon"
+   }
+  ],
+  "Uncrested Shield": [
+   {
+    "key": "blackwargreymon4",
+    "char": "blackwargreymon"
+   }
+  ],
+  "Dark Creation": [
+   {
+    "key": "blackwargreymon5",
+    "char": "blackwargreymon"
+   }
+  ],
+  "Karma Taijutsu": [
+   {
+    "key": "boruto1",
+    "char": "boruto"
+   }
+  ],
+  "Boruto Shadow Clones": [
+   {
+    "key": "boruto2",
+    "char": "boruto"
+   }
+  ],
+  "Vanishing Rasengan": [
+   {
+    "key": "boruto3",
+    "char": "boruto"
+   }
+  ],
+  "Thunderclap Arrow": [
+   {
+    "key": "boruto4",
+    "char": "boruto"
+   }
+  ],
+  "Rasengan Specialist": [
+   {
+    "key": "boruto5",
+    "char": "boruto"
+   }
+  ],
+  "Wind Release: Rasengan": [
+   {
+    "key": "boruto6",
+    "char": "boruto"
+   }
+  ],
+  "Compression Rasengan": [
+   {
+    "key": "boruto7",
+    "char": "boruto"
+   }
+  ],
+  "Gigantic Slam": [
+   {
+    "key": "broly1",
+    "char": "broly"
+   }
+  ],
+  "Eraser Cannon": [
+   {
+    "key": "broly2",
+    "char": "broly"
+   }
+  ],
+  "Explosive Wave": [
+   {
+    "key": "broly3",
+    "char": "broly"
+   }
+  ],
+  "Powered Shell Protect": [
+   {
+    "key": "broly4",
+    "char": "broly"
+   }
+  ],
+  "Legendary Super Saiyan": [
+   {
+    "key": "broly5",
+    "char": "broly"
+   }
+  ],
+  "Planet Geyser Wave": [
+   {
+    "key": "broly6",
+    "char": "broly"
+   }
+  ],
+  "Burning Blood Serum": [
+   {
+    "key": "burning_blood_serum",
+    "char": "burning_blood_serum"
+   }
+  ],
+  "Scatter, Senbonzakura": [
+   {
+    "key": "byakuya1",
+    "char": "byakuya"
+   }
+  ],
+  "Bakudo #61: Six-Rod Light Restraint": [
+   {
+    "key": "byakuya2",
+    "char": "byakuya"
+   }
+  ],
+  "Senka": [
+   {
+    "key": "byakuya3",
+    "char": "byakuya"
+   }
+  ],
+  "Bakudo #81: Airtight": [
+   {
+    "key": "byakuya4",
+    "char": "byakuya"
+   }
+  ],
+  "Bankai: Senbonzakura Kageyoshi": [
+   {
+    "key": "byakuya5",
+    "char": "byakuya"
+   }
+  ],
+  "Hado #4: Pale Lightning": [
+   {
+    "key": "byakuya6",
+    "char": "byakuya"
+   }
+  ],
+  "White Imperial Sword": [
+   {
+    "key": "byakuya7",
+    "char": "byakuya"
+   }
+  ],
+  "Perfected Combat": [
+   {
+    "key": "cell1",
+    "char": "cell"
+   }
+  ],
+  "Inherited Solar Flare": [
+   {
+    "key": "cell2",
+    "char": "cell"
+   }
+  ],
+  "Absorption": [
+   {
+    "key": "cell3",
+    "char": "cell"
+   }
+  ],
+  "Cellular Regeneration": [
+   {
+    "key": "cell4",
+    "char": "cell"
+   }
+  ],
+  "Genetic Perfection": [
+   {
+    "key": "cell5",
+    "char": "cell"
+   }
+  ],
+  "Rampant Energy Rain": [
+   {
+    "key": "cell6",
+    "char": "cell"
+   }
+  ],
+  "Inherited Kamehameha": [
+   {
+    "key": "cell7",
+    "char": "cell"
+   }
+  ],
+  "Inherited Death Beam": [
+   {
+    "key": "cell8",
+    "char": "cell"
+   }
+  ],
+  "Chorus": [
+   {
+    "key": "chorus",
+    "char": "chorus"
+   }
+  ],
+  "Illusion: Flame Pillar": [
+   {
+    "key": "chrome1",
+    "char": "chrome"
+   }
+  ],
+  "Illusion: Snake Bind": [
+   {
+    "key": "chrome2",
+    "char": "chrome"
+   }
+  ],
+  "Rokudo Takeover": [
+   {
+    "key": "chrome3",
+    "char": "chrome"
+   }
+  ],
+  "Illusion: Broken Ground": [
+   {
+    "key": "chrome4",
+    "char": "chrome"
+   }
+  ],
+  "Cloudless Skies": [
+   {
+    "key": "cloudless_skies",
+    "char": "cloudless_skies"
+   }
+  ],
+  "Death Chaser": [
+   {
+    "key": "cooler1",
+    "char": "cooler"
+   }
+  ],
+  "Supernova": [
+   {
+    "key": "cooler2",
+    "char": "cooler"
+   }
+  ],
+  "Darkness Eye Laser": [
+   {
+    "key": "cooler3",
+    "char": "cooler"
+   }
+  ],
+  "Nova Chariot": [
+   {
+    "key": "cooler4",
+    "char": "cooler"
+   }
+  ],
+  "Sadistic Tread": [
+   {
+    "key": "cooler5",
+    "char": "cooler"
+   }
+  ],
+  "Cruel Transformation": [
+   {
+    "key": "cooler6",
+    "char": "cooler"
+   }
+  ],
+  "Black Blood": [
+   {
+    "key": "crona1",
+    "char": "crona"
+   }
+  ],
+  "Tortured Resonance": [
+   {
+    "key": "crona2",
+    "char": "crona"
+   }
+  ],
+  "Scream Assault": [
+   {
+    "key": "crona3",
+    "char": "crona"
+   }
+  ],
+  "Hardened Body": [
+   {
+    "key": "crona4",
+    "char": "crona"
+   }
+  ],
+  "Scream Chaser": [
+   {
+    "key": "crona5",
+    "char": "crona"
+   }
+  ],
+  "Partner: Ragnarok": [
+   {
+    "key": "crona6",
+    "char": "crona"
+   }
+  ],
+  "Day of Destiny": [
+   {
+    "key": "day_of_destiny",
+    "char": "day_of_destiny"
+   }
+  ],
+  "Kishin Hunter": [
+   {
+    "key": "death1",
+    "char": "death"
+   }
+  ],
+  "Death Claws": [
+   {
+    "key": "death2",
+    "char": "death"
+   }
+  ],
+  "Barrier Pressure": [
+   {
+    "key": "death3",
+    "char": "death"
+   }
+  ],
+  "Death Barrier": [
+   {
+    "key": "death4",
+    "char": "death"
+   }
+  ],
+  "Rip and Tear": [
+   {
+    "key": "denji1",
+    "char": "denji"
+   }
+  ],
+  "Reckless Charge": [
+   {
+    "key": "denji2",
+    "char": "denji"
+   },
+   {
+    "key": "eren1",
+    "char": "eren"
+   }
+  ],
+  "Devil Transformation": [
+   {
+    "key": "denji3",
+    "char": "denji"
+   }
+  ],
+  "Chainsaw Block": [
+   {
+    "key": "denji4",
+    "char": "denji"
+   }
+  ],
+  "Blood Consumption": [
+   {
+    "key": "denji5",
+    "char": "denji"
+   }
+  ],
+  "Ripcord Pull": [
+   {
+    "key": "denji6",
+    "char": "denji"
+   }
+  ],
+  "Mother Catastrophe": [
+   {
+    "key": "diane1",
+    "char": "diane"
+   }
+  ],
+  "Heavy Metal": [
+   {
+    "key": "diane2",
+    "char": "diane"
+   }
+  ],
+  "Queen's Embrace": [
+   {
+    "key": "diane3",
+    "char": "diane"
+   }
+  ],
+  "Diane Dance": [
+   {
+    "key": "diane4",
+    "char": "diane"
+   }
+  ],
+  "Ground Gladius": [
+   {
+    "key": "diane5",
+    "char": "diane"
+   }
+  ],
+  "Destruction Alchemy": [
+   {
+    "key": "edward1",
+    "char": "edward"
+   }
+  ],
+  "Defensive Alchemy": [
+   {
+    "key": "edward2",
+    "char": "edward"
+   }
+  ],
+  "Battle Alchemy": [
+   {
+    "key": "edward3",
+    "char": "edward"
+   }
+  ],
+  "Fullmetal Alchemy": [
+   {
+    "key": "edward4",
+    "char": "edward"
+   }
+  ],
+  "Free Transmutation": [
+   {
+    "key": "edward5",
+    "char": "edward"
+   }
+  ],
+  "Trace, On!": [
+   {
+    "key": "emiya1",
+    "char": "emiya"
+   }
+  ],
+  "True Projection": [
+   {
+    "key": "emiya2",
+    "char": "emiya"
+   }
+  ],
+  "Projection - Nameless Blade": [
+   {
+    "key": "emiya3",
+    "char": "emiya"
+   }
+  ],
+  "Projection - Kanshou": [
+   {
+    "key": "emiya4",
+    "char": "emiya"
+   }
+  ],
+  "Projection - Bakuya": [
+   {
+    "key": "emiya5",
+    "char": "emiya"
+   }
+  ],
+  "Projection - Rho Aias": [
+   {
+    "key": "emiya6",
+    "char": "emiya"
+   }
+  ],
+  "Unlimited Blade Works": [
+   {
+    "key": "emiya7",
+    "char": "emiya"
+   }
+  ],
+  "Caladbolg Barrage": [
+   {
+    "key": "emiyaarcher1",
+    "char": "emiyaarcher"
+   }
+  ],
+  "Hawkeye": [
+   {
+    "key": "emiyaarcher2",
+    "char": "emiyaarcher"
+   }
+  ],
+  "Twinblade Rush": [
+   {
+    "key": "emiyaarcher3",
+    "char": "emiyaarcher"
+   }
+  ],
+  "Eye of the Mind": [
+   {
+    "key": "emiyaarcher4",
+    "char": "emiyaarcher"
+   }
+  ],
+  "Grand Caladbolg": [
+   {
+    "key": "emiyaarcher5",
+    "char": "emiyaarcher"
+   }
+  ],
+  "Sacrificial Save": [
+   {
+    "key": "eren2",
+    "char": "eren"
+   }
+  ],
+  "Titan Transformation": [
+   {
+    "key": "eren3",
+    "char": "eren"
+   }
+  ],
+  "Eren Rampage": [
+   {
+    "key": "eren4",
+    "char": "eren"
+   }
+  ],
+  "Titan Eren Assault": [
+   {
+    "key": "eren5",
+    "char": "eren"
+   }
+  ],
+  "Titan Bite": [
+   {
+    "key": "eren6",
+    "char": "eren"
+   }
+  ],
+  "Titan KO": [
+   {
+    "key": "eren7",
+    "char": "eren"
+   }
+  ],
+  "Titan Heal": [
+   {
+    "key": "eren8",
+    "char": "eren"
+   }
+  ],
+  "Titania's Rampage": [
+   {
+    "key": "erza1",
+    "char": "erza"
+   }
+  ],
+  "Circle Blade": [
+   {
+    "key": "erza2",
+    "char": "erza"
+   }
+  ],
+  "Nakagami's Starlight": [
+   {
+    "key": "erza3",
+    "char": "erza"
+   }
+  ],
+  "Queen of Fairies": [
+   {
+    "key": "erza4",
+    "char": "erza"
+   }
+  ],
+  "Empire's Strongest": [
+   {
+    "key": "esdeath1",
+    "char": "esdeath"
+   }
+  ],
+  "Mahapadma": [
+   {
+    "key": "esdeath2",
+    "char": "esdeath"
+   }
+  ],
+  "Weiss Schnabel": [
+   {
+    "key": "esdeath3",
+    "char": "esdeath"
+   }
+  ],
+  "Effortless Block": [
+   {
+    "key": "esdeath4",
+    "char": "esdeath"
+   }
+  ],
+  "Heart of Cruelty": [
+   {
+    "key": "esdeath5",
+    "char": "esdeath"
+   }
+  ],
+  "Zoltraak Beam": [
+   {
+    "key": "fern1",
+    "char": "fern"
+   }
+  ],
+  "Mana Control": [
+   {
+    "key": "fern2",
+    "char": "fern"
+   }
+  ],
+  "Zoltraak Blasts": [
+   {
+    "key": "fern3",
+    "char": "fern"
+   }
+  ],
+  "Protective Barrier": [
+   {
+    "key": "fern4",
+    "char": "fern"
+   }
+  ],
+  "Talented Child": [
+   {
+    "key": "fern5",
+    "char": "fern"
+   }
+  ],
+  "Forewarn": [
+   {
+    "key": "forewarn",
+    "char": "forewarn"
+   }
+  ],
+  "Bridal Chest": [
+   {
+    "key": "frankenstein1",
+    "char": "frankenstein"
+   }
+  ],
+  "Bridal Rampage": [
+   {
+    "key": "frankenstein2",
+    "char": "frankenstein"
+   }
+  ],
+  "Blasted Tree": [
+   {
+    "key": "frankenstein3",
+    "char": "frankenstein"
+   }
+  ],
+  "Galvanism": [
+   {
+    "key": "frankenstein4",
+    "char": "frankenstein"
+   }
+  ],
+  "Zoltraak": [
+   {
+    "key": "frieren1",
+    "char": "frieren"
+   }
+  ],
+  "Flower Field": [
+   {
+    "key": "frieren2",
+    "char": "frieren"
+   }
+  ],
+  "Mana Release": [
+   {
+    "key": "frieren3",
+    "char": "frieren"
+   }
+  ],
+  "Flight Evasion": [
+   {
+    "key": "frieren4",
+    "char": "frieren"
+   }
+  ],
+  "Mana Concealment": [
+   {
+    "key": "frieren5",
+    "char": "frieren"
+   }
+  ],
+  "Vollzanbel": [
+   {
+    "key": "frieren6",
+    "char": "frieren"
+   }
+  ],
+  "Judradjim": [
+   {
+    "key": "frieren7",
+    "char": "frieren"
+   }
+  ],
+  "Death Beam": [
+   {
+    "key": "frieza1",
+    "char": "frieza"
+   }
+  ],
+  "Nova Strike": [
+   {
+    "key": "frieza2",
+    "char": "frieza"
+   }
+  ],
+  "Death Ball": [
+   {
+    "key": "frieza3",
+    "char": "frieza"
+   }
+  ],
+  "Telekinesis": [
+   {
+    "key": "frieza4",
+    "char": "frieza"
+   }
+  ],
+  "Death Beam Barrage": [
+   {
+    "key": "frieza5",
+    "char": "frieza"
+   }
+  ],
+  "Last Emperor": [
+   {
+    "key": "frieza6",
+    "char": "frieza"
+   }
+  ],
+  "Frozen Rampart": [
+   {
+    "key": "frozen_rampart",
+    "char": "frozen_rampart"
+   }
+  ],
+  "Stoneskin": [
+   {
+    "key": "gaia_1",
+    "char": "gaia_"
+   }
+  ],
+  "Rampart": [
+   {
+    "key": "gaia_2",
+    "char": "gaia_"
+   }
+  ],
+  "Earthen Surge": [
+   {
+    "key": "gaia_3",
+    "char": "gaia_"
+   }
+  ],
+  "Earthen Embrace": [
+   {
+    "key": "gaia_4",
+    "char": "gaia_"
+   }
+  ],
+  "Harmonize": [
+   {
+    "key": "gaia_5",
+    "char": "gaia_"
+   }
+  ],
+  "Gallant Guard": [
+   {
+    "key": "gallantmon1",
+    "char": "gallantmon"
+   }
+  ],
+  "Lightning Joust": [
+   {
+    "key": "gallantmon2",
+    "char": "gallantmon"
+   }
+  ],
+  "Yuggoth Blaster": [
+   {
+    "key": "gallantmon3",
+    "char": "gallantmon"
+   }
+  ],
+  "Grani Flight": [
+   {
+    "key": "gallantmon4",
+    "char": "gallantmon"
+   }
+  ],
+  "Shield of the Just": [
+   {
+    "key": "gallantmon5",
+    "char": "gallantmon"
+   }
+  ],
+  "Ganta Gun": [
+   {
+    "key": "ganta1",
+    "char": "ganta"
+   }
+  ],
+  "Supersonic Ganta Gun": [
+   {
+    "key": "ganta2",
+    "char": "ganta"
+   }
+  ],
+  "Ganbare Gun": [
+   {
+    "key": "ganta3",
+    "char": "ganta"
+   }
+  ],
+  "Reckless Rush": [
+   {
+    "key": "ganta4",
+    "char": "ganta"
+   }
+  ],
+  "Branch of Sin: Woodpecker": [
+   {
+    "key": "ganta5",
+    "char": "ganta"
+   }
+  ],
+  "Axe Crazy": [
+   {
+    "key": "gasai1",
+    "char": "gasai"
+   }
+  ],
+  "Breakdown": [
+   {
+    "key": "gasai2",
+    "char": "gasai"
+   }
+  ],
+  "Knife Deflection": [
+   {
+    "key": "gasai3",
+    "char": "gasai"
+   }
+  ],
+  "Desperate Escape": [
+   {
+    "key": "gasai4",
+    "char": "gasai"
+   }
+  ],
+  "Yukiteru Diary": [
+   {
+    "key": "gasai5",
+    "char": "gasai"
+   }
+  ],
+  "Mow Down": [
+   {
+    "key": "gasai6",
+    "char": "gasai"
+   }
+  ],
+  "Lightning Paw": [
+   {
+    "key": "gatomon1",
+    "char": "gatomon"
+   }
+  ],
+  "Eden's Javelin": [
+   {
+    "key": "gatomon10",
+    "char": "gatomon"
+   }
+  ],
+  "Sefirot Crystal": [
+   {
+    "key": "gatomon11",
+    "char": "gatomon"
+   }
+  ],
+  "Final Judgement": [
+   {
+    "key": "gatomon12",
+    "char": "gatomon"
+   }
+  ],
+  "Holy Light": [
+   {
+    "key": "gatomon13",
+    "char": "gatomon"
+   }
+  ],
+  "Eden's Air": [
+   {
+    "key": "gatomon14",
+    "char": "gatomon"
+   }
+  ],
+  "Cat's Eye": [
+   {
+    "key": "gatomon2",
+    "char": "gatomon"
+   }
+  ],
+  "Gatomon Digivolve": [
+   {
+    "key": "gatomon3",
+    "char": "gatomon"
+   }
+  ],
+  "Nekodamashi": [
+   {
+    "key": "gatomon4",
+    "char": "gatomon"
+   }
+  ],
+  "Holy Slap": [
+   {
+    "key": "gatomon5",
+    "char": "gatomon"
+   }
+  ],
+  "Celestial Arrow": [
+   {
+    "key": "gatomon6",
+    "char": "gatomon"
+   }
+  ],
+  "Heaven's Charm": [
+   {
+    "key": "gatomon7",
+    "char": "gatomon"
+   }
+  ],
+  "Angel Wings": [
+   {
+    "key": "gatomon8",
+    "char": "gatomon"
+   }
+  ],
+  "Saint Air": [
+   {
+    "key": "gatomon9",
+    "char": "gatomon"
+   }
+  ],
+  "Machine-Gun Blows": [
+   {
+    "key": "genos1",
+    "char": "genos"
+   }
+  ],
+  "Lightning Eye": [
+   {
+    "key": "genos2",
+    "char": "genos"
+   }
+  ],
+  "Super Incineration Cannon": [
+   {
+    "key": "genos3",
+    "char": "genos"
+   }
+  ],
+  "Rocket Boosters": [
+   {
+    "key": "genos4",
+    "char": "genos"
+   }
+  ],
+  "Lightning Drill Cannon": [
+   {
+    "key": "genos5",
+    "char": "genos"
+   }
+  ],
+  "Gate of Babylon": [
+   {
+    "key": "gilgamesh1",
+    "char": "gilgamesh"
+   }
+  ],
+  "Enkidu, Chains of Heaven": [
+   {
+    "key": "gilgamesh2",
+    "char": "gilgamesh"
+   }
+  ],
+  "Enuma Elish": [
+   {
+    "key": "gilgamesh3",
+    "char": "gilgamesh"
+   }
+  ],
+  "Gate of Babylon - Interception": [
+   {
+    "key": "gilgamesh4",
+    "char": "gilgamesh"
+   }
+  ],
+  "Give and Take": [
+   {
+    "key": "give_and_take",
+    "char": "give_and_take"
+   }
+  ],
+  "Big Bang Kamehameha": [
+   {
+    "key": "gogeta1",
+    "char": "gogeta"
+   }
+  ],
+  "Unrivaled Strength": [
+   {
+    "key": "gogeta2",
+    "char": "gogeta"
+   }
+  ],
+  "Positive Energy Reflection": [
+   {
+    "key": "gogeta3",
+    "char": "gogeta"
+   }
+  ],
+  "Unapproachable Stance": [
+   {
+    "key": "gogeta4",
+    "char": "gogeta"
+   }
+  ],
+  "Bluff Kamehameha": [
+   {
+    "key": "gogeta5",
+    "char": "gogeta"
+   }
+  ],
+  "Merciless Punch": [
+   {
+    "key": "gohan1",
+    "char": "gohan"
+   }
+  ],
+  "Saiyan Rage": [
+   {
+    "key": "gohan2",
+    "char": "gohan"
+   }
+  ],
+  "Brutal Kick": [
+   {
+    "key": "gohan3",
+    "char": "gohan"
+   }
+  ],
+  "Gohan Dodge": [
+   {
+    "key": "gohan4",
+    "char": "gohan"
+   }
+  ],
+  "Father-Son Kamehameha": [
+   {
+    "key": "gohan5",
+    "char": "gohan"
+   }
+  ],
+  "Lapse: Blue": [
+   {
+    "key": "gojo1",
+    "char": "gojo"
+   }
+  ],
+  "Reversal: Red": [
+   {
+    "key": "gojo2",
+    "char": "gojo"
+   }
+  ],
+  "Hollow Technique: Purple": [
+   {
+    "key": "gojo3",
+    "char": "gojo"
+   }
+  ],
+  "Infinity Barrier": [
+   {
+    "key": "gojo4",
+    "char": "gojo"
+   }
+  ],
+  "Six Eyes": [
+   {
+    "key": "gojo5",
+    "char": "gojo"
+   }
+  ],
+  "Kamehameha": [
+   {
+    "key": "goku1",
+    "char": "goku"
+   }
+  ],
+  "Kaioken x20": [
+   {
+    "key": "goku2",
+    "char": "goku"
+   }
+  ],
+  "Spirit Bomb": [
+   {
+    "key": "goku3",
+    "char": "goku"
+   }
+  ],
+  "Instant Transmission": [
+   {
+    "key": "goku4",
+    "char": "goku"
+   }
+  ],
+  "Kaioken Rush": [
+   {
+    "key": "goku5",
+    "char": "goku"
+   }
+  ],
+  "Jajanken Stance": [
+   {
+    "key": "gon1",
+    "char": "gon"
+   }
+  ],
+  "Jajanken Rock": [
+   {
+    "key": "gon2",
+    "char": "gon"
+   }
+  ],
+  "Jajanken Paper": [
+   {
+    "key": "gon3",
+    "char": "gon"
+   }
+  ],
+  "Jajanken Scissors": [
+   {
+    "key": "gon4",
+    "char": "gon"
+   }
+  ],
+  "Ice, Make...": [
+   {
+    "key": "gray1",
+    "char": "gray"
+   }
+  ],
+  "Ice, Make Freeze Lancer": [
+   {
+    "key": "gray2",
+    "char": "gray"
+   }
+  ],
+  "Ice, Make Hammer": [
+   {
+    "key": "gray3",
+    "char": "gray"
+   }
+  ],
+  "Ice, Make Shield": [
+   {
+    "key": "gray4",
+    "char": "gray"
+   }
+  ],
+  "Disciple of Ur": [
+   {
+    "key": "gray5",
+    "char": "gray"
+   }
+  ],
+  "Ice, Make Unlimited": [
+   {
+    "key": "gray6",
+    "char": "gray"
+   }
+  ],
+  "Iced Shell": [
+   {
+    "key": "gray7",
+    "char": "gray"
+   }
+  ],
+  "One-Sided Chaotic Dance": [
+   {
+    "key": "gray8",
+    "char": "gray"
+   }
+  ],
+  "Super Awesome Punch": [
+   {
+    "key": "gunha1",
+    "char": "gunha"
+   }
+  ],
+  "Overwhelming Suppression": [
+   {
+    "key": "gunha2",
+    "char": "gunha"
+   }
+  ],
+  "Guts Explosion": [
+   {
+    "key": "gunha3",
+    "char": "gunha"
+   }
+  ],
+  "Gutsy Defense": [
+   {
+    "key": "gunha4",
+    "char": "gunha"
+   }
+  ],
+  "Guts": [
+   {
+    "key": "gunha5",
+    "char": "gunha"
+   }
+  ],
+  "Ola Blast": [
+   {
+    "key": "halibel1",
+    "char": "halibel"
+   }
+  ],
+  "Ola Azul": [
+   {
+    "key": "halibel2",
+    "char": "halibel"
+   }
+  ],
+  "Aspect of Sacrifice": [
+   {
+    "key": "halibel3",
+    "char": "halibel"
+   }
+  ],
+  "Tiburón Block": [
+   {
+    "key": "halibel4",
+    "char": "halibel"
+   }
+  ],
+  "Resurrección: Tiburón": [
+   {
+    "key": "halibel5",
+    "char": "halibel"
+   }
+  ],
+  "Cascada": [
+   {
+    "key": "halibel6",
+    "char": "halibel"
+   }
+  ],
+  "Hirviendo": [
+   {
+    "key": "halibel7",
+    "char": "halibel"
+   }
+  ],
+  "Saya Brand Handcrank": [
+   {
+    "key": "handcrank",
+    "char": "handcrank"
+   }
+  ],
+  "Deep Forest Bloom: Pollen": [
+   {
+    "key": "hashirama1",
+    "char": "hashirama"
+   }
+  ],
+  "Deep Forest Bloom: Strangle": [
+   {
+    "key": "hashirama2",
+    "char": "hashirama"
+   }
+  ],
+  "Deep Forest Creation": [
+   {
+    "key": "hashirama3",
+    "char": "hashirama"
+   }
+  ],
+  "Wood Clone": [
+   {
+    "key": "hashirama4",
+    "char": "hashirama"
+   }
+  ],
+  "Great Thriving Forest": [
+   {
+    "key": "hashirama5",
+    "char": "hashirama"
+   }
+  ],
+  "Feather Strike": [
+   {
+    "key": "hawkmon1",
+    "char": "hawkmon"
+   }
+  ],
+  "Static Force": [
+   {
+    "key": "hawkmon10",
+    "char": "hawkmon"
+   }
+  ],
+  "Dual Sonic": [
+   {
+    "key": "hawkmon11",
+    "char": "hawkmon"
+   }
+  ],
+  "Air Field": [
+   {
+    "key": "hawkmon12",
+    "char": "hawkmon"
+   }
+  ],
+  "Pecking Beak": [
+   {
+    "key": "hawkmon2",
+    "char": "hawkmon"
+   }
+  ],
+  "Hawkmon Digivolve": [
+   {
+    "key": "hawkmon3",
+    "char": "hawkmon"
+   }
+  ],
+  "Wind Guard": [
+   {
+    "key": "hawkmon4",
+    "char": "hawkmon"
+   }
+  ],
+  "Blast Wings": [
+   {
+    "key": "hawkmon5",
+    "char": "hawkmon"
+   }
+  ],
+  "Grand Horn": [
+   {
+    "key": "hawkmon6",
+    "char": "hawkmon"
+   }
+  ],
+  "Storm Bomber": [
+   {
+    "key": "hawkmon7",
+    "char": "hawkmon"
+   }
+  ],
+  "Wind Breath": [
+   {
+    "key": "hawkmon8",
+    "char": "hawkmon"
+   }
+  ],
+  "Top Gun": [
+   {
+    "key": "hawkmon9",
+    "char": "hawkmon"
+   }
+  ],
+  "Cloud Tonfa": [
+   {
+    "key": "hibari1",
+    "char": "hibari"
+   }
+  ],
+  "Alaudi's Handcuffs": [
+   {
+    "key": "hibari2",
+    "char": "hibari"
+   }
+  ],
+  "Porcospino Nuvola": [
+   {
+    "key": "hibari3",
+    "char": "hibari"
+   }
+  ],
+  "Hibari Block": [
+   {
+    "key": "hibari4",
+    "char": "hibari"
+   }
+  ],
+  "Cloud Flames": [
+   {
+    "key": "hibari5",
+    "char": "hibari"
+   }
+  ],
+  "Gentle Fist Taijutsu": [
+   {
+    "key": "hinata1",
+    "char": "hinata"
+   }
+  ],
+  "Protective Eight Trigrams: 64 Palms": [
+   {
+    "key": "hinata2",
+    "char": "hinata"
+   }
+  ],
+  "Eight Trigrams: Air Palm": [
+   {
+    "key": "hinata3",
+    "char": "hinata"
+   }
+  ],
+  "My Turn To Protect": [
+   {
+    "key": "hinata4",
+    "char": "hinata"
+   }
+  ],
+  "Gentle Step: Twin Lions Fist": [
+   {
+    "key": "hinata5",
+    "char": "hinata"
+   }
+  ],
+  "Card Throw": [
+   {
+    "key": "hisoka1",
+    "char": "hisoka"
+   }
+  ],
+  "Bungee Gum - Attract": [
+   {
+    "key": "hisoka2",
+    "char": "hisoka"
+   }
+  ],
+  "Texture Surprise": [
+   {
+    "key": "hisoka3",
+    "char": "hisoka"
+   }
+  ],
+  "Bungee Gum - Catch": [
+   {
+    "key": "hisoka4",
+    "char": "hisoka"
+   }
+  ],
+  "Bungee Gum - Reflect": [
+   {
+    "key": "hisoka5",
+    "char": "hisoka"
+   }
+  ],
+  "Flamboyant Execution": [
+   {
+    "key": "hisoka6",
+    "char": "hisoka"
+   }
+  ],
+  "Honor Guard": [
+   {
+    "key": "honor_guard",
+    "char": "honor_guard"
+   }
+  ],
+  "Horn of Winter": [
+   {
+    "key": "horn_of_winter",
+    "char": "horn_of_winter"
+   }
+  ],
+  "Kororo Snowboard": [
+   {
+    "key": "horohoro1",
+    "char": "horohoro"
+   }
+  ],
+  "Nipopo Punch": [
+   {
+    "key": "horohoro2",
+    "char": "horohoro"
+   }
+  ],
+  "Nipopo Gauntlets": [
+   {
+    "key": "horohoro3",
+    "char": "horohoro"
+   }
+  ],
+  "Impeccable Power": [
+   {
+    "key": "horohoro4",
+    "char": "horohoro"
+   }
+  ],
+  "Icicle Sword": [
+   {
+    "key": "horohoro5",
+    "char": "horohoro"
+   }
+  ],
+  "Frost That Rouses The Sleeping": [
+   {
+    "key": "horohoro6",
+    "char": "horohoro"
+   }
+  ],
+  "All-Swallowing Avalanche": [
+   {
+    "key": "horohoro7",
+    "char": "horohoro"
+   }
+  ],
+  "Horrifying Syringe Trap": [
+   {
+    "key": "horrifying_syringe_trap",
+    "char": "horrifying_syringe_trap"
+   }
+  ],
+  "Howling Blast": [
+   {
+    "key": "howling_blast",
+    "char": "howling_blast"
+   }
+  ],
+  "Hymn of Hope": [
+   {
+    "key": "hymn_of_hope",
+    "char": "hymn_of_hope"
+   }
+  ],
+  "Hymn of Valor": [
+   {
+    "key": "hymn_of_valor",
+    "char": "hymn_of_valor"
+   }
+  ],
+  "Iceblood Hammer": [
+   {
+    "key": "iceblood_hammer",
+    "char": "iceblood_hammer"
+   }
+  ],
+  "Ichimonji": [
+   {
+    "key": "ichibe1",
+    "char": "ichibe"
+   }
+  ],
+  "Ink Splatter": [
+   {
+    "key": "ichibe2",
+    "char": "ichibe"
+   }
+  ],
+  "Shirafude Ichimonji": [
+   {
+    "key": "ichibe3",
+    "char": "ichibe"
+   }
+  ],
+  "Ink Manipulation: Conceal": [
+   {
+    "key": "ichibe4",
+    "char": "ichibe"
+   }
+  ],
+  "Futen Taisatsuryo": [
+   {
+    "key": "ichibe5",
+    "char": "ichibe"
+   }
+  ],
+  "Named Reconstitution": [
+   {
+    "key": "ichibe6",
+    "char": "ichibe"
+   }
+  ],
+  "Zangetsu Slash": [
+   {
+    "key": "ichigo1",
+    "char": "ichigo"
+   }
+  ],
+  "Getsuga Tenshou": [
+   {
+    "key": "ichigo2",
+    "char": "ichigo"
+   }
+  ],
+  "Bankai: Tensa Zangetsu": [
+   {
+    "key": "ichigo3",
+    "char": "ichigo"
+   }
+  ],
+  "Ichigo Block": [
+   {
+    "key": "ichigo4",
+    "char": "ichigo"
+   }
+  ],
+  "Badaboom": [
+   {
+    "key": "impmon1",
+    "char": "impmon"
+   }
+  ],
+  "Infernal Funnel": [
+   {
+    "key": "impmon2",
+    "char": "impmon"
+   }
+  ],
+  "Warp Digivolve - Beelzemon": [
+   {
+    "key": "impmon3",
+    "char": "impmon"
+   }
+  ],
+  "Imp Trick": [
+   {
+    "key": "impmon4",
+    "char": "impmon"
+   }
+  ],
+  "Lord of Gluttony": [
+   {
+    "key": "impmon5",
+    "char": "impmon"
+   }
+  ],
+  "Heartbreak Shot": [
+   {
+    "key": "impmon6",
+    "char": "impmon"
+   }
+  ],
+  "Double Serrated Slash": [
+   {
+    "key": "inosuke1",
+    "char": "inosuke"
+   }
+  ],
+  "Second Fang: Slice": [
+   {
+    "key": "inosuke2",
+    "char": "inosuke"
+   }
+  ],
+  "Seventh Fang: Spatial Awareness": [
+   {
+    "key": "inosuke3",
+    "char": "inosuke"
+   }
+  ],
+  "Inosuke Dodge": [
+   {
+    "key": "inosuke4",
+    "char": "inosuke"
+   }
+  ],
+  "Wind Scar": [
+   {
+    "key": "inuyasha1",
+    "char": "inuyasha"
+   }
+  ],
+  "Blades of Blood": [
+   {
+    "key": "inuyasha2",
+    "char": "inuyasha"
+   }
+  ],
+  "Iron Reaver Soul Stealer": [
+   {
+    "key": "inuyasha3",
+    "char": "inuyasha"
+   }
+  ],
+  "Tessaiga Barrier": [
+   {
+    "key": "inuyasha4",
+    "char": "inuyasha"
+   }
+  ],
+  "Hanyo Cycle": [
+   {
+    "key": "inuyasha5",
+    "char": "inuyasha"
+   }
+  ],
+  "Invincible Punch": [
+   {
+    "key": "invincible1",
+    "char": "invincible"
+   }
+  ],
+  "Heroic Rush": [
+   {
+    "key": "invincible2",
+    "char": "invincible"
+   }
+  ],
+  "Desperate Bite": [
+   {
+    "key": "invincible3",
+    "char": "invincible"
+   }
+  ],
+  "Viltrumite Flight": [
+   {
+    "key": "invincible4",
+    "char": "invincible"
+   }
+  ],
+  "Face Smash": [
+   {
+    "key": "invincible5",
+    "char": "invincible"
+   }
+  ],
+  "A Reason To Fight": [
+   {
+    "key": "invincible6",
+    "char": "invincible"
+   }
+  ],
+  "Crow Clone": [
+   {
+    "key": "itachi1",
+    "char": "itachi"
+   }
+  ],
+  "Tsukuyomi": [
+   {
+    "key": "itachi2",
+    "char": "itachi"
+   }
+  ],
+  "Kotoamatsukami": [
+   {
+    "key": "itachi3",
+    "char": "itachi"
+   }
+  ],
+  "Susanoo": [
+   {
+    "key": "itachi4",
+    "char": "itachi"
+   }
+  ],
+  "Totsuka Blade": [
+   {
+    "key": "itachi5",
+    "char": "itachi"
+   }
+  ],
+  "Yata Mirror": [
+   {
+    "key": "itachi6",
+    "char": "itachi"
+   }
+  ],
+  "Yasaka Magatama": [
+   {
+    "key": "itachi7",
+    "char": "itachi"
+   }
+  ],
+  "Maria The Ripper": [
+   {
+    "key": "jack1",
+    "char": "jack"
+   }
+  ],
+  "Fog of London": [
+   {
+    "key": "jack2",
+    "char": "jack"
+   }
+  ],
+  "We Are Jack": [
+   {
+    "key": "jack3",
+    "char": "jack"
+   }
+  ],
+  "Smokescreen Ambush": [
+   {
+    "key": "jack4",
+    "char": "jack"
+   }
+  ],
+  "Streets of the Lost": [
+   {
+    "key": "jack5",
+    "char": "jack"
+   }
+  ],
+  "Elemental HERO Avian": [
+   {
+    "key": "jaden1",
+    "char": "jaden"
+   }
+  ],
+  "Elemental HERO Burstinatrix": [
+   {
+    "key": "jaden2",
+    "char": "jaden"
+   }
+  ],
+  "Elemental HERO Clayman": [
+   {
+    "key": "jaden3",
+    "char": "jaden"
+   }
+  ],
+  "Elemental HERO Bubbleman": [
+   {
+    "key": "jaden4",
+    "char": "jaden"
+   }
+  ],
+  "Elemental HERO Flame Wingman": [
+   {
+    "key": "jaden5",
+    "char": "jaden"
+   }
+  ],
+  "Elemental HERO Rampart Blaster": [
+   {
+    "key": "jaden6",
+    "char": "jaden"
+   }
+  ],
+  "Elemental HERO Mudballman": [
+   {
+    "key": "jaden7",
+    "char": "jaden"
+   }
+  ],
+  "Elemental HERO Mariner": [
+   {
+    "key": "jaden8",
+    "char": "jaden"
+   }
+  ],
+  "Iron Maiden": [
+   {
+    "key": "jeanne1",
+    "char": "jeanne"
+   }
+  ],
+  "Gibbet": [
+   {
+    "key": "jeanne2",
+    "char": "jeanne"
+   }
+  ],
+  "Shamash Judgment": [
+   {
+    "key": "jeanne3",
+    "char": "jeanne"
+   }
+  ],
+  "Shamash's Kiss": [
+   {
+    "key": "jeanne4",
+    "char": "jeanne"
+   }
+  ],
+  "Skull and Knee Crushers": [
+   {
+    "key": "jeanne5",
+    "char": "jeanne"
+   }
+  ],
+  "Guillotine": [
+   {
+    "key": "jeanne6",
+    "char": "jeanne"
+   }
+  ],
+  "Crystal Beasts": [
+   {
+    "key": "jesse1",
+    "char": "jesse"
+   }
+  ],
+  "Crystal Abundance": [
+   {
+    "key": "jesse2",
+    "char": "jesse"
+   }
+  ],
+  "Crystal Blessing": [
+   {
+    "key": "jesse3",
+    "char": "jesse"
+   }
+  ],
+  "Crystal Promise": [
+   {
+    "key": "jesse4",
+    "char": "jesse"
+   }
+  ],
+  "Rainbow Dragon": [
+   {
+    "key": "jesse5",
+    "char": "jesse"
+   }
+  ],
+  "Vital Strike": [
+   {
+    "key": "jinwoo1",
+    "char": "jinwoo"
+   },
+   {
+    "key": "jinwooblue1",
+    "char": "jinwooblue"
+   },
+   {
+    "key": "jinwoogreen1",
+    "char": "jinwoogreen"
+   },
+   {
+    "key": "jinwoored1",
+    "char": "jinwoored"
+   },
+   {
+    "key": "jinwoowhite1",
+    "char": "jinwoowhite"
+   }
+  ],
+  "Hand of the Monarch": [
+   {
+    "key": "jinwoo2",
+    "char": "jinwoo"
+   },
+   {
+    "key": "jinwooblue2",
+    "char": "jinwooblue"
+   },
+   {
+    "key": "jinwoogreen2",
+    "char": "jinwoogreen"
+   },
+   {
+    "key": "jinwoored2",
+    "char": "jinwoored"
+   },
+   {
+    "key": "jinwoowhite2",
+    "char": "jinwoowhite"
+   }
+  ],
+  "Shadow Summon": [
+   {
+    "key": "jinwoo3",
+    "char": "jinwoo"
+   }
+  ],
+  "Vanish": [
+   {
+    "key": "jinwoo4",
+    "char": "jinwoo"
+   },
+   {
+    "key": "jinwooblue4",
+    "char": "jinwooblue"
+   },
+   {
+    "key": "jinwoogreen4",
+    "char": "jinwoogreen"
+   },
+   {
+    "key": "jinwoored4",
+    "char": "jinwoored"
+   },
+   {
+    "key": "jinwoowhite4",
+    "char": "jinwoowhite"
+   }
+  ],
+  "Summon - Tusk": [
+   {
+    "key": "jinwooblue3",
+    "char": "jinwooblue"
+   }
+  ],
+  "Hymn of Fire": [
+   {
+    "key": "jinwooblue5",
+    "char": "jinwooblue"
+   }
+  ],
+  "Summon - Beru": [
+   {
+    "key": "jinwoogreen3",
+    "char": "jinwoogreen"
+   }
+  ],
+  "Impossible Speed": [
+   {
+    "key": "jinwoogreen5",
+    "char": "jinwoogreen"
+   },
+   {
+    "key": "koro2",
+    "char": "koro"
+   }
+  ],
+  "Summon - Igris": [
+   {
+    "key": "jinwoored3",
+    "char": "jinwoored"
+   }
+  ],
+  "Demon King's Longsword": [
+   {
+    "key": "jinwoored5",
+    "char": "jinwoored"
+   }
+  ],
+  "Summon - Tank": [
+   {
+    "key": "jinwoowhite3",
+    "char": "jinwoowhite"
+   }
+  ],
+  "Grand Challenge": [
+   {
+    "key": "jinwoowhite5",
+    "char": "jinwoowhite"
+   }
+  ],
+  "Supreme Thunder": [
+   {
+    "key": "jupiter1",
+    "char": "jupiter"
+   }
+  ],
+  "Flower Hurricane": [
+   {
+    "key": "jupiter2",
+    "char": "jupiter"
+   }
+  ],
+  "Supreme Thunder Dragon": [
+   {
+    "key": "jupiter3",
+    "char": "jupiter"
+   }
+  ],
+  "Sparkling Wide Pressure": [
+   {
+    "key": "jupiter4",
+    "char": "jupiter"
+   }
+  ],
+  "Thunder Antenna": [
+   {
+    "key": "jupiter5",
+    "char": "jupiter"
+   }
+  ],
+  "Burst Stream of Destruction": [
+   {
+    "key": "kaiba1",
+    "char": "kaiba"
+   }
+  ],
+  "Blue-Eyes White Dragon": [
+   {
+    "key": "kaiba2",
+    "char": "kaiba"
+   }
+  ],
+  "Enemy Controller": [
+   {
+    "key": "kaiba3",
+    "char": "kaiba"
+   }
+  ],
+  "Hold This!": [
+   {
+    "key": "kaiba4",
+    "char": "kaiba"
+   }
+  ],
+  "Crush Card Virus": [
+   {
+    "key": "kaiba5",
+    "char": "kaiba"
+   }
+  ],
+  "Blue-Eyes Ultimate Dragon": [
+   {
+    "key": "kaiba6",
+    "char": "kaiba"
+   }
+  ],
+  "Lightning Blade Kunai": [
+   {
+    "key": "kakashi1",
+    "char": "kakashi"
+   }
+  ],
+  "Long-Range Kamui": [
+   {
+    "key": "kakashi2",
+    "char": "kakashi"
+   }
+  ],
+  "Lightning Release: Shadow Clone": [
+   {
+    "key": "kakashi3",
+    "char": "kakashi"
+   }
+  ],
+  "Kamui Squad Ambush": [
+   {
+    "key": "kakashi4",
+    "char": "kakashi"
+   }
+  ],
+  "Copy Ninja Kakashi": [
+   {
+    "key": "kakashi5",
+    "char": "kakashi"
+   }
+  ],
+  "Tentacle Pierce": [
+   {
+    "key": "ken1",
+    "char": "ken"
+   }
+  ],
+  "Disembowel": [
+   {
+    "key": "ken2",
+    "char": "ken"
+   }
+  ],
+  "Bloodthirsty Rampage": [
+   {
+    "key": "ken3",
+    "char": "ken"
+   }
+  ],
+  "Tentacle Block": [
+   {
+    "key": "ken4",
+    "char": "ken"
+   }
+  ],
+  "Sanzu River Shot": [
+   {
+    "key": "kid1",
+    "char": "kid"
+   }
+  ],
+  "Fatal Error": [
+   {
+    "key": "kid2",
+    "char": "kid"
+   }
+  ],
+  "Stable Resonance": [
+   {
+    "key": "kid3",
+    "char": "kid"
+   }
+  ],
+  "Death Slide": [
+   {
+    "key": "kid4",
+    "char": "kid"
+   }
+  ],
+  "Partners: Liz and Patty": [
+   {
+    "key": "kid5",
+    "char": "kid"
+   }
+  ],
+  "Death Cannon": [
+   {
+    "key": "kid6",
+    "char": "kid"
+   }
+  ],
+  "Claws Assassination": [
+   {
+    "key": "killua1",
+    "char": "killua"
+   }
+  ],
+  "Heart Ripper": [
+   {
+    "key": "killua2",
+    "char": "killua"
+   }
+  ],
+  "Decapitation": [
+   {
+    "key": "killua3",
+    "char": "killua"
+   }
+  ],
+  "Killua Hide": [
+   {
+    "key": "killua4",
+    "char": "killua"
+   }
+  ],
+  "Chastifold: Sunflower": [
+   {
+    "key": "king1",
+    "char": "king"
+   }
+  ],
+  "Chastifold: Increase": [
+   {
+    "key": "king2",
+    "char": "king"
+   }
+  ],
+  "True Spirit Spear Chastifold": [
+   {
+    "key": "king3",
+    "char": "king"
+   }
+  ],
+  "Chastifold: Guardian": [
+   {
+    "key": "king4",
+    "char": "king"
+   }
+  ],
+  "Chastifold: Pollen Garden": [
+   {
+    "key": "king5",
+    "char": "king"
+   }
+  ],
+  "Disaster": [
+   {
+    "key": "king6",
+    "char": "king"
+   }
+  ],
+  "Slicing Water Waves": [
+   {
+    "key": "kitara1",
+    "char": "kitara"
+   }
+  ],
+  "Ice Deflection": [
+   {
+    "key": "kitara2",
+    "char": "kitara"
+   }
+  ],
+  "Soothing Water": [
+   {
+    "key": "kitara3",
+    "char": "kitara"
+   }
+  ],
+  "Ice Barrier": [
+   {
+    "key": "kitara4",
+    "char": "kitara"
+   }
+  ],
+  "Hard Lessons": [
+   {
+    "key": "koro1",
+    "char": "koro"
+   }
+  ],
+  "Protective Molting": [
+   {
+    "key": "koro3",
+    "char": "koro"
+   }
+  ],
+  "Pitch Black": [
+   {
+    "key": "koro4",
+    "char": "koro"
+   }
+  ],
+  "Class Is In Session!": [
+   {
+    "key": "koro5",
+    "char": "koro"
+   }
+  ],
+  "Fire Control": [
+   {
+    "key": "korra1",
+    "char": "korra"
+   }
+  ],
+  "Air Control": [
+   {
+    "key": "korra2",
+    "char": "korra"
+   }
+  ],
+  "Earth Control": [
+   {
+    "key": "korra3",
+    "char": "korra"
+   }
+  ],
+  "Water Control": [
+   {
+    "key": "korra4",
+    "char": "korra"
+   }
+  ],
+  "Air Wave": [
+   {
+    "key": "korra6",
+    "char": "korra"
+   }
+  ],
+  "Earth Area Attack": [
+   {
+    "key": "korra7",
+    "char": "korra"
+   }
+  ],
+  "Water Arm Stun": [
+   {
+    "key": "korra8",
+    "char": "korra"
+   }
+  ],
+  "Bokken Smash": [
+   {
+    "key": "kurapika1",
+    "char": "kurapika"
+   }
+  ],
+  "Chain Jail": [
+   {
+    "key": "kurapika2",
+    "char": "kurapika"
+   }
+  ],
+  "Holy Chain": [
+   {
+    "key": "kurapika3",
+    "char": "kurapika"
+   }
+  ],
+  "Scarlet Eyes": [
+   {
+    "key": "kurapika4",
+    "char": "kurapika"
+   }
+  ],
+  "Judgement Chain": [
+   {
+    "key": "kurapika5",
+    "char": "kurapika"
+   }
+  ],
+  "Judgement Throw": [
+   {
+    "key": "kuroko1",
+    "char": "kuroko"
+   }
+  ],
+  "Teleporting Strike": [
+   {
+    "key": "kuroko2",
+    "char": "kuroko"
+   }
+  ],
+  "Needle Pin": [
+   {
+    "key": "kuroko3",
+    "char": "kuroko"
+   }
+  ],
+  "Tactical Teleport": [
+   {
+    "key": "kuroko4",
+    "char": "kuroko"
+   }
+  ],
+  "Ashisogi Jizo": [
+   {
+    "key": "kurotsuchi1",
+    "char": "kurotsuchi"
+   }
+  ],
+  "Data Collection": [
+   {
+    "key": "kurotsuchi2",
+    "char": "kurotsuchi"
+   }
+  ],
+  "Flesh-Healing Drug": [
+   {
+    "key": "kurotsuchi3",
+    "char": "kurotsuchi"
+   }
+  ],
+  "Nikushibuki": [
+   {
+    "key": "kurotsuchi4",
+    "char": "kurotsuchi"
+   }
+  ],
+  "Bankai - Konjiki Ashisogi Jizo": [
+   {
+    "key": "kurotsuchi5",
+    "char": "kurotsuchi"
+   }
+  ],
+  "Deadly Gas": [
+   {
+    "key": "kurotsuchi6",
+    "char": "kurotsuchi"
+   }
+  ],
+  "Superhuman Drug": [
+   {
+    "key": "kurotsuchi7",
+    "char": "kurotsuchi"
+   }
+  ],
+  "Postcognition Drug": [
+   {
+    "key": "kurotsuchi8",
+    "char": "kurotsuchi"
+   }
+  ],
+  "Black Wing": [
+   {
+    "key": "ladydevimon1",
+    "char": "ladydevimon"
+   }
+  ],
+  "Devil Slap": [
+   {
+    "key": "ladydevimon2",
+    "char": "ladydevimon"
+   }
+  ],
+  "Darkness Spear": [
+   {
+    "key": "ladydevimon3",
+    "char": "ladydevimon"
+   }
+  ],
+  "Darkness Wave": [
+   {
+    "key": "ladydevimon4",
+    "char": "ladydevimon"
+   }
+  ],
+  "Lady's Poison": [
+   {
+    "key": "ladydevimon5",
+    "char": "ladydevimon"
+   }
+  ],
+  "Precision Strike": [
+   {
+    "key": "levi1",
+    "char": "levi"
+   }
+  ],
+  "ODM Gear Assault": [
+   {
+    "key": "levi2",
+    "char": "levi"
+   }
+  ],
+  "Humanity's Strongest": [
+   {
+    "key": "levi3",
+    "char": "levi"
+   }
+  ],
+  "Unmatched Agility": [
+   {
+    "key": "levi4",
+    "char": "levi"
+   }
+  ],
+  "Relentless Captain": [
+   {
+    "key": "levi5",
+    "char": "levi"
+   }
+  ],
+  "Transform: Liz": [
+   {
+    "key": "lizandpatty1",
+    "char": "lizandpatty"
+   }
+  ],
+  "Transform: Patty": [
+   {
+    "key": "lizandpatty2",
+    "char": "lizandpatty"
+   }
+  ],
+  "Thompson Sisters Soul Resonance": [
+   {
+    "key": "lizandpatty3",
+    "char": "lizandpatty"
+   }
+  ],
+  "Coordinated Evasion": [
+   {
+    "key": "lizandpatty4",
+    "char": "lizandpatty"
+   }
+  ],
+  "Wavelength Compression: Patty": [
+   {
+    "key": "lizandpatty5",
+    "char": "lizandpatty"
+   }
+  ],
+  "Wavelength Compression: Liz": [
+   {
+    "key": "lizandpatty6",
+    "char": "lizandpatty"
+   }
+  ],
+  "Brooklyn Devils": [
+   {
+    "key": "lizandpatty7",
+    "char": "lizandpatty"
+   }
+  ],
+  "Aquarius": [
+   {
+    "key": "lucy1",
+    "char": "lucy"
+   }
+  ],
+  "Gemini": [
+   {
+    "key": "lucy2",
+    "char": "lucy"
+   }
+  ],
+  "Capricorn": [
+   {
+    "key": "lucy3",
+    "char": "lucy"
+   }
+  ],
+  "Leo": [
+   {
+    "key": "lucy4",
+    "char": "lucy"
+   }
+  ],
+  "Urano Metria": [
+   {
+    "key": "lucy5",
+    "char": "lucy"
+   }
+  ],
+  "Gomu Gomu No Pistol": [
+   {
+    "key": "luffy1",
+    "char": "luffy"
+   }
+  ],
+  "Gomu Gomu No Gatling Gun": [
+   {
+    "key": "luffy2",
+    "char": "luffy"
+   }
+  ],
+  "Gomu Gomu No Bazooka": [
+   {
+    "key": "luffy3",
+    "char": "luffy"
+   }
+  ],
+  "Gomu Gomu No Balloon": [
+   {
+    "key": "luffy4",
+    "char": "luffy"
+   }
+  ],
+  "Rubber Body": [
+   {
+    "key": "luffy5",
+    "char": "luffy"
+   }
+  ],
+  "Homing Pendulum": [
+   {
+    "key": "lyserg1",
+    "char": "lyserg"
+   }
+  ],
+  "Blind Pendulum": [
+   {
+    "key": "lyserg2",
+    "char": "lyserg"
+   }
+  ],
+  "Mastema Dolkeen": [
+   {
+    "key": "lyserg3",
+    "char": "lyserg"
+   }
+  ],
+  "Heavenly Intervention": [
+   {
+    "key": "lyserg4",
+    "char": "lyserg"
+   }
+  ],
+  "Big Ben Wire Frame": [
+   {
+    "key": "lyserg5",
+    "char": "lyserg"
+   }
+  ],
+  "Halvaya": [
+   {
+    "key": "lyserg6",
+    "char": "lyserg"
+   }
+  ],
+  "Giga Cannon": [
+   {
+    "key": "machinedramon1",
+    "char": "machinedramon"
+   }
+  ],
+  "Giga Destroyer": [
+   {
+    "key": "machinedramon2",
+    "char": "machinedramon"
+   }
+  ],
+  "Infinite Hand": [
+   {
+    "key": "machinedramon3",
+    "char": "machinedramon"
+   }
+  ],
+  "EMP Wave": [
+   {
+    "key": "machinedramon4",
+    "char": "machinedramon"
+   }
+  ],
+  "Catastrophe Day": [
+   {
+    "key": "machinedramon5",
+    "char": "machinedramon"
+   }
+  ],
+  "Magical Arrow": [
+   {
+    "key": "madoka1",
+    "char": "madoka"
+   }
+  ],
+  "Rose Barrage": [
+   {
+    "key": "madoka2",
+    "char": "madoka"
+   }
+  ],
+  "Karmic Destiny": [
+   {
+    "key": "madoka3",
+    "char": "madoka"
+   }
+  ],
+  "My Wish": [
+   {
+    "key": "madoka4",
+    "char": "madoka"
+   }
+  ],
+  "Soul Gem: Madoka": [
+   {
+    "key": "madoka5",
+    "char": "madoka"
+   }
+  ],
+  "Reap": [
+   {
+    "key": "maka1",
+    "char": "maka"
+   }
+  ],
+  "Soul Resonance": [
+   {
+    "key": "maka2",
+    "char": "maka"
+   }
+  ],
+  "Witch Hunter": [
+   {
+    "key": "maka3",
+    "char": "maka"
+   }
+  ],
+  "Scythe Deflection": [
+   {
+    "key": "maka4",
+    "char": "maka"
+   }
+  ],
+  "Figure-6 Hunter": [
+   {
+    "key": "maka5",
+    "char": "maka"
+   }
+  ],
+  "Partner: Soul": [
+   {
+    "key": "maka6",
+    "char": "maka"
+   }
+  ],
+  "Tiro Concert": [
+   {
+    "key": "mami1",
+    "char": "mami"
+   }
+  ],
+  "Ribbon Wrap": [
+   {
+    "key": "mami2",
+    "char": "mami"
+   }
+  ],
+  "Tiro Assault": [
+   {
+    "key": "mami3",
+    "char": "mami"
+   }
+  ],
+  "Ribbon Show": [
+   {
+    "key": "mami4",
+    "char": "mami"
+   }
+  ],
+  "Tiro Finale": [
+   {
+    "key": "mami5",
+    "char": "mami"
+   }
+  ],
+  "Soul Gem: Mami": [
+   {
+    "key": "mami6",
+    "char": "mami"
+   }
+  ],
+  "Blue Flames of Resurrection": [
+   {
+    "key": "marco1",
+    "char": "marco"
+   }
+  ],
+  "Hoo-In": [
+   {
+    "key": "marco2",
+    "char": "marco"
+   }
+  ],
+  "Immortal Thistle": [
+   {
+    "key": "marco3",
+    "char": "marco"
+   }
+  ],
+  "Phoenix Wing Block": [
+   {
+    "key": "marco4",
+    "char": "marco"
+   }
+  ],
+  "Pineapple Stone": [
+   {
+    "key": "marco5",
+    "char": "marco"
+   }
+  ],
+  "Hito Hito no Mi, Model: Phoenix": [
+   {
+    "key": "marco6",
+    "char": "marco"
+   }
+  ],
+  "Blazing Mandala": [
+   {
+    "key": "mars1",
+    "char": "mars"
+   }
+  ],
+  "Akuryo Taisen": [
+   {
+    "key": "mars2",
+    "char": "mars"
+   }
+  ],
+  "Snake Fire": [
+   {
+    "key": "mars3",
+    "char": "mars"
+   }
+  ],
+  "Ofuda": [
+   {
+    "key": "mars4",
+    "char": "mars"
+   }
+  ],
+  "Flying Galahad": [
+   {
+    "key": "mash1",
+    "char": "mash"
+   }
+  ],
+  "Around Round Crash": [
+   {
+    "key": "mash2",
+    "char": "mash"
+   }
+  ],
+  "Lord Camelot": [
+   {
+    "key": "mash3",
+    "char": "mash"
+   }
+  ],
+  "A Knight That Protects": [
+   {
+    "key": "mash4",
+    "char": "mash"
+   }
+  ],
+  "Around Round Axe": [
+   {
+    "key": "mash5",
+    "char": "mash"
+   }
+  ],
+  "Shield of White Walls": [
+   {
+    "key": "mash6",
+    "char": "mash"
+   }
+  ],
+  "Fairy Law": [
+   {
+    "key": "mavis1",
+    "char": "mavis"
+   }
+  ],
+  "Bestow": [
+   {
+    "key": "mavis2",
+    "char": "mavis"
+   }
+  ],
+  "Fairy Sphere": [
+   {
+    "key": "mavis3",
+    "char": "mavis"
+   }
+  ],
+  "Fairy Heart": [
+   {
+    "key": "mavis4",
+    "char": "mavis"
+   }
+  ],
+  "Fairy Star Strategy": [
+   {
+    "key": "mavis5",
+    "char": "mavis"
+   }
+  ],
+  "Fairy Glitter": [
+   {
+    "key": "mavis6",
+    "char": "mavis"
+   }
+  ],
+  "Bottomless Well": [
+   {
+    "key": "megumi1",
+    "char": "megumi"
+   }
+  ],
+  "Great Serpent": [
+   {
+    "key": "megumi2",
+    "char": "megumi"
+   }
+  ],
+  "Nue": [
+   {
+    "key": "megumi3",
+    "char": "megumi"
+   }
+  ],
+  "Rabbit Escape": [
+   {
+    "key": "megumi4",
+    "char": "megumi"
+   }
+  ],
+  "Shikigami Summoning": [
+   {
+    "key": "megumi5",
+    "char": "megumi"
+   }
+  ],
+  "Waga wa Megumin!": [
+   {
+    "key": "megumin1",
+    "char": "megumin"
+   }
+  ],
+  "Crimson Incantation": [
+   {
+    "key": "megumin2",
+    "char": "megumin"
+   }
+  ],
+  "Explosion": [
+   {
+    "key": "megumin3",
+    "char": "megumin"
+   }
+  ],
+  "Face-first Slide": [
+   {
+    "key": "megumin4",
+    "char": "megumin"
+   }
+  ],
+  "Hellblaze": [
+   {
+    "key": "meliodas1",
+    "char": "meliodas"
+   }
+  ],
+  "Full Counter": [
+   {
+    "key": "meliodas2",
+    "char": "meliodas"
+   }
+  ],
+  "Revenge Counter": [
+   {
+    "key": "meliodas3",
+    "char": "meliodas"
+   }
+  ],
+  "Jitsuzo Bunshin": [
+   {
+    "key": "meliodas4",
+    "char": "meliodas"
+   }
+  ],
+  "Dragon's Sin of Wrath": [
+   {
+    "key": "meliodas5",
+    "char": "meliodas"
+   }
+  ],
+  "Shabon Spray": [
+   {
+    "key": "mercury1",
+    "char": "mercury"
+   }
+  ],
+  "Shabon Spray Freeze": [
+   {
+    "key": "mercury2",
+    "char": "mercury"
+   }
+  ],
+  "Mercury Aqua Mirage": [
+   {
+    "key": "mercury3",
+    "char": "mercury"
+   }
+  ],
+  "Shine Aqua Illusion": [
+   {
+    "key": "mercury4",
+    "char": "mercury"
+   }
+  ],
+  "Blackwhip": [
+   {
+    "key": "midoriya1",
+    "char": "midoriya"
+   }
+  ],
+  "St. Louis Smash": [
+   {
+    "key": "midoriya2",
+    "char": "midoriya"
+   }
+  ],
+  "Detroit Smash": [
+   {
+    "key": "midoriya3",
+    "char": "midoriya"
+   }
+  ],
+  "Faux 100%": [
+   {
+    "key": "midoriya5",
+    "char": "midoriya"
+   }
+  ],
+  "Titan Takedown": [
+   {
+    "key": "mikasa1",
+    "char": "mikasa"
+   }
+  ],
+  "Rallying Call": [
+   {
+    "key": "mikasa2",
+    "char": "mikasa"
+   }
+  ],
+  "Maneuvering Gear": [
+   {
+    "key": "mikasa3",
+    "char": "mikasa"
+   }
+  ],
+  "Unlikely Savior": [
+   {
+    "key": "mikasa4",
+    "char": "mikasa"
+   }
+  ],
+  "Thunder Spear": [
+   {
+    "key": "mikasa5",
+    "char": "mikasa"
+   }
+  ],
+  "Roman Artillery - Pumpkin": [
+   {
+    "key": "mine1",
+    "char": "mine"
+   }
+  ],
+  "High Output Blast Blade": [
+   {
+    "key": "mine2",
+    "char": "mine"
+   }
+  ],
+  "Genius Sniper": [
+   {
+    "key": "mine3",
+    "char": "mine"
+   }
+  ],
+  "Narrow Dodge": [
+   {
+    "key": "mine4",
+    "char": "mine"
+   }
+  ],
+  "Grenade": [
+   {
+    "key": "minene1",
+    "char": "minene"
+   }
+  ],
+  "Landmines": [
+   {
+    "key": "minene2",
+    "char": "minene"
+   }
+  ],
+  "Master of Disguise": [
+   {
+    "key": "minene3",
+    "char": "minene"
+   }
+  ],
+  "Escape Route": [
+   {
+    "key": "minene4",
+    "char": "minene"
+   }
+  ],
+  "Escape Diary": [
+   {
+    "key": "minene5",
+    "char": "minene"
+   }
+  ],
+  "Explosives Detonator": [
+   {
+    "key": "minene6",
+    "char": "minene"
+   }
+  ],
+  "Iron Sand": [
+   {
+    "key": "misaka1",
+    "char": "misaka"
+   }
+  ],
+  "Railgun": [
+   {
+    "key": "misaka2",
+    "char": "misaka"
+   }
+  ],
+  "Overcharge": [
+   {
+    "key": "misaka3",
+    "char": "misaka"
+   }
+  ],
+  "Electric Deflection": [
+   {
+    "key": "misaka4",
+    "char": "misaka"
+   }
+  ],
+  "Iron Colossus": [
+   {
+    "key": "misaka5",
+    "char": "misaka"
+   }
+  ],
+  "Ultra Railgun": [
+   {
+    "key": "misaka6",
+    "char": "misaka"
+   }
+  ],
+  "Misery": [
+   {
+    "key": "misery",
+    "char": "misery"
+   }
+  ],
+  "Third Form: Scattering Mist Splash": [
+   {
+    "key": "muichiro1",
+    "char": "muichiro"
+   }
+  ],
+  "Fourth Form: Shifting Flow Slash": [
+   {
+    "key": "muichiro2",
+    "char": "muichiro"
+   }
+  ],
+  "Seventh Form: Obscuring Clouds": [
+   {
+    "key": "muichiro3",
+    "char": "muichiro"
+   }
+  ],
+  "Sixth Form: Lunar Dispersing Mist": [
+   {
+    "key": "muichiro4",
+    "char": "muichiro"
+   }
+  ],
+  "Fifth Form: Sea of Clouds and Haze": [
+   {
+    "key": "muichiro5",
+    "char": "muichiro"
+   }
+  ],
+  "Unexpected Beheading": [
+   {
+    "key": "muichiro6",
+    "char": "muichiro"
+   }
+  ],
+  "Grisly Wing": [
+   {
+    "key": "myotismon1",
+    "char": "myotismon"
+   }
+  ],
+  "Crimson Lightning": [
+   {
+    "key": "myotismon2",
+    "char": "myotismon"
+   }
+  ],
+  "Disintegrate": [
+   {
+    "key": "myotismon3",
+    "char": "myotismon"
+   }
+  ],
+  "Myotismon Protect": [
+   {
+    "key": "myotismon4",
+    "char": "myotismon"
+   }
+  ],
+  "Killing Intent": [
+   {
+    "key": "nagisa1",
+    "char": "nagisa"
+   }
+  ],
+  "Bloody Knife": [
+   {
+    "key": "nagisa2",
+    "char": "nagisa"
+   }
+  ],
+  "Don't Test Me": [
+   {
+    "key": "nagisa3",
+    "char": "nagisa"
+   }
+  ],
+  "Friendly Smile": [
+   {
+    "key": "nagisa4",
+    "char": "nagisa"
+   }
+  ],
+  "Natural Assassin": [
+   {
+    "key": "nagisa5",
+    "char": "nagisa"
+   }
+  ],
+  "Toad Kumite": [
+   {
+    "key": "naruto1",
+    "char": "naruto"
+   }
+  ],
+  "Rasenshuriken": [
+   {
+    "key": "naruto2",
+    "char": "naruto"
+   }
+  ],
+  "Sage Chakra Gather": [
+   {
+    "key": "naruto3",
+    "char": "naruto"
+   }
+  ],
+  "Naruto Block": [
+   {
+    "key": "naruto4",
+    "char": "naruto"
+   }
+  ],
+  "Fire Dragon's Iron Fist": [
+   {
+    "key": "natsu1",
+    "char": "natsu"
+   }
+  ],
+  "Fire Dragon's Wing Attack": [
+   {
+    "key": "natsu2",
+    "char": "natsu"
+   }
+  ],
+  "Fire Dragon's Roar": [
+   {
+    "key": "natsu3",
+    "char": "natsu"
+   }
+  ],
+  "Consume Flame": [
+   {
+    "key": "natsu4",
+    "char": "natsu"
+   }
+  ],
+  "I'm all fired up!": [
+   {
+    "key": "natsu5",
+    "char": "natsu"
+   }
+  ],
+  "Doctor Blythe": [
+   {
+    "key": "neferpitou1",
+    "char": "neferpitou"
+   }
+  ],
+  "Puppeteering": [
+   {
+    "key": "neferpitou2",
+    "char": "neferpitou"
+   }
+  ],
+  "Terpsichora": [
+   {
+    "key": "neferpitou3",
+    "char": "neferpitou"
+   }
+  ],
+  "Cat Reflexes": [
+   {
+    "key": "neferpitou4",
+    "char": "neferpitou"
+   }
+  ],
+  "Post-Mortem Nen": [
+   {
+    "key": "neferpitou5",
+    "char": "neferpitou"
+   }
+  ],
+  "Lanzador Verde": [
+   {
+    "key": "nel1",
+    "char": "nel"
+   }
+  ],
+  "Cero Doble": [
+   {
+    "key": "nel2",
+    "char": "nel"
+   }
+  ],
+  "Declare, Gamuza": [
+   {
+    "key": "nel3",
+    "char": "nel"
+   }
+  ],
+  "Nel Block": [
+   {
+    "key": "nel4",
+    "char": "nel"
+   }
+  ],
+  "Protector's Reiatsu": [
+   {
+    "key": "nel5",
+    "char": "nel"
+   }
+  ],
+  "Blood Demon Art": [
+   {
+    "key": "nezuko1",
+    "char": "nezuko"
+   }
+  ],
+  "Demonic Frenzy": [
+   {
+    "key": "nezuko2",
+    "char": "nezuko"
+   }
+  ],
+  "Pyrokinesis": [
+   {
+    "key": "nezuko3",
+    "char": "nezuko"
+   },
+   {
+    "key": "pyrrha3",
+    "char": "pyrrha"
+   }
+  ],
+  "Little Nezuko!": [
+   {
+    "key": "nezuko4",
+    "char": "nezuko"
+   }
+  ],
+  "Demon Blood": [
+   {
+    "key": "nezuko5",
+    "char": "nezuko"
+   }
+  ],
+  "Nightfall": [
+   {
+    "key": "nightfall",
+    "char": "nightfall"
+   }
+  ],
+  "Nightwrap": [
+   {
+    "key": "nightwrap",
+    "char": "nightwrap"
+   }
+  ],
+  "Unblockable Strike": [
+   {
+    "key": "nimaiya1",
+    "char": "nimaiya"
+   }
+  ],
+  "Sheath Dodger": [
+   {
+    "key": "nimaiya2",
+    "char": "nimaiya"
+   }
+  ],
+  "God of the Sword": [
+   {
+    "key": "nimaiya3",
+    "char": "nimaiya"
+   }
+  ],
+  "Perfect Stance": [
+   {
+    "key": "nimaiya4",
+    "char": "nimaiya"
+   }
+  ],
+  "Hammer Swing": [
+   {
+    "key": "nobara1",
+    "char": "nobara"
+   }
+  ],
+  "Straw Doll Technique": [
+   {
+    "key": "nobara2",
+    "char": "nobara"
+   }
+  ],
+  "Resonance": [
+   {
+    "key": "nobara3",
+    "char": "nobara"
+   }
+  ],
+  "Embrace Pain": [
+   {
+    "key": "nobara4",
+    "char": "nobara"
+   }
+  ],
+  "Hairpin": [
+   {
+    "key": "nobara5",
+    "char": "nobara"
+   }
+  ],
+  "Sea Dragon's Roar": [
+   {
+    "key": "noelle1",
+    "char": "noelle"
+   }
+  ],
+  "Sea Dragon's Cradle": [
+   {
+    "key": "noelle2",
+    "char": "noelle"
+   }
+  ],
+  "Saint Valkyrie Dress": [
+   {
+    "key": "noelle3",
+    "char": "noelle"
+   }
+  ],
+  "Sea Dragon's Nest": [
+   {
+    "key": "noelle4",
+    "char": "noelle"
+   }
+  ],
+  "Point-Blank Sea Dragon's Roar": [
+   {
+    "key": "noelle5",
+    "char": "noelle"
+   }
+  ],
+  "Flute Missile": [
+   {
+    "key": "nonon1",
+    "char": "nonon"
+   }
+  ],
+  "Overture Barrage": [
+   {
+    "key": "nonon2",
+    "char": "nonon"
+   }
+  ],
+  "Concentrated Climax": [
+   {
+    "key": "nonon3",
+    "char": "nonon"
+   }
+  ],
+  "Sound Negation": [
+   {
+    "key": "nonon4",
+    "char": "nonon"
+   }
+  ],
+  "Unstoppable Performance": [
+   {
+    "key": "nonon5",
+    "char": "nonon"
+   }
+  ],
+  "Oathbreaker Strike": [
+   {
+    "key": "oathbreaker_strike",
+    "char": "oathbreaker_strike"
+   }
+  ],
+  "Omni-Headbutt": [
+   {
+    "key": "omniman1",
+    "char": "omniman"
+   }
+  ],
+  "Omni-Bisect": [
+   {
+    "key": "omniman2",
+    "char": "omniman"
+   }
+  ],
+  "Omni-Flight": [
+   {
+    "key": "omniman3",
+    "char": "omniman"
+   }
+  ],
+  "Omni-Counter": [
+   {
+    "key": "omniman4",
+    "char": "omniman"
+   }
+  ],
+  "Omni-Rage": [
+   {
+    "key": "omniman5",
+    "char": "omniman"
+   }
+  ],
+  "Transcendent Sword": [
+   {
+    "key": "omnimon1",
+    "char": "omnimon"
+   }
+  ],
+  "Garuru Cannon": [
+   {
+    "key": "omnimon2",
+    "char": "omnimon"
+   }
+  ],
+  "Destiny Digivolve": [
+   {
+    "key": "omnimon3",
+    "char": "omnimon"
+   }
+  ],
+  "Brave Shield": [
+   {
+    "key": "omnimon4",
+    "char": "omnimon"
+   }
+  ],
+  "Digidestiny": [
+   {
+    "key": "omnimon5",
+    "char": "omnimon"
+   }
+  ],
+  "Solitary Sacred Cutting Shield": [
+   {
+    "key": "orihime1",
+    "char": "orihime"
+   }
+  ],
+  "Twin Sacred Return Shield": [
+   {
+    "key": "orihime2",
+    "char": "orihime"
+   }
+  ],
+  "Three Sacred Links Shield": [
+   {
+    "key": "orihime3",
+    "char": "orihime"
+   }
+  ],
+  "Six Princess Shielding Flowers": [
+   {
+    "key": "orihime4",
+    "char": "orihime"
+   }
+  ],
+  "Toon Assault": [
+   {
+    "key": "pegasus1",
+    "char": "pegasus"
+   }
+  ],
+  "Relinquished": [
+   {
+    "key": "pegasus2",
+    "char": "pegasus"
+   }
+  ],
+  "Dark-Eyes Illusionist": [
+   {
+    "key": "pegasus3",
+    "char": "pegasus"
+   }
+  ],
+  "Millennium Eye": [
+   {
+    "key": "pegasus4",
+    "char": "pegasus"
+   }
+  ],
+  "Thousand-Eyes Restrict": [
+   {
+    "key": "pegasus5",
+    "char": "pegasus"
+   }
+  ],
+  "Thundershock": [
+   {
+    "key": "pikachu1",
+    "char": "pikachu"
+   }
+  ],
+  "Thunder": [
+   {
+    "key": "pikachu3",
+    "char": "pikachu"
+   }
+  ],
+  "Agility": [
+   {
+    "key": "pikachu4",
+    "char": "pikachu"
+   }
+  ],
+  "Static": [
+   {
+    "key": "pikachu5",
+    "char": "pikachu"
+   }
+  ],
+  "Blood Knives": [
+   {
+    "key": "power1",
+    "char": "power"
+   }
+  ],
+  "Blood Spear": [
+   {
+    "key": "power2",
+    "char": "power"
+   }
+  ],
+  "GAHAHA! GUTS!": [
+   {
+    "key": "power3",
+    "char": "power"
+   }
+  ],
+  "Bloodshed": [
+   {
+    "key": "power4",
+    "char": "power"
+   }
+  ],
+  "Blood Fiend": [
+   {
+    "key": "power5",
+    "char": "power"
+   }
+  ],
+  "Knight's Sword": [
+   {
+    "key": "pucelle1",
+    "char": "pucelle"
+   }
+  ],
+  "Magic Sword": [
+   {
+    "key": "pucelle2",
+    "char": "pucelle"
+   }
+  ],
+  "Ideal Strike": [
+   {
+    "key": "pucelle3",
+    "char": "pucelle"
+   }
+  ],
+  "Knight's Guard": [
+   {
+    "key": "pucelle4",
+    "char": "pucelle"
+   }
+  ],
+  "Fan the Flames": [
+   {
+    "key": "pyrrha1",
+    "char": "pyrrha"
+   }
+  ],
+  "Feed the Fire": [
+   {
+    "key": "pyrrha2",
+    "char": "pyrrha"
+   }
+  ],
+  "Cataclysm": [
+   {
+    "key": "pyrrha4",
+    "char": "pyrrha"
+   }
+  ],
+  "Wraith in White": [
+   {
+    "key": "pyrrha5",
+    "char": "pyrrha"
+   }
+  ],
+  "Rage Serum": [
+   {
+    "key": "rage_serum",
+    "char": "rage_serum"
+   }
+  ],
+  "Bleeding Shot": [
+   {
+    "key": "rakko1",
+    "char": "rakko"
+   }
+  ],
+  "Close-Range Rifle": [
+   {
+    "key": "rakko2",
+    "char": "rakko"
+   }
+  ],
+  "Relentless Hunter": [
+   {
+    "key": "rakko3",
+    "char": "rakko"
+   }
+  ],
+  "Rakko Block": [
+   {
+    "key": "rakko4",
+    "char": "rakko"
+   }
+  ],
+  "Wave Tracking": [
+   {
+    "key": "rakko5",
+    "char": "rakko"
+   }
+  ],
+  "Korenkyaku": [
+   {
+    "key": "renamon1",
+    "char": "renamon"
+   }
+  ],
+  "Diamond Storm": [
+   {
+    "key": "renamon2",
+    "char": "renamon"
+   }
+  ],
+  "Digivolve: Kyubimon": [
+   {
+    "key": "renamon3",
+    "char": "renamon"
+   }
+  ],
+  "High Speed Leap": [
+   {
+    "key": "renamon4",
+    "char": "renamon"
+   }
+  ],
+  "Foxtail Inferno": [
+   {
+    "key": "renamon5",
+    "char": "renamon"
+   }
+  ],
+  "Second Form: Rising Scorching Sun": [
+   {
+    "key": "rengoku1",
+    "char": "rengoku"
+   }
+  ],
+  "Swift Sword Slash": [
+   {
+    "key": "rengoku2",
+    "char": "rengoku"
+   }
+  ],
+  "Fourth Form: Blooming Flame Undulation": [
+   {
+    "key": "rengoku3",
+    "char": "rengoku"
+   }
+  ],
+  "Esoteric Art": [
+   {
+    "key": "rengoku4",
+    "char": "rengoku"
+   }
+  ],
+  "Ninth Form: Rengoku": [
+   {
+    "key": "rengoku5",
+    "char": "rengoku"
+   }
+  ],
+  "Black Flame": [
+   {
+    "key": "rimuru1",
+    "char": "rimuru"
+   }
+  ],
+  "Gluttony": [
+   {
+    "key": "rimuru2",
+    "char": "rimuru"
+   }
+  ],
+  "Megiddo": [
+   {
+    "key": "rimuru3",
+    "char": "rimuru"
+   }
+  ],
+  "Slime Transformation": [
+   {
+    "key": "rimuru4",
+    "char": "rimuru"
+   }
+  ],
+  "Rokushiki: Shigan": [
+   {
+    "key": "rob1",
+    "char": "rob"
+   }
+  ],
+  "Rokushiki: Rankyaku": [
+   {
+    "key": "rob2",
+    "char": "rob"
+   }
+  ],
+  "Rokushiki Ogi: Rokuogan": [
+   {
+    "key": "rob3",
+    "char": "rob"
+   }
+  ],
+  "Rokushiki: Tekkai": [
+   {
+    "key": "rob4",
+    "char": "rob"
+   }
+  ],
+  "Tobu Shigan Bachi": [
+   {
+    "key": "rob5",
+    "char": "rob"
+   }
+  ],
+  "Rankyaku Gaicho": [
+   {
+    "key": "rob6",
+    "char": "rob"
+   }
+  ],
+  "Sai Dai Rin: Rokuogan": [
+   {
+    "key": "rob7",
+    "char": "rob"
+   }
+  ],
+  "Tekkai Utsugi": [
+   {
+    "key": "rob8",
+    "char": "rob"
+   }
+  ],
+  "Neko Neko no Mi, Model: Leopard": [
+   {
+    "key": "rob9",
+    "char": "rob"
+   }
+  ],
+  "In the Name of Ruler!": [
+   {
+    "key": "ruler1",
+    "char": "ruler"
+   }
+  ],
+  "Minion - Minael and Yunael": [
+   {
+    "key": "ruler2",
+    "char": "ruler"
+   }
+  ],
+  "Minion - Tama": [
+   {
+    "key": "ruler3",
+    "char": "ruler"
+   }
+  ],
+  "Minion - Swim Swim": [
+   {
+    "key": "ruler4",
+    "char": "ruler"
+   }
+  ],
+  "Maximum Cannon": [
+   {
+    "key": "ryohei1",
+    "char": "ryohei"
+   }
+  ],
+  "Kangaryu": [
+   {
+    "key": "ryohei2",
+    "char": "ryohei"
+   }
+  ],
+  "Vongola Headgear": [
+   {
+    "key": "ryohei3",
+    "char": "ryohei"
+   }
+  ],
+  "To the Extreme!!": [
+   {
+    "key": "ryohei4",
+    "char": "ryohei"
+   }
+  ],
+  "Fiber Lost": [
+   {
+    "key": "ryuko1",
+    "char": "ryuko"
+   }
+  ],
+  "Decapitation Mode": [
+   {
+    "key": "ryuko2",
+    "char": "ryuko"
+   }
+  ],
+  "Life Fiber Synchronization": [
+   {
+    "key": "ryuko3",
+    "char": "ryuko"
+   }
+  ],
+  "Ryuko Block": [
+   {
+    "key": "ryuko4",
+    "char": "ryuko"
+   }
+  ],
+  "Excalibur": [
+   {
+    "key": "saber1",
+    "char": "saber"
+   }
+  ],
+  "Wind Blade Combat": [
+   {
+    "key": "saber2",
+    "char": "saber"
+   }
+  ],
+  "Avalon": [
+   {
+    "key": "saber3",
+    "char": "saber"
+   }
+  ],
+  "Providence": [
+   {
+    "key": "saber4",
+    "char": "saber"
+   }
+  ],
+  "Normal Punch": [
+   {
+    "key": "saitama1",
+    "char": "saitama"
+   }
+  ],
+  "Consecutive Normal Punches": [
+   {
+    "key": "saitama2",
+    "char": "saitama"
+   }
+  ],
+  "Serious Series: Serious Table-Flip": [
+   {
+    "key": "saitama3",
+    "char": "saitama"
+   }
+  ],
+  "Serious Series: Serious Side-Hops": [
+   {
+    "key": "saitama4",
+    "char": "saitama"
+   }
+  ],
+  "Serious Series: Serious Punch": [
+   {
+    "key": "saitama5",
+    "char": "saitama"
+   }
+  ],
+  "Cherry Blossom Fist": [
+   {
+    "key": "sakura1",
+    "char": "sakura"
+   }
+  ],
+  "Medical Ninjutsu": [
+   {
+    "key": "sakura2",
+    "char": "sakura"
+   }
+  ],
+  "Rampage Gloves": [
+   {
+    "key": "sakura3",
+    "char": "sakura"
+   }
+  ],
+  "Sakura Dodge": [
+   {
+    "key": "sakura4",
+    "char": "sakura"
+   }
+  ],
+  "Cherry Blossom Crash": [
+   {
+    "key": "sakura5",
+    "char": "sakura"
+   }
+  ],
+  "Shuriken Jutsu": [
+   {
+    "key": "sasuke1",
+    "char": "sasuke"
+   }
+  ],
+  "Chidori Nagashi": [
+   {
+    "key": "sasuke2",
+    "char": "sasuke"
+   }
+  ],
+  "Great Dragon Fire": [
+   {
+    "key": "sasuke3",
+    "char": "sasuke"
+   }
+  ],
+  "Stalemate": [
+   {
+    "key": "sasuke4",
+    "char": "sasuke"
+   }
+  ],
+  "Shadow Shuriken Wire Trap": [
+   {
+    "key": "sasuke5",
+    "char": "sasuke"
+   }
+  ],
+  "Kirin": [
+   {
+    "key": "sasuke6",
+    "char": "sasuke"
+   }
+  ],
+  "Effortless Precision": [
+   {
+    "key": "satsuki1",
+    "char": "satsuki"
+   }
+  ],
+  "Overwhelming Power": [
+   {
+    "key": "satsuki2",
+    "char": "satsuki"
+   }
+  ],
+  "Perfect Crescent": [
+   {
+    "key": "satsuki3",
+    "char": "satsuki"
+   }
+  ],
+  "Disdainful Block": [
+   {
+    "key": "satsuki4",
+    "char": "satsuki"
+   }
+  ],
+  "Flawless Restoration": [
+   {
+    "key": "satsuki5",
+    "char": "satsuki"
+   }
+  ],
+  "Ruinous Scythe": [
+   {
+    "key": "saturn1",
+    "char": "saturn"
+   }
+  ],
+  "Silence Glaive Surprise": [
+   {
+    "key": "saturn2",
+    "char": "saturn"
+   }
+  ],
+  "Death Reborn Revolution": [
+   {
+    "key": "saturn3",
+    "char": "saturn"
+   }
+  ],
+  "Silence Wall": [
+   {
+    "key": "saturn4",
+    "char": "saturn"
+   }
+  ],
+  "Saturn Crystal": [
+   {
+    "key": "saturn5",
+    "char": "saturn"
+   }
+  ],
+  "Saya Coil": [
+   {
+    "key": "saya_coil",
+    "char": "saya_coil"
+   }
+  ],
+  "Hero Slash": [
+   {
+    "key": "sayaka1",
+    "char": "sayaka"
+   }
+  ],
+  "Azure Healing": [
+   {
+    "key": "sayaka2",
+    "char": "sayaka"
+   }
+  ],
+  "Hero Counter": [
+   {
+    "key": "sayaka3",
+    "char": "sayaka"
+   }
+  ],
+  "Enraged Slash": [
+   {
+    "key": "sayaka4",
+    "char": "sayaka"
+   }
+  ],
+  "Soul Gem: Sayaka": [
+   {
+    "key": "sayaka5",
+    "char": "sayaka"
+   }
+  ],
+  "Chains of the First Poisoner": [
+   {
+    "key": "semiramis1",
+    "char": "semiramis"
+   }
+  ],
+  "Mystical Beast - Hydra": [
+   {
+    "key": "semiramis2",
+    "char": "semiramis"
+   }
+  ],
+  "Arrogant King's Poison": [
+   {
+    "key": "semiramis3",
+    "char": "semiramis"
+   }
+  ],
+  "Scales of the Sacred Fish": [
+   {
+    "key": "semiramis4",
+    "char": "semiramis"
+   }
+  ],
+  "Hanging Gardens of Babylon": [
+   {
+    "key": "semiramis5",
+    "char": "semiramis"
+   }
+  ],
+  "Hell Breaker": [
+   {
+    "key": "seventeen1",
+    "char": "seventeen"
+   }
+  ],
+  "Photon Flash": [
+   {
+    "key": "seventeen2",
+    "char": "seventeen"
+   }
+  ],
+  "Android Assault": [
+   {
+    "key": "seventeen3",
+    "char": "seventeen"
+   }
+  ],
+  "Barrier": [
+   {
+    "key": "seventeen4",
+    "char": "seventeen"
+   }
+  ],
+  "Infinite Energy Cycling": [
+   {
+    "key": "seventeen5",
+    "char": "seventeen"
+   }
+  ],
+  "Shadowblade": [
+   {
+    "key": "shadowblade",
+    "char": "shadowblade"
+   }
+  ],
+  "Extase - Bisector of Creation": [
+   {
+    "key": "sheele1",
+    "char": "sheele"
+   }
+  ],
+  "Savior Strike": [
+   {
+    "key": "sheele2",
+    "char": "sheele"
+   }
+  ],
+  "Trump Card - Blinding Light": [
+   {
+    "key": "sheele3",
+    "char": "sheele"
+   }
+  ],
+  "Extase Block": [
+   {
+    "key": "sheele4",
+    "char": "sheele"
+   }
+  ],
+  "Four Scythe Child": [
+   {
+    "key": "shinoa1",
+    "char": "shinoa"
+   }
+  ],
+  "Doji Slash": [
+   {
+    "key": "shinoa2",
+    "char": "shinoa"
+   }
+  ],
+  "Doji Sweep": [
+   {
+    "key": "shinoa3",
+    "char": "shinoa"
+   }
+  ],
+  "Shinoa Deflection": [
+   {
+    "key": "shinoa4",
+    "char": "shinoa"
+   }
+  ],
+  "Doji Manifestation": [
+   {
+    "key": "shinoa5",
+    "char": "shinoa"
+   }
+  ],
+  "Ignition: Shinra": [
+   {
+    "key": "shinra1",
+    "char": "shinra"
+   }
+  ],
+  "Rapid Kick": [
+   {
+    "key": "shinra2",
+    "char": "shinra"
+   }
+  ],
+  "Tora Hishigi": [
+   {
+    "key": "shinra3",
+    "char": "shinra"
+   }
+  ],
+  "Adolla Burst": [
+   {
+    "key": "shinra4",
+    "char": "shinra"
+   }
+  ],
+  "Hysterical Strength": [
+   {
+    "key": "shinra5",
+    "char": "shinra"
+   }
+  ],
+  "Shiro Kick": [
+   {
+    "key": "shiro1",
+    "char": "shiro"
+   }
+  ],
+  "Mascot Rush": [
+   {
+    "key": "shiro2",
+    "char": "shiro"
+   }
+  ],
+  "Shiro Rampage": [
+   {
+    "key": "shiro3",
+    "char": "shiro"
+   }
+  ],
+  "Ganta Fight Song": [
+   {
+    "key": "shiro4",
+    "char": "shiro"
+   }
+  ],
+  "Ganta Fever": [
+   {
+    "key": "shiro5",
+    "char": "shiro"
+   }
+  ],
+  "Mental Out": [
+   {
+    "key": "shokuhou1",
+    "char": "shokuhou"
+   }
+  ],
+  "Plan to Lose": [
+   {
+    "key": "shokuhou2",
+    "char": "shokuhou"
+   }
+  ],
+  "Exterior": [
+   {
+    "key": "shokuhou3",
+    "char": "shokuhou"
+   }
+  ],
+  "Subordinate Protection": [
+   {
+    "key": "shokuhou4",
+    "char": "shokuhou"
+   }
+  ],
+  "Enhanced Strength": [
+   {
+    "key": "snowwhite1",
+    "char": "snowwhite"
+   }
+  ],
+  "Hear Distress": [
+   {
+    "key": "snowwhite2",
+    "char": "snowwhite"
+   }
+  ],
+  "Lucky Rabbit's Foot": [
+   {
+    "key": "snowwhite3",
+    "char": "snowwhite"
+   }
+  ],
+  "Leap": [
+   {
+    "key": "snowwhite4",
+    "char": "snowwhite"
+   }
+  ],
+  "Soothing Night": [
+   {
+    "key": "soothing_night",
+    "char": "soothing_night"
+   }
+  ],
+  "Scythe Transformation": [
+   {
+    "key": "soul1",
+    "char": "soul"
+   }
+  ],
+  "Nightmare Wavelength": [
+   {
+    "key": "soul2",
+    "char": "soul"
+   }
+  ],
+  "Nightmare Sonata": [
+   {
+    "key": "soul3",
+    "char": "soul"
+   }
+  ],
+  "Consume Soul": [
+   {
+    "key": "soul4",
+    "char": "soul"
+   }
+  ],
+  "Partner: Maka": [
+   {
+    "key": "soul5",
+    "char": "soul"
+   }
+  ],
+  "Soul Cleave": [
+   {
+    "key": "soul_cleave",
+    "char": "soul_cleave"
+   }
+  ],
+  "Spider Mines": [
+   {
+    "key": "spider_mines",
+    "char": "spider_mines"
+   }
+  ],
+  "Zanna di Squalo": [
+   {
+    "key": "squalo1",
+    "char": "squalo"
+   }
+  ],
+  "Scontro di Squalo": [
+   {
+    "key": "squalo2",
+    "char": "squalo"
+   }
+  ],
+  "Squalo Grande Pioggia": [
+   {
+    "key": "squalo3",
+    "char": "squalo"
+   }
+  ],
+  "Squalo Parry": [
+   {
+    "key": "squalo4",
+    "char": "squalo"
+   }
+  ],
+  "Skull Bash": [
+   {
+    "key": "squirtle1",
+    "char": "squirtle"
+   }
+  ],
+  "Bubblebeam": [
+   {
+    "key": "squirtle3",
+    "char": "squirtle"
+   }
+  ],
+  "Withdraw": [
+   {
+    "key": "squirtle4",
+    "char": "squirtle"
+   }
+  ],
+  "Rapid Spin": [
+   {
+    "key": "squirtle5",
+    "char": "squirtle"
+   }
+  ],
+  "Hydro Pump": [
+   {
+    "key": "squirtle6",
+    "char": "squirtle"
+   }
+  ],
+  "Thug Life": [
+   {
+    "key": "squirtle7",
+    "char": "squirtle"
+   }
+  ],
+  "To The Rescue": [
+   {
+    "key": "stark1",
+    "char": "stark"
+   }
+  ],
+  "Axe Smash": [
+   {
+    "key": "stark2",
+    "char": "stark"
+   }
+  ],
+  "Cowardice": [
+   {
+    "key": "stark3",
+    "char": "stark"
+   }
+  ],
+  "Tumble": [
+   {
+    "key": "stark4",
+    "char": "stark"
+   }
+  ],
+  "Superhuman Resilience": [
+   {
+    "key": "stark5",
+    "char": "stark"
+   }
+  ],
+  "Cleaving Light": [
+   {
+    "key": "stark6",
+    "char": "stark"
+   }
+  ],
+  "Lightning Strike": [
+   {
+    "key": "stark7",
+    "char": "stark"
+   }
+  ],
+  "Stone Bone Serum": [
+   {
+    "key": "stone_bone_serum",
+    "char": "stone_bone_serum"
+   }
+  ],
+  "Suffocating Night": [
+   {
+    "key": "suffocating_night",
+    "char": "suffocating_night"
+   }
+  ],
+  "Malevolent Shrine": [
+   {
+    "key": "sukuna1",
+    "char": "sukuna"
+   }
+  ],
+  "Fire Arrow": [
+   {
+    "key": "sukuna2",
+    "char": "sukuna"
+   }
+  ],
+  "Cleave and Dismantle": [
+   {
+    "key": "sukuna3",
+    "char": "sukuna"
+   }
+  ],
+  "Demonic Pact": [
+   {
+    "key": "sukuna4",
+    "char": "sukuna"
+   }
+  ],
+  "Sealed King": [
+   {
+    "key": "sukuna5",
+    "char": "sukuna"
+   }
+  ],
+  "Nekomata Blaze": [
+   {
+    "key": "tamaki1",
+    "char": "tamaki"
+   }
+  ],
+  "Nekomata Cage": [
+   {
+    "key": "tamaki2",
+    "char": "tamaki"
+   }
+  ],
+  "Ignition: Nekomata": [
+   {
+    "key": "tamaki3",
+    "char": "tamaki"
+   }
+  ],
+  "Fearless Defender": [
+   {
+    "key": "tamaki4",
+    "char": "tamaki"
+   }
+  ],
+  "Nekomata Fireball": [
+   {
+    "key": "tamaki5",
+    "char": "tamaki"
+   }
+  ],
+  "Fourth Form: Striking Tide": [
+   {
+    "key": "tanjiro1",
+    "char": "tanjiro"
+   }
+  ],
+  "Third Form: Flowing Dance": [
+   {
+    "key": "tanjiro2",
+    "char": "tanjiro"
+   }
+  ],
+  "Seventh Form: Drop Ripple Thrust": [
+   {
+    "key": "tanjiro3",
+    "char": "tanjiro"
+   }
+  ],
+  "Second Form: Water Wheel": [
+   {
+    "key": "tanjiro4",
+    "char": "tanjiro"
+   }
+  ],
+  "Tenth Form: Constant Flux": [
+   {
+    "key": "tanjiro5",
+    "char": "tanjiro"
+   }
+  ],
+  "Sixth Form: Whirlpool": [
+   {
+    "key": "tanjiro6",
+    "char": "tanjiro"
+   }
+  ],
+  "Eighth Form: Waterfall Basin": [
+   {
+    "key": "tanjiro7",
+    "char": "tanjiro"
+   }
+  ],
+  "Enhanced Smell": [
+   {
+    "key": "tanjiro8",
+    "char": "tanjiro"
+   }
+  ],
+  "Psychic Shear": [
+   {
+    "key": "tatsumaki1",
+    "char": "tatsumaki"
+   }
+  ],
+  "Psychokinetic Bind": [
+   {
+    "key": "tatsumaki2",
+    "char": "tatsumaki"
+   }
+  ],
+  "Extreme Psychic Twisting": [
+   {
+    "key": "tatsumaki3",
+    "char": "tatsumaki"
+   }
+  ],
+  "Tatsumaki Barrier": [
+   {
+    "key": "tatsumaki4",
+    "char": "tatsumaki"
+   }
+  ],
+  "Spear of Green Light": [
+   {
+    "key": "tatsumaki5",
+    "char": "tatsumaki"
+   }
+  ],
+  "City-Wide Barrier": [
+   {
+    "key": "tatsumaki6",
+    "char": "tatsumaki"
+   }
+  ],
+  "Killing Strike": [
+   {
+    "key": "tatsumi1",
+    "char": "tatsumi"
+   }
+  ],
+  "Incursio": [
+   {
+    "key": "tatsumi2",
+    "char": "tatsumi"
+   }
+  ],
+  "Neuntote": [
+   {
+    "key": "tatsumi3",
+    "char": "tatsumi"
+   }
+  ],
+  "Invisibility": [
+   {
+    "key": "tatsumi4",
+    "char": "tatsumi"
+   }
+  ],
+  "The Nightmare Rides": [
+   {
+    "key": "the_nightmare_rides",
+    "char": "the_nightmare_rides"
+   }
+  ],
+  "Heaven-Piercing Ice Wall": [
+   {
+    "key": "todoroki1",
+    "char": "todoroki"
+   }
+  ],
+  "Jet Burn": [
+   {
+    "key": "todoroki2",
+    "char": "todoroki"
+   }
+  ],
+  "Glacial Prison": [
+   {
+    "key": "todoroki3",
+    "char": "todoroki"
+   }
+  ],
+  "Fire Wall": [
+   {
+    "key": "todoroki4",
+    "char": "todoroki"
+   }
+  ],
+  "Half-Hot Half-Cold": [
+   {
+    "key": "todoroki5",
+    "char": "todoroki"
+   }
+  ],
+  "Thirsting Knife": [
+   {
+    "key": "toga1",
+    "char": "toga"
+   }
+  ],
+  "Vacuum Syringe": [
+   {
+    "key": "toga2",
+    "char": "toga"
+   }
+  ],
+  "Killing Spree": [
+   {
+    "key": "toga3",
+    "char": "toga"
+   }
+  ],
+  "Twisted Love": [
+   {
+    "key": "toga4",
+    "char": "toga"
+   }
+  ],
+  "Quirk: Transform": [
+   {
+    "key": "toga5",
+    "char": "toga"
+   }
+  ],
+  "Drop Dead": [
+   {
+    "key": "toga6",
+    "char": "toga"
+   }
+  ],
+  "Split Soul Katana": [
+   {
+    "key": "toji1",
+    "char": "toji"
+   }
+  ],
+  "Playful Cloud": [
+   {
+    "key": "toji2",
+    "char": "toji"
+   }
+  ],
+  "Inverted Spear of Heaven": [
+   {
+    "key": "toji3",
+    "char": "toji"
+   }
+  ],
+  "Chain of a Thousand Miles": [
+   {
+    "key": "toji4",
+    "char": "toji"
+   }
+  ],
+  "X-Slash": [
+   {
+    "key": "toji5",
+    "char": "toji"
+   }
+  ],
+  "Dark Shadow Rampage": [
+   {
+    "key": "tokoyami1",
+    "char": "tokoyami"
+   }
+  ],
+  "Sabbath": [
+   {
+    "key": "tokoyami2",
+    "char": "tokoyami"
+   }
+  ],
+  "Covert Black-Ops Arms": [
+   {
+    "key": "tokoyami3",
+    "char": "tokoyami"
+   }
+  ],
+  "Dark Aura": [
+   {
+    "key": "tokoyami4",
+    "char": "tokoyami"
+   }
+  ],
+  "Black Abyss": [
+   {
+    "key": "tokoyami5",
+    "char": "tokoyami"
+   }
+  ],
+  "Stone Pillar": [
+   {
+    "key": "toph1",
+    "char": "toph"
+   }
+  ],
+  "Earthen Shackles": [
+   {
+    "key": "toph2",
+    "char": "toph"
+   }
+  ],
+  "Metal Armor": [
+   {
+    "key": "toph3",
+    "char": "toph"
+   }
+  ],
+  "Earth Wall": [
+   {
+    "key": "toph4",
+    "char": "toph"
+   }
+  ],
+  "Seismic Sense": [
+   {
+    "key": "toph5",
+    "char": "toph"
+   }
+  ],
+  "Draw Stance": [
+   {
+    "key": "toudou1",
+    "char": "toudou"
+   }
+  ],
+  "Nukiashi": [
+   {
+    "key": "toudou2",
+    "char": "toudou"
+   }
+  ],
+  "Raiou": [
+   {
+    "key": "toudou3",
+    "char": "toudou"
+   }
+  ],
+  "Graceful Dodge": [
+   {
+    "key": "toudou4",
+    "char": "toudou"
+   }
+  ],
+  "Raikiri": [
+   {
+    "key": "toudou5",
+    "char": "toudou"
+   }
+  ],
+  "Ukaku Slam": [
+   {
+    "key": "touka1",
+    "char": "touka"
+   }
+  ],
+  "Crystallized Shards": [
+   {
+    "key": "touka2",
+    "char": "touka"
+   }
+  ],
+  "Crystallized Ukaku": [
+   {
+    "key": "touka3",
+    "char": "touka"
+   }
+  ],
+  "Touka Observation": [
+   {
+    "key": "touka4",
+    "char": "touka"
+   }
+  ],
+  "Tsubaki Mode: Kusarigama": [
+   {
+    "key": "tsubaki1",
+    "char": "tsubaki"
+   }
+  ],
+  "Tsubaki Mode: Smoke Bomb": [
+   {
+    "key": "tsubaki2",
+    "char": "tsubaki"
+   }
+  ],
+  "Tsubaki Soul Resonance": [
+   {
+    "key": "tsubaki3",
+    "char": "tsubaki"
+   }
+  ],
+  "Dummy Star": [
+   {
+    "key": "tsubaki4",
+    "char": "tsubaki"
+   }
+  ],
+  "Partner: Black Star": [
+   {
+    "key": "tsubaki5",
+    "char": "tsubaki"
+   }
+  ],
+  "Tsubaki Mode: Uncanny Sword": [
+   {
+    "key": "tsubaki6",
+    "char": "tsubaki"
+   }
+  ],
+  "Azure Slash": [
+   {
+    "key": "tsubasa1",
+    "char": "tsubasa"
+   }
+  ],
+  "One Thousand Tears": [
+   {
+    "key": "tsubasa2",
+    "char": "tsubasa"
+   }
+  ],
+  "Burning Wrath Whirl": [
+   {
+    "key": "tsubasa3",
+    "char": "tsubasa"
+   }
+  ],
+  "Tsubasa Block": [
+   {
+    "key": "tsubasa4",
+    "char": "tsubasa"
+   }
+  ],
+  "Ame no Habakiri": [
+   {
+    "key": "tsubasa5",
+    "char": "tsubasa"
+   }
+  ],
+  "Burning Wrath Blade": [
+   {
+    "key": "tsubasa6",
+    "char": "tsubasa"
+   }
+  ],
+  "X-Burner": [
+   {
+    "key": "tsunayoshi1",
+    "char": "tsunayoshi"
+   }
+  ],
+  "Zero Point Breakthrough": [
+   {
+    "key": "tsunayoshi2",
+    "char": "tsunayoshi"
+   }
+  ],
+  "Burning Axle": [
+   {
+    "key": "tsunayoshi3",
+    "char": "tsunayoshi"
+   }
+  ],
+  "Flare Burst": [
+   {
+    "key": "tsunayoshi4",
+    "char": "tsunayoshi"
+   }
+  ],
+  "Tongue Lash": [
+   {
+    "key": "tsuyu1",
+    "char": "tsuyu"
+   }
+  ],
+  "Great Leap": [
+   {
+    "key": "tsuyu2",
+    "char": "tsuyu"
+   }
+  ],
+  "Frog Mucus": [
+   {
+    "key": "tsuyu3",
+    "char": "tsuyu"
+   }
+  ],
+  "Camouflage": [
+   {
+    "key": "tsuyu4",
+    "char": "tsuyu"
+   }
+  ],
+  "UnholyAura": [
+   {
+    "key": "unholy_aura",
+    "char": "unholy_aura"
+   }
+  ],
+  "Universal Energy Conduit": [
+   {
+    "key": "universal_energy_conduit",
+    "char": "universal_energy_conduit"
+   }
+  ],
+  "BindBenihime": [
+   {
+    "key": "urahara1",
+    "char": "urahara"
+   }
+  ],
+  "Seal Slaying Penance": [
+   {
+    "key": "urahara2",
+    "char": "urahara"
+   }
+  ],
+  "Suspended Seal Destruction": [
+   {
+    "key": "urahara3",
+    "char": "urahara"
+   }
+  ],
+  "Negation Block": [
+   {
+    "key": "urahara4",
+    "char": "urahara"
+   }
+  ],
+  "Fire-Play, Benihime": [
+   {
+    "key": "urahara5",
+    "char": "urahara"
+   }
+  ],
+  "Space Sword Blaster": [
+   {
+    "key": "uranus1",
+    "char": "uranus"
+   }
+  ],
+  "Intercepting Strike": [
+   {
+    "key": "uranus2",
+    "char": "uranus"
+   }
+  ],
+  "World Shaking": [
+   {
+    "key": "uranus3",
+    "char": "uranus"
+   }
+  ],
+  "Space Defense": [
+   {
+    "key": "uranus4",
+    "char": "uranus"
+   }
+  ],
+  "Uranus Lip Rod": [
+   {
+    "key": "uranus5",
+    "char": "uranus"
+   }
+  ],
+  "Zero Gravity": [
+   {
+    "key": "uraraka1",
+    "char": "uraraka"
+   }
+  ],
+  "Gravity Plus": [
+   {
+    "key": "uraraka2",
+    "char": "uraraka"
+   }
+  ],
+  "Zero Gravity: Comet Shower": [
+   {
+    "key": "uraraka3",
+    "char": "uraraka"
+   }
+  ],
+  "Uraraka Float": [
+   {
+    "key": "uraraka4",
+    "char": "uraraka"
+   }
+  ],
+  "Spirit Particle Subjugation": [
+   {
+    "key": "uryu1",
+    "char": "uryu"
+   }
+  ],
+  "Kojaku Shot": [
+   {
+    "key": "uryu2",
+    "char": "uryu"
+   }
+  ],
+  "Seele Schneider": [
+   {
+    "key": "uryu3",
+    "char": "uryu"
+   }
+  ],
+  "Uryuu Evasion": [
+   {
+    "key": "uryu4",
+    "char": "uryu"
+   }
+  ],
+  "Quincy Final Kojaku Shot": [
+   {
+    "key": "uryu5",
+    "char": "uryu"
+   }
+  ],
+  "Smoke Star": [
+   {
+    "key": "usopp1",
+    "char": "usopp"
+   }
+  ],
+  "Impact Dial": [
+   {
+    "key": "usopp2",
+    "char": "usopp"
+   }
+  ],
+  "Lead Star": [
+   {
+    "key": "usopp3",
+    "char": "usopp"
+   }
+  ],
+  "Gunpowder Star": [
+   {
+    "key": "usopp4",
+    "char": "usopp"
+   }
+  ],
+  "Sharpshooter": [
+   {
+    "key": "usopp5",
+    "char": "usopp"
+   }
+  ],
+  "First Form: Roar": [
+   {
+    "key": "uzui1",
+    "char": "uzui"
+   }
+  ],
+  "Constant Resounding Slashes": [
+   {
+    "key": "uzui2",
+    "char": "uzui"
+   }
+  ],
+  "String Performance": [
+   {
+    "key": "uzui3",
+    "char": "uzui"
+   }
+  ],
+  "Uzui Dodge": [
+   {
+    "key": "uzui4",
+    "char": "uzui"
+   }
+  ],
+  "The Score": [
+   {
+    "key": "uzui5",
+    "char": "uzui"
+   }
+  ],
+  "Ki Blast": [
+   {
+    "key": "vegeta1",
+    "char": "vegeta"
+   }
+  ],
+  "Double Ki Blast": [
+   {
+    "key": "vegeta2",
+    "char": "vegeta"
+   }
+  ],
+  "Galick Gun": [
+   {
+    "key": "vegeta3",
+    "char": "vegeta"
+   }
+  ],
+  "Energy Charge": [
+   {
+    "key": "vegeta4",
+    "char": "vegeta"
+   }
+  ],
+  "Imitation Kamehameha": [
+   {
+    "key": "veldora1",
+    "char": "veldora"
+   }
+  ],
+  "Explosive Aura": [
+   {
+    "key": "veldora2",
+    "char": "veldora"
+   }
+  ],
+  "Tempest Fist": [
+   {
+    "key": "veldora3",
+    "char": "veldora"
+   }
+  ],
+  "Tempest Guard": [
+   {
+    "key": "veldora4",
+    "char": "veldora"
+   }
+  ],
+  "Slumbering Dragon": [
+   {
+    "key": "veldora5",
+    "char": "veldora"
+   }
+  ],
+  "Venus Love and Beauty Shock": [
+   {
+    "key": "venus1",
+    "char": "venus"
+   }
+  ],
+  "Venus Love Me Chain": [
+   {
+    "key": "venus2",
+    "char": "venus"
+   }
+  ],
+  "Crescent Beam Barrage": [
+   {
+    "key": "venus3",
+    "char": "venus"
+   }
+  ],
+  "Defensive Binding": [
+   {
+    "key": "venus4",
+    "char": "venus"
+   }
+  ],
+  "Venus Burning Love": [
+   {
+    "key": "venus5",
+    "char": "venus"
+   }
+  ],
+  "Bandage": [
+   {
+    "key": "vessel2",
+    "char": "vessel"
+   }
+  ],
+  "Combat Direction": [
+   {
+    "key": "vessel3",
+    "char": "vessel"
+   }
+  ],
+  "Second Wind": [
+   {
+    "key": "vessel5",
+    "char": "vessel"
+   }
+  ],
+  "Disarm": [
+   {
+    "key": "vessel6",
+    "char": "vessel"
+   }
+  ],
+  "Voice of Light": [
+   {
+    "key": "voice_of_light",
+    "char": "voice_of_light"
+   }
+  ],
+  "Well-Used Panic Button": [
+   {
+    "key": "well_used_panic_button",
+    "char": "well_used_panic_button"
+   }
+  ],
+  "Scoppio d'Ira": [
+   {
+    "key": "xanxus1",
+    "char": "xanxus"
+   }
+  ],
+  "Martello di Fiamma": [
+   {
+    "key": "xanxus2",
+    "char": "xanxus"
+   }
+  ],
+  "Flames of Wrath": [
+   {
+    "key": "xanxus3",
+    "char": "xanxus"
+   }
+  ],
+  "Sky Flame Deflection": [
+   {
+    "key": "xanxus4",
+    "char": "xanxus"
+   }
+  ],
+  "Scars of Wrath": [
+   {
+    "key": "xanxus5",
+    "char": "xanxus"
+   }
+  ],
+  "Shinotsuku Ame": [
+   {
+    "key": "yamamoto1",
+    "char": "yamamoto"
+   }
+  ],
+  "Utsuhi Ame": [
+   {
+    "key": "yamamoto2",
+    "char": "yamamoto"
+   }
+  ],
+  "Asari Ugetsu": [
+   {
+    "key": "yamamoto3",
+    "char": "yamamoto"
+   }
+  ],
+  "Sakamaku Ame": [
+   {
+    "key": "yamamoto4",
+    "char": "yamamoto"
+   }
+  ],
+  "Scontro di Rondine": [
+   {
+    "key": "yamamoto5",
+    "char": "yamamoto"
+   }
+  ],
+  "Beccata di Rondine": [
+   {
+    "key": "yamamoto6",
+    "char": "yamamoto"
+   }
+  ],
+  "Amidamaru Over Soul": [
+   {
+    "key": "yoh1",
+    "char": "yoh"
+   }
+  ],
+  "Spirit of Sword": [
+   {
+    "key": "yoh2",
+    "char": "yoh"
+   }
+  ],
+  "White Swan Over Soul": [
+   {
+    "key": "yoh3",
+    "char": "yoh"
+   }
+  ],
+  "Halo Blade": [
+   {
+    "key": "yoh4",
+    "char": "yoh"
+   }
+  ],
+  "Grand Halo Blade": [
+   {
+    "key": "yoh5",
+    "char": "yoh"
+   }
+  ],
+  "The Absence of Ignorance": [
+   {
+    "key": "yoh6",
+    "char": "yoh"
+   }
+  ],
+  "Shunko: Gather": [
+   {
+    "key": "yoruichi1",
+    "char": "yoruichi"
+   }
+  ],
+  "Shunko: Raijin Senkei": [
+   {
+    "key": "yoruichi2",
+    "char": "yoruichi"
+   }
+  ],
+  "Black Cat Warrior Princess": [
+   {
+    "key": "yoruichi3",
+    "char": "yoruichi"
+   }
+  ],
+  "Yoruichi Dodge": [
+   {
+    "key": "yoruichi4",
+    "char": "yoruichi"
+   }
+  ],
+  "Fickle Flash": [
+   {
+    "key": "yoruichi5",
+    "char": "yoruichi"
+   }
+  ],
+  "Sadistic Taunt": [
+   {
+    "key": "yubel1",
+    "char": "yubel"
+   }
+  ],
+  "Dark Dimension": [
+   {
+    "key": "yubel2",
+    "char": "yubel"
+   }
+  ],
+  "Terror Incarnate": [
+   {
+    "key": "yubel3",
+    "char": "yubel"
+   }
+  ],
+  "Malicious Intent": [
+   {
+    "key": "yubel4",
+    "char": "yubel"
+   }
+  ],
+  "Ultimate Nightmare": [
+   {
+    "key": "yubel5",
+    "char": "yubel"
+   }
+  ],
+  "Sealed Nightmare": [
+   {
+    "key": "yubel6",
+    "char": "yubel"
+   }
+  ],
+  "Kuriboh": [
+   {
+    "key": "yugi1",
+    "char": "yugi"
+   }
+  ],
+  "Dark Magician Girl": [
+   {
+    "key": "yugi2",
+    "char": "yugi"
+   }
+  ],
+  "Swords of Revealing Light": [
+   {
+    "key": "yugi3",
+    "char": "yugi"
+   }
+  ],
+  "Big Shield Gardna": [
+   {
+    "key": "yugi4",
+    "char": "yugi"
+   }
+  ],
+  "Dark Magician": [
+   {
+    "key": "yugi5",
+    "char": "yugi"
+   }
+  ],
+  "Exodia, the Forbidden One": [
+   {
+    "key": "yugi6",
+    "char": "yugi"
+   }
+  ],
+  "Obliterate!": [
+   {
+    "key": "yugi7",
+    "char": "yugi"
+   }
+  ],
+  "Divergent Fist": [
+   {
+    "key": "yuji1",
+    "char": "yuji"
+   }
+  ],
+  "Combat Awakening": [
+   {
+    "key": "yuji2",
+    "char": "yuji"
+   }
+  ],
+  "Consume Finger": [
+   {
+    "key": "yuji3",
+    "char": "yuji"
+   }
+  ],
+  "Unusual Fortitude": [
+   {
+    "key": "yuji4",
+    "char": "yuji"
+   }
+  ],
+  "Black Flash": [
+   {
+    "key": "yuji5",
+    "char": "yuji"
+   }
+  ],
+  "Wind Blades Shower": [
+   {
+    "key": "yuno1",
+    "char": "yuno"
+   }
+  ],
+  "Towering Tornado": [
+   {
+    "key": "yuno2",
+    "char": "yuno"
+   }
+  ],
+  "Spirit Dive: Sylph": [
+   {
+    "key": "yuno3",
+    "char": "yuno"
+   }
+  ],
+  "Sylph Block": [
+   {
+    "key": "yuno4",
+    "char": "yuno"
+   }
+  ],
+  "Gale White Bow": [
+   {
+    "key": "yuno5",
+    "char": "yuno"
+   }
+  ],
+  "Sylph's Breath": [
+   {
+    "key": "yuno6",
+    "char": "yuno"
+   }
+  ],
+  "Spirit of Zephyr": [
+   {
+    "key": "yuno7",
+    "char": "yuno"
+   }
+  ],
+  "Speed of Thunder": [
+   {
+    "key": "zenitsu1",
+    "char": "zenitsu"
+   }
+  ],
+  "Thunder Release": [
+   {
+    "key": "zenitsu2",
+    "char": "zenitsu"
+   }
+  ],
+  "First Form: Thunderclap and Flash": [
+   {
+    "key": "zenitsu3",
+    "char": "zenitsu"
+   }
+  ],
+  "Falling Maneuver": [
+   {
+    "key": "zenitsu4",
+    "char": "zenitsu"
+   }
+  ],
+  "Onigiri": [
+   {
+    "key": "zoro1",
+    "char": "zoro"
+   }
+  ],
+  "Master of Swords": [
+   {
+    "key": "zoro2",
+    "char": "zoro"
+   }
+  ],
+  "Three-Sword Style Counter": [
+   {
+    "key": "zoro3",
+    "char": "zoro"
+   }
+  ],
+  "Three-Sword Style Parry": [
+   {
+    "key": "zoro4",
+    "char": "zoro"
+   }
+  ],
+  "One-Sword Style: Lion Strike": [
+   {
+    "key": "zoro5",
+    "char": "zoro"
+   }
+  ],
+  "Rhitta Smash": [
+   {
+    "key": "escanor1",
+    "char": "escanor"
+   }
+  ],
+  "Cruel Sun": [
+   {
+    "key": "escanor2",
+    "char": "escanor"
+   }
+  ],
+  "Pride Flare": [
+   {
+    "key": "escanor3",
+    "char": "escanor"
+   }
+  ],
+  "Flame of Pride": [
+   {
+    "key": "escanor4",
+    "char": "escanor"
+   }
+  ],
+  "Sunshine": [
+   {
+    "key": "escanor5",
+    "char": "escanor"
+   }
+  ],
+  "Divine Spear: Escanor": [
+   {
+    "key": "escanor6",
+    "char": "escanor"
+   }
+  ],
+  "Amalgam": [
+   {
+    "key": "hibiki1",
+    "char": "hibiki"
+   }
+  ],
+  "Alchemic Gold": [
+   {
+    "key": "hibiki2",
+    "char": "hibiki"
+   }
+  ],
+  "Ex-Drive": [
+   {
+    "key": "hibiki3",
+    "char": "hibiki"
+   }
+  ],
+  "Berserk Mode": [
+   {
+    "key": "hibiki4",
+    "char": "hibiki"
+   }
+  ],
+  "Gungnir": [
+   {
+    "key": "hibiki5",
+    "char": "hibiki"
+   }
+  ]
+ }
+}
