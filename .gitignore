@@ -40,7 +40,7 @@ metrics.db
 metrics.db-wal
 metrics.db-shm
 deploy/
-
+AICheatsheets/
 # Player-authored characters + uploaded art (user data, not source)
 authored/
 authored_assets/
