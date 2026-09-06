@@ -1,28 +1,33 @@
 extends Ability
 
-# Mega Spirit Gun. The transformed slot-0 skill (swapped in by the hub once Spirit Gun hits 2 stacks).
-# True damage that builds its own single stack. Empowered lets it fire through Invulnerability.
+# Mega Spirit Gun. The transformed slot-0 skill (swapped in when Spirit Gun is used at 2 stacks). True damage
+# that builds its own single stack. USED at 1 stack, it consumes the stack and reverts to Spirit Gun.
+# Empowered lets it fire through Invulnerability.
 
 func describe(user):
-	return "Deals 20 True damage to target enemy and gives Yusuke 1 stack of Mega Spirit Gun (max 1 stack). Deals 20 more damage per stack of Mega Spirit Gun. While Empowered, Bypasses Invulnerability."
+	return "Deals 20 True damage to target enemy and gives Yusuke 1 stack of Mega Spirit Gun (max 1). Deals 20 more damage per stack of Mega Spirit Gun. When used at 1 stack of Mega Spirit Gun, instead consumes the stack and reverts this skill to Spirit Gun. While Empowered, Bypasses Invulnerability."
 
 func split_desc():
 	return [
 		"Deals 20 True damage to target enemy and gains 1 stack of Mega Spirit Gun (max 1)",
 		["Deals 20 more damage per stack of Mega Spirit Gun", Color.CADET_BLUE],
+		["Used at 1 stack: consumes it and reverts to Spirit Gun", Color.AQUAMARINE],
 		["While Empowered: Bypasses Invulnerability", Color.ORANGE_RED],
 	]
 
 func execute(user, battle):
 	var context = QueryContext.from_game_state(user, battle)
 	var empowered = user.marked_by("Empowered", user)
-	# Base 20 True; the "Mega Spirit Gun" DAMAGE_MOD on Yusuke adds +20 per stack (max 1) through the engine.
-	# The stack is granted AFTER this hit resolves, so the current cast is never boosted by its own new stack.
+	# Base 20 True; the "Mega Spirit Gun" DAMAGE_MOD on Yusuke adds +20 per stack (so a 1-stack cast deals 40).
 	for target in user.targeter.targets:
 		Character.resolve_damage(context, target, 20, DamageType.Type.TRUE)
 	if empowered:
 		user.effects.erase_effect(empowered)
-	user.call_unique("yusuke", "add_spirit_stack", [context, self, true])
+	# Used AT 1 stack -> revert to Spirit Gun + consume the stack; otherwise gain a stack.
+	if user.call_unique("yusuke", "mega_spirit_gun_stacks", []) >= 1:
+		user.call_unique("yusuke", "revert_to_spirit_gun", [])
+	else:
+		user.call_unique("yusuke", "add_spirit_stack", [context, self, true])
 
 func extra_usable(user):
 	return true

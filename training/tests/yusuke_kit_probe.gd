@@ -151,6 +151,27 @@ func _ready():
 	_check(g0.has_effect("Spirit Shotgun", TT.STUN, y6) != null, "[Emp] empowered Spirit Shotgun stuns the primary target")
 	_check(g1.has_effect("Spirit Shotgun", TT.STUN, y6) == null, "[Emp] non-primary target is NOT stunned")
 
+	# 5e: Spirit Shotgun's bonus is TWO per_stack DAMAGE_MODs (same style as the gun boosts), one per pile,
+	# kept as distinct icons by unique_render_id (1 = Spirit Gun +5/stack, 2 = Mega +10/stack) — NOT inline.
+	var rS = _battle(9011)
+	var mS = rS[0]; var yS = rS[1].team.characters[0]
+	var sgS = yS.moveset.base_abilities[0]; var megaS = yS.moveset.base_abilities[4]; var shotS = yS.moveset.base_abilities[2]
+	var tS = rS[2].team.characters[0]
+	tS.health.hp = 100; _use(yS, sgS, [tS])          # SG stack 1 -> shotgun render_id 1 +5
+	tS.health.hp = 100; _use(yS, sgS, [tS])          # SG stack 2 -> shotgun render_id 1 stacks to 2 (+ transform)
+	tS.health.hp = 100; _use(yS, megaS, [tS])        # Mega stack 1 -> shotgun render_id 2 +10
+	var sgmod = null; var megamod = null
+	for e in yS.effects.get_effects_by_type(TT.DAMAGE_MOD):
+		if e.effect_name() == "Spirit Shotgun":
+			if e.unique_render_id == 1: sgmod = e
+			elif e.unique_render_id == 2: megamod = e
+	_check(sgmod != null and sgmod.per_stack and sgmod.display_stacks and sgmod.mag == 5 and sgmod.stack_count() == 2, "[Shotgun] Spirit Gun pile is a per_stack +5 DAMAGE_MOD at 2 stacks (mag=%s x%s)" % [str(sgmod.mag) if sgmod else "nil", str(sgmod.stack_count()) if sgmod else "nil"])
+	_check(megamod != null and megamod.per_stack and megamod.display_stacks and megamod.mag == 10 and megamod.stack_count() == 1, "[Shotgun] Mega pile is a per_stack +10 DAMAGE_MOD at 1 stack (mag=%s x%s)" % [str(megamod.mag) if megamod else "nil", str(megamod.stack_count()) if megamod else "nil"])
+	_check(sgmod != null and megamod != null and not sgmod.stack_mag and not megamod.stack_mag, "[Shotgun] both use the gun boosts' per_stack style (not stack_mag)")
+	_check(sgmod != null and megamod != null and sgmod.source == yS.moveset.base_abilities[0] and megamod.source == yS.moveset.base_abilities[4], "[Shotgun] the two same-named piles have DISTINCT icon art (Spirit Gun vs Mega Spirit Gun source), never identical")
+	tS.health.hp = 100; _use(yS, shotS, [tS])        # 15 + 5*2 + 10*1 = 35 (both piles sum through the engine)
+	_check(tS.health.hp == 65, "[Shotgun] both piles sum through get_true_damage: 15 + 20 = 35 (-> %d)" % tS.health.hp)
+
 	# 5d: Mega Spirit Gun empowered -> bypasses Invulnerability (at targeting)
 	var r7 = _battle(9007)
 	var m7 = r7[0]; var y7 = r7[1].team.characters[0]; var iv = r7[2].team.characters[0]

@@ -15,12 +15,11 @@ func split_desc():
 func execute(user, battle):
 	var context = QueryContext.from_game_state(user, battle)
 	var empowered = user.marked_by("Empowered", user)
-	var sg = user.call_unique("yusuke", "spirit_gun_stacks", [])
-	var msg = user.call_unique("yusuke", "mega_spirit_gun_stacks", [])
-	var dmg = 15 + 5 * sg + 10 * msg
+	# Base 15; the "Spirit Shotgun" DAMAGE_MOD on Yusuke (fed +5/Spirit Gun stack, +10/Mega stack) adds the
+	# rest through the engine, so the boost is a native, visible damage mod rather than an inline computation.
 	var main = user.targeter.main_target
 	for target in user.targeter.targets:
-		Character.resolve_damage(context, target, dmg, DamageType.Type.NORMAL)
+		Character.resolve_damage(context, target, 15, DamageType.Type.NORMAL)
 		if empowered and target == main:
 			var stun = Effect.stun_effect(2)
 			stun.set_source(self)
