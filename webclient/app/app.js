@@ -6156,8 +6156,11 @@
   function uniKey(u) { return (u || "").toLowerCase().replace(/[^a-z0-9]/g, ""); }
   // Mirrors the Godot Universe enum (components/character_concept.gd) — the canonical source for the
   // Nexus universe buttons, so they always match the server's enum-key bucket universes instead of
-  // roster.json's drifting display names. INVINCIBLE is intentionally omitted (disabled in the Nexus).
-  const NEXUS_UNIVERSE_KEYS = ["NARUTO", "BLEACH", "ONE_PIECE", "MY_HERO_ACADEMIA", "BLACK_CLOVER", "MADOKA_MAGICA", "FAIRY_TAIL", "SOUL_EATER", "AVATAR", "AKAME_GA_KILL", "DEMON_SLAYER", "SEVEN_DEADLY_SINS", "KATEKYO_HITMAN_REBORN", "ATTACK_ON_TITAN", "ONE_PUNCH_MAN", "FIRE_FORCE", "HUNTER_X_HUNTER", "A_CERTAIN_SCIENTIFIC_RAILGUN", "FATE", "KILL_LA_KILL", "DEADMAN_WONDERLAND", "TOKYO_GHOUL", "THAT_TIME_I_GOT_REINCARNATED_AS_A_SLIME", "JUJUTSU_KAISEN", "DIGIMON", "SAILOR_MOON", "DRAGON_BALL", "MASHLE", "EMINENCE_IN_SHADOW", "FRIEREN", "SOLO_LEVELING", "CHAINSAW_MAN", "AO_NO_EXORCIST", "YUGIOH", "INUYASHA", "FULL_METAL_ALCHEMIST", "ASSASSINATION_CLASSROOM", "KONOSUBA", "SERAPH_OF_THE_END", "CHIVALRY_OF_A_FAILED_KNIGHT", "GACHIAKUTA", "SHAMAN_KING", "RECORD_OF_RAGNAROK", "SAINT_SEIYA", "YU_YU_HAKUSHO", "TOUGEN_ANKI", "MIRAI_NIKKI", "RE_ZERO", "BAKI", "SYMPHOGEAR", "CLAYMORE"];
+  // roster.json's drifting display names. INVINCIBLE is intentionally omitted (disabled in the Nexus);
+  // CUSTOM (player-authored) is not a Nexus universe. Keep this list in sync when a universe is appended
+  // to the enum — otherwise its characters only get a button via the drift-safety fallback below, and a
+  // universe whose buckets aren't currently served shows no button at all.
+  const NEXUS_UNIVERSE_KEYS = ["NARUTO", "BLEACH", "ONE_PIECE", "MY_HERO_ACADEMIA", "BLACK_CLOVER", "MADOKA_MAGICA", "FAIRY_TAIL", "SOUL_EATER", "AVATAR", "AKAME_GA_KILL", "DEMON_SLAYER", "SEVEN_DEADLY_SINS", "KATEKYO_HITMAN_REBORN", "ATTACK_ON_TITAN", "ONE_PUNCH_MAN", "FIRE_FORCE", "HUNTER_X_HUNTER", "A_CERTAIN_SCIENTIFIC_RAILGUN", "FATE", "KILL_LA_KILL", "DEADMAN_WONDERLAND", "TOKYO_GHOUL", "THAT_TIME_I_GOT_REINCARNATED_AS_A_SLIME", "JUJUTSU_KAISEN", "DIGIMON", "SAILOR_MOON", "DRAGON_BALL", "MASHLE", "EMINENCE_IN_SHADOW", "FRIEREN", "SOLO_LEVELING", "CHAINSAW_MAN", "AO_NO_EXORCIST", "YUGIOH", "INUYASHA", "FULL_METAL_ALCHEMIST", "ASSASSINATION_CLASSROOM", "KONOSUBA", "SERAPH_OF_THE_END", "CHIVALRY_OF_A_FAILED_KNIGHT", "GACHIAKUTA", "SHAMAN_KING", "RECORD_OF_RAGNAROK", "SAINT_SEIYA", "YU_YU_HAKUSHO", "TOUGEN_ANKI", "MIRAI_NIKKI", "RE_ZERO", "BAKI", "SYMPHOGEAR", "WONDER_EGG_PRIORITY", "SWORD_ART_ONLINE", "CLAYMORE", "OVERLORD"];
   function nexusMenu() {
     const roster = S.roster || [];
     if (!roster.length) loadRoster();
