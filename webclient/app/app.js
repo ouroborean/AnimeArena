@@ -6234,7 +6234,7 @@
       el("div", { class: "nx-popup" }, [
         el("div", { class: "nx-popup-title" }, ["Donate to " + (c ? c.name : titleCase(path))]),
         el("div", { class: "nx-popup-sub" }, ["Bucket: " + fmtAp(bucketAp) + " AP   ·   Your AP: " + fmtAp(playerAp)]),
-        el("input", { class: "nx-popup-input", type: "number", min: "1", max: String(playerAp), placeholder: "Amount", value: S.nexusDonate.amount || "", oninput: (e) => { S.nexusDonate.amount = e.target.value; } }),
+        el("input", { class: "nx-popup-input", type: "number", min: "1", max: String(playerAp), placeholder: "Amount", "data-focus-id": "nexus-donate-amount", value: S.nexusDonate.amount || "", oninput: (e) => { S.nexusDonate.amount = e.target.value; } }),
         el("div", { class: "nx-popup-actions" }, [
           el("button", { class: "nx-cancel", onclick: () => set({ nexusDonate: null }) }, ["Cancel"]),
           el("button", { class: "nx-confirm", onclick: () => doDonate(path) }, ["Donate"]),

@@ -48,6 +48,11 @@ const GATE_BANDS := [
 	[-1, 0.0],   # any rating gap -> 0s wait: pair immediately (closest-rated pair first)
 ]
 const MM_TICK := 1.0                 # seconds between gate sweeps
+# Seconds between Nexus disk re-scans. The bucket roster is now driven by the <path>.dat files in
+# `bucket data/` (see BucketHandler.initialize_buckets), so this poll lets files added / removed / edited
+# on disk by an external tool surface to clients without a server restart. Only broadcasts on a real change.
+const NEXUS_POLL_INTERVAL := 30.0
+var _last_poll_open := true           # last-seen bucket data/poll.dat state, so an external toggle rebroadcasts too
 var _ranked_wait_start := {}         # peer_id -> Time.get_ticks_msec() at enqueue
 var _gate_tick_running := false      # re-entrancy guard for the sweep
 
@@ -346,6 +351,14 @@ func _ready():
 		gate_timer.autostart = true
 		gate_timer.timeout.connect(_gate_tick)
 		add_child(gate_timer)
+		# Nexus disk poll: re-scan bucket data/ every NEXUS_POLL_INTERVAL so .dat files added / removed /
+		# edited on disk (by an external service or a manual edit) reach clients without a server restart.
+		_last_poll_open = _poll_open()
+		var nexus_poll_timer := Timer.new()
+		nexus_poll_timer.wait_time = NEXUS_POLL_INTERVAL
+		nexus_poll_timer.autostart = true
+		nexus_poll_timer.timeout.connect(_nexus_poll_tick)
+		add_child(nexus_poll_timer)
 
 # --- HELPER: GET PLAYER SAFE ---
 # Replaces 'connected_peers[peer_id]' to safely get data via the new Session system
@@ -1127,8 +1140,7 @@ func _on_json_message(json_pid: int, msg: Dictionary) -> void:
 			else:
 				var nc_count = int(msg.get("count", 0))
 				var nc_result = bucket_handler.close_nexus_round(nc_count)
-				var nc_sets = bucket_handler.get_all_bucket_sets()
-				json_gateway.broadcast({"type": "nexus_state", "max": nc_sets[0], "sets": nc_sets[1], "poll_open": _poll_open()})
+				broadcast_nexus_state()
 				print("[ADMIN] '", nca.username, "' closed nexus round (count=", nc_count, "): removed ", nc_result.removed)
 				json_gateway.send(json_pid, {"type": "nexus_round_closed", "removed": nc_result.removed, "remaining": nc_result.remaining, "current_max": nc_result.current_max})
 		"admin_scale_nexus_ap":
@@ -1144,8 +1156,7 @@ func _on_json_message(json_pid: int, msg: Dictionary) -> void:
 					json_gateway.send(json_pid, {"type": "error", "reason": "Multiplier must be greater than 0"})
 				else:
 					var ns_result = bucket_handler.scale_all_buckets(ns_mult)
-					var ns_sets = bucket_handler.get_all_bucket_sets()
-					json_gateway.broadcast({"type": "nexus_state", "max": ns_sets[0], "sets": ns_sets[1], "poll_open": _poll_open()})
+					broadcast_nexus_state()
 					print("[ADMIN] '", nsa.username, "' scaled nexus AP by ", ns_mult, " (", ns_result.scaled, " buckets)")
 					json_gateway.send(json_pid, {"type": "nexus_scaled", "multiplier": ns_mult, "count": ns_result.scaled})
 		"admin_ultra_bot":
@@ -5116,6 +5127,29 @@ func _poll_open() -> bool:
 	if f == null:
 		return true
 	return bool(int(f.get_line()))
+
+# Periodic Nexus disk poll (see NEXUS_POLL_INTERVAL). Re-scans bucket data/ and broadcasts a fresh
+# nexus_state to every client only when the roster actually changed on disk — or when the poll open/closed
+# flag (poll.dat) was toggled externally — so an admin editing files on the box, or another service writing
+# .dat files, shows up live without a restart and without spamming clients when nothing changed.
+func _nexus_poll_tick() -> void:
+	if bucket_handler == null:
+		return
+	var changed := bucket_handler.refresh_from_disk()
+	var po := _poll_open()
+	if po != _last_poll_open:
+		_last_poll_open = po
+		changed = true
+	if changed:
+		broadcast_nexus_state()
+
+# Fan the current Nexus standings + poll state out to every connected client. Shared by the periodic poll
+# and the admin close-round / scale ops so the payload shape stays in one place.
+func broadcast_nexus_state() -> void:
+	if json_gateway == null:
+		return
+	var ns = bucket_handler.get_all_bucket_sets()
+	json_gateway.broadcast({"type": "nexus_state", "max": ns[0], "sets": ns[1], "poll_open": _poll_open()})
 
 func check_poll_active():
 	rpc_id(1, "poll_active", multiplayer.get_unique_id())

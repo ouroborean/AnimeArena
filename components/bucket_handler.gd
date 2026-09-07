@@ -2,6 +2,11 @@ extends Node
 class_name BucketHandler
 
 var current_active_buckets: Dictionary
+# The live Nexus roster, keyed FLAT by path_name -> CharacterBucket. Its membership is derived from the
+# .dat files found in `bucket data/` at boot (see initialize_buckets), NOT from the static all_chars
+# catalogue: drop a <path>.dat in and the character appears next boot, delete one and it's gone, all
+# without editing this file or rebuilding the server. all_chars below is now only a metadata catalogue
+# (display name + universe + portrait) consulted for characters it happens to know.
 var all_buckets: Dictionary
 var universe_buckets: Dictionary
 var peer_active_buckets: Dictionary
@@ -12,6 +17,14 @@ var poll_active = true
 # Loaded from bucket data/removed_list.dat at boot so removals survive restarts. The names below are
 # permanently excluded regardless (see PERMANENT_EXCLUDED / _is_removed).
 var removed_set: Dictionary = {}
+# Optional metadata for disk-only buckets, loaded from bucket data/nexus_meta.json at boot:
+#   { "<path_name>": { "universe": "NARUTO", "name": "Display Name" }, ... }
+# Lets an external program describe a brand-new character (its universe group + server display name)
+# without touching this file. Any character already in all_chars ignores this (the catalogue wins).
+var nexus_meta: Dictionary = {}
+# Basenames in `bucket data/` that are bookkeeping files, NOT character buckets, and must be skipped by
+# the directory scan: removed_list.dat (persisted removals) and poll.dat (donation open/closed flag).
+const RESERVED_DAT := ["removed_list", "poll"]
 # Characters CONFIRMED for the playable roster. The Nexus is a poll for what to build next, so once a
 # character is greenlit there is nothing left to vote on and they come out of the running.
 # They stay in `all_chars` on purpose: the entry is what resolves an existing donation or a
@@ -712,105 +725,112 @@ func notify_disconnect():
 func start_reconnect(packages):
 	pass
 
+# Build the live Nexus roster by SCANNING `bucket data/` for <path>.dat files, instead of walking the
+# static all_chars catalogue. Consequences (the whole point of this system):
+#   * delete a .dat  -> that character drops out of the Nexus on the next boot;
+#   * add a .dat      -> that character joins the Nexus on the next boot, even one all_chars has never
+#                        heard of (universe/name come from nexus_meta.json or a title-cased fallback, and
+#                        the web client fills in the real display name + portrait from char_index.json).
+# Two filters still apply so the poll only ever asks "what should we build NEXT":
+#   * _is_removed   -> admin round-closed / owner-retired / permanently-excluded characters stay hidden
+#                      even though their donation-history .dat lingers on disk;
+#   * already playable -> a character in the live roster (CharacterDatabase.char_name_list) auto-leaves
+#                      the Nexus, so greenlit characters never resurface. Deriving this from the roster
+#                      (instead of a hand-kept list) means a new character exits the poll the instant it
+#                      ships, with no edit here.
 func initialize_buckets():
-	all_buckets = {
-		CharacterConcept.Universe.NARUTO: {},
-		CharacterConcept.Universe.BLEACH: {},
-		CharacterConcept.Universe.ONE_PIECE: {},
-		CharacterConcept.Universe.MY_HERO_ACADEMIA: {},
-		CharacterConcept.Universe.BLACK_CLOVER: {},
-		CharacterConcept.Universe.MADOKA_MAGICA: {},
-		CharacterConcept.Universe.FAIRY_TAIL: {},
-		CharacterConcept.Universe.SOUL_EATER: {},
-		CharacterConcept.Universe.AVATAR: {},
-		CharacterConcept.Universe.AKAME_GA_KILL: {},
-		CharacterConcept.Universe.DEMON_SLAYER: {},
-		CharacterConcept.Universe.SEVEN_DEADLY_SINS: {},
-		CharacterConcept.Universe.KATEKYO_HITMAN_REBORN: {},
-		CharacterConcept.Universe.ATTACK_ON_TITAN: {},
-		CharacterConcept.Universe.ONE_PUNCH_MAN: {},
-		CharacterConcept.Universe.FIRE_FORCE: {},
-		CharacterConcept.Universe.HUNTER_X_HUNTER: {},
-		CharacterConcept.Universe.A_CERTAIN_SCIENTIFIC_RAILGUN: {},
-		CharacterConcept.Universe.FATE: {},
-		CharacterConcept.Universe.KILL_LA_KILL: {},
-		CharacterConcept.Universe.DEADMAN_WONDERLAND: {},
-		CharacterConcept.Universe.TOKYO_GHOUL: {},
-		CharacterConcept.Universe.THAT_TIME_I_GOT_REINCARNATED_AS_A_SLIME: {},
-		CharacterConcept.Universe.JUJUTSU_KAISEN: {},
-		CharacterConcept.Universe.DIGIMON: {},
-		CharacterConcept.Universe.SAILOR_MOON: {},
-		CharacterConcept.Universe.INVINCIBLE: {},
-		CharacterConcept.Universe.DRAGON_BALL: {},
-		CharacterConcept.Universe.MASHLE: {},
-		CharacterConcept.Universe.EMINENCE_IN_SHADOW: {},
-		CharacterConcept.Universe.FRIEREN: {},
-		CharacterConcept.Universe.SOLO_LEVELING: {},
-		CharacterConcept.Universe.CHAINSAW_MAN: {},
-		CharacterConcept.Universe.AO_NO_EXORCIST: {},
-		CharacterConcept.Universe.YUGIOH: {},
-		CharacterConcept.Universe.INUYASHA: {},
-		CharacterConcept.Universe.FULL_METAL_ALCHEMIST: {},
-		CharacterConcept.Universe.KONOSUBA: {},
-		CharacterConcept.Universe.SERAPH_OF_THE_END: {},
-		CharacterConcept.Universe.GACHIAKUTA: {},
-		CharacterConcept.Universe.SHAMAN_KING: {},
-		CharacterConcept.Universe.ASSASSINATION_CLASSROOM: {},
-		CharacterConcept.Universe.RECORD_OF_RAGNAROK: {},
-		CharacterConcept.Universe.SAINT_SEIYA: {},
-		CharacterConcept.Universe.YU_YU_HAKUSHO: {},
-		CharacterConcept.Universe.TOUGEN_ANKI: {},
-		CharacterConcept.Universe.MIRAI_NIKKI: {},
-		CharacterConcept.Universe.RE_ZERO: {},
-		CharacterConcept.Universe.BAKI: {},
-		CharacterConcept.Universe.SYMPHOGEAR: {},
-		CharacterConcept.Universe.WONDER_EGG_PRIORITY: {},
-		CharacterConcept.Universe.CLAYMORE: {},
-		CharacterConcept.Universe.SWORD_ART_ONLINE: {},
-		CharacterConcept.Universe.OVERLORD: {}
-	}
+	_free_bucket_nodes()   # release the previous roster's orphan Nodes (Bucket extends Node) before rebuild
+	all_buckets = {}
+	current_max = 0
 	_load_removed_list()
-	for path_name in all_chars:
-		if _is_removed(path_name):
-			continue   # removed characters never re-enter the Nexus (survives restart via removed_list.dat)
-		var concept = all_chars[path_name]
-		var ap = get_bucket_data(concept)
-		if ap == -1:
+	_load_nexus_meta()
+	var playable := {}
+	for n in CharacterDatabase.char_name_list():
+		playable[n] = true
+	for path_name in _scan_bucket_dir():
+		if _is_removed(path_name) or playable.has(path_name):
 			continue
+		var ap = _read_bucket_ap(path_name)
+		var concept = _resolve_concept(path_name)
+		var bucket = CharacterBucket.new_character_bucket(ap, null, concept, 1.0)
+		bucket.universe_name = _universe_name_for(concept, path_name)
+		all_buckets[path_name] = bucket
 		if ap > current_max:
 			current_max = ap
-		all_buckets[concept.universe][concept.path_name] = CharacterBucket.new_character_bucket(ap, null, concept, 1.0)
-	
 
+# Re-scan `bucket data/` and rebuild the live roster from disk, so .dat files added / removed / edited by
+# an external tool (or a hand edit) surface WITHOUT a server restart. Returns true iff what clients would
+# see actually changed (membership, any AP, universe, or a removal), so the caller only broadcasts a fresh
+# nexus_state on a real change. A donation is NOT a change here — process_bucket_update already write-
+# through-saved its AP and broadcast its own update, so the before/after signatures match and we stay quiet.
+# Godot's main loop is single-threaded, so this never interleaves with a donation/admin handler mid-call.
+func refresh_from_disk() -> bool:
+	# Guard the poll against a transiently-unreadable directory: if `bucket data/` can't be opened right now
+	# (e.g. an external tool doing a non-atomic dir swap — `rm -rf`/`mv` — has it missing for a moment), a
+	# blind rebuild would scan nothing, WIPE the in-memory roster, and broadcast an empty Nexus to every
+	# client for up to a full interval. Skip this tick and keep the last-good roster; the next poll rebuilds
+	# once the directory has settled. (A well-behaved external tool should swap atomically via rename.)
+	if DirAccess.open(_bucket_data_dir()) == null:
+		push_warning("BucketHandler: '%s' unreadable this poll — keeping current roster" % _bucket_data_dir())
+		return false
+	var before := _roster_signature()   # from the current in-memory roster
+	initialize_buckets()                # frees the old bucket Nodes + rebuilds from disk
+	return before != _roster_signature()
+
+# An order-independent fingerprint of exactly what get_all_bucket_sets would serialize to clients (path +
+# ap + universe for every VISIBLE bucket). get_bucket_list already drops _is_removed entries, so this
+# mirrors the client view.
+func _roster_signature() -> String:
+	var rows := []
+	for bucket in get_bucket_list():
+		rows.append("%s=%d@%s" % [bucket.character_concept.path_name, bucket.ap, bucket.universe_name])
+	rows.sort()
+	return "|".join(rows)
+
+# Bucket / CharacterBucket extend Node but are never parented into the scene tree, so a dropped reference
+# would leak. initialize_buckets can now run repeatedly (the periodic poll), so release the previous
+# roster's Nodes before replacing them. queue_free defers to frame end — the dict is reassigned right
+# after, so nothing keeps a freed Node.
+# CharacterConcept ALSO extends Node. For a disk-only bucket (path not in all_chars) _resolve_concept
+# synthesizes a fresh concept Node each rebuild, referenced only by its bucket — freeing the bucket does
+# NOT free that concept (it isn't a child), so it must be freed here too or it leaks one orphan per
+# disk-only character per poll. Catalogued buckets share the persistent all_chars concept object; that one
+# is reused every rebuild and must NEVER be freed (identity check against the catalogue).
+func _free_bucket_nodes() -> void:
+	for b in all_buckets.values():
+		if not is_instance_valid(b):
+			continue
+		var cc = b.character_concept
+		if is_instance_valid(cc) and cc != all_chars.get(cc.path_name):
+			cc.queue_free()   # synthesized disk-only concept — not the shared all_chars object
+		b.queue_free()
 
 func get_bucket_list():
 	var output = []
-	for universe in all_buckets.keys():
-		var uni_buckets = all_buckets[universe]
-		for path_name in uni_buckets.keys():
-			if _is_removed(path_name):
-				continue
-			output.append(uni_buckets[path_name])
+	for path_name in all_buckets.keys():
+		if _is_removed(path_name):
+			continue   # honours an in-session admin round-close without needing to re-scan disk
+		output.append(all_buckets[path_name])
 	return output
 
 func get_all_bucket_sets():
-	# [current_max, [[path_name, ap, universe], ...]] for every character bucket (muichiro/shirou
-	# excluded by get_bucket_list). The universe (enum key name, e.g. "NARUTO") lets the web client
-	# group EVERY bucket by universe — its roster.json only covers the playable subset, so without
-	# this the per-universe view can't place the many non-playable concept buckets.
+	# [current_max, [[path_name, ap, universe], ...]] for every character bucket. The universe string
+	# (an enum key name like "NARUTO" for catalogued characters, or the nexus_meta value for disk-only
+	# ones) lets the web client group EVERY bucket by universe — its roster.json only covers the playable
+	# subset, so without this the per-universe view can't place the many non-playable concept buckets.
+	# The bucket carries universe_name directly (set in initialize_buckets) so disk-only buckets with a
+	# synthesized concept — which has no valid Universe ordinal — still serialize a universe.
 	var sets = []
-	var uni_names = CharacterConcept.Universe.keys()
 	for bucket in get_bucket_list():
-		sets.append([bucket.character_concept.path_name, bucket.ap, uni_names[int(bucket.character_concept.universe)]])
+		sets.append([bucket.character_concept.path_name, bucket.ap, bucket.universe_name])
 	return [current_max, sets]
 
 func has_character_bucket(path_name):
+	# A live bucket exists on disk for this character AND it isn't hidden. Note this no longer requires an
+	# all_chars entry: a disk-only character can be donated to just like a catalogued one.
 	if _is_removed(path_name):
 		return false
-	if not all_chars.has(path_name):
-		return false
-	var uni = all_chars[path_name].universe
-	return all_buckets.has(uni) and all_buckets[uni].has(path_name)
+	return all_buckets.has(path_name)
 
 func get_poll_state(p_poll_active):
 	poll_active = p_poll_active
@@ -830,6 +850,8 @@ func receive_character_bucket_information(max_ap, bucket_information_sets):
 	for bucket_information in bucket_information_sets:
 		if _is_removed(bucket_information[1]):
 			continue
+		if not all_chars.has(bucket_information[1]):
+			continue   # legacy client render path can only draw catalogued concepts (name+portrait)
 		var bucket = CharacterBucket.new_character_bucket(bucket_information[2], null, all_chars[bucket_information[1]], 1.0)
 		bucket.maximum = current_max
 		buckets.append(bucket)
@@ -843,10 +865,16 @@ func receive_universe_bucket_information(bucket_information_sets):
 	set_active_buckets(buckets)
 	
 func receive_character_buckets_request(universe):
+	# Legacy per-universe request (old Godot client). all_buckets is now flat, so filter by the concept's
+	# universe ordinal; disk-only buckets (synthesized concept, universe 0) simply don't match here.
 	var bucket_info_sets = []
-	for bucket in all_buckets[universe]:
-		var info_set = [universe, all_buckets[universe][bucket].character_concept.path_name, all_buckets[universe][bucket].ap, current_max]
-		bucket_info_sets.append(info_set)
+	for path_name in all_buckets.keys():
+		var bucket = all_buckets[path_name]
+		if _is_removed(path_name):
+			continue
+		if int(bucket.character_concept.universe) != int(universe):
+			continue
+		bucket_info_sets.append([universe, path_name, bucket.ap, current_max])
 	return [current_max, bucket_info_sets]
 
 func receive_universe_buckets_request():
@@ -877,8 +905,8 @@ func set_new_max(max):
 		current_active_buckets[bucket_name].maximum = max
 
 func process_bucket_update(bucket_name, ap_amount):
-	var universe = all_chars[bucket_name].universe
-	var bucket = all_buckets[universe][bucket_name]
+	# Guarded upstream by has_character_bucket, so the bucket is always present + live here.
+	var bucket = all_buckets[bucket_name]
 	bucket.add_ap(ap_amount)
 	save_bucket_value(bucket_name)
 	if bucket.ap > current_max:
@@ -886,20 +914,98 @@ func process_bucket_update(bucket_name, ap_amount):
 	return [bucket_name, bucket.ap, current_max]
 
 func save_bucket_value(bucket_name):
-	var bucket_file = FileAccess.open("bucket data/" + bucket_name + ".dat", FileAccess.WRITE)
-	bucket_file.store_line(str(all_buckets[all_chars[bucket_name].universe][bucket_name].ap))
-	
-func get_bucket_data(character_concept):
-	if not FileAccess.file_exists("bucket data/" + character_concept.path_name + ".dat"):
-		var file = FileAccess.open("bucket data/" + character_concept.path_name + ".dat", FileAccess.WRITE)
-		FileAccess.get_open_error()
-		file.store_line("0")
-	var bucket_file = FileAccess.open("bucket data/" + character_concept.path_name + ".dat", FileAccess.READ)
-	var ap_value = int(bucket_file.get_line())
-	return ap_value
+	if not all_buckets.has(bucket_name):
+		return
+	var bucket_file = FileAccess.open(_bucket_data_dir() + "/" + bucket_name + ".dat", FileAccess.WRITE)
+	if bucket_file != null:
+		bucket_file.store_line(str(all_buckets[bucket_name].ap))
+
+# ---- disk-driven Nexus roster -------------------------------------------------------------------
+# Where the character .dat files (and removed_list.dat / poll.dat / nexus_meta.json) live. Defaults to
+# the project-relative "bucket data"; a test can point it at a scratch directory to exercise the scan in
+# isolation. Empty override = the default location.
+var bucket_data_dir_override: String = ""
+func _bucket_data_dir() -> String:
+	return bucket_data_dir_override if bucket_data_dir_override != "" else "bucket data"
+
+# The character path_names whose <path>.dat files currently live in `bucket data/` — this IS the Nexus
+# membership. Reserved bookkeeping files (removed_list.dat, poll.dat) are skipped; so is the sidecar
+# nexus_meta.json (it doesn't end in .dat, so it never matches).
+func _scan_bucket_dir() -> Array:
+	var out := []
+	var dir = DirAccess.open(_bucket_data_dir())
+	if dir == null:
+		push_warning("BucketHandler: cannot open '%s' — Nexus will be empty" % _bucket_data_dir())
+		return out
+	dir.list_dir_begin()
+	var fname = dir.get_next()
+	while fname != "":
+		if not dir.current_is_dir() and fname.ends_with(".dat"):
+			var pn = fname.substr(0, fname.length() - 4)
+			if not pn in RESERVED_DAT:
+				out.append(pn)
+		fname = dir.get_next()
+	dir.list_dir_end()
+	return out
+
+# Read a bucket's stored AP (its .dat holds a single integer on line 1). Absent/unreadable -> 0. Unlike
+# the old get_bucket_data this NEVER creates the file: the file's existence is what defines membership,
+# so materialising one here would silently re-add a character. save_bucket_value writes it on donation.
+# NOTE for external writers: update a .dat ATOMICALLY (write a temp file, then rename over the target).
+# A non-atomic truncate-then-write can be observed mid-write by the periodic poll as an empty file (AP 0),
+# which would broadcast a one-tick AP flicker before the next poll reads the settled value. Rename is atomic.
+func _read_bucket_ap(path_name) -> int:
+	var p = _bucket_data_dir() + "/" + path_name + ".dat"
+	if not FileAccess.file_exists(p):
+		return 0
+	var f = FileAccess.open(p, FileAccess.READ)
+	if f == null:
+		return 0
+	return int(f.get_line())
+
+# Metadata (server-side display name + universe) for a discovered bucket. all_chars — the catalogue of
+# every historically-added concept — wins when it knows the path; otherwise the concept is synthesized
+# from nexus_meta.json (or a title-cased fallback name). Synthesized via .new() rather than
+# CharacterConcept.create() so we don't spin up an assets/images/<name> directory for unknown paths.
+# The web client resolves the authoritative display name + portrait from char_index.json by path_name
+# regardless, so an unknown character renders correctly the moment its art ships client-side.
+func _resolve_concept(path_name) -> CharacterConcept:
+	if all_chars.has(path_name):
+		return all_chars[path_name]
+	var meta = nexus_meta.get(path_name, {})
+	var disp = str(meta.get("name", str(path_name).capitalize()))
+	var c = load("res://components/character_concept.gd").new()
+	c.character_name = disp
+	c.path_name = path_name
+	c.description = ""
+	return c
+
+# The universe-key string a bucket serializes to the client for per-universe grouping. Catalogued
+# characters use their real enum key ("NARUTO"); disk-only characters use their nexus_meta "universe"
+# value if given, else "" (the client then lists them on the leaderboard but in no universe group).
+func _universe_name_for(concept, path_name) -> String:
+	if all_chars.has(path_name):
+		return CharacterConcept.Universe.keys()[int(concept.universe)]
+	var meta = nexus_meta.get(path_name, {})
+	return str(meta.get("universe", ""))
+
+# Load the optional bucket data/nexus_meta.json sidecar (see nexus_meta). Malformed / absent -> empty.
+func _load_nexus_meta() -> void:
+	nexus_meta = {}
+	var p = _bucket_data_dir() + "/nexus_meta.json"
+	if not FileAccess.file_exists(p):
+		return
+	var f = FileAccess.open(p, FileAccess.READ)
+	if f == null:
+		return
+	var parsed = JSON.parse_string(f.get_as_text())
+	if typeof(parsed) == TYPE_DICTIONARY:
+		nexus_meta = parsed
+	else:
+		push_warning("BucketHandler: nexus_meta.json is not a JSON object — ignoring")
 
 func _removed_list_path() -> String:
-	return "bucket data/removed_list.dat"
+	return _bucket_data_dir() + "/removed_list.dat"
 
 func _is_removed(path_name) -> bool:
 	return path_name in PERMANENT_EXCLUDED or path_name in OWNER_RETIRED or removed_set.has(path_name)
@@ -940,8 +1046,7 @@ func close_nexus_round(n: int) -> Dictionary:
 		var concept = ranked[i].character_concept
 		removed_paths.append(concept.path_name)
 		removed_set[concept.path_name] = true
-		if all_buckets.has(concept.universe):
-			all_buckets[concept.universe].erase(concept.path_name)
+		all_buckets.erase(concept.path_name)   # flat path-keyed roster
 	if n > 0:
 		_save_removed_list()
 	# Halve everyone still standing (int division floors for the non-negative AP values we store).
@@ -1010,8 +1115,8 @@ func get_top_5():
 		return a.ap > b.ap
 	
 	bucket_list.sort_custom(sort_func)
-	
-	for i in range(5):
+
+	for i in range(min(5, bucket_list.size())):   # a disk-driven roster can hold fewer than 5 buckets
 		var concept = bucket_list[i].character_concept
 		output.append(concept)
 	return output
@@ -1023,7 +1128,7 @@ func process_leaderboard_request():
 	var leaderboard_concept_sets = []
 	
 	for concept in get_top_5():
-		var ap = all_buckets[concept.universe][concept.path_name].ap
+		var ap = all_buckets[concept.path_name].ap
 		var path_name = concept.path_name
 		leaderboard_concept_sets.append([path_name, ap])
 	
@@ -1033,6 +1138,6 @@ func process_leaderboard_sets(leaderboard_concept_sets):
 	var output = []
 	for set in leaderboard_concept_sets:
 		var ap = set[1]
-		var concept = all_chars[set[0]]
+		var concept = _resolve_concept(set[0])   # tolerate a disk-only path with no all_chars entry
 		output.append([concept, ap])
 	broadcast_leaderboard_sets.emit(output)
