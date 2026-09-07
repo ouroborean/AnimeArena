@@ -125,7 +125,7 @@
   // Bump whenever bundled art/assets change. Appended as ?v= to every bundled-asset URL so a
   // same-named replacement (e.g. a new character portrait) busts the browser AND the Cloudflare
   // Pages edge cache — a plain redeploy does NOT, because the URL is unchanged.
-  const ASSET_VERSION = "2026-08-30";
+  const ASSET_VERSION = "2026-09-07";
   function assetBase() { return (typeof window !== "undefined" && window.AA_ASSET_BASE) || ASSET_BASE; }
 
   // ---- state ---------------------------------------------------------------
