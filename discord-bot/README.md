@@ -18,8 +18,14 @@ server**, reading the game's data files directly and querying the server's WebSo
 | `/roll [dice]` | Dice roller — `2d6+3`, `d100`, default `1d20`. |
 | `/coinflip` | A fair coin (nod to the who-goes-first coin). |
 | `/random-character` | Picks a random playable character and shows its kit. |
+| `/add-nexus <path> <name> [universe]` | **(owner)** Stage a new Nexus character. Pick a `universe` (autocomplete) to group it; omit for leaderboard-only. Confirm with `/confirm-nexus`. |
+| `/confirm-nexus <path> <pin>` | **(owner)** Confirm with the PIN — writes the `.dat` (and the `nexus_meta.json` grouping row if a universe was given) into the server's `bucket data/`. Live within ~30s, no restart. |
+| `/sync <scope>` | **(owner)** Re-register slash commands: `global` / `here` / `clear-here` / `clear-global`. |
 
 `/ability`, `/character`, `/nexus`, `/status`, `/ladder` come from live game data; the rest are self-contained.
+The owner commands (`/add-nexus`, `/confirm-nexus`, `/sync`) are gated by `AA_NEXUS_ADMIN_IDS` (or the bot
+owner) and, for confirm, `AA_NEXUS_PIN`. A grouped character still needs its `char_index.json` name+portrait
+shipped to the front-end to show correctly — the bot writes the server-side bucket + universe, not the art.
 
 ## How it's wired
 
@@ -158,8 +164,13 @@ It's picked up automatically on the next start (and synced to your guild instant
 | Var | Required | Default | Purpose |
 | --- | --- | --- | --- |
 | `DISCORD_TOKEN` | ✅ | — | Bot token (secret). |
-| `DISCORD_GUILD_ID` | | (global) | Sync commands to one server instantly. |
+| `DISCORD_GUILD_ID` | | (global) | Instant command sync to server(s). One id or a comma-separated **list** — list every server the bot serves. Blank = global sync (~1h). |
 | `AA_GAME_DIR` | | the game repo containing this folder | Where the game data files live. |
 | `AA_GATEWAY_URL` | | `ws://localhost:5695` | Game server's WebSocket JSON gateway. |
 | `AA_ASSET_BASE_URL` | | (off) | Host serving `/assets/` — enables images in embeds. |
 | `AA_ASSET_VERSION` | | (none) | Cache-buster appended to asset URLs (match the client's `ASSET_VERSION`). |
+| `AA_BUCKET_DIR` | | `<game_dir>/bucket data` | Nexus bucket `.dat` dir for `/add-nexus`. |
+| `AA_NEXUS_PIN` | | (built-in) | PIN for `/confirm-nexus`. |
+| `AA_NEXUS_ADMIN_IDS` | | (PIN only) | Discord user IDs allowed to run `/add-nexus`, `/confirm-nexus`, `/sync`. |
+
+**Slash-command sync:** commands are registered per-server (instant, via `DISCORD_GUILD_ID`) or globally (every server, up to ~1h). A command added while only one server was listed won't appear in the others until a **global** sync runs. The owner-only **`/sync`** command re-registers at runtime: `global` (all servers), `here` (this server, instant), `clear-here` (remove this server's guild-scoped copies, e.g. to clear duplicates).
