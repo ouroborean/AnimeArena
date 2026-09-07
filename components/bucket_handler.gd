@@ -921,12 +921,23 @@ func save_bucket_value(bucket_name):
 		bucket_file.store_line(str(all_buckets[bucket_name].ap))
 
 # ---- disk-driven Nexus roster -------------------------------------------------------------------
-# Where the character .dat files (and removed_list.dat / poll.dat / nexus_meta.json) live. Defaults to
-# the project-relative "bucket data"; a test can point it at a scratch directory to exercise the scan in
-# isolation. Empty override = the default location.
+# Where the character .dat files (and removed_list.dat / poll.dat / nexus_meta.json) live. A test can point
+# `bucket_data_dir_override` at a scratch directory to exercise the scan in isolation. Empty override = the
+# default location, resolved to an ABSOLUTE on-disk path.
+#
+# WHY absolute and not the bare "bucket data" relative path: in an exported build these files are baked into
+# the binary's embedded PCK at export time, and Godot's virtual filesystem resolves a relative "bucket data/…"
+# INTO that PCK — the packed copy shadows the live file on disk, so FileAccess never sees disk edits. That
+# froze nexus_meta.json (grouping) at export time and would likewise stale-read any .dat that was packed. An
+# absolute OS path never matches a PCK entry, so FileAccess/DirAccess always hit the real files: the folder
+# next to the executable in an export, the project's own folder in the editor.
 var bucket_data_dir_override: String = ""
 func _bucket_data_dir() -> String:
-	return bucket_data_dir_override if bucket_data_dir_override != "" else "bucket data"
+	if bucket_data_dir_override != "":
+		return bucket_data_dir_override
+	if OS.has_feature("editor"):
+		return ProjectSettings.globalize_path("res://bucket data")
+	return OS.get_executable_path().get_base_dir().path_join("bucket data")
 
 # The character path_names whose <path>.dat files currently live in `bucket data/` — this IS the Nexus
 # membership. Reserved bookkeeping files (removed_list.dat, poll.dat) are skipped; so is the sidecar
